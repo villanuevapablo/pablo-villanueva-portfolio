@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FolderGit2, Github, ExternalLink, ArrowRight, Award, ShieldCheck, Brain, BarChart2 } from 'lucide-react';
+import { FolderGit2, Github, ArrowRight, Award, Radio } from 'lucide-react';
 import { ProjectItem, ProjectCategory } from '../types/portfolio';
 import { PROJECTS, UI_TRANSLATIONS } from '../data/portfolioData';
 import { useLanguage } from '../context/LanguageContext';
@@ -9,7 +9,8 @@ import {
   BtcForecastVisual, 
   SrmsSecurityVisual, 
   SmartOrganizerVisual, 
-  PreflopHeroVisual 
+  PreflopHeroVisual,
+  IotEdgeVisual 
 } from './ProjectVisuals';
 
 export const Projects: React.FC = () => {
@@ -20,6 +21,7 @@ export const Projects: React.FC = () => {
   const categories: { id: ProjectCategory; label: string }[] = [
     { id: 'all', label: UI_TRANSLATIONS.projects.filterAll[language] },
     { id: 'ai-ml', label: UI_TRANSLATIONS.projects.filterAi[language] },
+    { id: 'iot', label: UI_TRANSLATIONS.projects.filterIot[language] },
     { id: 'security', label: UI_TRANSLATIONS.projects.filterSecurity[language] },
     { id: 'data', label: UI_TRANSLATIONS.projects.filterData[language] },
   ];
@@ -32,6 +34,8 @@ export const Projects: React.FC = () => {
     switch (type) {
       case 'btc-forecast':
         return <BtcForecastVisual />;
+      case 'iot-edge':
+        return <IotEdgeVisual />;
       case 'srms-security':
         return <SrmsSecurityVisual />;
       case 'smart-organizer':
@@ -185,7 +189,7 @@ export const Projects: React.FC = () => {
                           target="_blank"
                           rel="noopener noreferrer"
                           className="p-2 text-slate-400 hover:text-white rounded-lg hover:bg-slate-800 transition-colors"
-                          title="View Repository"
+                          title="View Repository on GitHub"
                         >
                           <Github className="w-4 h-4" />
                         </a>

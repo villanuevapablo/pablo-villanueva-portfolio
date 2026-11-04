@@ -5,16 +5,18 @@ import { PersonalInfo, ExperienceItem, EducationItem, ProjectItem, SkillCategory
  * VERIFIED RESUME & PROJECT DATA - PABLO VILLANUEVA PICAZO
  * ============================================================================
  * 
- * Synchronized with official curriculum vitae and genuine repositories:
+ * Synchronized with official curriculum vitae and genuine GitHub repositories:
  * - Software Engineer — Full-Stack Developer
  * - First-Class Honours (Class I) - York St John University (Equivalent: 9/10)
  * - Instituto de Formación Profesional Nebrija (DAM)
  * - Universidad Nebrija (Development Technician)
- * - Real projects: 
- *    1. TFG Bitcoin Prediction (Grade: 9.0/10 | Machine Learning & Edge AI)
- *    2. Secure Record Management (SRMS in Go | OWASP Top 10)
- *    3. Smart File Organizer (Local AI Daemon | Ollama LLM & Watchdog)
- *    4. Preflop Hero (Poker Hand History Parser & GTO Strategy Auditor)
+ * - Core Focus: Full-Stack Development, Applied AI, Automation & Data Analytics
+ * - 5 Verified GitHub Projects: 
+ *    1. TFG Bitcoin Prediction (Grade: 9.0/10 | Machine Learning & Time-Series)
+ *    2. Secure Record Management (SRMS-MEDICAL in Go | OWASP Top 10)
+ *    3. Smart File Organizer (Local AI Daemon | Ollama LLMs & Watchdog Automation)
+ *    4. IoT Security System (Edge AI & Arduino UNO R4 WiFi | Hardware & AJAX)
+ *    5. Preflop Hero (Poker Hand History Parser & GTO Strategy Auditor)
  */
 
 export const SOCIAL_LINKS: SocialLinks = {
@@ -38,12 +40,12 @@ export const PERSONAL_INFO: PersonalInfo = {
     es: 'Construyendo software.\nExplorando inteligencia.\nCreando impacto.',
   },
   heroSubheading: {
-    en: 'Software Engineer passionate about building scalable digital products, high-integrity backend systems, and exploring Artificial Intelligence.',
-    es: 'Ingeniero de Software enfocado en la resolución de problemas complejos mediante código limpio, arquitectura de datos y principios de seguridad web.',
+    en: 'Software Engineer focused on Full-Stack development, applied Artificial Intelligence, intelligent process automation, and data analytics.',
+    es: 'Ingeniero de Software enfocado en desarrollo Full-Stack, Inteligencia Artificial aplicada, automatización inteligente de procesos y analítica de datos.',
   },
   heroIntro: {
-    en: 'Graduate with First-Class Honours (Class I, 9/10) in Software Engineering from York St John University and Higher Vocational DAM from Nebrija. Experienced in full-stack architecture, REST APIs, Web Security (OWASP), and Edge AI.',
-    es: 'Graduado con First-Class Honours (Nota media: 9/10) en Software Engineering por York St John University y Técnico Superior en DAM por Nebrija. Experiencia en full-stack, APIs REST, seguridad web (OWASP) y Edge AI.',
+    en: 'Graduate with First-Class Honours (Class I, 9/10) in Software Engineering from York St John University and Higher Vocational DAM from Nebrija. Experienced in building robust full-stack architectures, local LLM daemons, predictive ML models, IoT edge systems, and secure REST APIs.',
+    es: 'Graduado con First-Class Honours (Nota media: 9/10) en Software Engineering por York St John University y Técnico Superior en DAM por Nebrija. Experiencia en arquitecturas full-stack robustas, demonios con LLMs locales, modelos predictivos de ML, sistemas IoT y APIs REST seguras.',
   },
   location: {
     en: 'Madrid, Spain',
@@ -62,19 +64,19 @@ export const PERSONAL_INFO: PersonalInfo = {
     es: 'cv-pablo-villanueva-es.pdf',
   },
   professionalProfile: {
-    en: 'Highly technical Software Engineer, focused on solving complex problems through clean and efficient code. Experience in full-stack development, data architecture, and agile methodologies. Demonstrated ability to design scalable solutions, optimize system performance, and apply web security principles in dynamic environments.',
-    es: 'Ingeniero de Software altamente técnico, enfocado en la resolución de problemas complejos mediante código limpio y eficiente. Experiencia en desarrollo full-stack, arquitectura de datos y metodologías ágiles. Capacidad demostrada para diseñar soluciones escalables, optimizar el rendimiento de sistemas y aplicar principios de seguridad web en entornos dinámicos.',
+    en: 'Highly technical Software Engineer, focused on solving complex problems through clean and efficient code. Experience in full-stack development, data architecture, process automation, and agile methodologies. Demonstrated ability to design scalable solutions, optimize system performance, and apply web security principles in dynamic environments.',
+    es: 'Ingeniero de Software altamente técnico, enfocado en la resolución de problemas complejos mediante código limpio y eficiente. Experiencia en desarrollo full-stack, arquitectura de datos, automatización de procesos y metodologías ágiles. Capacidad demostrada para diseñar soluciones escalables, optimizar el rendimiento de sistemas y aplicar principios de seguridad web en entornos dinámicos.',
   },
   aboutText: {
     en: [
-      'Highly technical Software Engineer, focused on solving complex problems through clean and efficient code.',
-      'My background combines practical full-stack development, data architecture, robust backend engineering, and an increasing focus on Machine Learning and Edge AI.',
-      'I possess demonstrated ability to design scalable solutions, optimize system performance, and enforce rigorous web security principles (OWASP Top 10, RBAC, CSRF mitigation) in production-grade environments.'
+      'Highly technical Software Engineer, focused on solving complex problems through clean, efficient, and maintainable code.',
+      'My engineering foundation bridges robust full-stack development, data architectures, and an active specialization in Artificial Intelligence, autonomous system daemons, and data analytics.',
+      'From designing resilient Go and Spring Boot microservices to deploying Edge AI on microcontrollers and local LLM pipelines with Ollama, I prioritize high performance, system security (OWASP Top 10), and practical automation.'
     ],
     es: [
-      'Ingeniero de Software altamente técnico, enfocado en la resolución de problemas complejos mediante código limpio y eficiente.',
-      'Mi trayectoria combina desarrollo práctico full-stack, arquitectura de datos, ingeniería de backend robusta y un enfoque activo en Machine Learning y Edge AI.',
-      'Cuento con capacidad demostrada para diseñar soluciones escalables, optimizar el rendimiento de sistemas y aplicar principios rigurosos de seguridad web (OWASP Top 10, RBAC, mitigación CSRF) en entornos de producción.'
+      'Ingeniero de Software altamente técnico, enfocado en la resolución de problemas complejos mediante código limpio, eficiente y mantenible.',
+      'Mi base de ingeniería une desarrollo full-stack robusto, arquitectura de datos y una especialización activa en Inteligencia Artificial, demonios autónomos de automatización y analítica de datos.',
+      'Desde el diseño de microservicios en Go y Spring Boot hasta el despliegue de Edge AI en microcontroladores y pipelines con LLMs locales en Ollama, priorizo el alto rendimiento, la seguridad (OWASP Top 10) y la automatización práctica.'
     ]
   },
   quickHighlights: {
@@ -91,8 +93,8 @@ export const PERSONAL_INFO: PersonalInfo = {
       },
       {
         label: 'Core Specialties',
-        value: 'Full-Stack, Security & Edge AI',
-        description: 'Go, Java, Python, Spring Boot, React & OWASP standards'
+        value: 'Full-Stack, AI & Data Automation',
+        description: 'Python, Go, React, Local LLMs, ETL pipelines & smart daemons'
       },
       {
         label: 'Languages',
@@ -112,9 +114,9 @@ export const PERSONAL_INFO: PersonalInfo = {
         description: 'Instituto Nebrija y York St John: sólida base práctica y teórica'
       },
       {
-        label: 'Especialidades',
-        value: 'Full-Stack, Seguridad y Edge AI',
-        description: 'Go, Java, Python, Spring Boot, React y estándares OWASP'
+        label: 'Especialidades Clave',
+        value: 'Full-Stack, IA y Automatización',
+        description: 'Python, Go, React, LLMs locales, pipelines ETL y automatización inteligente'
       },
       {
         label: 'Idiomas',
@@ -127,14 +129,14 @@ export const PERSONAL_INFO: PersonalInfo = {
     en: [
       'Immediate availability for on-site, hybrid, or remote engineering positions',
       'Driving License (Category B)',
-      'Continuous technical learning and rapid adaptability to evolving tech stacks',
-      'Solid foundations in Agile methodologies and Git collaborative workflows'
+      'High adaptability in AI-assisted workflows, data analytics, and autonomous automation',
+      'Solid foundations in Agile methodologies, Linux CLI environments, and Git CI/CD flows'
     ],
     es: [
       'Disponibilidad inmediata para incorporación presencial, híbrida o remota',
       'Permiso de conducir (Categoría B)',
-      'Adaptabilidad tecnológica continua y capacidad de aprendizaje autónomo',
-      'Sólidas bases en metodologías ágiles y flujos colaborativos en Git'
+      'Gran adaptabilidad en flujos asistidos por IA, analítica de datos y automatización autónoma',
+      'Sólidas bases en metodologías ágiles, entornos Linux y flujos CI/CD en Git'
     ]
   }
 };
@@ -308,8 +310,94 @@ export const PROJECTS: ProjectItem[] = [
     }
   },
   {
+    id: 'iot-edge-ai-security',
+    title: 'IoT Security System (Edge AI & Arduino UNO R4)',
+    category: 'iot',
+    categoryLabel: {
+      en: 'IoT & Edge AI',
+      es: 'IoT & Edge AI',
+    },
+    year: '2026',
+    shortDescription: {
+      en: 'Autonomous IoT security appliance running on Arduino UNO R4 WiFi. Detects intruders locally using ultrasonic sensors and rule-based Edge AI logic, featuring an asynchronous real-time AJAX web dashboard, M2M connectivity, and CSV logging.',
+      es: 'Sistema de seguridad IoT con Edge AI en Arduino UNO R4 WiFi. Detecta intrusos en local mediante sensores ultrasónicos y lógica Edge AI, con dashboard web AJAX en tiempo real, conectividad M2M y registro CSV.',
+    },
+    longDescription: {
+      en: 'Hardware security system engineered in C++ on the Arduino UNO R4 WiFi microcontroller platform. Eliminates external cloud latency by performing edge inference locally through high-frequency ultrasonic distance sampling and rule-based decision trees. Embeds an asynchronous web server for live browser monitoring via AJAX, supports M2M device communication, and records forensic CSV logs.',
+      es: 'Sistema de seguridad física desarrollado en C++ sobre la plataforma de microcontroladores Arduino UNO R4 WiFi. Elimina la latencia y dependencia de la nube ejecutando inferencia en el borde (Edge AI) mediante muestreo ultrasónico de alta frecuencia y árboles de decisión. Aloja un servidor web embebido para monitorización en vivo por AJAX, conectividad M2M y registro forense en CSV.',
+    },
+    technologies: ['Arduino UNO R4 WiFi', 'C++ / Embedded', 'Edge AI', 'IoT', 'Ultrasonic Sensors', 'AJAX Web Dashboard', 'M2M Protocols', 'CSV Event Logging'],
+    visualType: 'iot-edge',
+    githubUrl: 'https://github.com/villanuevapablo/IoT-Edge-AI-Security-System',
+    liveDemoUrl: null,
+    isPlaceholderUrl: false,
+    status: {
+      en: 'Embedded Hardware & Edge AI (2026)',
+      es: 'Hardware Embebido & Edge AI (2026)',
+    },
+    features: {
+      en: [
+        'On-device Edge AI decision engine executing autonomously on Arduino UNO R4 WiFi hardware',
+        'Ultrasonic spatial sensing with distance thresholding and noise filtering',
+        'Embedded lightweight web server hosting an interactive real-time AJAX control dashboard',
+        'Machine-to-Machine (M2M) connectivity for automated alerting across local network nodes',
+        'Persistent CSV event logging for security auditing and timestamped intrusion tracking'
+      ],
+      es: [
+        'Motor de decisión Edge AI ejecutado de forma autónoma en el microcontrolador Arduino UNO R4 WiFi',
+        'Sensor ultrasónico espacial con filtrado de ruido y umbrales de detección de proximidad',
+        'Servidor web embebido ligero que sirve un panel de control interactivo por AJAX en tiempo real',
+        'Conectividad Machine-to-Machine (M2M) para propagación de alertas automáticas en red local',
+        'Registro persistente de eventos en formato CSV para auditoría de seguridad y marcas temporales'
+      ]
+    }
+  },
+  {
+    id: 'smart-file-organizer',
+    title: 'Smart File Organizer (Local AI Daemon)',
+    category: 'ai-ml',
+    categoryLabel: {
+      en: 'AI Automation & Local LLMs',
+      es: 'Automatización IA & LLMs Locales',
+    },
+    year: '2026',
+    shortDescription: {
+      en: 'Autonomous background daemon and desktop application for real-time filesystem monitoring, semantic categorization, and standardized renaming using local LLMs (Ollama) with enforced JSON schemas.',
+      es: 'Demonio autónomo en segundo plano y aplicación de escritorio para monitorización del sistema de archivos en tiempo real y clasificación semántica mediante LLMs locales (Ollama) con esquemas JSON estrictos.',
+    },
+    longDescription: {
+      en: 'Autonomous system automation tool engineered in Python that intercepts filesystem events via watchdog. Validates file-lock stability to avoid reading in-flight downloads, extracts multi-format content (text, PDF parsing via pypdf, binary metadata), and executes deterministic local LLM classification via Ollama REST API with strictly enforced JSON schemas. Includes both a headless daemon and an interactive Tkinter desktop GUI.',
+      es: 'Herramienta de automatización de sistema desarrollada en Python que intercepta eventos del sistema de archivos mediante watchdog. Valida el bloqueo de archivos para evitar lecturas de descargas en curso, extrae contenido en múltiples formatos (texto, PDFs con pypdf, metadatos) y ejecuta inferencia local con LLMs mediante Ollama con esquemas JSON estructurados. Incluye demonio en segundo plano e interfaz gráfica en Tkinter.',
+    },
+    technologies: ['Python', 'Local LLMs', 'Ollama API', 'watchdog', 'pypdf', 'JSON Schema', 'Tkinter GUI', 'Automation Daemon'],
+    visualType: 'smart-organizer',
+    githubUrl: 'https://github.com/villanuevapablo/smart-file-organizer',
+    liveDemoUrl: null,
+    isPlaceholderUrl: false,
+    status: {
+      en: 'Automation Daemon & Desktop App (2026)',
+      es: 'Demonio de Automatización & App (2026)',
+    },
+    features: {
+      en: [
+        'Real-time folder monitoring intercepting filesystem creation and move events via watchdog',
+        'File stability and lock verification preventing premature reads of in-flight downloads or large copies',
+        'Multi-format content extraction: text streams, PDF multi-page parsing with pypdf, and binary metadata analysis',
+        'Deterministic local AI classification via Ollama REST API with strictly enforced JSON schemas',
+        'Dual execution mode: background Windows/Linux service and modern desktop GUI'
+      ],
+      es: [
+        'Monitorización de carpetas en tiempo real interceptando eventos de creación y movimiento con watchdog',
+        'Verificación de estabilidad y bloqueo de archivos para evitar lecturas de descargas en curso',
+        'Extracción multiformato: texto, análisis multipágina de PDFs con pypdf y metadatos binarios',
+        'Clasificación determinista con IA local mediante Ollama y validación de esquemas JSON estrictos',
+        'Modo de ejecución dual: servicio en segundo plano (Windows/Linux) e interfaz gráfica de escritorio'
+      ]
+    }
+  },
+  {
     id: 'secure-record-management-system',
-    title: 'Secure Record Management System (SRMS)',
+    title: 'Secure Record Management System (SRMS-MEDICAL)',
     category: 'security',
     categoryLabel: {
       en: 'Web Security & Go Backend',
@@ -326,7 +414,7 @@ export const PROJECTS: ProjectItem[] = [
     },
     technologies: ['Go (Golang)', 'net/http', 'SQLite', 'Web Security', 'OWASP Top 10', 'RBAC', 'bcrypt', 'CSRF Protection', 'Rate Limiting'],
     visualType: 'srms-security',
-    githubUrl: 'https://github.com/villanuevapablo/secure-record-management-system',
+    githubUrl: 'https://github.com/villanuevapablo/SRMS-MEDICAL',
     liveDemoUrl: null,
     isPlaceholderUrl: false,
     status: {
@@ -351,49 +439,6 @@ export const PROJECTS: ProjectItem[] = [
     }
   },
   {
-    id: 'smart-file-organizer',
-    title: 'Smart File Organizer (Local AI Daemon)',
-    category: 'ai-ml',
-    categoryLabel: {
-      en: 'Local AI & System Daemon',
-      es: 'IA Local & Demonio de Sistema',
-    },
-    year: '2026',
-    shortDescription: {
-      en: 'Autonomous background daemon and desktop application for real-time filesystem monitoring, semantic categorization, and standardized renaming using local LLMs (Ollama) with enforced JSON schemas.',
-      es: 'Demonio autónomo en segundo plano y aplicación de escritorio para monitorización del sistema de archivos en tiempo real y clasificación semántica mediante LLMs locales (Ollama) con esquemas JSON estrictos.',
-    },
-    longDescription: {
-      en: 'Autonomous system tool engineered in Python that intercepts filesystem events via watchdog. Validates file-lock stability, extracts content across multiple formats (text, PDF parsing via pypdf, metadata), and executes zero-cost local LLM inference via Ollama REST API with strictly enforced JSON schemas. Includes both a headless daemon and an interactive Tkinter desktop GUI.',
-      es: 'Herramienta de sistema autónoma desarrollada en Python que intercepta eventos del sistema de archivos mediante watchdog. Valida el bloqueo de archivos para evitar lecturas prematuras, extrae contenido en múltiples formatos (texto, PDFs con pypdf, metadatos) y ejecuta inferencia local con LLMs mediante Ollama con esquemas JSON estructurados. Incluye demonio en segundo plano e interfaz gráfica en Tkinter.',
-    },
-    technologies: ['Python', 'Local LLMs', 'Ollama API', 'watchdog', 'pypdf', 'JSON Schema', 'Tkinter GUI', 'File System Daemon'],
-    visualType: 'smart-organizer',
-    githubUrl: 'https://github.com/villanuevapablo/smart-file-organizer',
-    liveDemoUrl: null,
-    isPlaceholderUrl: false,
-    status: {
-      en: 'Production Daemon & Desktop App (2026)',
-      es: 'Demonio y App de Escritorio (2026)',
-    },
-    features: {
-      en: [
-        'Real-time folder monitoring intercepting filesystem creation and move events via watchdog',
-        'File stability and lock verification preventing premature reads of in-flight downloads or large copies',
-        'Multi-format content extraction: text streams, PDF multi-page parsing with pypdf, and binary metadata analysis',
-        'Deterministic local AI classification via Ollama REST API with strictly enforced JSON schemas',
-        'Dual execution mode: background Windows/Linux service and modern desktop GUI'
-      ],
-      es: [
-        'Monitorización de carpetas en tiempo real interceptando eventos de creación y movimiento con watchdog',
-        'Verificación de estabilidad y bloqueo de archivos para evitar lecturas de descargas en curso',
-        'Extracción multiformato: texto, análisis multipágina de PDFs con pypdf y metadatos binarios',
-        'Clasificación determinista con IA local mediante Ollama y validación de esquemas JSON estrictos',
-        'Modo de ejecución dual: servicio en segundo plano (Windows/Linux) e interfaz gráfica de escritorio'
-      ]
-    }
-  },
-  {
     id: 'preflop-hero',
     title: 'Preflop Hero: Hand History Parser & Strategy Auditor',
     category: 'data',
@@ -412,7 +457,7 @@ export const PROJECTS: ProjectItem[] = [
     },
     technologies: ['Python', 'SQLite', 'Data Analytics', 'Regex Parsing', 'GTO Benchmarks', 'Web Dashboard', 'Statistical Modeling'],
     visualType: 'preflop-hero',
-    githubUrl: 'https://github.com/villanuevapablo/poker-analyzer',
+    githubUrl: 'https://github.com/villanuevapablo/preflop-hero',
     liveDemoUrl: null,
     isPlaceholderUrl: false,
     status: {
@@ -447,52 +492,50 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
     },
     icon: 'Code2',
     skills: [
-      { name: 'Go (Golang)', levelHint: { en: 'Backend, Net/HTTP, Concurrency', es: 'Backend, Net/HTTP, Concurrencia' }, featured: true },
+      { name: 'Python', levelHint: { en: 'ML, Data Analytics, Ollama & Daemons', es: 'ML, Analítica, Ollama y Demonios' }, featured: true },
+      { name: 'Go (Golang)', levelHint: { en: 'Backend, Net/HTTP, Microservices', es: 'Backend, Net/HTTP, Microservicios' }, featured: true },
       { name: 'Java', levelHint: { en: 'Core OOP, Enterprise, JDBC', es: 'POO, Entornos empresariales, JDBC' }, featured: true },
-      { name: 'Python', levelHint: { en: 'Machine Learning, Edge AI, Ollama, Daemons', es: 'Machine Learning, Edge AI, Ollama, Demonios' }, featured: true },
-      { name: 'JavaScript', levelHint: { en: 'Modern ES6+, Web Services', es: 'ES6+ moderno, Servicios Web' }, featured: true },
-      { name: 'TypeScript', levelHint: { en: 'Type-Safe Applications', es: 'Desarrollo tipado escalable' }, featured: true },
-      { name: 'Spring Boot', levelHint: { en: 'Java Microservices & APIs', es: 'Microservicios y APIs en Java' }, featured: true },
-      { name: 'React', levelHint: { en: 'SPA, Hooks, State Systems', es: 'SPA, Hooks, Gestión de estado' }, featured: true },
+      { name: 'TypeScript / JavaScript', levelHint: { en: 'Type-Safe Full-Stack & React', es: 'Full-Stack tipado y React' }, featured: true },
+      { name: 'C++ / Embedded', levelHint: { en: 'Arduino, Edge AI & IoT Hardware', es: 'Arduino, Edge AI y Hardware IoT' }, featured: true },
+      { name: 'Spring Boot', levelHint: { en: 'Java Microservices & REST APIs', es: 'Microservicios y APIs en Java' }, featured: true },
+      { name: 'React', levelHint: { en: 'SPA, Hooks, State Architecture', es: 'SPA, Hooks, Arquitectura de estado' }, featured: true },
       { name: 'Angular', levelHint: { en: 'Enterprise Frontend Architecture', es: 'Arquitectura frontend empresarial' } },
       { name: 'Svelte', levelHint: { en: 'Reactive Modern Interfaces', es: 'Interfaces reactivas modernas' } },
     ]
   },
   {
-    id: 'security-specialties',
+    id: 'ai-automation-data',
     title: {
-      en: 'Web Security & IT Specialties',
-      es: 'Seguridad Web y Especialidades IT',
+      en: 'AI, Automation & Data Analytics',
+      es: 'IA, Automatización y Analítica de Datos',
     },
-    icon: 'Shield',
+    icon: 'Brain',
     skills: [
-      { name: 'Web Security (OWASP Top 10)', levelHint: { en: 'SQLi, XSS, CSRF Mitigation', es: 'Mitigación de SQLi, XSS, CSRF' }, featured: true },
-      { name: 'RBAC (Role-Based Access Control)', levelHint: { en: 'Granular Privilege Separation', es: 'Separación granular de privilegios' }, featured: true },
-      { name: 'Cryptographic Hashing (bcrypt)', levelHint: { en: 'Credential Protection & Salt', es: 'Protección de credenciales y salting' }, featured: true },
-      { name: 'IP Rate Limiting & Account Lockout', levelHint: { en: 'Brute-Force & Abuse Defense', es: 'Defensa frente a fuerza bruta' }, featured: true },
-      { name: 'REST APIs Design & Integration', levelHint: { en: 'Secure Data Transfer', es: 'Transferencia segura de datos' }, featured: true },
-      { name: 'Software Testing (Unit & Integration)', levelHint: { en: 'Defect Reduction in Production', es: 'Reducción de fallos en producción' }, featured: true },
-      { name: 'Full-Stack Architecture', levelHint: { en: 'Scalable System Engineering', es: 'Ingeniería de sistemas escalables' }, featured: true },
-      { name: 'Edge AI & Local LLMs', levelHint: { en: 'Ollama REST, Low Latency Inference', es: 'Ollama REST, Inferencia de baja latencia' }, featured: true },
-      { name: 'Machine Learning & Scikit-learn', levelHint: { en: 'Predictive Modeling & Regressors', es: 'Modelos predictivos y regresores' }, featured: true },
-      { name: 'Linux', levelHint: { en: 'Environment & Command Line', es: 'Entorno de sistemas y CLI' } },
-      { name: 'Git & GitHub', levelHint: { en: 'Version Control & Agile Flow', es: 'Control de versiones y flujo ágil' }, featured: true },
+      { name: 'Local LLMs & Ollama API', levelHint: { en: 'Zero-Cost Local Ingestion & Schemas', es: 'Ingesta local con esquemas JSON' }, featured: true },
+      { name: 'Edge AI & Microcontroller Inference', levelHint: { en: 'On-Device Low Latency Systems', es: 'Sistemas en el borde de baja latencia' }, featured: true },
+      { name: 'Autonomous System Daemons', levelHint: { en: 'watchdog Real-Time FS Monitoring', es: 'Monitorización en tiempo real con watchdog' }, featured: true },
+      { name: 'Machine Learning (Scikit-learn)', levelHint: { en: 'Time-Series Regression & Validation', es: 'Regresión temporal y validación cruzada' }, featured: true },
+      { name: 'Data Analytics & Feature Engineering', levelHint: { en: 'Pandas, NumPy & Mathematical Stats', es: 'Pandas, NumPy y estadística matemática' }, featured: true },
+      { name: 'ETL Pipelines & Automated Extraction', levelHint: { en: 'pypdf, Text Streams & Regex Parsers', es: 'pypdf, flujos de texto y parsers regex' }, featured: true },
+      { name: 'Web Security (OWASP Top 10)', levelHint: { en: 'SQLi, XSS, CSRF, RBAC & bcrypt', es: 'Mitigación de SQLi, XSS, CSRF, RBAC y bcrypt' }, featured: true },
+      { name: 'Software Testing & Quality Assurance', levelHint: { en: 'Unit & Integration Testing', es: 'Testing unitario e integración' }, featured: true },
+      { name: 'Git & Linux CLI', levelHint: { en: 'Version Control, Daemons & Tooling', es: 'Control de versiones, demonios y CLI' }, featured: true },
     ]
   },
   {
     id: 'databases-cloud',
     title: {
-      en: 'Databases & Cloud',
-      es: 'Bases de Datos y Cloud',
+      en: 'Databases, Cloud & IoT',
+      es: 'Bases de Datos, Cloud e IoT',
     },
     icon: 'Database',
     skills: [
       { name: 'SQLite', levelHint: { en: 'Embedded Lightweight RDBMS', es: 'SGBD relacional ligero embebido' }, featured: true },
-      { name: 'JDBC', levelHint: { en: 'Java Database Connectivity', es: 'Conectividad de datos en Java' }, featured: true },
-      { name: 'Firebase', levelHint: { en: 'Cloud NoSQL & Services', es: 'NoSQL en la nube y servicios' }, featured: true },
-      { name: 'Cloud Computing & Deployment', levelHint: { en: 'Hosting, Compute & Scaling', es: 'Despliegue y computación en la nube' }, featured: true },
-      { name: 'MySQL', levelHint: { en: 'Relational Database Schema', es: 'Esquema relacional de bases de datos' } },
-      { name: 'PostgreSQL', levelHint: { en: 'ACID Relational Engine', es: 'Motor relacional ACID' } },
+      { name: 'IoT & M2M Protocols', levelHint: { en: 'Sensors, AJAX Web Servers & Hardware', es: 'Sensores, servidores AJAX y hardware' }, featured: true },
+      { name: 'JDBC & Relational Schemas', levelHint: { en: 'Java Database Connectivity & ACID', es: 'Conectividad de datos y esquemas ACID' }, featured: true },
+      { name: 'Firebase', levelHint: { en: 'Cloud NoSQL, Auth & Realtime', es: 'NoSQL en la nube, Auth y Realtime' }, featured: true },
+      { name: 'Cloud Deployment & Hosting', levelHint: { en: 'Vercel, CI/CD & Cloud Compute', es: 'Vercel, CI/CD y computación cloud' }, featured: true },
+      { name: 'MySQL & PostgreSQL', levelHint: { en: 'Relational Database Engines', es: 'Motores de bases de datos relacionales' } },
     ]
   }
 ];
@@ -536,19 +579,20 @@ export const UI_TRANSLATIONS = {
   },
   projects: {
     title: { en: 'Featured Projects', es: 'Proyectos Destacados' },
-    subtitle: { en: 'Real software implementations across Edge AI, Local LLMs, Web Security (OWASP) and Data Analytics', es: 'Proyectos reales en Edge AI, LLMs locales, Seguridad Web (OWASP) y Analítica de Datos' },
+    subtitle: { en: 'Production codebases across Edge AI, Local LLMs, IoT Hardware, Web Security (OWASP) and Data Analytics', es: 'Proyectos reales en Edge AI, LLMs locales, Hardware IoT, Ciberseguridad (OWASP) y Analítica de Datos' },
     filterAll: { en: 'All Projects', es: 'Todos los Proyectos' },
-    filterAi: { en: 'AI & Machine Learning', es: 'IA & Machine Learning' },
+    filterAi: { en: 'AI & Automation', es: 'IA & Automatización' },
+    filterIot: { en: 'IoT & Hardware', es: 'IoT & Hardware' },
     filterSecurity: { en: 'Web Security & Go', es: 'Seguridad Web & Go' },
     filterData: { en: 'Data Analytics & SQLite', es: 'Analítica & SQLite' },
     viewDetails: { en: 'Inspect Architecture', es: 'Ver Detalles' },
     codeRepository: { en: 'View Repository', es: 'Ver Repositorio' },
     liveDemo: { en: 'Live Demo', es: 'Demostración' },
-    placeholderBadge: { en: 'Verified Codebases & Academic Research', es: 'Proyectos Reales Verificados' },
+    placeholderBadge: { en: '5 Verified Production Repositories on GitHub', es: '5 Repositorios Reales Verificados en GitHub' },
   },
   skills: {
     title: { en: 'Technical Skills', es: 'Competencias Técnicas' },
-    subtitle: { en: 'Languages, frameworks, databases, cloud, and security competencies from verified CV', es: 'Lenguajes, frameworks, bases de datos, cloud y seguridad contrastados en CV' },
+    subtitle: { en: 'Languages, frameworks, AI automation, databases, cloud, and security competencies', es: 'Lenguajes, frameworks, automatización con IA, bases de datos, cloud y seguridad' },
     allTab: { en: 'All Technologies', es: 'Todas las Competencias' },
     clarificationNote: { en: 'Verified competencies from official curriculum vitae. No arbitrary percentage bars.', es: 'Competencias técnicas verificadas según currículum oficial. Sin porcentajes arbitrarios.' },
   },

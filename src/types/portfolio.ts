@@ -54,7 +54,7 @@ export interface EducationItem {
   statusBadge?: Record<Language, string>;
 }
 
-export type ProjectCategory = 'all' | 'ai-ml' | 'security' | 'data';
+export type ProjectCategory = 'all' | 'ai-ml' | 'security' | 'data' | 'iot';
 
 export interface ProjectItem {
   id: string;
@@ -66,7 +66,7 @@ export interface ProjectItem {
   shortDescription: Record<Language, string>;
   longDescription: Record<Language, string>;
   technologies: string[];
-  visualType: 'btc-forecast' | 'srms-security' | 'smart-organizer' | 'preflop-hero' | 'fullstack-arch';
+  visualType: 'btc-forecast' | 'srms-security' | 'smart-organizer' | 'preflop-hero' | 'iot-edge' | 'fullstack-arch';
   githubUrl: string | null;
   liveDemoUrl: string | null;
   status: Record<Language, string>;

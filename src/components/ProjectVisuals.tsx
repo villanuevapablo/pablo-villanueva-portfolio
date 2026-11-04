@@ -8,11 +8,11 @@ import {
   Cpu, 
   Brain, 
   FolderSync, 
-  FileText, 
-  Sparkles,
   BarChart2,
   Database,
-  Search
+  Radio,
+  Wifi,
+  Waves
 } from 'lucide-react';
 
 export const BtcForecastVisual: React.FC = () => {
@@ -78,6 +78,70 @@ export const BtcForecastVisual: React.FC = () => {
         <div>
           <span className="text-slate-500 block">Dissertation</span>
           <span className="text-emerald-400 font-semibold">BSc (Hons) TFG</span>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const IotEdgeVisual: React.FC = () => {
+  return (
+    <div className="w-full h-48 bg-[#0B0F19] rounded-xl border border-slate-800/80 p-3.5 flex flex-col justify-between font-mono relative overflow-hidden select-none">
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b15_1px,transparent_1px),linear-gradient(to_bottom,#1e293b15_1px,transparent_1px)] bg-[size:16px_16px]" />
+
+      <div className="relative z-10 flex items-center justify-between border-b border-slate-800/60 pb-2">
+        <div className="flex items-center gap-2">
+          <Radio className="w-3.5 h-3.5 text-cyan-400 animate-pulse" />
+          <span className="text-[11px] font-semibold text-slate-200">IoT Security • Arduino UNO R4 WiFi</span>
+        </div>
+        <div className="flex items-center gap-1 text-[10px] text-emerald-400 bg-emerald-950/40 px-2 py-0.5 rounded border border-emerald-800/40">
+          <Wifi className="w-3 h-3" />
+          <span>Real-Time AJAX</span>
+        </div>
+      </div>
+
+      {/* Ultrasonic Sensing & Edge Inference simulation */}
+      <div className="relative z-10 grid grid-cols-3 gap-2 my-2">
+        <div className="p-2 rounded-lg bg-slate-900/90 border border-slate-800 text-center">
+          <div className="flex items-center justify-center gap-1 text-[10px] text-blue-400 font-bold mb-0.5">
+            <Waves className="w-3 h-3" />
+            <span>Ultrasonic</span>
+          </div>
+          <span className="text-[11px] text-white font-bold block">42 cm</span>
+          <span className="text-[9px] text-slate-400 block">Distance Scan</span>
+        </div>
+
+        <div className="p-2 rounded-lg bg-slate-900/90 border border-slate-800 text-center">
+          <div className="flex items-center justify-center gap-1 text-[10px] text-cyan-400 font-bold mb-0.5">
+            <Cpu className="w-3 h-3" />
+            <span>Edge AI</span>
+          </div>
+          <span className="text-[11px] text-emerald-400 font-bold block">Intrusion</span>
+          <span className="text-[9px] text-slate-400 block">On-Device Rule</span>
+        </div>
+
+        <div className="p-2 rounded-lg bg-slate-900/90 border border-slate-800 text-center">
+          <div className="flex items-center justify-center gap-1 text-[10px] text-emerald-400 font-bold mb-0.5">
+            <Database className="w-3 h-3" />
+            <span>M2M & CSV</span>
+          </div>
+          <span className="text-[11px] text-slate-200 font-bold block">Logged</span>
+          <span className="text-[9px] text-slate-400 block">Audit Stream</span>
+        </div>
+      </div>
+
+      <div className="relative z-10 grid grid-cols-3 gap-2 pt-2 border-t border-slate-800/60 text-[10px]">
+        <div>
+          <span className="text-slate-500 block">Hardware Platform</span>
+          <span className="text-slate-300 font-semibold">UNO R4 WiFi (C++)</span>
+        </div>
+        <div>
+          <span className="text-slate-500 block">Cloud Dependency</span>
+          <span className="text-emerald-400 font-semibold">Zero (On-Device)</span>
+        </div>
+        <div>
+          <span className="text-slate-500 block">UI Dashboard</span>
+          <span className="text-cyan-400 font-semibold">Embedded AJAX</span>
         </div>
       </div>
     </div>
@@ -160,7 +224,6 @@ export const SmartOrganizerVisual: React.FC = () => {
         </div>
       </div>
 
-      {/* Visual Pipeline Flow */}
       <div className="relative z-10 flex items-center justify-between gap-1.5 my-2">
         <div className="flex-1 p-2 rounded-lg bg-slate-900/90 border border-slate-800 text-center">
           <span className="text-[9px] text-slate-500 uppercase block">Watchdog</span>
@@ -219,7 +282,6 @@ export const PreflopHeroVisual: React.FC = () => {
         </div>
       </div>
 
-      {/* KPI GTO Metrics Display */}
       <div className="relative z-10 grid grid-cols-3 gap-2 my-2">
         <div className="p-2 rounded-lg bg-slate-900/90 border border-slate-800 text-center">
           <span className="text-[9px] text-slate-500 uppercase block">VPIP Target</span>
