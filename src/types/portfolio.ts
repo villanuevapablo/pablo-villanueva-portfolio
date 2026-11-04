@@ -4,20 +4,29 @@ export interface SocialLinks {
   github: string;
   linkedin: string;
   email: string;
+  phone: string;
 }
 
 export interface PersonalInfo {
   name: string;
+  fullName: string;
   initials: string;
+  avatarUrl: string;
   title: Record<Language, string>;
   heroHeading: Record<Language, string>;
   heroSubheading: Record<Language, string>;
   heroIntro: Record<Language, string>;
   location: Record<Language, string>;
+  availability: Record<Language, string>;
   statusBadge: Record<Language, string>;
-  cvFilename: string;
+  cvFilename: {
+    en: string;
+    es: string;
+  };
+  professionalProfile: Record<Language, string>;
   aboutText: Record<Language, string[]>;
   quickHighlights: Record<Language, { label: string; value: string; description: string }[]>;
+  otherData: Record<Language, string[]>;
 }
 
 export interface ExperienceItem {
@@ -39,22 +48,25 @@ export interface EducationItem {
   period: string;
   location: Record<Language, string>;
   level: Record<Language, string>;
+  grade?: Record<Language, string>;
   description: Record<Language, string>;
   highlights: Record<Language, string[]>;
   statusBadge?: Record<Language, string>;
 }
 
-export type ProjectCategory = 'all' | 'ai-ml' | 'fullstack' | 'data';
+export type ProjectCategory = 'all' | 'ai-ml' | 'fullstack' | 'security' | 'data';
 
 export interface ProjectItem {
   id: string;
   title: string;
   category: ProjectCategory;
   categoryLabel: Record<Language, string>;
+  grade?: string;
+  year?: string;
   shortDescription: Record<Language, string>;
   longDescription: Record<Language, string>;
   technologies: string[];
-  visualType: 'btc-forecast' | 'fullstack-arch' | 'data-analytics';
+  visualType: 'btc-forecast' | 'srms-security' | 'fullstack-arch' | 'data-analytics';
   githubUrl: string | null;
   liveDemoUrl: string | null;
   status: Record<Language, string>;

@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FolderGit2, Github, ExternalLink, ArrowRight, Layers, Sparkles } from 'lucide-react';
+import { FolderGit2, Github, ExternalLink, ArrowRight, Sparkles, Award, ShieldCheck } from 'lucide-react';
 import { ProjectItem, ProjectCategory } from '../types/portfolio';
 import { PROJECTS, UI_TRANSLATIONS, SOCIAL_LINKS } from '../data/portfolioData';
 import { useLanguage } from '../context/LanguageContext';
 import { ProjectModal } from './ProjectModal';
-import { BtcForecastVisual, FullstackArchVisual, DataAnalyticsVisual } from './ProjectVisuals';
+import { BtcForecastVisual, SrmsSecurityVisual, FullstackArchVisual } from './ProjectVisuals';
 
 export const Projects: React.FC = () => {
   const { language } = useLanguage();
@@ -15,8 +15,8 @@ export const Projects: React.FC = () => {
   const categories: { id: ProjectCategory; label: string }[] = [
     { id: 'all', label: UI_TRANSLATIONS.projects.filterAll[language] },
     { id: 'ai-ml', label: UI_TRANSLATIONS.projects.filterAi[language] },
+    { id: 'security', label: UI_TRANSLATIONS.projects.filterSecurity[language] },
     { id: 'fullstack', label: UI_TRANSLATIONS.projects.filterFullstack[language] },
-    { id: 'data', label: UI_TRANSLATIONS.projects.filterData[language] },
   ];
 
   const filteredProjects = activeCategory === 'all'
@@ -27,12 +27,12 @@ export const Projects: React.FC = () => {
     switch (type) {
       case 'btc-forecast':
         return <BtcForecastVisual />;
+      case 'srms-security':
+        return <SrmsSecurityVisual />;
       case 'fullstack-arch':
-        return <FullstackArchVisual />;
       case 'data-analytics':
-        return <DataAnalyticsVisual />;
       default:
-        return null;
+        return <FullstackArchVisual />;
     }
   };
 
@@ -67,7 +67,7 @@ export const Projects: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.15 }}
-            className="text-slate-400 text-sm sm:text-base"
+            className="text-slate-400 text-sm sm:text-base leading-relaxed"
           >
             {UI_TRANSLATIONS.projects.subtitle[language]}
           </motion.p>
@@ -119,15 +119,25 @@ export const Projects: React.FC = () => {
                       <span className="text-[11px] font-mono uppercase tracking-wider text-cyan-400">
                         {project.categoryLabel[language]}
                       </span>
-                      <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-900 border border-slate-800 text-slate-400">
-                        {project.status[language]}
-                      </span>
+                      {project.grade && (
+                        <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-950/60 border border-emerald-800/60 text-emerald-300 font-bold flex items-center gap-1">
+                          <Award className="w-3 h-3 text-emerald-400" />
+                          <span>{project.grade}</span>
+                        </span>
+                      )}
                     </div>
 
                     {/* Title */}
                     <h3 className="text-xl font-bold text-white group-hover:text-blue-300 transition-colors mb-2">
                       {project.title}
                     </h3>
+
+                    {/* Academic Context if present */}
+                    {project.academicContext && (
+                      <span className="text-[11px] font-mono text-slate-400 block mb-3">
+                        {project.academicContext[language]}
+                      </span>
+                    )}
 
                     {/* Short Description */}
                     <p className="text-xs sm:text-sm text-slate-300/90 leading-relaxed mb-5 font-normal">
@@ -136,7 +146,7 @@ export const Projects: React.FC = () => {
 
                     {/* Tech Pills */}
                     <div className="flex flex-wrap gap-1.5 mb-6">
-                      {project.technologies.slice(0, 5).map((tech) => (
+                      {project.technologies.slice(0, 6).map((tech) => (
                         <span
                           key={tech}
                           className="px-2 py-0.5 rounded bg-[#111827] text-slate-300 border border-slate-800 text-[11px] font-mono"
@@ -144,11 +154,6 @@ export const Projects: React.FC = () => {
                           {tech}
                         </span>
                       ))}
-                      {project.technologies.length > 5 && (
-                        <span className="px-2 py-0.5 rounded bg-[#111827] text-slate-500 text-[11px] font-mono">
-                          +{project.technologies.length - 5}
-                        </span>
-                      )}
                     </div>
                   </div>
 
@@ -163,37 +168,15 @@ export const Projects: React.FC = () => {
                     </button>
 
                     <div className="flex items-center gap-2">
-                      {project.githubUrl ? (
-                        <a
-                          href={project.githubUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="p-2 text-slate-400 hover:text-white rounded-lg hover:bg-slate-800 transition-colors"
-                          title="View Repository"
-                        >
-                          <Github className="w-4 h-4" />
-                        </a>
-                      ) : (
-                        <button
-                          onClick={() => setSelectedProject(project)}
-                          className="p-2 text-slate-500 hover:text-slate-300 rounded-lg hover:bg-slate-800 transition-colors"
-                          title="Configurable Repository Link"
-                        >
-                          <Github className="w-4 h-4" />
-                        </button>
-                      )}
-
-                      {project.liveDemoUrl && (
-                        <a
-                          href={project.liveDemoUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="p-2 text-slate-400 hover:text-cyan-400 rounded-lg hover:bg-slate-800 transition-colors"
-                          title="Live Demo"
-                        >
-                          <ExternalLink className="w-4 h-4" />
-                        </a>
-                      )}
+                      <a
+                        href={SOCIAL_LINKS.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-2 text-slate-400 hover:text-white rounded-lg hover:bg-slate-800 transition-colors"
+                        title="GitHub Profile"
+                      >
+                        <Github className="w-4 h-4" />
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -201,17 +184,6 @@ export const Projects: React.FC = () => {
             ))}
           </AnimatePresence>
         </motion.div>
-
-        {/* Central Configuration Hint Box */}
-        <div className="mt-14 max-w-3xl mx-auto p-4 sm:p-5 rounded-2xl bg-[#0D1220]/70 border border-slate-800/80 text-center">
-          <div className="inline-flex items-center gap-2 text-xs font-mono text-cyan-400 mb-1.5">
-            <Sparkles className="w-3.5 h-3.5" />
-            <span>{UI_TRANSLATIONS.projects.placeholderBadge[language]}</span>
-          </div>
-          <p className="text-xs text-slate-400 leading-relaxed">
-            {UI_TRANSLATIONS.projects.placeholderNotice[language]}
-          </p>
-        </div>
       </div>
 
       {/* Project Deep Dive Modal */}

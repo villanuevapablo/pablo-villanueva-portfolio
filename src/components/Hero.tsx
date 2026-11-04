@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowDown, Github, Terminal, Sparkles, Send, FolderGit2, MapPin } from 'lucide-react';
+import { ArrowDown, Github, Terminal, Sparkles, Send, FolderGit2, MapPin, Award, FileDown } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { PERSONAL_INFO, SOCIAL_LINKS, UI_TRANSLATIONS } from '../data/portfolioData';
+import { CvModal } from './CvModal';
 
 export const Hero: React.FC = () => {
   const { language } = useLanguage();
+  const [isCvModalOpen, setIsCvModalOpen] = useState(false);
 
   const scrollToSection = (id: string) => {
     const el = document.getElementById(id);
@@ -22,36 +24,37 @@ export const Hero: React.FC = () => {
   };
 
   return (
-    <section id="home" className="relative min-h-[92vh] flex items-center justify-center pt-24 pb-16 overflow-hidden">
+    <section id="home" className="relative min-h-[92vh] flex items-center justify-center pt-28 pb-16 overflow-hidden">
       {/* Background Decorative Mesh & Radial Glow */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        {/* Subtle radial gradients */}
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[450px] bg-gradient-to-tr from-blue-600/15 via-cyan-500/10 to-transparent blur-[120px] rounded-full" />
         <div className="absolute top-1/3 right-10 w-[350px] h-[350px] bg-blue-500/10 blur-[100px] rounded-full" />
         <div className="absolute bottom-10 left-10 w-[400px] h-[400px] bg-cyan-600/10 blur-[120px] rounded-full" />
-        
-        {/* Subtle Engineering Grid */}
         <div className="absolute inset-0 bg-grid-pattern bg-[size:48px_48px] opacity-25 [mask-image:radial-gradient(ellipse_at_center,black_40%,transparent_75%)]" />
       </div>
 
       <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
-        {/* Status Pill Badge */}
+        {/* Status Pill Badge & Photo Avatar */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-[#111827]/80 border border-slate-800 text-xs text-slate-300 mb-8 shadow-inner shadow-black/40 hover:border-slate-700 transition-colors"
+          className="inline-flex items-center gap-3 px-3.5 py-1.5 rounded-full bg-[#111827]/80 border border-slate-800 text-xs text-slate-300 mb-6 shadow-inner shadow-black/40 hover:border-slate-700 transition-colors"
         >
+          {/* Real Photo Avatar */}
+          <div className="relative w-6 h-6 rounded-full overflow-hidden border border-blue-400/50">
+            <img 
+              src={PERSONAL_INFO.avatarUrl} 
+              alt={PERSONAL_INFO.fullName} 
+              className="w-full h-full object-cover object-top"
+            />
+          </div>
+
           <span className="relative flex h-2 w-2">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
             <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
           </span>
           <span className="font-medium">{PERSONAL_INFO.statusBadge[language]}</span>
-          <span className="text-slate-600">|</span>
-          <span className="text-slate-400 flex items-center gap-1">
-            <MapPin className="w-3 h-3 text-cyan-400" />
-            Spain
-          </span>
         </motion.div>
 
         {/* Identity & Subtitle Tag */}
@@ -63,9 +66,9 @@ export const Hero: React.FC = () => {
         >
           <h2 className="text-sm sm:text-base font-mono uppercase tracking-widest text-cyan-400 font-semibold mb-3 flex items-center justify-center gap-2">
             <Terminal className="w-4 h-4 text-blue-400 inline" />
-            {PERSONAL_INFO.name}
+            <span>{PERSONAL_INFO.fullName}</span>
             <span className="text-slate-600">•</span>
-            <span className="text-slate-400 font-normal">Software Engineer</span>
+            <span className="text-slate-300 font-normal">{PERSONAL_INFO.title[language]}</span>
           </h2>
         </motion.div>
 
@@ -81,7 +84,7 @@ export const Hero: React.FC = () => {
           Creating <span className="bg-clip-text text-transparent bg-gradient-to-r from-slate-100 via-blue-100 to-slate-300">impact</span>.
         </motion.h1>
 
-        {/* Supporting Heading & Intro */}
+        {/* Supporting Heading & Verified Profile */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -105,9 +108,9 @@ export const Hero: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.45 }}
-          className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 mb-16"
+          className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 mb-14"
         >
-          {/* Button 1: View my projects */}
+          {/* Button 1: View projects */}
           <button
             onClick={() => scrollToSection('projects')}
             className="group relative inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-medium text-sm transition-all duration-200 shadow-lg shadow-blue-600/25 hover:shadow-blue-500/35 hover:-translate-y-0.5"
@@ -116,24 +119,32 @@ export const Hero: React.FC = () => {
             <span>{UI_TRANSLATIONS.hero.viewProjects[language]}</span>
           </button>
 
-          {/* Button 2: Get in touch */}
+          {/* Button 2: Download CV */}
+          <button
+            onClick={() => setIsCvModalOpen(true)}
+            className="inline-flex items-center gap-2 px-5 py-3.5 rounded-xl bg-slate-900/90 hover:bg-slate-800 text-cyan-300 hover:text-white font-medium text-sm border border-cyan-500/30 hover:border-cyan-500/50 transition-all duration-200 hover:-translate-y-0.5 shadow-lg shadow-cyan-950/30"
+          >
+            <FileDown className="w-4 h-4 text-cyan-400" />
+            <span>{UI_TRANSLATIONS.hero.downloadCv[language]}</span>
+          </button>
+
+          {/* Button 3: Get in touch */}
           <button
             onClick={() => scrollToSection('contact')}
-            className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-[#111827] hover:bg-slate-800 text-slate-200 hover:text-white font-medium text-sm border border-slate-800 hover:border-slate-700 transition-all duration-200 hover:-translate-y-0.5"
+            className="inline-flex items-center gap-2 px-5 py-3.5 rounded-xl bg-[#111827] hover:bg-slate-800 text-slate-200 hover:text-white font-medium text-sm border border-slate-800 hover:border-slate-700 transition-all duration-200 hover:-translate-y-0.5"
           >
-            <Send className="w-4 h-4 text-cyan-400" />
+            <Send className="w-4 h-4 text-slate-400" />
             <span>{UI_TRANSLATIONS.hero.getInTouch[language]}</span>
           </button>
 
-          {/* Button 3: GitHub profile */}
+          {/* Button 4: GitHub profile */}
           <a
             href={SOCIAL_LINKS.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-5 py-3.5 rounded-xl bg-[#0D1220]/80 hover:bg-slate-900 text-slate-300 hover:text-white font-medium text-sm border border-slate-800/80 hover:border-slate-700 transition-all duration-200"
+            className="inline-flex items-center gap-2 px-4 py-3.5 rounded-xl bg-[#0D1220]/80 hover:bg-slate-900 text-slate-300 hover:text-white font-medium text-sm border border-slate-800/80 hover:border-slate-700 transition-all duration-200"
           >
             <Github className="w-4 h-4" />
-            <span>{UI_TRANSLATIONS.hero.githubProfile[language]}</span>
           </a>
         </motion.div>
 
@@ -149,35 +160,35 @@ export const Hero: React.FC = () => {
               <span className="w-2.5 h-2.5 rounded-full bg-red-500/80" />
               <span className="w-2.5 h-2.5 rounded-full bg-yellow-500/80" />
               <span className="w-2.5 h-2.5 rounded-full bg-green-500/80" />
-              <span className="text-xs font-mono text-slate-400 pl-2">engineer_stack.config</span>
+              <span className="text-xs font-mono text-slate-400 pl-2">pablo_villanueva_cv.config</span>
             </div>
-            <div className="flex items-center gap-1.5 text-[11px] font-mono text-cyan-400">
-              <Sparkles className="w-3 h-3" />
-              <span>Full Stack & AI Ready</span>
+            <div className="flex items-center gap-1.5 text-[11px] font-mono text-emerald-400 font-semibold">
+              <Award className="w-3.5 h-3.5" />
+              <span>{UI_TRANSLATIONS.hero.gradeBadge[language]}</span>
             </div>
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs font-mono">
             <div>
               <span className="text-slate-500 block mb-1">// Core Languages</span>
-              <span className="text-slate-200 font-semibold">Java • Python • JS/TS</span>
+              <span className="text-slate-200 font-semibold">Go • Java • Python • JS/TS</span>
             </div>
             <div>
-              <span className="text-slate-500 block mb-1">// Architecture</span>
-              <span className="text-slate-200 font-semibold">REST APIs • Clean Code</span>
+              <span className="text-slate-500 block mb-1">// Backend & Security</span>
+              <span className="text-slate-200 font-semibold">Spring Boot • OWASP • APIs</span>
             </div>
             <div>
-              <span className="text-slate-500 block mb-1">// AI & Data</span>
-              <span className="text-slate-200 font-semibold">ML Pipelines • Pandas</span>
+              <span className="text-slate-500 block mb-1">// Edge AI & ML</span>
+              <span className="text-slate-200 font-semibold">TFG 9.0/10 • Real-time</span>
             </div>
             <div>
-              <span className="text-slate-500 block mb-1">// Location</span>
-              <span className="text-slate-200 font-semibold">Spain • English / ES</span>
+              <span className="text-slate-500 block mb-1">// Availability</span>
+              <span className="text-emerald-400 font-semibold">Immediate • Madrid</span>
             </div>
           </div>
         </motion.div>
 
-        {/* Subtle scroll down indicator */}
+        {/* Scroll down indicator */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -196,6 +207,8 @@ export const Hero: React.FC = () => {
           </button>
         </motion.div>
       </div>
+
+      <CvModal isOpen={isCvModalOpen} onClose={() => setIsCvModalOpen(false)} />
     </section>
   );
 };

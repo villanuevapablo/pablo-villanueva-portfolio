@@ -38,7 +38,7 @@ export const Education: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.15 }}
-            className="text-slate-400 text-sm sm:text-base"
+            className="text-slate-400 text-sm sm:text-base leading-relaxed"
           >
             {UI_TRANSLATIONS.education.subtitle[language]}
           </motion.p>
@@ -55,19 +55,19 @@ export const Education: React.FC = () => {
               transition={{ duration: 0.6, delay: idx * 0.15 }}
               className="group relative p-7 sm:p-8 rounded-2xl bg-[#0D1220]/80 border border-slate-800/80 hover:border-blue-500/40 transition-all duration-300 shadow-xl shadow-black/20 flex flex-col justify-between hover:-translate-y-1 overflow-hidden"
             >
-              {/* Subtle accent border glow */}
               <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-blue-500 via-cyan-400 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
 
               <div>
                 {/* Degree Header & Badge */}
                 <div className="flex items-start justify-between gap-4 mb-4">
                   <div className="p-3 rounded-xl bg-blue-600/15 border border-blue-500/25 text-blue-400 group-hover:scale-110 transition-transform">
-                    {idx === 0 ? <GraduationCap className="w-6 h-6" /> : <Award className="w-6 h-6" />}
+                    {idx === 0 ? <Award className="w-6 h-6 text-emerald-400" /> : <GraduationCap className="w-6 h-6" />}
                   </div>
 
                   {item.statusBadge && (
-                    <span className="px-3 py-1 rounded-full bg-slate-900 border border-slate-700/70 text-[11px] font-mono text-cyan-300">
-                      {item.statusBadge[language]}
+                    <span className="px-3 py-1 rounded-full bg-slate-900 border border-emerald-500/30 text-[11px] font-mono text-emerald-300 font-semibold flex items-center gap-1.5">
+                      <Award className="w-3 h-3 text-emerald-400" />
+                      <span>{item.statusBadge[language]}</span>
                     </span>
                   )}
                 </div>
@@ -80,9 +80,15 @@ export const Education: React.FC = () => {
                   {item.degree[language]}
                 </h3>
 
-                <div className="text-base font-medium text-slate-200 mb-4">
+                <div className="text-base font-medium text-slate-200 mb-2">
                   {item.institution}
                 </div>
+
+                {item.grade && (
+                  <div className="text-xs font-mono text-emerald-400 font-semibold mb-3">
+                    {item.grade[language]}
+                  </div>
+                )}
 
                 {/* Period & Location Meta */}
                 <div className="flex flex-wrap items-center gap-y-2 gap-x-4 text-xs font-mono text-slate-400 pb-5 mb-5 border-b border-slate-800/80">

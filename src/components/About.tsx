@@ -1,8 +1,21 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FileDown, GraduationCap, Code2, Brain, Compass, Sparkles, CheckCircle2 } from 'lucide-react';
+import { 
+  FileDown, 
+  GraduationCap, 
+  Code2, 
+  ShieldCheck, 
+  Compass, 
+  Sparkles, 
+  CheckCircle2, 
+  Award, 
+  Mail, 
+  Phone, 
+  MapPin, 
+  Clock 
+} from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
-import { PERSONAL_INFO, UI_TRANSLATIONS } from '../data/portfolioData';
+import { PERSONAL_INFO, SOCIAL_LINKS, UI_TRANSLATIONS } from '../data/portfolioData';
 import { CvModal } from './CvModal';
 
 export const About: React.FC = () => {
@@ -42,7 +55,7 @@ export const About: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.15 }}
-            className="text-slate-400 text-sm sm:text-base"
+            className="text-slate-400 text-sm sm:text-base leading-relaxed"
           >
             {UI_TRANSLATIONS.about.subtitle[language]}
           </motion.p>
@@ -50,7 +63,7 @@ export const About: React.FC = () => {
 
         {/* Content Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          {/* Main Narrative Card */}
+          {/* Main Narrative & Verified Profile Card */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -58,15 +71,20 @@ export const About: React.FC = () => {
             transition={{ duration: 0.6 }}
             className="lg:col-span-7 bg-[#0D1220]/80 rounded-2xl border border-slate-800/80 p-6 sm:p-8 backdrop-blur-sm relative overflow-hidden shadow-xl"
           >
-            {/* Top accent line */}
             <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-blue-500 via-cyan-400 to-transparent" />
 
-            <div className="flex items-center gap-2 text-xs font-mono text-cyan-400 mb-6">
-              <Sparkles className="w-4 h-4 text-blue-400" />
-              <span>professional_profile.md</span>
+            <div className="flex items-center justify-between gap-2 text-xs font-mono text-cyan-400 mb-6">
+              <div className="flex items-center gap-2">
+                <Sparkles className="w-4 h-4 text-blue-400" />
+                <span>professional_profile.md</span>
+              </div>
+              <span className="text-emerald-400 font-semibold flex items-center gap-1">
+                <Award className="w-3.5 h-3.5" />
+                <span>Class I Honours (9/10)</span>
+              </span>
             </div>
 
-            {/* Paragraphs */}
+            {/* Paragraphs from Official CV */}
             <div className="space-y-4 text-slate-300 leading-relaxed text-sm sm:text-base font-normal">
               {PERSONAL_INFO.aboutText[language].map((paragraph, idx) => (
                 <p key={idx} className="text-slate-300/90">
@@ -75,37 +93,52 @@ export const About: React.FC = () => {
               ))}
             </div>
 
-            {/* Core Values / Engineering Mindset */}
+            {/* Core Values & Specialties */}
             <div className="mt-8 pt-6 border-t border-slate-800/80">
               <h4 className="text-xs font-mono uppercase tracking-wider text-slate-400 mb-4">
-                // {language === 'en' ? 'Core Engineering Principles' : 'Principios de Ingeniería'}
+                // {language === 'en' ? 'Core Engineering Competencies' : 'Competencias Principales de Ingeniería'}
               </h4>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <div className="flex items-start gap-2.5 p-3 rounded-xl bg-[#111827]/60 border border-slate-800/60">
                   <CheckCircle2 className="w-4 h-4 text-cyan-400 shrink-0 mt-0.5" />
                   <span className="text-xs text-slate-300">
-                    {language === 'en' ? 'Clean code, modularity and maintainable design' : 'Código limpio, modularidad y diseño mantenible'}
+                    {language === 'en' ? 'Clean code, data architecture & agile methodologies' : 'Código limpio, arquitectura de datos y metodologías ágiles'}
                   </span>
                 </div>
                 <div className="flex items-start gap-2.5 p-3 rounded-xl bg-[#111827]/60 border border-slate-800/60">
                   <CheckCircle2 className="w-4 h-4 text-cyan-400 shrink-0 mt-0.5" />
                   <span className="text-xs text-slate-300">
-                    {language === 'en' ? 'Evidence-based problem solving & continuous learning' : 'Resolución analítica de problemas y aprendizaje continuo'}
+                    {language === 'en' ? 'Web Security: OWASP Top 10, RBAC, CSRF & bcrypt' : 'Seguridad Web: OWASP Top 10, RBAC, CSRF y bcrypt'}
                   </span>
                 </div>
                 <div className="flex items-start gap-2.5 p-3 rounded-xl bg-[#111827]/60 border border-slate-800/60">
                   <CheckCircle2 className="w-4 h-4 text-cyan-400 shrink-0 mt-0.5" />
                   <span className="text-xs text-slate-300">
-                    {language === 'en' ? 'Data-informed intelligence & machine learning' : 'Inteligencia guiada por datos y machine learning'}
+                    {language === 'en' ? 'Edge AI architectures & decentralized ML processing' : 'Arquitecturas Edge AI y procesamiento descentralizado en tiempo real'}
                   </span>
                 </div>
                 <div className="flex items-start gap-2.5 p-3 rounded-xl bg-[#111827]/60 border border-slate-800/60">
                   <CheckCircle2 className="w-4 h-4 text-cyan-400 shrink-0 mt-0.5" />
                   <span className="text-xs text-slate-300">
-                    {language === 'en' ? 'Collaboration, agility and systematic debugging' : 'Colaboración, agilidad y depuración sistemática'}
+                    {language === 'en' ? 'REST API creation, integration & systematic testing' : 'Creación de APIs REST, integración y testing sistemático'}
                   </span>
                 </div>
               </div>
+            </div>
+
+            {/* Other Verified Data */}
+            <div className="mt-6 pt-6 border-t border-slate-800/80">
+              <h4 className="text-xs font-mono uppercase tracking-wider text-slate-400 mb-3">
+                // {UI_TRANSLATIONS.about.otherDetailsTitle[language]}
+              </h4>
+              <ul className="space-y-2 text-xs text-slate-300">
+                {PERSONAL_INFO.otherData[language].map((item, oIdx) => (
+                  <li key={oIdx} className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
 
             {/* Download CV CTA */}
@@ -123,12 +156,12 @@ export const About: React.FC = () => {
                 className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-blue-600/20 hover:bg-blue-600/30 text-blue-300 hover:text-white border border-blue-500/30 hover:border-blue-500/50 text-xs font-medium transition-all"
               >
                 <FileDown className="w-4 h-4" />
-                <span>{UI_TRANSLATIONS.about.downloadCv[language]} (PDF)</span>
+                <span>{UI_TRANSLATIONS.about.downloadCv[language]}</span>
               </button>
             </div>
           </motion.div>
 
-          {/* Quick Stats & Highlight Cards */}
+          {/* Right Column: Profile Card with Photo & Quick Stats */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -136,6 +169,56 @@ export const About: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.15 }}
             className="lg:col-span-5 flex flex-col gap-4"
           >
+            {/* Identity Card with Photo */}
+            <div className="p-6 rounded-2xl bg-[#0D1220]/90 border border-slate-800/90 shadow-xl shadow-black/30">
+              <div className="flex items-center gap-4 mb-5">
+                <div className="relative w-16 h-16 rounded-2xl overflow-hidden border-2 border-blue-500/40 shadow-lg shadow-blue-500/20 shrink-0">
+                  <img
+                    src={PERSONAL_INFO.avatarUrl}
+                    alt={PERSONAL_INFO.fullName}
+                    className="w-full h-full object-cover object-top"
+                  />
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold text-white">
+                    {PERSONAL_INFO.fullName}
+                  </h3>
+                  <p className="text-xs font-mono text-cyan-400">
+                    {PERSONAL_INFO.title[language]}
+                  </p>
+                  <div className="flex items-center gap-1.5 mt-1 text-[11px] text-emerald-400 font-mono">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                    <span>{PERSONAL_INFO.statusBadge[language]}</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Direct Info Items */}
+              <div className="space-y-2 pt-3 border-t border-slate-800 text-xs font-mono">
+                <div className="flex items-center gap-2.5 text-slate-300">
+                  <MapPin className="w-3.5 h-3.5 text-cyan-400 shrink-0" />
+                  <span>{PERSONAL_INFO.location[language]}</span>
+                </div>
+                <div className="flex items-center gap-2.5 text-slate-300">
+                  <Mail className="w-3.5 h-3.5 text-blue-400 shrink-0" />
+                  <a href={`mailto:${SOCIAL_LINKS.email}`} className="hover:text-white transition-colors">
+                    {SOCIAL_LINKS.email}
+                  </a>
+                </div>
+                <div className="flex items-center gap-2.5 text-slate-300">
+                  <Phone className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                  <a href={`tel:${SOCIAL_LINKS.phone}`} className="hover:text-white transition-colors">
+                    {SOCIAL_LINKS.phone}
+                  </a>
+                </div>
+                <div className="flex items-center gap-2.5 text-slate-300">
+                  <Clock className="w-3.5 h-3.5 text-indigo-400 shrink-0" />
+                  <span>{PERSONAL_INFO.availability[language]}</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Highlights Grid */}
             {highlights.map((item, idx) => (
               <div
                 key={idx}
@@ -145,10 +228,10 @@ export const About: React.FC = () => {
                   <span className="text-[11px] font-mono uppercase tracking-wider text-cyan-400">
                     {item.label}
                   </span>
-                  {idx === 0 && <GraduationCap className="w-4 h-4 text-blue-400" />}
-                  {idx === 1 && <Code2 className="w-4 h-4 text-cyan-400" />}
-                  {idx === 2 && <Brain className="w-4 h-4 text-indigo-400" />}
-                  {idx === 3 && <Compass className="w-4 h-4 text-emerald-400" />}
+                  {idx === 0 && <Award className="w-4 h-4 text-emerald-400" />}
+                  {idx === 1 && <GraduationCap className="w-4 h-4 text-blue-400" />}
+                  {idx === 2 && <ShieldCheck className="w-4 h-4 text-cyan-400" />}
+                  {idx === 3 && <Compass className="w-4 h-4 text-indigo-400" />}
                 </div>
                 <div className="text-lg font-bold text-white group-hover:text-blue-300 transition-colors mb-1">
                   {item.value}
@@ -158,29 +241,10 @@ export const About: React.FC = () => {
                 </p>
               </div>
             ))}
-
-            {/* Quick Contact Prompt Pill */}
-            <div className="p-5 rounded-2xl bg-gradient-to-br from-blue-950/40 via-[#0D1220] to-cyan-950/30 border border-blue-900/40 text-xs text-slate-300">
-              <span className="font-semibold text-white block mb-1">
-                {language === 'en' ? 'Ready to contribute' : 'Listo para aportar'}
-              </span>
-              <p className="text-slate-400 mb-3 text-[11px] leading-relaxed">
-                {language === 'en'
-                  ? 'Actively seeking software development, backend, or applied AI roles where technical curiosity meets high software engineering standards.'
-                  : 'Buscando activamente oportunidades en desarrollo de software, backend o IA aplicada donde el rigor técnico impulse proyectos reales.'}
-              </p>
-              <a
-                href="#contact"
-                className="text-cyan-400 hover:text-cyan-300 font-mono text-[11px] font-semibold underline underline-offset-4"
-              >
-                {language === 'en' ? 'Get in touch directly →' : 'Contactar directamente →'}
-              </a>
-            </div>
           </motion.div>
         </div>
       </div>
 
-      {/* CV Placeholder Modal */}
       <CvModal isOpen={isCvModalOpen} onClose={() => setIsCvModalOpen(false)} />
     </section>
   );

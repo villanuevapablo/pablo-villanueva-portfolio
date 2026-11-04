@@ -2,110 +2,135 @@ import { PersonalInfo, ExperienceItem, EducationItem, ProjectItem, SkillCategory
 
 /**
  * ============================================================================
- * CENTRAL PORTFOLIO CONFIGURATION - PABLO VILLANUEVA
+ * VERIFIED RESUME DATA - PABLO VILLANUEVA PICAZO
  * ============================================================================
  * 
- * Edit this file to update any content on your personal website:
- * - Personal information, titles, and social links
- * - Professional experience and education
- * - Projects, technologies, and repositories
- * - Technical skills and categories
- * 
- * All text supports both English ('en') and Spanish ('es').
+ * Synchronized with official English & Spanish CV documents:
+ * - Software Engineer — Full-Stack Developer
+ * - First-Class Honours (Class I) - York St John University (9/10)
+ * - Instituto de Formación Profesional Nebrija (DAM)
+ * - Universidad Nebrija (Development Technician)
+ * - Real projects: TFG Bitcoin Prediction (9.0/10) & Secure Record Management (SRMS in Go)
  */
 
 export const SOCIAL_LINKS: SocialLinks = {
   github: 'https://github.com/villanuevapablo',
   linkedin: 'https://www.linkedin.com/in/pablovillanuevapicazo/',
-  // [PLACEHOLDER]: Replace with your official professional email
-  email: 'pablo.villanueva.dev@example.com',
+  email: 'pablovillanueva48@gmail.com',
+  phone: '+34 684262439',
 };
 
 export const PERSONAL_INFO: PersonalInfo = {
   name: 'Pablo Villanueva',
+  fullName: 'Pablo Villanueva Picazo',
   initials: 'PV',
+  avatarUrl: '/pablo-portrait.jpg',
   title: {
-    en: 'Software Engineer | Full Stack Developer | AI & Data Enthusiast',
-    es: 'Ingeniero de Software | Desarrollador Full Stack | Entusiasta de IA y Datos',
+    en: 'Software Engineer — Full-Stack Developer',
+    es: 'Ingeniero de Software — Desarrollador Full-Stack',
   },
   heroHeading: {
     en: 'Building software.\nExploring intelligence.\nCreating impact.',
     es: 'Construyendo software.\nExplorando inteligencia.\nCreando impacto.',
   },
   heroSubheading: {
-    en: 'Software Engineer passionate about building digital products and exploring the possibilities of Artificial Intelligence.',
-    es: 'Ingeniero de Software apasionado por construir productos digitales y explorar el potencial de la Inteligencia Artificial.',
+    en: 'Software Engineer passionate about building scalable digital products, high-integrity backend systems, and exploring Artificial Intelligence.',
+    es: 'Ingeniero de Software enfocado en la resolución de problemas complejos mediante código limpio, arquitectura de datos y principios de seguridad web.',
   },
   heroIntro: {
-    en: 'Graduate with practical experience in full-stack architecture, RESTful services, and applied machine learning. Focused on clean engineering, measurable results, and continuous technical growth.',
-    es: 'Graduado con experiencia práctica en arquitectura full-stack, servicios REST y machine learning aplicado. Enfocado en código limpio, resultados medibles y aprendizaje continuo.',
+    en: 'Graduate with First-Class Honours (Class I, 9/10) in Software Engineering from York St John University and Higher Vocational DAM from Nebrija. Experienced in full-stack architecture, REST APIs, Web Security (OWASP), and Edge AI.',
+    es: 'Graduado con First-Class Honours (Nota media: 9/10) en Software Engineering por York St John University y Técnico Superior en DAM por Nebrija. Experiencia en full-stack, APIs REST, seguridad web (OWASP) y Edge AI.',
   },
   location: {
-    en: 'Spain (Available for Remote / Hybrid / On-site roles)',
-    es: 'España (Disponible para remoto / híbrido / presencial)',
+    en: 'Madrid, Spain',
+    es: 'Madrid, España',
+  },
+  availability: {
+    en: 'Immediate availability • Category B Driving License',
+    es: 'Disponibilidad inmediata • Permiso de conducir B',
   },
   statusBadge: {
-    en: 'Open to software engineering & tech opportunities',
-    es: 'Abierto a oportunidades de ingeniería y tecnología',
+    en: 'Available for Immediate Hire • Madrid, Spain',
+    es: 'Disponibilidad inmediata • Madrid, España',
   },
-  // [PLACEHOLDER]: Put your CV file in public/cv-pablo-villanueva.pdf when ready
-  cvFilename: 'cv-pablo-villanueva.pdf',
+  cvFilename: {
+    en: 'cv-pablo-villanueva-en.pdf',
+    es: 'cv-pablo-villanueva-es.pdf',
+  },
+  professionalProfile: {
+    en: 'Highly technical Software Engineer, focused on solving complex problems through clean and efficient code. Experience in full-stack development, data architecture, and agile methodologies. Demonstrated ability to design scalable solutions, optimize system performance, and apply web security principles in dynamic environments.',
+    es: 'Ingeniero de Software altamente técnico, enfocado en la resolución de problemas complejos mediante código limpio y eficiente. Experiencia en desarrollo full-stack, arquitectura de datos y metodologías ágiles. Capacidad demostrada para diseñar soluciones escalables, optimizar el rendimiento de sistemas y aplicar principios de seguridad web en entornos dinámicos.',
+  },
   aboutText: {
     en: [
-      "I'm a Software Engineering professional with a strong interest in building practical software solutions and exploring emerging technologies.",
-      "My background combines application development, backend engineering, database management and an increasing interest in Artificial Intelligence and Machine Learning.",
-      "I enjoy solving problems, learning new technologies and turning ideas into functional applications. I'm particularly interested in opportunities where I can contribute to real projects, collaborate with experienced teams and continue developing my technical skills."
+      'Highly technical Software Engineer, focused on solving complex problems through clean and efficient code.',
+      'My background combines practical full-stack development, data architecture, robust backend engineering, and an increasing focus on Machine Learning and Edge AI.',
+      'I possess demonstrated ability to design scalable solutions, optimize system performance, and enforce rigorous web security principles (OWASP Top 10, RBAC, CSRF mitigation) in production-grade environments.'
     ],
     es: [
-      "Soy un profesional en Ingeniería de Software con un gran interés en construir soluciones prácticas de software y explorar tecnologías emergentes.",
-      "Mi trayectoria combina desarrollo de aplicaciones, ingeniería de backend, gestión de bases de datos y un creciente interés en Inteligencia Artificial y Machine Learning.",
-      "Disfruto resolviendo problemas, aprendiendo nuevas tecnologías y transformando ideas en aplicaciones funcionales. Me interesan especialmente oportunidades donde pueda contribuir a proyectos reales, colaborar con equipos experimentados y continuar desarrollando mis habilidades técnicas."
+      'Ingeniero de Software altamente técnico, enfocado en la resolución de problemas complejos mediante código limpio y eficiente.',
+      'Mi trayectoria combina desarrollo práctico full-stack, arquitectura de datos, ingeniería de backend robusta y un enfoque activo en Machine Learning y Edge AI.',
+      'Cuento con capacidad demostrada para diseñar soluciones escalables, optimizar el rendimiento de sistemas y aplicar principios rigurosos de seguridad web (OWASP Top 10, RBAC, mitigación CSRF) en entornos de producción.'
     ]
   },
   quickHighlights: {
     en: [
       {
-        label: 'Degree Focus',
-        value: 'BSc (Hons) Software Eng.',
-        description: 'York St John University'
+        label: 'Academic Standing',
+        value: 'First-Class Honours (Class I)',
+        description: 'York St John University • Grade 9/10 equivalent'
       },
       {
-        label: 'Practical Background',
-        value: 'DAM Vocational + University',
-        description: 'Multiplatform app development & enterprise foundation'
+        label: 'Technical Foundation',
+        value: 'DAM Vocational + BSc (Hons)',
+        description: 'Instituto Nebrija & York St John dual technical depth'
       },
       {
-        label: 'Core Focus',
-        value: 'Full Stack & AI/Data',
-        description: 'Bridging robust web architecture with intelligent models'
+        label: 'Core Specialties',
+        value: 'Full-Stack, Security & Edge AI',
+        description: 'Go, Java, Python, Spring Boot, React & OWASP standards'
       },
       {
         label: 'Languages',
-        value: 'Spanish (Native) • English (Prof.)',
-        description: 'Bilingual international engineering communication'
+        value: 'English (B2 Prof.) • Spanish (Native)',
+        description: 'Certified B2 professional working fluency'
       }
     ],
     es: [
       {
-        label: 'Enfoque Académico',
-        value: 'BSc (Hons) Software Eng.',
-        description: 'York St John University'
+        label: 'Rendimiento Académico',
+        value: 'First-Class Honours (Clase I)',
+        description: 'York St John University • Nota media equivalente: 9/10'
       },
       {
-        label: 'Formación Práctica',
-        value: 'DAM FP Superior + Grado',
-        description: 'Desarrollo de aplicaciones multiplataforma y bases empresariales'
+        label: 'Base Técnica',
+        value: 'FP Superior DAM + Grado',
+        description: 'Instituto Nebrija y York St John: sólida base práctica y teórica'
       },
       {
-        label: 'Áreas de Interés',
-        value: 'Full Stack & IA / Datos',
-        description: 'Uniendo arquitecturas web robustas con modelos inteligentes'
+        label: 'Especialidades',
+        value: 'Full-Stack, Seguridad y Edge AI',
+        description: 'Go, Java, Python, Spring Boot, React y estándares OWASP'
       },
       {
         label: 'Idiomas',
-        value: 'Español (Nativo) • Inglés (Prof.)',
-        description: 'Comunicación técnica en entornos internacionales'
+        value: 'Inglés (B2 Cert.) • Español (Nativo)',
+        description: 'Certificación B2 y fluidez profesional'
       }
+    ]
+  },
+  otherData: {
+    en: [
+      'Immediate availability for on-site, hybrid, or remote engineering positions',
+      'Driving License (Category B)',
+      'Continuous technical learning and rapid adaptability to evolving tech stacks',
+      'Solid foundations in Agile methodologies and Git collaborative workflows'
+    ],
+    es: [
+      'Disponibilidad inmediata para incorporación presencial, híbrida o remota',
+      'Permiso de conducir (Categoría B)',
+      'Adaptabilidad tecnológica continua y capacidad de aprendizaje autónomo',
+      'Sólidas bases en metodologías ágiles y flujos colaborativos en Git'
     ]
   }
 };
@@ -114,12 +139,12 @@ export const EXPERIENCES: ExperienceItem[] = [
   {
     id: 'nebrija-technician',
     role: {
-      en: 'Software Development Technician',
-      es: 'Técnico de Desarrollo de Software',
+      en: 'Development Technician (Técnico de Desarrollo)',
+      es: 'Técnico de Desarrollo',
     },
-    company: 'Universidad Nebrija',
+    company: 'Universidad Nebrija (Madrid)',
     period: {
-      en: 'April 2025 – June 2025',
+      en: 'Apr 2025 – Jun 2025',
       es: 'Abril 2025 – Junio 2025',
     },
     location: {
@@ -127,28 +152,26 @@ export const EXPERIENCES: ExperienceItem[] = [
       es: 'Madrid, España',
     },
     type: {
-      en: 'Professional Experience',
-      es: 'Experiencia Profesional',
+      en: 'Work Experience',
+      es: 'Experiencia Laboral',
     },
     summary: {
-      en: 'Contributed to software development activities involving full-stack development, REST API creation, testing, debugging and database interaction.',
-      es: 'Contribución en actividades de desarrollo de software que abarcaron desarrollo full-stack, creación de APIs REST, testing, depuración e interacción con bases de datos.',
+      en: 'Full-stack software development in production environments, building scalable solutions, creating secure REST APIs, and running systematic unit and integration testing.',
+      es: 'Desarrollo full-stack de soluciones robustas, diseño e implementación de APIs REST seguras e integración de pruebas para garantizar calidad en producción.',
     },
     responsibilities: {
       en: [
-        'Full-stack software development and feature implementation.',
-        'REST API development, integration, and endpoint structuring.',
-        'Software testing, QA validation, and systematic debugging.',
-        'Database interaction, query formulation, and application state persistence.'
+        'Full-stack development of robust solutions, optimizing user experience, stability, and system scalability (Frontend and Backend).',
+        'Design and implementation of efficient REST APIs to integrate third-party services, ensuring security in data transfer.',
+        'Execution of unit and integration tests (software testing) to ensure code quality and reduce failures in production.'
       ],
       es: [
-        'Desarrollo de software full-stack e implementación de funcionalidades.',
-        'Desarrollo de APIs REST, integración y estructuración de endpoints.',
-        'Testing de software, validación de calidad y depuración sistemática.',
-        'Interacción con bases de datos, formulación de consultas y persistencia de datos.'
+        'Desarrollo full-stack de soluciones robustas, optimizando la experiencia de usuario, la estabilidad y la escalabilidad del sistema (Frontend y Backend).',
+        'Diseño e implementación de APIs REST eficientes para integrar servicios de terceros, garantizando la seguridad en la transferencia de datos.',
+        'Ejecución de pruebas unitarias y de integración (software testing) para asegurar la calidad del código y reducir fallos en producción.'
       ]
     },
-    technologies: ['Full Stack', 'REST APIs', 'Software Testing', 'Debugging', 'Database Interaction', 'SQL']
+    technologies: ['Full-Stack', 'REST APIs', 'Software Testing', 'Unit Testing', 'Integration Testing', 'System Scalability', 'Data Transfer Security']
   }
 ];
 
@@ -156,210 +179,210 @@ export const EDUCATION: EducationItem[] = [
   {
     id: 'york-st-john',
     degree: {
-      en: 'Software Engineering – BSc (Hons)',
-      es: 'Grado en Ingeniería de Software – BSc (Hons)',
+      en: 'BSc (Hons) Software Engineering',
+      es: 'BSc (Hons) Software Engineering',
     },
     institution: 'York St John University',
-    period: 'September 2025 – June 2026',
+    period: '2025 – 2026',
     location: {
-      en: 'United Kingdom / York',
-      es: 'Reino Unido / York',
+      en: 'York, United Kingdom',
+      es: 'York, Reino Unido',
     },
     level: {
-      en: 'Undergraduate Degree',
-      es: 'Grado Universitario',
+      en: 'University Degree (BSc Hons)',
+      es: 'Grado Universitario Oficial',
+    },
+    grade: {
+      en: 'Equivalent average grade: 9/10 | First-Class Honours (Class I)',
+      es: 'Nota media equivalente: 9/10 | First-Class Honours (Class I)',
     },
     description: {
-      en: 'Focused on advanced software engineering principles, system architecture, research methodology, time-series forecasting, and machine learning pipelines.',
-      es: 'Especialización en principios avanzados de ingeniería de software, arquitectura de sistemas, metodología de investigación y modelos de machine learning.',
+      en: 'Rigorous British honours degree covering software architecture, distributed engineering, machine learning pipelines, and research methodology.',
+      es: 'Titulación británica oficial de máximo honor enfocada en ingeniería de software, arquitectura de sistemas, pipelines de machine learning y metodología de investigación.',
     },
     highlights: {
       en: [
-        'Advanced Software Architecture & Clean Design Patterns',
-        'Academic Dissertation: Bitcoin price forecasting & sentiment analysis systems',
-        'Rigorous methodology, validation techniques, and time-series cross-validation'
+        'Awarded First-Class Honours (Class I) with an equivalent 9/10 average grade',
+        'Final Degree Project (TFG): Bitcoin Price Prediction System & Edge AI (Grade: 9.0/10)',
+        'Advanced system design, empirical research, and rigorous code verification'
       ],
       es: [
-        'Arquitectura avanzada de software y patrones de diseño limpios',
-        'Disertación académica: Sistemas de predicción de precio de Bitcoin y análisis de sentimiento',
-        'Metodología rigurosa, técnicas de validación y cross-validation temporal'
+        'Calificación First-Class Honours (Clase I) con nota media equivalente de 9/10',
+        'Trabajo de Fin de Grado (TFG): Sistema de Predicción de Bitcoin y Edge AI (Nota: 9.0/10)',
+        'Diseño avanzado de sistemas, validación empírica y verificación rigurosa de código'
       ]
     },
     statusBadge: {
-      en: 'Academic Programme',
-      es: 'Programa Académico',
+      en: 'First-Class Honours (9/10)',
+      es: 'First-Class Honours (9/10)',
     }
   },
   {
-    id: 'dam-spain',
+    id: 'dam-nebrija',
     degree: {
-      en: 'Higher Vocational Training in Multiplatform Application Development (DAM)',
-      es: 'Ciclo Formativo de Grado Superior en Desarrollo de Aplicaciones Multiplataforma (DAM)',
+      en: 'Higher Level Vocational Training in Cross-Platform Application Development (DAM)',
+      es: 'Grado Superior en Desarrollo de Aplicaciones Multiplataforma (DAM)',
     },
-    institution: 'Spain',
+    institution: 'Instituto de Formación Profesional Nebrija (Madrid)',
     period: 'Completed',
     location: {
-      en: 'Spain',
-      es: 'España',
+      en: 'Madrid, Spain',
+      es: 'Madrid, España',
     },
     level: {
-      en: 'Higher Vocational Degree (EQF Level 5)',
-      es: 'Formación Profesional de Grado Superior (Nivel 5 MECES/EQF)',
+      en: 'Higher Vocational Training (Nivel 5 EQF / Formación Profesional)',
+      es: 'Formación Profesional de Grado Superior',
     },
     description: {
-      en: 'Comprehensive technical grounding in cross-platform development, object-oriented programming (Java), relational databases, mobile engineering, and enterprise application lifecycle.',
-      es: 'Sólida base técnica en desarrollo multiplataforma, programación orientada a objetos (Java), bases de datos relacionales, desarrollo móvil y ciclo de vida de aplicaciones empresariales.',
+      en: 'In-depth practical engineering in multiplatform architecture, object-oriented programming with Java, relational database modeling (JDBC, SQL), and multiplatform client interfaces.',
+      es: 'Formación eminentemente técnica y práctica en desarrollo multiplataforma, programación orientada a objetos (Java), diseño de bases de datos (JDBC, SQL) y arquitecturas empresariales.',
     },
     highlights: {
       en: [
-        'Object-Oriented Programming (Java, Kotlin) & Data Structures',
-        'Relational Database Modeling (MySQL, PostgreSQL, JDBC)',
-        'Native Mobile & Multiplatform Development (Android Studio, Room)',
-        'Enterprise Backend Services, Servlets, and RESTful architectures'
+        'Strong OOP fundamentals: Java, Spring Boot, design patterns and clean code',
+        'Data persistence and storage: SQLite, JDBC, Firebase and relational schemas',
+        'Cross-platform development and responsive user experiences'
       ],
       es: [
-        'Programación Orientada a Objetos (Java, Kotlin) y estructuras de datos',
-        'Modelado de bases de datos relacionales (MySQL, PostgreSQL, JDBC)',
-        'Desarrollo nativo y multiplataforma (Android Studio, Room)',
-        'Servicios backend empresariales, Servlets y arquitecturas RESTful'
+        'Fundamentos sólidos de POO: Java, Spring Boot, patrones de diseño y código limpio',
+        'Persistencia y almacenamiento: SQLite, JDBC, Firebase y modelado relacional',
+        'Desarrollo multiplataforma y diseño de interfaces optimizadas'
       ]
     },
     statusBadge: {
-      en: 'Graduated',
-      es: 'Completado',
+      en: 'Graduated • Nebrija',
+      es: 'Graduado • Nebrija',
     }
   }
 ];
 
 export const PROJECTS: ProjectItem[] = [
   {
-    id: 'bitcoin-price-prediction',
-    title: 'Bitcoin Price Prediction & Sentiment Analysis',
+    id: 'tfg-bitcoin-prediction',
+    title: 'Final Degree Project (TFG): Bitcoin Prediction System',
     category: 'ai-ml',
     categoryLabel: {
-      en: 'AI & Machine Learning',
-      es: 'IA y Machine Learning',
+      en: 'Machine Learning & Edge AI',
+      es: 'Machine Learning & Edge AI',
     },
+    grade: '9.0 / 10',
+    year: '2026',
     shortDescription: {
-      en: 'An academic Machine Learning project focused on analysing Bitcoin market data and exploring how social media sentiment can contribute to cryptocurrency price prediction.',
-      es: 'Proyecto académico de Machine Learning centrado en analizar datos de mercado de Bitcoin y explorar cómo el sentimiento de redes sociales puede contribuir a la predicción de precios.',
+      en: 'Machine Learning forecasting system for Bitcoin price estimation coupled with an Edge AI architecture for decentralized, low-latency real-time data processing.',
+      es: 'Desarrollo de un modelo de predicción del precio de Bitcoin mediante algoritmos de Machine Learning y diseño de una arquitectura Edge AI para procesamiento descentralizado en tiempo real.',
     },
     longDescription: {
-      en: 'Academic research exploring price dynamics, technical indicators (SMA, rolling volatility, lags), and sentiment signals. Employs chronological time-series cross-validation to prevent lookahead bias and evaluate predictive utility.',
-      es: 'Investigación académica que explora dinámicas de precios, indicadores técnicos (SMA, volatilidad móvil, retardos) y señales de sentimiento. Utiliza cross-validation temporal cronológica para evitar sesgo de anticipación.',
+      en: 'Academic dissertation evaluated with a 9.0/10 mark. Combines time-series feature engineering (moving averages, lag returns, rolling volatility metrics) with regression algorithms. Integrates an Edge AI architecture to decentralize live market processing, minimizing server latency and resource consumption.',
+      es: 'Trabajo de Fin de Grado calificado con 9.0/10. Combina ingeniería de características temporales (medias móviles, retardos, volatilidad móvil) con modelos de regresión y una arquitectura Edge AI para procesamiento descentralizado en tiempo real con mínima latencia.',
     },
-    technologies: ['Python', 'Pandas', 'NumPy', 'Scikit-learn', 'Machine Learning', 'NLP', 'Data Analysis', 'APIs'],
+    technologies: ['Python', 'Machine Learning', 'Edge AI', 'Scikit-learn', 'Pandas', 'NumPy', 'Technical Analysis', 'Decentralized Processing'],
     visualType: 'btc-forecast',
-    // [PLACEHOLDER]: Set actual repo URL once published or leave as null for modal preview
     githubUrl: null,
     liveDemoUrl: null,
-    isPlaceholderUrl: true,
+    isPlaceholderUrl: false,
     status: {
-      en: 'Academic Research & ML Pipeline',
-      es: 'Investigación Académica & Pipeline ML',
+      en: 'Grade: 9.0/10 • Completed (2026)',
+      es: 'Nota: 9.0/10 • Completado (2026)',
     },
     academicContext: {
-      en: 'York St John University — Undergraduate Research',
-      es: 'York St John University — Investigación Académica',
+      en: 'BSc (Hons) Software Engineering TFG • York St John University',
+      es: 'TFG Grado en Ingeniería de Software • York St John University',
     },
     features: {
       en: [
-        'Historical Bitcoin price ingestion & data preprocessing pipeline',
-        'Technical indicators engineering (SMA 7/30, 14-day rolling volatility, lag returns)',
-        'Predictive modeling comparisons using Linear Regression & Random Forest baselines',
-        'Chronological time-series cross-validation to maintain temporal validity',
-        'Visual sentiment analysis correlation framework (Placeholder for live sentiment data)'
+        'Development of a Bitcoin price prediction model using ML algorithms focused on technical market analysis',
+        'Design of an Edge AI architecture for decentralized real-time data processing, optimizing resources and latency',
+        'Rigorous time-series validation protocols to eliminate lookahead bias and ensure empirical integrity',
+        'Real-time data feeds, automated feature extraction, and predictive trend evaluation'
       ],
       es: [
-        'Pipeline de ingesta y preprocesamiento de datos históricos de Bitcoin',
-        'Ingeniería de indicadores técnicos (SMA 7/30, volatilidad móvil 14d, retardos)',
-        'Comparativa de modelos predictivos usando Regresión Lineal y Random Forest',
-        'Validación cruzada temporal cronológica para garantizar rigurosidad',
-        'Marco visual de correlación de análisis de sentimiento (Marcador para datos de sentimiento)'
+        'Desarrollo de un modelo de predicción del precio de Bitcoin utilizando algoritmos de Machine Learning enfocados en análisis técnico',
+        'Diseño de una arquitectura Edge AI para procesamiento de datos descentralizado en tiempo real, optimizando recursos y latencia',
+        'Protocolos de validación temporal rigurosos para eliminar sesgo de anticipación y garantizar rigor empírico',
+        'Flujos de datos en tiempo real, extracción automatizada de características y estimación de tendencias'
       ]
     }
   },
   {
-    id: 'full-stack-application',
-    title: 'Full Stack Enterprise Application',
+    id: 'secure-record-management-system',
+    title: 'Secure Record Management System (SRMS)',
+    category: 'security',
+    categoryLabel: {
+      en: 'Web Security & Go Backend',
+      es: 'Seguridad Web & Backend Go',
+    },
+    year: '2026',
+    shortDescription: {
+      en: 'High-security web application built in Go adhering to OWASP Top 10 standards with RBAC, CSRF mitigation, bcrypt hashing, and IP rate limiting.',
+      es: 'Aplicación web de gestión de registros médicos en Go con net/http y SQLite, implementando mitigaciones estrictas frente al OWASP Top 10, RBAC, CSRF y rate limiting.',
+    },
+    longDescription: {
+      en: 'Enterprise medical record platform engineered with native Go (net/http and html/template) and SQLite. Designed with security-first defense-in-depth: complete prevention of SQL injection and XSS following the OWASP Top 10, Role-Based Access Control (RBAC), CSRF tokens, bcrypt password hashing, IP rate limiting, and automated account lockout after failed logins.',
+      es: 'Plataforma de gestión de registros médicos construida con Go nativo (net/http y html/template) y SQLite. Diseñada con arquitectura de seguridad en profundidad: prevención total de inyección SQL y XSS siguiendo el OWASP Top 10, control de acceso por roles (RBAC), protección CSRF, hashing de contraseñas con bcrypt, rate limiting por IP y bloqueo de cuentas tras intentos fallidos.',
+    },
+    technologies: ['Go (Golang)', 'net/http', 'SQLite', 'Web Security', 'OWASP Top 10', 'RBAC', 'bcrypt', 'CSRF Protection', 'Rate Limiting'],
+    visualType: 'srms-security',
+    githubUrl: null,
+    liveDemoUrl: null,
+    isPlaceholderUrl: false,
+    status: {
+      en: 'Production-Grade Security Architecture (2026)',
+      es: 'Arquitectura de Seguridad Empresarial (2026)',
+    },
+    features: {
+      en: [
+        'Web application engineered in Go using standard library net/http, html/template, and SQLite database',
+        'Strict prevention of SQL injection and Cross-Site Scripting (XSS) adhering to the OWASP Top 10',
+        'Role-Based Access Control (RBAC) separating administrative, physician, and user permissions',
+        'CSRF token validation and cryptographic password hashing with bcrypt',
+        'IP rate limiting and automated account lockout after repeated failed authentication attempts'
+      ],
+      es: [
+        'Aplicación web desarrollada en Go con net/http, html/template y base de datos SQLite',
+        'Prevención estricta de inyección SQL y Cross-Site Scripting (XSS) siguiendo las pautas de OWASP Top 10',
+        'Control de acceso basado en roles (RBAC) para separar permisos de administración, facultativos y usuarios',
+        'Validación de tokens CSRF y hashing criptográfico de contraseñas mediante bcrypt',
+        'Rate limiting por dirección IP y bloqueo temporal de cuenta tras intentos fallidos de inicio de sesión'
+      ]
+    }
+  },
+  {
+    id: 'fullstack-architecture-app',
+    title: 'Full-Stack Distributed Application',
     category: 'fullstack',
     categoryLabel: {
-      en: 'Full Stack Development',
-      es: 'Desarrollo Full Stack',
+      en: 'Full-Stack Architecture',
+      es: 'Arquitectura Full-Stack',
     },
     shortDescription: {
-      en: 'A full-stack application demonstrating software architecture, frontend development, backend functionality, database management and REST API integration.',
-      es: 'Aplicación full-stack que demuestra arquitectura de software, desarrollo frontend, funcionalidad backend, gestión de bases de datos e integración de APIs REST.',
+      en: 'Decoupled full-stack system demonstrating clean architecture, RESTful API design, database persistence, and automated test coverage.',
+      es: 'Sistema desacoplado full-stack que demuestra arquitectura limpia, diseño de APIs REST, persistencia relacional y cobertura de pruebas automatizadas.',
     },
     longDescription: {
-      en: 'End-to-end multi-tier system built with a decoupled architecture. Features secure authentication, clean RESTful endpoints, relational data persistence, and a responsive client interface.',
-      es: 'Sistema multicapa de extremo a extremo construido con arquitectura desacoplada. Incorpora autenticación segura, endpoints REST limpios, persistencia relacional e interfaz de cliente responsiva.',
+      en: 'Multi-tier web application built with a decoupled architecture. Features structured RESTful endpoints, relational data normalization, transaction integrity, and robust unit & integration testing to reduce defects in production.',
+      es: 'Aplicación web multicapa construida con arquitectura desacoplada. Incorpora endpoints REST limpios, normalización de datos relacionales, integridad transaccional y pruebas unitarias y de integración para reducir fallos en producción.',
     },
-    technologies: ['JavaScript', 'Node.js', 'React', 'REST APIs', 'SQL', 'Clean Architecture'],
+    technologies: ['TypeScript', 'React', 'Node.js / Java', 'Spring Boot', 'REST APIs', 'SQL / JDBC', 'Testing'],
     visualType: 'fullstack-arch',
-    // [PLACEHOLDER]: Set actual repo URL once published
     githubUrl: null,
     liveDemoUrl: null,
-    isPlaceholderUrl: true,
+    isPlaceholderUrl: false,
     status: {
-      en: 'Architecture & Prototype',
-      es: 'Arquitectura y Prototipo',
+      en: 'Enterprise Architecture Pattern',
+      es: 'Patrón de Arquitectura Empresarial',
     },
     features: {
       en: [
-        'Structured RESTful API endpoints with validation and error handling',
-        'Relational schema design with normalized tables and relational constraints',
-        'State management and dynamic UI rendering with React',
-        'Component reusability and modular separation of concerns',
-        'Comprehensive manual and automated testing routines'
+        'Decoupled frontend & backend services with strict boundary contracts',
+        'REST API design for seamless third-party and client data exchange',
+        'Database abstraction with JDBC / SQL schemas',
+        'Systematic unit and integration testing suite for deployment safety'
       ],
       es: [
-        'Endpoints de API REST estructurados con validación y manejo de errores',
-        'Diseño de esquema relacional con tablas normalizadas y restricciones',
-        'Gestión de estado y renderizado dinámico de interfaz con React',
-        'Reutilización de componentes y separación modular de responsabilidades',
-        'Rutinas de testing sistemático y aseguramiento de calidad'
-      ]
-    }
-  },
-  {
-    id: 'data-analytics-dashboard',
-    title: 'Data Analytics & Insights Dashboard',
-    category: 'data',
-    categoryLabel: {
-      en: 'Data Analytics',
-      es: 'Analítica de Datos',
-    },
-    shortDescription: {
-      en: 'A data analysis project focused on transforming raw data into useful insights through data processing, visualisation and reporting.',
-      es: 'Proyecto de análisis de datos enfocado en transformar datos brutos en información útil mediante procesamiento de datos, visualización y generación de informes.',
-    },
-    longDescription: {
-      en: 'Data-driven pipeline that automates cleaning, aggregations, trend exploration, and KPI visual summaries to facilitate clear technical and decision-making communication.',
-      es: 'Pipeline analítico que automatiza la limpieza, agregación, exploración de tendencias y resúmenes visuales de KPIs para facilitar la toma de decisiones informadas.',
-    },
-    technologies: ['Python', 'Pandas', 'SQL', 'Power BI', 'Data Visualisation', 'NumPy'],
-    visualType: 'data-analytics',
-    // [PLACEHOLDER]: Set actual repo URL once published
-    githubUrl: null,
-    liveDemoUrl: null,
-    isPlaceholderUrl: true,
-    status: {
-      en: 'Data Pipeline & Dashboard',
-      es: 'Pipeline de Datos y Dashboard',
-    },
-    features: {
-      en: [
-        'Automated ETL pipelines: data extraction, cleaning, and null handling with Pandas',
-        'Complex SQL queries for dimensional aggregations and trend extraction',
-        'Interactive KPI visualisations and summary metrics distribution',
-        'Exportable analytical reports and descriptive statistical summaries'
-      ],
-      es: [
-        'Pipelines ETL automatizados: extracción, limpieza y tratamiento de nulos con Pandas',
-        'Consultas SQL complejas para agregaciones dimensionales y detección de tendencias',
-        'Visualizaciones interactivas de KPIs y distribución de métricas clave',
-        'Informes analíticos exportables y resúmenes estadísticos descriptivos'
+        'Servicios desacoplados de frontend y backend con contratos estrictos',
+        'Diseño de APIs REST para intercambio seguro de datos con terceros',
+        'Abstracción de bases de datos mediante esquemas SQL y JDBC',
+        'Suite de pruebas unitarias y de integración para seguridad en despliegue'
       ]
     }
   }
@@ -367,95 +390,59 @@ export const PROJECTS: ProjectItem[] = [
 
 export const SKILL_CATEGORIES: SkillCategory[] = [
   {
-    id: 'programming',
+    id: 'languages-frameworks',
     title: {
-      en: 'Programming Languages',
-      es: 'Lenguajes de Programación',
+      en: 'Languages & Frameworks',
+      es: 'Lenguajes y Frameworks',
     },
     icon: 'Code2',
     skills: [
-      { name: 'Java', levelHint: { en: 'Core OOP & Enterprise', es: 'POO & Entornos empresariales' }, featured: true },
-      { name: 'Python', levelHint: { en: 'ML, Scripting & Data', es: 'ML, Scripting y Datos' }, featured: true },
-      { name: 'JavaScript', levelHint: { en: 'Modern ES6+ & Full Stack', es: 'ES6+ moderno y Full Stack' }, featured: true },
-      { name: 'Kotlin', levelHint: { en: 'Android & Modern JVM', es: 'Android y JVM moderna' } },
-      { name: 'SQL', levelHint: { en: 'Relational Queries & Schemas', es: 'Consultas y esquemas relacionales' }, featured: true },
-      { name: 'HTML5', levelHint: { en: 'Semantic Markup & A11y', es: 'Estructura semántica y accesibilidad' } },
-      { name: 'CSS3', levelHint: { en: 'Responsive Layouts & Flex/Grid', es: 'Diseño responsivo y Flex/Grid' } },
+      { name: 'Go (Golang)', levelHint: { en: 'Backend, Net/HTTP, Concurrency', es: 'Backend, Net/HTTP, Concurrencia' }, featured: true },
+      { name: 'Java', levelHint: { en: 'Core OOP, Enterprise, JDBC', es: 'POO, Entornos empresariales, JDBC' }, featured: true },
+      { name: 'Python', levelHint: { en: 'Machine Learning, Edge AI, Data', es: 'Machine Learning, Edge AI, Datos' }, featured: true },
+      { name: 'JavaScript', levelHint: { en: 'Modern ES6+, Web Services', es: 'ES6+ moderno, Servicios Web' }, featured: true },
+      { name: 'TypeScript', levelHint: { en: 'Type-Safe Applications', es: 'Desarrollo tipado escalable' }, featured: true },
+      { name: 'Spring Boot', levelHint: { en: 'Java Microservices & APIs', es: 'Microservicios y APIs en Java' }, featured: true },
+      { name: 'React', levelHint: { en: 'SPA, Hooks, State Systems', es: 'SPA, Hooks, Gestión de estado' }, featured: true },
+      { name: 'Angular', levelHint: { en: 'Enterprise Frontend Architecture', es: 'Arquitectura frontend empresarial' } },
+      { name: 'Svelte', levelHint: { en: 'Reactive Modern Interfaces', es: 'Interfaces reactivas modernas' } },
     ]
   },
   {
-    id: 'frontend',
+    id: 'security-specialties',
     title: {
-      en: 'Frontend Development',
-      es: 'Desarrollo Frontend',
+      en: 'Web Security & IT Specialties',
+      es: 'Seguridad Web y Especialidades IT',
     },
-    icon: 'Layout',
+    icon: 'Shield',
     skills: [
-      { name: 'React', levelHint: { en: 'Components, Hooks & State', es: 'Componentes, Hooks y Estado' }, featured: true },
-      { name: 'Tailwind CSS', levelHint: { en: 'Utility-first Modern UI', es: 'UI moderna utility-first' }, featured: true },
-      { name: 'Svelte', levelHint: { en: 'Reactive UI Framework', es: 'Framework UI reactivo' } },
-      { name: 'Jetpack Compose', levelHint: { en: 'Declarative Android UI', es: 'UI declarativa en Android' } },
+      { name: 'Web Security (OWASP Top 10)', levelHint: { en: 'SQLi, XSS, CSRF Mitigation', es: 'Mitigación de SQLi, XSS, CSRF' }, featured: true },
+      { name: 'RBAC (Role-Based Access Control)', levelHint: { en: 'Granular Privilege Separation', es: 'Separación granular de privilegios' }, featured: true },
+      { name: 'Cryptographic Hashing (bcrypt)', levelHint: { en: 'Credential Protection & Salt', es: 'Protección de credenciales y salting' }, featured: true },
+      { name: 'IP Rate Limiting & Account Lockout', levelHint: { en: 'Brute-Force & Abuse Defense', es: 'Defensa frente a fuerza bruta' }, featured: true },
+      { name: 'REST APIs Design & Integration', levelHint: { en: 'Secure Data Transfer', es: 'Transferencia segura de datos' }, featured: true },
+      { name: 'Software Testing (Unit & Integration)', levelHint: { en: 'Defect Reduction in Production', es: 'Reducción de fallos en producción' }, featured: true },
+      { name: 'Full-Stack Architecture', levelHint: { en: 'Scalable System Engineering', es: 'Ingeniería de sistemas escalables' }, featured: true },
+      { name: 'Edge AI', levelHint: { en: 'Decentralized Real-Time Inference', es: 'Inferencia descentralizada en tiempo real' }, featured: true },
+      { name: 'Machine Learning', levelHint: { en: 'Predictive Modeling & Scikit-learn', es: 'Modelos predictivos y Scikit-learn' }, featured: true },
+      { name: 'Linux', levelHint: { en: 'Environment & Command Line', es: 'Entorno de sistemas y CLI' } },
+      { name: 'Git & GitHub', levelHint: { en: 'Version Control & Agile Flow', es: 'Control de versiones y flujo ágil' }, featured: true },
     ]
   },
   {
-    id: 'backend',
+    id: 'databases-cloud',
     title: {
-      en: 'Backend & APIs',
-      es: 'Backend y APIs',
-    },
-    icon: 'Server',
-    skills: [
-      { name: 'Node.js', levelHint: { en: 'Event-driven Runtime', es: 'Entorno de ejecución asíncrono' }, featured: true },
-      { name: 'Express', levelHint: { en: 'Web APIs & Middleware', es: 'APIs web y middlewares' }, featured: true },
-      { name: 'REST APIs', levelHint: { en: 'Design, Integration & CRUD', es: 'Diseño, integración y CRUD' }, featured: true },
-      { name: 'Java Servlets', levelHint: { en: 'Java Enterprise Foundation', es: 'Bases de Java empresarial' } },
-      { name: 'JDBC', levelHint: { en: 'Java Database Connectivity', es: 'Conectividad a bases de datos' } },
-    ]
-  },
-  {
-    id: 'databases',
-    title: {
-      en: 'Databases & Storage',
-      es: 'Bases de Datos y Almacenamiento',
+      en: 'Databases & Cloud',
+      es: 'Bases de Datos y Cloud',
     },
     icon: 'Database',
     skills: [
-      { name: 'MySQL', levelHint: { en: 'Relational DBMS', es: 'SGBD Relacional' }, featured: true },
-      { name: 'PostgreSQL', levelHint: { en: 'Advanced Relational DBMS', es: 'SGBD Relacional avanzado' }, featured: true },
-      { name: 'Firebase', levelHint: { en: 'Cloud NoSQL & Auth', es: 'NoSQL en la nube y Auth' } },
-      { name: 'Room', levelHint: { en: 'Android SQLite ORM', es: 'ORM SQLite para Android' } },
-    ]
-  },
-  {
-    id: 'tools',
-    title: {
-      en: 'Tools & Workflow',
-      es: 'Herramientas y Flujo de Trabajo',
-    },
-    icon: 'Wrench',
-    skills: [
-      { name: 'Git', levelHint: { en: 'Version Control', es: 'Control de versiones' }, featured: true },
-      { name: 'GitHub', levelHint: { en: 'Collaboration & Repos', es: 'Repositorios y colaboración' }, featured: true },
-      { name: 'Visual Studio Code', levelHint: { en: 'Primary Editor', es: 'Editor principal' }, featured: true },
-      { name: 'Postman', levelHint: { en: 'API Testing & Debugging', es: 'Pruebas y depuración de APIs' }, featured: true },
-      { name: 'Android Studio', levelHint: { en: 'Mobile Development IDE', es: 'IDE de desarrollo móvil' } },
-      { name: 'Eclipse', levelHint: { en: 'Java IDE', es: 'IDE para Java' } },
-    ]
-  },
-  {
-    id: 'ai-data',
-    title: {
-      en: 'AI & Data Analytics',
-      es: 'IA y Analítica de Datos',
-    },
-    icon: 'Brain',
-    skills: [
-      { name: 'Machine Learning', levelHint: { en: 'Supervised Learning & Pipelines', es: 'Modelos supervisados y pipelines' }, featured: true },
-      { name: 'Data Analysis', levelHint: { en: 'EDA & Descriptive Stats', es: 'Análisis exploratorio y estadísticas' }, featured: true },
-      { name: 'Pandas', levelHint: { en: 'DataFrames & Data Wrangling', es: 'DataFrames y manipulación de datos' }, featured: true },
-      { name: 'NumPy', levelHint: { en: 'Numerical & Array Operations', es: 'Operaciones numéricas matriciales' }, featured: true },
-      { name: 'Scikit-learn', levelHint: { en: 'Regressors, Splits & Metrics', es: 'Regresión, particiones y métricas' }, featured: true },
-      { name: 'Sentiment Analysis', levelHint: { en: 'Text Processing & Polarity', es: 'Procesamiento de texto y polaridad' } },
+      { name: 'SQLite', levelHint: { en: 'Embedded Lightweight RDBMS', es: 'SGBD relacional ligero embebido' }, featured: true },
+      { name: 'JDBC', levelHint: { en: 'Java Database Connectivity', es: 'Conectividad de datos en Java' }, featured: true },
+      { name: 'Firebase', levelHint: { en: 'Cloud NoSQL & Services', es: 'NoSQL en la nube y servicios' }, featured: true },
+      { name: 'Cloud Computing & Deployment', levelHint: { en: 'Hosting, Compute & Scaling', es: 'Despliegue y computación en la nube' }, featured: true },
+      { name: 'MySQL', levelHint: { en: 'Relational Database Schema', es: 'Esquema relacional de bases de datos' } },
+      { name: 'PostgreSQL', levelHint: { en: 'ACID Relational Engine', es: 'Motor relacional ACID' } },
     ]
   }
 ];
@@ -471,65 +458,70 @@ export const UI_TRANSLATIONS = {
     contact: { en: 'Contact', es: 'Contacto' },
   },
   hero: {
-    viewProjects: { en: 'View my projects', es: 'Ver mis proyectos' },
+    viewProjects: { en: 'View projects', es: 'Ver proyectos' },
     getInTouch: { en: 'Get in touch', es: 'Contactar' },
-    githubProfile: { en: 'GitHub Profile', es: 'Perfil de GitHub' },
-    terminalTag: { en: 'Software Engineering • AI & Data', es: 'Ingeniería de Software • IA y Datos' },
+    githubProfile: { en: 'GitHub profile', es: 'Perfil de GitHub' },
+    downloadCv: { en: 'Download CV (PDF)', es: 'Descargar CV (PDF)' },
+    terminalTag: { en: 'Software Engineer — Full-Stack Developer', es: 'Ingeniero de Software — Desarrollador Full-Stack' },
+    gradeBadge: { en: 'BSc (Hons) First-Class Honours (9/10)', es: 'BSc (Hons) First-Class Honours (9/10)' },
   },
   about: {
     title: { en: 'About Me', es: 'Sobre Mí' },
-    subtitle: { en: 'Background, mindset and technical trajectory', es: 'Trayectoria, mentalidad y enfoque técnico' },
-    downloadCv: { en: 'Download CV', es: 'Descargar CV' },
-    cvNotice: { en: 'CV placeholder preview available', es: 'Vista previa de CV disponible' },
+    subtitle: { en: 'Professional profile, engineering mindset and academic honors', es: 'Perfil profesional, enfoque de ingeniería y distinciones académicas' },
+    downloadCv: { en: 'Download Verified CV', es: 'Descargar CV Verificado' },
+    cvNotice: { en: 'Official PDF available in English & Spanish', es: 'PDF oficial disponible en inglés y español' },
     academicFoundation: { en: 'Academic Foundation', es: 'Base Académica' },
-    coreInterests: { en: 'Areas of Interest', es: 'Áreas de Interés' },
+    coreInterests: { en: 'Areas of Interest', es: 'Áreas de Especialización' },
+    otherDetailsTitle: { en: 'Availability & Competencies', es: 'Disponibilidad y Competencias' },
   },
   experience: {
-    title: { en: 'Professional Experience', es: 'Experiencia Profesional' },
-    subtitle: { en: 'Hands-on roles and software engineering activities', es: 'Roles prácticos y actividades de ingeniería' },
+    title: { en: 'Work Experience', es: 'Experiencia Laboral' },
+    subtitle: { en: 'Hands-on roles in software engineering and production development', es: 'Roles prácticos en ingeniería de software y desarrollo en producción' },
     responsibilitiesTitle: { en: 'Key Responsibilities & Scope', es: 'Responsabilidades Clave y Alcance' },
   },
   education: {
-    title: { en: 'Education & Qualifications', es: 'Educación y Titulaciones' },
-    subtitle: { en: 'Academic degrees and certified vocational training', es: 'Titulaciones académicas y formación técnica' },
-    keyCompetencies: { en: 'Key Coursework & Competencies', es: 'Materias Clave y Competencias' },
+    title: { en: 'Education & Training', es: 'Educación y Formación' },
+    subtitle: { en: 'Academic degrees, university honors and certified vocational training', es: 'Titulaciones académicas, honores universitarios y formación técnica' },
+    keyCompetencies: { en: 'Key Achievements & Focus', es: 'Logros Clave y Enfoque' },
   },
   projects: {
-    title: { en: 'Featured Projects', es: 'Proyectos Destacados' },
-    subtitle: { en: 'Practical applications across software engineering, machine learning and data', es: 'Aplicaciones prácticas en ingeniería de software, machine learning y analítica' },
-    filterAll: { en: 'All Projects', es: 'Todos los Proyectos' },
-    filterAi: { en: 'AI & ML', es: 'IA y ML' },
-    filterFullstack: { en: 'Full Stack', es: 'Full Stack' },
-    filterData: { en: 'Data Analytics', es: 'Analítica de Datos' },
-    viewDetails: { en: 'Inspect Architecture', es: 'Ver Detalles' },
+    title: { en: 'Key Projects', es: 'Proyectos Destacados' },
+    subtitle: { en: 'Verified software implementations across Edge AI, Machine Learning, Web Security and Full-Stack', es: 'Proyectos reales en Edge AI, Machine Learning, Seguridad Web (OWASP) y Full-Stack' },
+    filterAll: { en: 'All Projects', es: 'Todos' },
+    filterAi: { en: 'AI & Machine Learning', es: 'IA y ML' },
+    filterSecurity: { en: 'Security & Go', es: 'Seguridad y Go' },
+    filterFullstack: { en: 'Full-Stack', es: 'Full-Stack' },
+    filterData: { en: 'Data Analytics', es: 'Analítica' },
+    viewDetails: { en: 'View Details', es: 'Ver Detalles' },
     codeRepository: { en: 'View Repository', es: 'Ver Repositorio' },
     liveDemo: { en: 'Live Demo', es: 'Demostración' },
-    placeholderNotice: { en: 'Project details and repository links are configurable placeholders ready for initial release.', es: 'Los detalles del proyecto y enlaces de repositorio son marcadores configurables listos para su publicación.' },
-    placeholderBadge: { en: 'Configurable Initial Project', es: 'Proyecto Inicial Configurable' },
+    placeholderBadge: { en: 'Verified Academic & Practical Engineering', es: 'Proyectos Reales Verificados' },
   },
   skills: {
-    title: { en: 'Technologies & Skills', es: 'Tecnologías y Habilidades' },
-    subtitle: { en: 'Verified competencies across development, architecture, data and tools', es: 'Competencias comprobadas en desarrollo, arquitectura, datos y herramientas' },
-    allTab: { en: 'All Technologies', es: 'Todas las Tecnologías' },
-    clarificationNote: { en: 'Note: Representing verified skills and practical training foundations. No arbitrary percentage bars.', es: 'Nota: Representa habilidades verificadas y bases prácticas de formación. Sin porcentajes arbitrarios.' },
+    title: { en: 'Technical Skills', es: 'Competencias Técnicas' },
+    subtitle: { en: 'Languages, frameworks, databases, cloud, and security competencies from verified CV', es: 'Lenguajes, frameworks, bases de datos, cloud y seguridad contrastados en CV' },
+    allTab: { en: 'All Technologies', es: 'Todas las Competencias' },
+    clarificationNote: { en: 'Verified competencies from official curriculum vitae. No arbitrary percentage bars.', es: 'Competencias técnicas verificadas según currículum oficial. Sin porcentajes arbitrarios.' },
   },
   contact: {
     title: { en: "Let's build something together.", es: 'Construyamos algo juntos.' },
-    subtitle: { en: "I'm always interested in connecting with people, exploring new opportunities and working on interesting technology projects.", es: 'Siempre estoy interesado en conectar con personas, explorar nuevas oportunidades y colaborar en proyectos tecnológicos interesantes.' },
+    subtitle: { en: "I'm always interested in connecting with people, exploring new opportunities, and discussing engineering challenges.", es: 'Siempre interesado en conectar, explorar nuevas oportunidades laborales y abordar retos técnicos.' },
     nameLabel: { en: 'Your Name', es: 'Tu Nombre' },
-    namePlaceholder: { en: 'e.g. Alex Smith', es: 'ej. Alejandro Gómez' },
+    namePlaceholder: { en: 'e.g. Sarah Jenkins', es: 'ej. Alejandro Gómez' },
     emailLabel: { en: 'Email Address', es: 'Correo Electrónico' },
-    emailPlaceholder: { en: 'e.g. alex@company.com', es: 'ej. alex@empresa.com' },
+    emailPlaceholder: { en: 'e.g. sarah@company.com', es: 'ej. alejandro@empresa.com' },
     subjectLabel: { en: 'Subject', es: 'Asunto' },
-    subjectPlaceholder: { en: 'e.g. Software Engineering Opportunity / Collaboration', es: 'ej. Oportunidad laboral / Colaboración técnica' },
+    subjectPlaceholder: { en: 'e.g. Software Engineering Opportunity at [Company]', es: 'ej. Oportunidad como Ingeniero de Software' },
     messageLabel: { en: 'Message', es: 'Mensaje' },
-    messagePlaceholder: { en: 'Tell me about your team, project, or what you would like to discuss...', es: 'Cuéntame sobre tu equipo, proyecto o qué te gustaría comentar...' },
+    messagePlaceholder: { en: 'Tell me about the role, project, or what you would like to discuss...', es: 'Cuéntame sobre el rol, el proyecto o qué te gustaría comentar...' },
     submitButton: { en: 'Send Message', es: 'Enviar Mensaje' },
-    prototypeNotice: { en: 'Frontend Prototype Mode: Form includes client-side validation. To receive live emails, connect Formspree, EmailJS, or a backend webhook in portfolioData.ts.', es: 'Modo Prototipo Frontend: Incluye validación de cliente. Para recibir emails reales, conecta Formspree, EmailJS o un webhook en portfolioData.ts.' },
-    successMessage: { en: 'Thank you! Your message was validated successfully. (Demo mode feedback)', es: '¡Gracias! Tu mensaje fue validado correctamente. (Confirmación de modo demo)' },
+    prototypeNotice: { en: 'Client validation active. You can also reach me directly at pablovillanueva48@gmail.com or via LinkedIn / Phone.', es: 'Validación de cliente activa. También puedes contactarme directamente en pablovillanueva48@gmail.com, LinkedIn o teléfono.' },
+    successMessage: { en: 'Thank you! Your message has been validated successfully.', es: '¡Gracias! Tu mensaje ha sido validado correctamente.' },
     directEmail: { en: 'Direct Email', es: 'Correo Directo' },
+    phoneNumber: { en: 'Phone Number', es: 'Teléfono' },
     locationText: { en: 'Location', es: 'Ubicación' },
-    socialText: { en: 'Professional Networks', es: 'Redes Profesionales' },
+    socialText: { en: 'Contact & Professional Networks', es: 'Contacto y Redes Profesionales' },
+    availabilityText: { en: 'Availability', es: 'Disponibilidad' },
   },
   footer: {
     rightsReserved: { en: 'All rights reserved.', es: 'Todos los derechos reservados.' },

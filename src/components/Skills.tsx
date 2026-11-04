@@ -8,7 +8,7 @@ import {
   Wrench, 
   Brain, 
   Cpu, 
-  Check, 
+  Shield, 
   Sparkles,
   Layers
 } from 'lucide-react';
@@ -23,14 +23,14 @@ export const Skills: React.FC = () => {
     switch (iconName) {
       case 'Code2':
         return <Code2 className="w-4 h-4" />;
+      case 'Shield':
+        return <Shield className="w-4 h-4" />;
+      case 'Database':
+        return <Database className="w-4 h-4" />;
       case 'Layout':
         return <Layout className="w-4 h-4" />;
       case 'Server':
         return <Server className="w-4 h-4" />;
-      case 'Database':
-        return <Database className="w-4 h-4" />;
-      case 'Wrench':
-        return <Wrench className="w-4 h-4" />;
       case 'Brain':
         return <Brain className="w-4 h-4" />;
       default:
@@ -73,7 +73,7 @@ export const Skills: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.15 }}
-            className="text-slate-400 text-sm sm:text-base"
+            className="text-slate-400 text-sm sm:text-base leading-relaxed"
           >
             {UI_TRANSLATIONS.skills.subtitle[language]}
           </motion.p>
@@ -113,7 +113,7 @@ export const Skills: React.FC = () => {
         </div>
 
         {/* Skills Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {displayedCategories.map((category, catIdx) => (
             <motion.div
               key={category.id}
@@ -134,7 +134,7 @@ export const Skills: React.FC = () => {
                       {category.title[language]}
                     </h3>
                     <span className="text-[11px] font-mono text-cyan-400">
-                      {category.skills.length} {language === 'en' ? 'technologies' : 'tecnologías'}
+                      {category.skills.length} {language === 'en' ? 'competencies' : 'competencias'}
                     </span>
                   </div>
                 </div>

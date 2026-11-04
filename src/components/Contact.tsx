@@ -6,9 +6,10 @@ import {
   Linkedin, 
   Github, 
   MapPin, 
+  Phone, 
+  Clock, 
   AlertCircle, 
   CheckCircle2, 
-  Sparkles,
   ArrowUpRight,
   MessageSquare
 } from 'lucide-react';
@@ -60,7 +61,6 @@ export const Contact: React.FC = () => {
 
     setIsSubmitting(true);
 
-    // Simulate immediate client validation response
     setTimeout(() => {
       setIsSubmitting(false);
       setSubmitStatus('success');
@@ -115,59 +115,12 @@ export const Contact: React.FC = () => {
             transition={{ duration: 0.6 }}
             className="lg:col-span-5 flex flex-col gap-6"
           >
-            {/* Direct Cards */}
             <div className="p-6 rounded-2xl bg-[#0D1220]/80 border border-slate-800/80 shadow-xl">
               <span className="text-xs font-mono uppercase tracking-wider text-cyan-400 block mb-4">
                 // {UI_TRANSLATIONS.contact.socialText[language]}
               </span>
 
-              <div className="space-y-4">
-                {/* LinkedIn */}
-                <a
-                  href={SOCIAL_LINKS.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group flex items-center justify-between p-3.5 rounded-xl bg-[#111827]/70 hover:bg-slate-800/70 border border-slate-800/80 hover:border-blue-500/40 transition-all"
-                >
-                  <div className="flex items-center gap-3">
-                    <div className="p-2 rounded-lg bg-[#0A66C2]/15 text-[#0A66C2]">
-                      <Linkedin className="w-5 h-5" />
-                    </div>
-                    <div>
-                      <span className="text-xs font-bold text-white block group-hover:text-blue-300 transition-colors">
-                        LinkedIn Profile
-                      </span>
-                      <span className="text-[11px] text-slate-400 font-mono">
-                        /in/pablovillanuevapicazo
-                      </span>
-                    </div>
-                  </div>
-                  <ArrowUpRight className="w-4 h-4 text-slate-500 group-hover:text-blue-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
-                </a>
-
-                {/* GitHub */}
-                <a
-                  href={SOCIAL_LINKS.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group flex items-center justify-between p-3.5 rounded-xl bg-[#111827]/70 hover:bg-slate-800/70 border border-slate-800/80 hover:border-slate-700 transition-all"
-                >
-                  <div className="flex items-center gap-3">
-                    <div className="p-2 rounded-lg bg-slate-800 text-white">
-                      <Github className="w-5 h-5" />
-                    </div>
-                    <div>
-                      <span className="text-xs font-bold text-white block group-hover:text-blue-300 transition-colors">
-                        GitHub Repositories
-                      </span>
-                      <span className="text-[11px] text-slate-400 font-mono">
-                        github.com/villanuevapablo
-                      </span>
-                    </div>
-                  </div>
-                  <ArrowUpRight className="w-4 h-4 text-slate-500 group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
-                </a>
-
+              <div className="space-y-3.5">
                 {/* Direct Email */}
                 <a
                   href={`mailto:${SOCIAL_LINKS.email}`}
@@ -188,26 +141,90 @@ export const Contact: React.FC = () => {
                   </div>
                   <ArrowUpRight className="w-4 h-4 text-slate-500 group-hover:text-cyan-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
                 </a>
+
+                {/* Direct Phone */}
+                <a
+                  href={`tel:${SOCIAL_LINKS.phone}`}
+                  className="group flex items-center justify-between p-3.5 rounded-xl bg-[#111827]/70 hover:bg-slate-800/70 border border-slate-800/80 hover:border-emerald-500/40 transition-all"
+                >
+                  <div className="flex items-center gap-3">
+                    <div className="p-2 rounded-lg bg-emerald-600/15 text-emerald-400">
+                      <Phone className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <span className="text-xs font-bold text-white block group-hover:text-emerald-300 transition-colors">
+                        {UI_TRANSLATIONS.contact.phoneNumber[language]}
+                      </span>
+                      <span className="text-[11px] text-slate-400 font-mono">
+                        {SOCIAL_LINKS.phone}
+                      </span>
+                    </div>
+                  </div>
+                  <ArrowUpRight className="w-4 h-4 text-slate-500 group-hover:text-emerald-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
+                </a>
+
+                {/* LinkedIn */}
+                <a
+                  href={SOCIAL_LINKS.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-center justify-between p-3.5 rounded-xl bg-[#111827]/70 hover:bg-slate-800/70 border border-slate-800/80 hover:border-blue-500/40 transition-all"
+                >
+                  <div className="flex items-center gap-3">
+                    <div className="p-2 rounded-lg bg-[#0A66C2]/15 text-[#0A66C2]">
+                      <Linkedin className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <span className="text-xs font-bold text-white block group-hover:text-blue-300 transition-colors">
+                        LinkedIn
+                      </span>
+                      <span className="text-[11px] text-slate-400 font-mono">
+                        linkedin.com/in/pablovillanuevapicazo
+                      </span>
+                    </div>
+                  </div>
+                  <ArrowUpRight className="w-4 h-4 text-slate-500 group-hover:text-blue-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
+                </a>
+
+                {/* GitHub */}
+                <a
+                  href={SOCIAL_LINKS.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-center justify-between p-3.5 rounded-xl bg-[#111827]/70 hover:bg-slate-800/70 border border-slate-800/80 hover:border-slate-700 transition-all"
+                >
+                  <div className="flex items-center gap-3">
+                    <div className="p-2 rounded-lg bg-slate-800 text-white">
+                      <Github className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <span className="text-xs font-bold text-white block group-hover:text-blue-300 transition-colors">
+                        GitHub
+                      </span>
+                      <span className="text-[11px] text-slate-400 font-mono">
+                        github.com/villanuevapablo
+                      </span>
+                    </div>
+                  </div>
+                  <ArrowUpRight className="w-4 h-4 text-slate-500 group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
+                </a>
               </div>
             </div>
 
-            {/* Location & Relocation Card */}
-            <div className="p-6 rounded-2xl bg-[#0D1220]/80 border border-slate-800/80 text-xs text-slate-400 space-y-2">
-              <div className="flex items-center gap-2 text-slate-200 font-semibold">
+            {/* Location & Availability Card */}
+            <div className="p-6 rounded-2xl bg-[#0D1220]/80 border border-slate-800/80 text-xs text-slate-300 space-y-3">
+              <div className="flex items-center gap-2 text-white font-semibold">
                 <MapPin className="w-4 h-4 text-cyan-400" />
-                <span>{UI_TRANSLATIONS.contact.locationText[language]}</span>
+                <span>{PERSONAL_INFO.location[language]}</span>
               </div>
-              <p className="text-slate-400 leading-relaxed text-xs">
-                {PERSONAL_INFO.location[language]}
-              </p>
-              <div className="pt-2 text-[11px] font-mono text-emerald-400 flex items-center gap-1.5">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                <span>{language === 'en' ? 'Open to EU & International teams' : 'Abierto a equipos nacionales e internacionales'}</span>
+              <div className="flex items-center gap-2 text-emerald-400 font-mono text-[11px]">
+                <Clock className="w-3.5 h-3.5 shrink-0" />
+                <span>{PERSONAL_INFO.availability[language]}</span>
               </div>
             </div>
           </motion.div>
 
-          {/* Right Column: Contact Form with Validation & Prototype Banner */}
+          {/* Right Column: Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -215,12 +232,11 @@ export const Contact: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.15 }}
             className="lg:col-span-7 p-6 sm:p-8 rounded-2xl bg-[#0D1220]/90 border border-slate-800/90 shadow-2xl relative"
           >
-            {/* Prototype Notice Alert */}
             <div className="mb-6 p-4 rounded-xl bg-slate-900/90 border border-slate-800 text-xs text-slate-300 flex items-start gap-3">
               <AlertCircle className="w-4 h-4 text-cyan-400 shrink-0 mt-0.5" />
               <div className="leading-relaxed">
                 <span className="font-semibold text-white block mb-0.5">
-                  {language === 'en' ? 'Client Prototype Notice' : 'Aviso de Prototipo Frontend'}
+                  {language === 'en' ? 'Quick Contact Form' : 'Formulario de Contacto Directo'}
                 </span>
                 <p className="text-slate-400 text-[11px]">
                   {UI_TRANSLATIONS.contact.prototypeNotice[language]}
@@ -237,7 +253,6 @@ export const Contact: React.FC = () => {
 
             <form onSubmit={handleSubmit} noValidate className="space-y-4">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {/* Name */}
                 <div>
                   <label htmlFor="name" className="block text-xs font-mono uppercase tracking-wider text-slate-300 mb-1.5">
                     {UI_TRANSLATIONS.contact.nameLabel[language]} <span className="text-red-400">*</span>
@@ -257,7 +272,6 @@ export const Contact: React.FC = () => {
                   )}
                 </div>
 
-                {/* Email */}
                 <div>
                   <label htmlFor="email" className="block text-xs font-mono uppercase tracking-wider text-slate-300 mb-1.5">
                     {UI_TRANSLATIONS.contact.emailLabel[language]} <span className="text-red-400">*</span>
@@ -278,7 +292,6 @@ export const Contact: React.FC = () => {
                 </div>
               </div>
 
-              {/* Subject */}
               <div>
                 <label htmlFor="subject" className="block text-xs font-mono uppercase tracking-wider text-slate-300 mb-1.5">
                   {UI_TRANSLATIONS.contact.subjectLabel[language]} <span className="text-red-400">*</span>
@@ -298,7 +311,6 @@ export const Contact: React.FC = () => {
                 )}
               </div>
 
-              {/* Message */}
               <div>
                 <label htmlFor="message" className="block text-xs font-mono uppercase tracking-wider text-slate-300 mb-1.5">
                   {UI_TRANSLATIONS.contact.messageLabel[language]} <span className="text-red-400">*</span>
@@ -318,7 +330,6 @@ export const Contact: React.FC = () => {
                 )}
               </div>
 
-              {/* Submit Button */}
               <button
                 type="submit"
                 disabled={isSubmitting}

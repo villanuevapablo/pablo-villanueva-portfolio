@@ -1,5 +1,5 @@
 import React from 'react';
-import { X, FileText, Download, CheckCircle, AlertCircle, ExternalLink } from 'lucide-react';
+import { X, FileText, Download, CheckCircle, ExternalLink, Award, Globe } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { PERSONAL_INFO, SOCIAL_LINKS } from '../data/portfolioData';
 
@@ -14,7 +14,7 @@ export const CvModal: React.FC<CvModalProps> = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm animate-in fade-in duration-200">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md animate-in fade-in duration-200">
       <div 
         className="relative w-full max-w-lg rounded-2xl bg-[#0D1220] border border-slate-700/80 shadow-2xl p-6 sm:p-7 text-left"
         onClick={(e) => e.stopPropagation()}
@@ -29,83 +29,82 @@ export const CvModal: React.FC<CvModalProps> = ({ isOpen, onClose }) => {
         </button>
 
         {/* Modal Header */}
-        <div className="flex items-center gap-3 mb-5">
-          <div className="p-3 rounded-xl bg-blue-600/20 border border-blue-500/30 text-blue-400">
-            <FileText className="w-6 h-6" />
+        <div className="flex items-center gap-3.5 mb-5">
+          <div className="relative w-12 h-12 rounded-xl overflow-hidden border border-blue-500/30 shrink-0">
+            <img 
+              src={PERSONAL_INFO.avatarUrl} 
+              alt={PERSONAL_INFO.fullName} 
+              className="w-full h-full object-cover object-top"
+            />
           </div>
           <div>
-            <h3 className="text-lg font-bold text-white">
-              {language === 'en' ? 'Curriculum Vitae / Resume' : 'Currículum Vitae'}
+            <h3 className="text-lg font-bold text-white flex items-center gap-2">
+              <span>{PERSONAL_INFO.fullName}</span>
+              <span className="w-2 h-2 rounded-full bg-emerald-400" />
             </h3>
             <p className="text-xs font-mono text-cyan-400">
-              {PERSONAL_INFO.name} • Software Engineer
+              {PERSONAL_INFO.title[language]}
             </p>
           </div>
         </div>
 
-        {/* Notice Box */}
-        <div className="p-4 rounded-xl bg-slate-900/90 border border-slate-800 mb-5">
-          <div className="flex items-start gap-2.5">
-            <AlertCircle className="w-4 h-4 text-cyan-400 shrink-0 mt-0.5" />
-            <div className="text-xs text-slate-300 leading-relaxed">
-              <span className="font-semibold text-white block mb-1">
-                {language === 'en' ? 'Curriculum Vitae Placeholder' : 'Marcador de Currículum Vitae'}
-              </span>
-              {language === 'en' ? (
-                <>
-                  To publish your finalized PDF resume, place your compiled PDF document named <code className="px-1.5 py-0.5 rounded bg-slate-800 text-cyan-300 font-mono text-[11px]">{PERSONAL_INFO.cvFilename}</code> in the <code className="px-1.5 py-0.5 rounded bg-slate-800 text-cyan-300 font-mono text-[11px]">public/</code> directory.
-                </>
-              ) : (
-                <>
-                  Para publicar tu currículum final en PDF, sitúa tu archivo compilado con el nombre <code className="px-1.5 py-0.5 rounded bg-slate-800 text-cyan-300 font-mono text-[11px]">{PERSONAL_INFO.cvFilename}</code> dentro de la carpeta <code className="px-1.5 py-0.5 rounded bg-slate-800 text-cyan-300 font-mono text-[11px]">public/</code>.
-                </>
-              )}
-            </div>
+        {/* Verified Credentials Box */}
+        <div className="space-y-2.5 mb-6 text-xs text-slate-300 font-mono bg-[#111827]/80 p-4 rounded-xl border border-slate-800/80">
+          <div className="flex items-center gap-2">
+            <Award className="w-4 h-4 text-emerald-400 shrink-0" />
+            <span>York St John Univ. — First-Class Honours (9/10)</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <CheckCircle className="w-4 h-4 text-cyan-400 shrink-0" />
+            <span>Instituto Nebrija — FP Grado Superior DAM</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <CheckCircle className="w-4 h-4 text-blue-400 shrink-0" />
+            <span>Universidad Nebrija — Development Technician</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <Globe className="w-4 h-4 text-indigo-400 shrink-0" />
+            <span>English (B2 Certified) • Spanish (Native)</span>
           </div>
         </div>
 
-        {/* Summary of credentials */}
-        <div className="space-y-2.5 mb-6 text-xs text-slate-300 font-mono bg-[#111827]/70 p-4 rounded-xl border border-slate-800/80">
-          <div className="flex items-center gap-2">
-            <CheckCircle className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
-            <span>York St John University — BSc (Hons) Software Engineering</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <CheckCircle className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
-            <span>DAM Vocational Higher Degree — Multiplatform App Development</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <CheckCircle className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
-            <span>Universidad Nebrija — Software Development Technician</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <CheckCircle className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
-            <span>Languages: Spanish (Native) • English (Professional)</span>
-          </div>
-        </div>
+        {/* Action Buttons: Download in EN or ES */}
+        <div className="space-y-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <a
+              href={`/${PERSONAL_INFO.cvFilename.en}`}
+              download="CV_Pablo_Villanueva_Picazo_EN.pdf"
+              className="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-medium text-xs transition-colors shadow-lg shadow-blue-600/20"
+            >
+              <Download className="w-4 h-4" />
+              <span>Download CV (English PDF)</span>
+            </a>
 
-        {/* Actions */}
-        <div className="flex flex-col sm:flex-row gap-3">
-          <a
-            href={`/${PERSONAL_INFO.cvFilename}`}
-            download={PERSONAL_INFO.cvFilename}
-            className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-medium text-xs transition-colors shadow-lg shadow-blue-600/20"
-          >
-            <Download className="w-4 h-4" />
-            <span>
-              {language === 'en' ? 'Download PDF Document' : 'Descargar Documento PDF'}
+            <a
+              href={`/${PERSONAL_INFO.cvFilename.es}`}
+              download="CV_Pablo_Villanueva_Picazo_ES.pdf"
+              className="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-[#111827] hover:bg-slate-800 text-cyan-300 hover:text-white font-medium text-xs border border-slate-700/80 transition-colors"
+            >
+              <Download className="w-4 h-4" />
+              <span>Descargar CV (Español PDF)</span>
+            </a>
+          </div>
+
+          <div className="flex items-center justify-between pt-2 border-t border-slate-800/80 text-xs">
+            <span className="text-slate-400 font-mono">
+              Madrid, Spain • {SOCIAL_LINKS.phone}
             </span>
-          </a>
 
-          <a
-            href={SOCIAL_LINKS.linkedin}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-medium border border-slate-700 transition-colors"
-          >
-            <span>{language === 'en' ? 'View on LinkedIn' : 'Ver en LinkedIn'}</span>
-            <ExternalLink className="w-3.5 h-3.5 text-slate-400" />
-          </a>
+            <a
+              href={SOCIAL_LINKS.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 text-blue-400 hover:text-blue-300 font-medium"
+            >
+              <span>LinkedIn</span>
+              <ExternalLink className="w-3.5 h-3.5" />
+            </a>
+          </div>
         </div>
       </div>
     </div>
