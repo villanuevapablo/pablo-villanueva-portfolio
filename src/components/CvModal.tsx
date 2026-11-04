@@ -64,7 +64,11 @@ export const CvModal: React.FC<CvModalProps> = ({ isOpen, onClose }) => {
           </div>
           <div className="flex items-center gap-2">
             <Globe className="w-4 h-4 text-indigo-400 shrink-0" />
-            <span>English (B2 Certified) • Spanish (Native)</span>
+            <span>
+              {language === 'en' 
+                ? 'English (Professional Fluency) • Spanish (Native)' 
+                : 'Inglés (Fluidez profesional) • Español (Nativo)'}
+            </span>
           </div>
         </div>
 

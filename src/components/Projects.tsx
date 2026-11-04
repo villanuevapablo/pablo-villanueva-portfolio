@@ -1,11 +1,16 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FolderGit2, Github, ExternalLink, ArrowRight, Sparkles, Award, ShieldCheck } from 'lucide-react';
+import { FolderGit2, Github, ExternalLink, ArrowRight, Award, ShieldCheck, Brain, BarChart2 } from 'lucide-react';
 import { ProjectItem, ProjectCategory } from '../types/portfolio';
-import { PROJECTS, UI_TRANSLATIONS, SOCIAL_LINKS } from '../data/portfolioData';
+import { PROJECTS, UI_TRANSLATIONS } from '../data/portfolioData';
 import { useLanguage } from '../context/LanguageContext';
 import { ProjectModal } from './ProjectModal';
-import { BtcForecastVisual, SrmsSecurityVisual, FullstackArchVisual } from './ProjectVisuals';
+import { 
+  BtcForecastVisual, 
+  SrmsSecurityVisual, 
+  SmartOrganizerVisual, 
+  PreflopHeroVisual 
+} from './ProjectVisuals';
 
 export const Projects: React.FC = () => {
   const { language } = useLanguage();
@@ -16,7 +21,7 @@ export const Projects: React.FC = () => {
     { id: 'all', label: UI_TRANSLATIONS.projects.filterAll[language] },
     { id: 'ai-ml', label: UI_TRANSLATIONS.projects.filterAi[language] },
     { id: 'security', label: UI_TRANSLATIONS.projects.filterSecurity[language] },
-    { id: 'fullstack', label: UI_TRANSLATIONS.projects.filterFullstack[language] },
+    { id: 'data', label: UI_TRANSLATIONS.projects.filterData[language] },
   ];
 
   const filteredProjects = activeCategory === 'all'
@@ -29,10 +34,12 @@ export const Projects: React.FC = () => {
         return <BtcForecastVisual />;
       case 'srms-security':
         return <SrmsSecurityVisual />;
-      case 'fullstack-arch':
-      case 'data-analytics':
+      case 'smart-organizer':
+        return <SmartOrganizerVisual />;
+      case 'preflop-hero':
+        return <PreflopHeroVisual />;
       default:
-        return <FullstackArchVisual />;
+        return <BtcForecastVisual />;
     }
   };
 
@@ -94,7 +101,7 @@ export const Projects: React.FC = () => {
         </div>
 
         {/* Projects Grid */}
-        <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <motion.div layout className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <AnimatePresence>
             {filteredProjects.map((project) => (
               <motion.article
@@ -119,10 +126,14 @@ export const Projects: React.FC = () => {
                       <span className="text-[11px] font-mono uppercase tracking-wider text-cyan-400">
                         {project.categoryLabel[language]}
                       </span>
-                      {project.grade && (
+                      {project.grade ? (
                         <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-950/60 border border-emerald-800/60 text-emerald-300 font-bold flex items-center gap-1">
                           <Award className="w-3 h-3 text-emerald-400" />
                           <span>{project.grade}</span>
+                        </span>
+                      ) : (
+                        <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-900 border border-slate-800 text-slate-400">
+                          {project.year}
                         </span>
                       )}
                     </div>
@@ -168,15 +179,17 @@ export const Projects: React.FC = () => {
                     </button>
 
                     <div className="flex items-center gap-2">
-                      <a
-                        href={SOCIAL_LINKS.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="p-2 text-slate-400 hover:text-white rounded-lg hover:bg-slate-800 transition-colors"
-                        title="GitHub Profile"
-                      >
-                        <Github className="w-4 h-4" />
-                      </a>
+                      {project.githubUrl && (
+                        <a
+                          href={project.githubUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="p-2 text-slate-400 hover:text-white rounded-lg hover:bg-slate-800 transition-colors"
+                          title="View Repository"
+                        >
+                          <Github className="w-4 h-4" />
+                        </a>
+                      )}
                     </div>
                   </div>
                 </div>

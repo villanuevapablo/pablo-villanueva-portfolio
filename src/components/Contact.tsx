@@ -8,10 +8,11 @@ import {
   MapPin, 
   Phone, 
   Clock, 
-  AlertCircle, 
   CheckCircle2, 
   ArrowUpRight,
-  MessageSquare
+  MessageSquare,
+  Copy,
+  Check
 } from 'lucide-react';
 import { SOCIAL_LINKS, PERSONAL_INFO, UI_TRANSLATIONS } from '../data/portfolioData';
 import { useLanguage } from '../context/LanguageContext';
@@ -29,6 +30,7 @@ export const Contact: React.FC = () => {
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success'>('idle');
+  const [copiedEmail, setCopiedEmail] = useState(false);
 
   const validate = () => {
     const errs: Record<string, string> = {};
@@ -54,6 +56,12 @@ export const Contact: React.FC = () => {
     return Object.keys(errs).length === 0;
   };
 
+  const handleCopyEmail = () => {
+    navigator.clipboard.writeText(SOCIAL_LINKS.email);
+    setCopiedEmail(true);
+    setTimeout(() => setCopiedEmail(false), 2000);
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
@@ -61,12 +69,20 @@ export const Contact: React.FC = () => {
 
     setIsSubmitting(true);
 
+    // Prepare mailto link with encoded message
+    const mailtoUrl = `mailto:${SOCIAL_LINKS.email}?subject=${encodeURIComponent(
+      formData.subject
+    )}&body=${encodeURIComponent(
+      `Hello Pablo,\n\n${formData.message}\n\n---\nSender: ${formData.name}\nContact Email: ${formData.email}`
+    )}`;
+
     setTimeout(() => {
       setIsSubmitting(false);
       setSubmitStatus('success');
+      window.open(mailtoUrl, '_blank');
       setFormData({ name: '', email: '', subject: '', message: '' });
       setErrors({});
-    }, 700);
+    }, 500);
   };
 
   return (
@@ -121,12 +137,12 @@ export const Contact: React.FC = () => {
               </span>
 
               <div className="space-y-3.5">
-                {/* Direct Email */}
-                <a
-                  href={`mailto:${SOCIAL_LINKS.email}`}
-                  className="group flex items-center justify-between p-3.5 rounded-xl bg-[#111827]/70 hover:bg-slate-800/70 border border-slate-800/80 hover:border-cyan-500/40 transition-all"
-                >
-                  <div className="flex items-center gap-3">
+                {/* Direct Email with Copy & Mail action */}
+                <div className="group flex items-center justify-between p-3.5 rounded-xl bg-[#111827]/70 hover:bg-slate-800/70 border border-slate-800/80 hover:border-cyan-500/40 transition-all">
+                  <a
+                    href={`mailto:${SOCIAL_LINKS.email}`}
+                    className="flex items-center gap-3 flex-1"
+                  >
                     <div className="p-2 rounded-lg bg-cyan-600/15 text-cyan-400">
                       <Mail className="w-5 h-5" />
                     </div>
@@ -138,9 +154,21 @@ export const Contact: React.FC = () => {
                         {SOCIAL_LINKS.email}
                       </span>
                     </div>
-                  </div>
-                  <ArrowUpRight className="w-4 h-4 text-slate-500 group-hover:text-cyan-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
-                </a>
+                  </a>
+
+                  <button
+                    onClick={handleCopyEmail}
+                    className="p-2 text-slate-400 hover:text-white rounded-lg hover:bg-slate-700/60 transition-colors"
+                    title={copiedEmail ? 'Copied!' : 'Copy email to clipboard'}
+                    aria-label="Copy email"
+                  >
+                    {copiedEmail ? (
+                      <Check className="w-4 h-4 text-emerald-400" />
+                    ) : (
+                      <Copy className="w-4 h-4" />
+                    )}
+                  </button>
+                </div>
 
                 {/* Direct Phone */}
                 <a
@@ -232,18 +260,6 @@ export const Contact: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.15 }}
             className="lg:col-span-7 p-6 sm:p-8 rounded-2xl bg-[#0D1220]/90 border border-slate-800/90 shadow-2xl relative"
           >
-            <div className="mb-6 p-4 rounded-xl bg-slate-900/90 border border-slate-800 text-xs text-slate-300 flex items-start gap-3">
-              <AlertCircle className="w-4 h-4 text-cyan-400 shrink-0 mt-0.5" />
-              <div className="leading-relaxed">
-                <span className="font-semibold text-white block mb-0.5">
-                  {language === 'en' ? 'Quick Contact Form' : 'Formulario de Contacto Directo'}
-                </span>
-                <p className="text-slate-400 text-[11px]">
-                  {UI_TRANSLATIONS.contact.prototypeNotice[language]}
-                </p>
-              </div>
-            </div>
-
             {submitStatus === 'success' && (
               <div className="mb-6 p-4 rounded-xl bg-emerald-950/40 border border-emerald-800/60 text-xs text-emerald-300 flex items-center gap-3">
                 <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0" />
@@ -330,20 +346,26 @@ export const Contact: React.FC = () => {
                 )}
               </div>
 
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-medium text-xs sm:text-sm transition-all duration-200 shadow-lg shadow-blue-600/25 hover:shadow-blue-500/35 disabled:opacity-50"
-              >
-                {isSubmitting ? (
-                  <span>{language === 'en' ? 'Validating...' : 'Validando...'}</span>
-                ) : (
-                  <>
-                    <Send className="w-4 h-4" />
-                    <span>{UI_TRANSLATIONS.contact.submitButton[language]}</span>
-                  </>
-                )}
-              </button>
+              <div className="flex flex-col sm:flex-row items-center justify-between gap-3 pt-2">
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-medium text-xs sm:text-sm transition-all duration-200 shadow-lg shadow-blue-600/25 hover:shadow-blue-500/35 disabled:opacity-50"
+                >
+                  {isSubmitting ? (
+                    <span>{language === 'en' ? 'Preparing Email...' : 'Preparando Mensaje...'}</span>
+                  ) : (
+                    <>
+                      <Send className="w-4 h-4" />
+                      <span>{UI_TRANSLATIONS.contact.submitButton[language]}</span>
+                    </>
+                  )}
+                </button>
+
+                <span className="text-[11px] text-slate-500 font-mono text-center sm:text-right">
+                  {UI_TRANSLATIONS.contact.prototypeNotice[language]}
+                </span>
+              </div>
             </form>
           </motion.div>
         </div>

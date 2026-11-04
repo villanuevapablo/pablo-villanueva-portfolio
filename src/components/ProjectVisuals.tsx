@@ -1,13 +1,25 @@
 import React from 'react';
-import { TrendingUp, Cpu, ShieldCheck, Activity, Lock, KeyRound, AlertTriangle, CheckCircle2, Server, Terminal } from 'lucide-react';
+import { 
+  ShieldCheck, 
+  Activity, 
+  Lock, 
+  KeyRound, 
+  CheckCircle2, 
+  Cpu, 
+  Brain, 
+  FolderSync, 
+  FileText, 
+  Sparkles,
+  BarChart2,
+  Database,
+  Search
+} from 'lucide-react';
 
 export const BtcForecastVisual: React.FC = () => {
   return (
     <div className="w-full h-48 bg-[#0B0F19] rounded-xl border border-slate-800/80 p-3.5 flex flex-col justify-between font-mono relative overflow-hidden select-none">
-      {/* Background Grid Pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b15_1px,transparent_1px),linear-gradient(to_bottom,#1e293b15_1px,transparent_1px)] bg-[size:16px_16px]" />
 
-      {/* Top Header */}
       <div className="relative z-10 flex items-center justify-between border-b border-slate-800/60 pb-2">
         <div className="flex items-center gap-2">
           <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
@@ -19,7 +31,6 @@ export const BtcForecastVisual: React.FC = () => {
         </div>
       </div>
 
-      {/* Visual Chart Graphic (SVG Time-series with MA) */}
       <div className="relative z-10 my-1 h-20 w-full">
         <svg className="w-full h-full overflow-visible" viewBox="0 0 320 80" preserveAspectRatio="none">
           <defs>
@@ -29,13 +40,11 @@ export const BtcForecastVisual: React.FC = () => {
             </linearGradient>
           </defs>
           
-          {/* Price area fill */}
           <path
             d="M 0 65 Q 40 50, 80 58 T 160 38 T 240 25 T 300 15 L 300 80 L 0 80 Z"
             fill="url(#btc-glow)"
           />
 
-          {/* Historical Price line */}
           <path
             d="M 0 65 Q 40 50, 80 58 T 160 38 T 240 25 T 300 15"
             fill="none"
@@ -44,7 +53,6 @@ export const BtcForecastVisual: React.FC = () => {
             strokeLinecap="round"
           />
 
-          {/* 30-day SMA trend line */}
           <path
             d="M 0 60 Q 50 55, 100 52 T 200 40 T 300 24"
             fill="none"
@@ -53,13 +61,11 @@ export const BtcForecastVisual: React.FC = () => {
             strokeDasharray="4 3"
           />
 
-          {/* Forecast Horizon point */}
           <circle cx="300" cy="15" r="4" fill="#10B981" />
           <circle cx="300" cy="15" r="7" fill="none" stroke="#10B981" strokeWidth="1.5" className="animate-ping" opacity="0.6" />
         </svg>
       </div>
 
-      {/* Bottom Metrics Bar */}
       <div className="relative z-10 grid grid-cols-3 gap-2 pt-2 border-t border-slate-800/60 text-[10px]">
         <div>
           <span className="text-slate-500 block">Processing Model</span>
@@ -81,10 +87,8 @@ export const BtcForecastVisual: React.FC = () => {
 export const SrmsSecurityVisual: React.FC = () => {
   return (
     <div className="w-full h-48 bg-[#0B0F19] rounded-xl border border-slate-800/80 p-3.5 flex flex-col justify-between font-mono relative overflow-hidden select-none">
-      {/* Background Grid Pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b15_1px,transparent_1px),linear-gradient(to_bottom,#1e293b15_1px,transparent_1px)] bg-[size:16px_16px]" />
 
-      {/* Top Header */}
       <div className="relative z-10 flex items-center justify-between border-b border-slate-800/60 pb-2">
         <div className="flex items-center gap-2">
           <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
@@ -96,7 +100,6 @@ export const SrmsSecurityVisual: React.FC = () => {
         </div>
       </div>
 
-      {/* Interactive Security Gates */}
       <div className="relative z-10 grid grid-cols-3 gap-2 my-2">
         <div className="p-2 rounded-lg bg-slate-900/90 border border-slate-800 text-center">
           <div className="flex items-center justify-center gap-1 text-[10px] text-cyan-400 font-bold mb-0.5">
@@ -123,7 +126,6 @@ export const SrmsSecurityVisual: React.FC = () => {
         </div>
       </div>
 
-      {/* Bottom Metrics Bar */}
       <div className="relative z-10 grid grid-cols-3 gap-2 pt-2 border-t border-slate-800/60 text-[10px]">
         <div>
           <span className="text-slate-500 block">Core Language</span>
@@ -142,65 +144,114 @@ export const SrmsSecurityVisual: React.FC = () => {
   );
 };
 
-export const FullstackArchVisual: React.FC = () => {
+export const SmartOrganizerVisual: React.FC = () => {
   return (
     <div className="w-full h-48 bg-[#0B0F19] rounded-xl border border-slate-800/80 p-3.5 flex flex-col justify-between font-mono relative overflow-hidden select-none">
-      {/* Background Pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b15_1px,transparent_1px),linear-gradient(to_bottom,#1e293b15_1px,transparent_1px)] bg-[size:16px_16px]" />
 
-      {/* Top Header */}
       <div className="relative z-10 flex items-center justify-between border-b border-slate-800/60 pb-2">
         <div className="flex items-center gap-2">
-          <Cpu className="w-3.5 h-3.5 text-blue-400" />
-          <span className="text-[11px] font-semibold text-slate-200">Decoupled Architecture</span>
+          <FolderSync className="w-3.5 h-3.5 text-blue-400" />
+          <span className="text-[11px] font-semibold text-slate-200">Local AI Daemon • File Organizer</span>
         </div>
-        <div className="flex items-center gap-1 text-[10px] text-emerald-400 bg-emerald-950/40 px-2 py-0.5 rounded border border-emerald-800/40">
-          <ShieldCheck className="w-3 h-3" />
-          <span>REST & Testing</span>
+        <div className="flex items-center gap-1 text-[10px] text-cyan-400 bg-cyan-950/40 px-2 py-0.5 rounded border border-cyan-800/40">
+          <Brain className="w-3 h-3" />
+          <span>Ollama LLM REST</span>
         </div>
       </div>
 
-      {/* Architecture Flow Simulation */}
+      {/* Visual Pipeline Flow */}
       <div className="relative z-10 flex items-center justify-between gap-1.5 my-2">
-        {/* Tier 1: Frontend */}
         <div className="flex-1 p-2 rounded-lg bg-slate-900/90 border border-slate-800 text-center">
-          <span className="text-[9px] text-slate-500 uppercase block">Client Layer</span>
-          <span className="text-[11px] font-bold text-blue-400">React UI</span>
-          <span className="text-[9px] text-slate-400 block mt-0.5">TypeScript</span>
+          <span className="text-[9px] text-slate-500 uppercase block">Watchdog</span>
+          <span className="text-[11px] font-bold text-blue-400">FS Events</span>
+          <span className="text-[9px] text-slate-400 block mt-0.5">Lock Verified</span>
         </div>
 
-        <span className="text-slate-600 text-xs font-bold">⇄</span>
+        <span className="text-slate-600 text-xs font-bold">➔</span>
 
-        {/* Tier 2: API Gateway */}
         <div className="flex-1 p-2 rounded-lg bg-slate-900/90 border border-slate-800 text-center">
-          <span className="text-[9px] text-slate-500 uppercase block">Services</span>
-          <span className="text-[11px] font-bold text-cyan-400">Spring / Node</span>
-          <span className="text-[9px] text-slate-400 block mt-0.5">REST APIs</span>
+          <span className="text-[9px] text-slate-500 uppercase block">Extractor</span>
+          <span className="text-[11px] font-bold text-cyan-400">pypdf / Text</span>
+          <span className="text-[9px] text-slate-400 block mt-0.5">Sanitized</span>
         </div>
 
-        <span className="text-slate-600 text-xs font-bold">⇄</span>
+        <span className="text-slate-600 text-xs font-bold">➔</span>
 
-        {/* Tier 3: Database */}
         <div className="flex-1 p-2 rounded-lg bg-slate-900/90 border border-slate-800 text-center">
-          <span className="text-[9px] text-slate-500 uppercase block">Persistence</span>
-          <span className="text-[11px] font-bold text-indigo-400">JDBC / SQL</span>
-          <span className="text-[9px] text-slate-400 block mt-0.5">Relational</span>
+          <span className="text-[9px] text-slate-500 uppercase block">Local LLM</span>
+          <span className="text-[11px] font-bold text-emerald-400">JSON Schema</span>
+          <span className="text-[9px] text-slate-400 block mt-0.5">Auto-Sorted</span>
         </div>
       </div>
 
-      {/* Bottom Metrics Bar */}
       <div className="relative z-10 grid grid-cols-3 gap-2 pt-2 border-t border-slate-800/60 text-[10px]">
         <div>
-          <span className="text-slate-500 block">Integration</span>
-          <span className="text-slate-300 font-semibold">Third-Party APIs</span>
+          <span className="text-slate-500 block">AI Backend</span>
+          <span className="text-slate-300 font-semibold">Ollama (Zero Cost)</span>
         </div>
         <div>
-          <span className="text-slate-500 block">Quality</span>
-          <span className="text-slate-300 font-semibold">Unit & Integration</span>
+          <span className="text-slate-500 block">UI Interface</span>
+          <span className="text-slate-300 font-semibold">Tkinter + Daemon</span>
         </div>
         <div>
-          <span className="text-slate-500 block">Target</span>
-          <span className="text-cyan-400 font-semibold">Production Stable</span>
+          <span className="text-slate-500 block">Data Privacy</span>
+          <span className="text-emerald-400 font-semibold">100% Local Device</span>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const PreflopHeroVisual: React.FC = () => {
+  return (
+    <div className="w-full h-48 bg-[#0B0F19] rounded-xl border border-slate-800/80 p-3.5 flex flex-col justify-between font-mono relative overflow-hidden select-none">
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b15_1px,transparent_1px),linear-gradient(to_bottom,#1e293b15_1px,transparent_1px)] bg-[size:16px_16px]" />
+
+      <div className="relative z-10 flex items-center justify-between border-b border-slate-800/60 pb-2">
+        <div className="flex items-center gap-2">
+          <BarChart2 className="w-3.5 h-3.5 text-cyan-400" />
+          <span className="text-[11px] font-semibold text-slate-200">Preflop Hero • GTO Strategy Auditor</span>
+        </div>
+        <div className="flex items-center gap-1 text-[10px] text-indigo-400 bg-indigo-950/40 px-2 py-0.5 rounded border border-indigo-800/40">
+          <Database className="w-3 h-3" />
+          <span>SQLite Indexed</span>
+        </div>
+      </div>
+
+      {/* KPI GTO Metrics Display */}
+      <div className="relative z-10 grid grid-cols-3 gap-2 my-2">
+        <div className="p-2 rounded-lg bg-slate-900/90 border border-slate-800 text-center">
+          <span className="text-[9px] text-slate-500 uppercase block">VPIP Target</span>
+          <span className="text-[12px] font-bold text-emerald-400">22.4%</span>
+          <span className="text-[9px] text-slate-400 block mt-0.5">6-Max GTO</span>
+        </div>
+
+        <div className="p-2 rounded-lg bg-slate-900/90 border border-slate-800 text-center">
+          <span className="text-[9px] text-slate-500 uppercase block">PFR Rate</span>
+          <span className="text-[12px] font-bold text-blue-400">18.6%</span>
+          <span className="text-[9px] text-slate-400 block mt-0.5">Aggressive Init</span>
+        </div>
+
+        <div className="p-2 rounded-lg bg-slate-900/90 border border-slate-800 text-center">
+          <span className="text-[9px] text-slate-500 uppercase block">Profile</span>
+          <span className="text-[11px] font-bold text-cyan-300">Optimal TAG</span>
+          <span className="text-[9px] text-slate-400 block mt-0.5">Gap: 3.8 pp</span>
+        </div>
+      </div>
+
+      <div className="relative z-10 grid grid-cols-3 gap-2 pt-2 border-t border-slate-800/60 text-[10px]">
+        <div>
+          <span className="text-slate-500 block">Parser Engine</span>
+          <span className="text-slate-300 font-semibold">Winamax & 888</span>
+        </div>
+        <div>
+          <span className="text-slate-500 block">Storage</span>
+          <span className="text-slate-300 font-semibold">SQLite Indexed DB</span>
+        </div>
+        <div>
+          <span className="text-slate-500 block">Dashboard</span>
+          <span className="text-cyan-400 font-semibold">Dark-Mode Web UI</span>
         </div>
       </div>
     </div>

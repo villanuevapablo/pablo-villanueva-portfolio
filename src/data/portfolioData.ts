@@ -2,15 +2,19 @@ import { PersonalInfo, ExperienceItem, EducationItem, ProjectItem, SkillCategory
 
 /**
  * ============================================================================
- * VERIFIED RESUME DATA - PABLO VILLANUEVA PICAZO
+ * VERIFIED RESUME & PROJECT DATA - PABLO VILLANUEVA PICAZO
  * ============================================================================
  * 
- * Synchronized with official English & Spanish CV documents:
+ * Synchronized with official curriculum vitae and genuine repositories:
  * - Software Engineer — Full-Stack Developer
- * - First-Class Honours (Class I) - York St John University (9/10)
+ * - First-Class Honours (Class I) - York St John University (Equivalent: 9/10)
  * - Instituto de Formación Profesional Nebrija (DAM)
  * - Universidad Nebrija (Development Technician)
- * - Real projects: TFG Bitcoin Prediction (9.0/10) & Secure Record Management (SRMS in Go)
+ * - Real projects: 
+ *    1. TFG Bitcoin Prediction (Grade: 9.0/10 | Machine Learning & Edge AI)
+ *    2. Secure Record Management (SRMS in Go | OWASP Top 10)
+ *    3. Smart File Organizer (Local AI Daemon | Ollama LLM & Watchdog)
+ *    4. Preflop Hero (Poker Hand History Parser & GTO Strategy Auditor)
  */
 
 export const SOCIAL_LINKS: SocialLinks = {
@@ -92,8 +96,8 @@ export const PERSONAL_INFO: PersonalInfo = {
       },
       {
         label: 'Languages',
-        value: 'English (B2 Prof.) • Spanish (Native)',
-        description: 'Certified B2 professional working fluency'
+        value: 'English (Prof. Fluency) • Spanish (Native)',
+        description: 'Professional working proficiency (BSc Hons in the UK)'
       }
     ],
     es: [
@@ -114,8 +118,8 @@ export const PERSONAL_INFO: PersonalInfo = {
       },
       {
         label: 'Idiomas',
-        value: 'Inglés (B2 Cert.) • Español (Nativo)',
-        description: 'Certificación B2 y fluidez profesional'
+        value: 'Inglés (Fluidez profesional) • Español (Nativo)',
+        description: 'Competencia profesional completa (Grado universitario en UK)'
       }
     ]
   },
@@ -268,16 +272,16 @@ export const PROJECTS: ProjectItem[] = [
     grade: '9.0 / 10',
     year: '2026',
     shortDescription: {
-      en: 'Machine Learning forecasting system for Bitcoin price estimation coupled with an Edge AI architecture for decentralized, low-latency real-time data processing.',
+      en: 'Machine Learning forecasting pipeline for Bitcoin price estimation coupled with an Edge AI architecture for decentralized, low-latency real-time market data processing.',
       es: 'Desarrollo de un modelo de predicción del precio de Bitcoin mediante algoritmos de Machine Learning y diseño de una arquitectura Edge AI para procesamiento descentralizado en tiempo real.',
     },
     longDescription: {
-      en: 'Academic dissertation evaluated with a 9.0/10 mark. Combines time-series feature engineering (moving averages, lag returns, rolling volatility metrics) with regression algorithms. Integrates an Edge AI architecture to decentralize live market processing, minimizing server latency and resource consumption.',
-      es: 'Trabajo de Fin de Grado calificado con 9.0/10. Combina ingeniería de características temporales (medias móviles, retardos, volatilidad móvil) con modelos de regresión y una arquitectura Edge AI para procesamiento descentralizado en tiempo real con mínima latencia.',
+      en: 'Academic dissertation evaluated with a 9.0/10 mark. Combines time-series feature engineering (moving averages, lag returns, rolling volatility metrics) with regression models (Random Forest, Linear Regression). Integrates an Edge AI architecture to decentralize live market processing, minimizing server latency and resource consumption.',
+      es: 'Trabajo de Fin de Grado calificado con 9.0/10. Combina ingeniería de características temporales (medias móviles, retardos, volatilidad móvil) con modelos de regresión (Random Forest, Regresión Lineal) y una arquitectura Edge AI para procesamiento descentralizado en tiempo real con mínima latencia.',
     },
-    technologies: ['Python', 'Machine Learning', 'Edge AI', 'Scikit-learn', 'Pandas', 'NumPy', 'Technical Analysis', 'Decentralized Processing'],
+    technologies: ['Python', 'Machine Learning', 'Edge AI', 'Scikit-learn', 'Pandas', 'NumPy', 'Technical Indicators', 'Decentralized Processing'],
     visualType: 'btc-forecast',
-    githubUrl: null,
+    githubUrl: 'https://github.com/villanuevapablo/bitcoin-price-forecasting',
     liveDemoUrl: null,
     isPlaceholderUrl: false,
     status: {
@@ -292,14 +296,14 @@ export const PROJECTS: ProjectItem[] = [
       en: [
         'Development of a Bitcoin price prediction model using ML algorithms focused on technical market analysis',
         'Design of an Edge AI architecture for decentralized real-time data processing, optimizing resources and latency',
-        'Rigorous time-series validation protocols to eliminate lookahead bias and ensure empirical integrity',
-        'Real-time data feeds, automated feature extraction, and predictive trend evaluation'
+        'Rigorous chronological time-series cross-validation (TimeSeriesSplit) to prevent lookahead bias',
+        'Real-time data feeds via yfinance, automated feature engineering, and Telegram bot notification pipeline'
       ],
       es: [
         'Desarrollo de un modelo de predicción del precio de Bitcoin utilizando algoritmos de Machine Learning enfocados en análisis técnico',
         'Diseño de una arquitectura Edge AI para procesamiento de datos descentralizado en tiempo real, optimizando recursos y latencia',
-        'Protocolos de validación temporal rigurosos para eliminar sesgo de anticipación y garantizar rigor empírico',
-        'Flujos de datos en tiempo real, extracción automatizada de características y estimación de tendencias'
+        'Validación cruzada temporal cronológica estricta (TimeSeriesSplit) para eliminar el sesgo de anticipación',
+        'Ingesta de datos en tiempo real con yfinance, ingeniería de características e integración con bot de Telegram'
       ]
     }
   },
@@ -313,7 +317,7 @@ export const PROJECTS: ProjectItem[] = [
     },
     year: '2026',
     shortDescription: {
-      en: 'High-security web application built in Go adhering to OWASP Top 10 standards with RBAC, CSRF mitigation, bcrypt hashing, and IP rate limiting.',
+      en: 'High-security medical record management platform engineered in Go adhering to OWASP Top 10 standards with RBAC, CSRF mitigation, bcrypt hashing, and IP rate limiting.',
       es: 'Aplicación web de gestión de registros médicos en Go con net/http y SQLite, implementando mitigaciones estrictas frente al OWASP Top 10, RBAC, CSRF y rate limiting.',
     },
     longDescription: {
@@ -322,7 +326,7 @@ export const PROJECTS: ProjectItem[] = [
     },
     technologies: ['Go (Golang)', 'net/http', 'SQLite', 'Web Security', 'OWASP Top 10', 'RBAC', 'bcrypt', 'CSRF Protection', 'Rate Limiting'],
     visualType: 'srms-security',
-    githubUrl: null,
+    githubUrl: 'https://github.com/villanuevapablo/secure-record-management-system',
     liveDemoUrl: null,
     isPlaceholderUrl: false,
     status: {
@@ -347,42 +351,88 @@ export const PROJECTS: ProjectItem[] = [
     }
   },
   {
-    id: 'fullstack-architecture-app',
-    title: 'Full-Stack Distributed Application',
-    category: 'fullstack',
+    id: 'smart-file-organizer',
+    title: 'Smart File Organizer (Local AI Daemon)',
+    category: 'ai-ml',
     categoryLabel: {
-      en: 'Full-Stack Architecture',
-      es: 'Arquitectura Full-Stack',
+      en: 'Local AI & System Daemon',
+      es: 'IA Local & Demonio de Sistema',
     },
+    year: '2026',
     shortDescription: {
-      en: 'Decoupled full-stack system demonstrating clean architecture, RESTful API design, database persistence, and automated test coverage.',
-      es: 'Sistema desacoplado full-stack que demuestra arquitectura limpia, diseño de APIs REST, persistencia relacional y cobertura de pruebas automatizadas.',
+      en: 'Autonomous background daemon and desktop application for real-time filesystem monitoring, semantic categorization, and standardized renaming using local LLMs (Ollama) with enforced JSON schemas.',
+      es: 'Demonio autónomo en segundo plano y aplicación de escritorio para monitorización del sistema de archivos en tiempo real y clasificación semántica mediante LLMs locales (Ollama) con esquemas JSON estrictos.',
     },
     longDescription: {
-      en: 'Multi-tier web application built with a decoupled architecture. Features structured RESTful endpoints, relational data normalization, transaction integrity, and robust unit & integration testing to reduce defects in production.',
-      es: 'Aplicación web multicapa construida con arquitectura desacoplada. Incorpora endpoints REST limpios, normalización de datos relacionales, integridad transaccional y pruebas unitarias y de integración para reducir fallos en producción.',
+      en: 'Autonomous system tool engineered in Python that intercepts filesystem events via watchdog. Validates file-lock stability, extracts content across multiple formats (text, PDF parsing via pypdf, metadata), and executes zero-cost local LLM inference via Ollama REST API with strictly enforced JSON schemas. Includes both a headless daemon and an interactive Tkinter desktop GUI.',
+      es: 'Herramienta de sistema autónoma desarrollada en Python que intercepta eventos del sistema de archivos mediante watchdog. Valida el bloqueo de archivos para evitar lecturas prematuras, extrae contenido en múltiples formatos (texto, PDFs con pypdf, metadatos) y ejecuta inferencia local con LLMs mediante Ollama con esquemas JSON estructurados. Incluye demonio en segundo plano e interfaz gráfica en Tkinter.',
     },
-    technologies: ['TypeScript', 'React', 'Node.js / Java', 'Spring Boot', 'REST APIs', 'SQL / JDBC', 'Testing'],
-    visualType: 'fullstack-arch',
-    githubUrl: null,
+    technologies: ['Python', 'Local LLMs', 'Ollama API', 'watchdog', 'pypdf', 'JSON Schema', 'Tkinter GUI', 'File System Daemon'],
+    visualType: 'smart-organizer',
+    githubUrl: 'https://github.com/villanuevapablo/smart-file-organizer',
     liveDemoUrl: null,
     isPlaceholderUrl: false,
     status: {
-      en: 'Enterprise Architecture Pattern',
-      es: 'Patrón de Arquitectura Empresarial',
+      en: 'Production Daemon & Desktop App (2026)',
+      es: 'Demonio y App de Escritorio (2026)',
     },
     features: {
       en: [
-        'Decoupled frontend & backend services with strict boundary contracts',
-        'REST API design for seamless third-party and client data exchange',
-        'Database abstraction with JDBC / SQL schemas',
-        'Systematic unit and integration testing suite for deployment safety'
+        'Real-time folder monitoring intercepting filesystem creation and move events via watchdog',
+        'File stability and lock verification preventing premature reads of in-flight downloads or large copies',
+        'Multi-format content extraction: text streams, PDF multi-page parsing with pypdf, and binary metadata analysis',
+        'Deterministic local AI classification via Ollama REST API with strictly enforced JSON schemas',
+        'Dual execution mode: background Windows/Linux service and modern desktop GUI'
       ],
       es: [
-        'Servicios desacoplados de frontend y backend con contratos estrictos',
-        'Diseño de APIs REST para intercambio seguro de datos con terceros',
-        'Abstracción de bases de datos mediante esquemas SQL y JDBC',
-        'Suite de pruebas unitarias y de integración para seguridad en despliegue'
+        'Monitorización de carpetas en tiempo real interceptando eventos de creación y movimiento con watchdog',
+        'Verificación de estabilidad y bloqueo de archivos para evitar lecturas de descargas en curso',
+        'Extracción multiformato: texto, análisis multipágina de PDFs con pypdf y metadatos binarios',
+        'Clasificación determinista con IA local mediante Ollama y validación de esquemas JSON estrictos',
+        'Modo de ejecución dual: servicio en segundo plano (Windows/Linux) e interfaz gráfica de escritorio'
+      ]
+    }
+  },
+  {
+    id: 'preflop-hero',
+    title: 'Preflop Hero: Hand History Parser & Strategy Auditor',
+    category: 'data',
+    categoryLabel: {
+      en: 'Data Analytics & SQLite',
+      es: 'Analítica de Datos & SQLite',
+    },
+    year: '2026',
+    shortDescription: {
+      en: 'High-performance poker hand history parser and strategy auditor. Extracts hole cards, calculates VPIP and PFR metrics, persists data in SQLite, and benchmarks gameplay against 6-max GTO models.',
+      es: 'Parser de alto rendimiento de historiales de manos de poker y auditor de estrategia preflop. Extrae cartas, calcula métricas VPIP y PFR, persiste datos en SQLite y compara el juego contra benchmarks GTO.',
+    },
+    longDescription: {
+      en: 'Data-driven analytics engine and standalone dark-mode web dashboard. Employs regex parsers to ingest multi-platform hand histories (Winamax & 888poker), computes mathematical preflop indicators (VPIP, PFR, cold-call spread), persists records in SQLite, and diagnoses strategic leaks against Game Theory Optimal (GTO) benchmarks.',
+      es: 'Motor analítico y dashboard web independiente en modo oscuro. Utiliza parsers regex para procesar historiales de Winamax y 888poker, calcula indicadores matemáticos preflop (VPIP, PFR, spread de cold-call), almacena los registros en SQLite y diagnostica fugas estratégicas frente a benchmarks GTO.',
+    },
+    technologies: ['Python', 'SQLite', 'Data Analytics', 'Regex Parsing', 'GTO Benchmarks', 'Web Dashboard', 'Statistical Modeling'],
+    visualType: 'preflop-hero',
+    githubUrl: 'https://github.com/villanuevapablo/poker-analyzer',
+    liveDemoUrl: null,
+    isPlaceholderUrl: false,
+    status: {
+      en: 'Parser Engine & Analytics Dashboard (2026)',
+      es: 'Motor de Parsing y Dashboard Analítico (2026)',
+    },
+    features: {
+      en: [
+        'Multi-platform regex parser supporting raw Winamax and 888poker hand histories',
+        'Mathematical extraction of core indicators: VPIP (Voluntarily Put $ in Pot) and PFR (Preflop Raise)',
+        'Cold-call spread calculation and automatic strategic profiling (Optimal TAG, Loose-Passive, Maniac)',
+        'Robust SQLite relational persistence with indexed hand querying and performance reporting',
+        'Standalone dark-mode dashboard with interactive KPI cards and distribution charts'
+      ],
+      es: [
+        'Parser regex multiplataforma compatible con historiales en bruto de Winamax y 888poker',
+        'Cálculo matemático de indicadores clave: VPIP (Voluntarily Put $ in Pot) y PFR (Preflop Raise)',
+        'Cálculo del spread de cold-call y diagnóstico de perfiles estratégicos (TAG Óptimo, Loose-Passive, Maniac)',
+        'Persistencia relacional en SQLite con consultas indexadas y generación de informes de rendimiento',
+        'Dashboard web autónomo en modo oscuro con tarjetas KPI y gráficos de distribución'
       ]
     }
   }
@@ -399,7 +449,7 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
     skills: [
       { name: 'Go (Golang)', levelHint: { en: 'Backend, Net/HTTP, Concurrency', es: 'Backend, Net/HTTP, Concurrencia' }, featured: true },
       { name: 'Java', levelHint: { en: 'Core OOP, Enterprise, JDBC', es: 'POO, Entornos empresariales, JDBC' }, featured: true },
-      { name: 'Python', levelHint: { en: 'Machine Learning, Edge AI, Data', es: 'Machine Learning, Edge AI, Datos' }, featured: true },
+      { name: 'Python', levelHint: { en: 'Machine Learning, Edge AI, Ollama, Daemons', es: 'Machine Learning, Edge AI, Ollama, Demonios' }, featured: true },
       { name: 'JavaScript', levelHint: { en: 'Modern ES6+, Web Services', es: 'ES6+ moderno, Servicios Web' }, featured: true },
       { name: 'TypeScript', levelHint: { en: 'Type-Safe Applications', es: 'Desarrollo tipado escalable' }, featured: true },
       { name: 'Spring Boot', levelHint: { en: 'Java Microservices & APIs', es: 'Microservicios y APIs en Java' }, featured: true },
@@ -423,8 +473,8 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
       { name: 'REST APIs Design & Integration', levelHint: { en: 'Secure Data Transfer', es: 'Transferencia segura de datos' }, featured: true },
       { name: 'Software Testing (Unit & Integration)', levelHint: { en: 'Defect Reduction in Production', es: 'Reducción de fallos en producción' }, featured: true },
       { name: 'Full-Stack Architecture', levelHint: { en: 'Scalable System Engineering', es: 'Ingeniería de sistemas escalables' }, featured: true },
-      { name: 'Edge AI', levelHint: { en: 'Decentralized Real-Time Inference', es: 'Inferencia descentralizada en tiempo real' }, featured: true },
-      { name: 'Machine Learning', levelHint: { en: 'Predictive Modeling & Scikit-learn', es: 'Modelos predictivos y Scikit-learn' }, featured: true },
+      { name: 'Edge AI & Local LLMs', levelHint: { en: 'Ollama REST, Low Latency Inference', es: 'Ollama REST, Inferencia de baja latencia' }, featured: true },
+      { name: 'Machine Learning & Scikit-learn', levelHint: { en: 'Predictive Modeling & Regressors', es: 'Modelos predictivos y regresores' }, featured: true },
       { name: 'Linux', levelHint: { en: 'Environment & Command Line', es: 'Entorno de sistemas y CLI' } },
       { name: 'Git & GitHub', levelHint: { en: 'Version Control & Agile Flow', es: 'Control de versiones y flujo ágil' }, featured: true },
     ]
@@ -485,17 +535,16 @@ export const UI_TRANSLATIONS = {
     keyCompetencies: { en: 'Key Achievements & Focus', es: 'Logros Clave y Enfoque' },
   },
   projects: {
-    title: { en: 'Key Projects', es: 'Proyectos Destacados' },
-    subtitle: { en: 'Verified software implementations across Edge AI, Machine Learning, Web Security and Full-Stack', es: 'Proyectos reales en Edge AI, Machine Learning, Seguridad Web (OWASP) y Full-Stack' },
-    filterAll: { en: 'All Projects', es: 'Todos' },
-    filterAi: { en: 'AI & Machine Learning', es: 'IA y ML' },
-    filterSecurity: { en: 'Security & Go', es: 'Seguridad y Go' },
-    filterFullstack: { en: 'Full-Stack', es: 'Full-Stack' },
-    filterData: { en: 'Data Analytics', es: 'Analítica' },
-    viewDetails: { en: 'View Details', es: 'Ver Detalles' },
+    title: { en: 'Featured Projects', es: 'Proyectos Destacados' },
+    subtitle: { en: 'Real software implementations across Edge AI, Local LLMs, Web Security (OWASP) and Data Analytics', es: 'Proyectos reales en Edge AI, LLMs locales, Seguridad Web (OWASP) y Analítica de Datos' },
+    filterAll: { en: 'All Projects', es: 'Todos los Proyectos' },
+    filterAi: { en: 'AI & Machine Learning', es: 'IA & Machine Learning' },
+    filterSecurity: { en: 'Web Security & Go', es: 'Seguridad Web & Go' },
+    filterData: { en: 'Data Analytics & SQLite', es: 'Analítica & SQLite' },
+    viewDetails: { en: 'Inspect Architecture', es: 'Ver Detalles' },
     codeRepository: { en: 'View Repository', es: 'Ver Repositorio' },
     liveDemo: { en: 'Live Demo', es: 'Demostración' },
-    placeholderBadge: { en: 'Verified Academic & Practical Engineering', es: 'Proyectos Reales Verificados' },
+    placeholderBadge: { en: 'Verified Codebases & Academic Research', es: 'Proyectos Reales Verificados' },
   },
   skills: {
     title: { en: 'Technical Skills', es: 'Competencias Técnicas' },
@@ -514,9 +563,9 @@ export const UI_TRANSLATIONS = {
     subjectPlaceholder: { en: 'e.g. Software Engineering Opportunity at [Company]', es: 'ej. Oportunidad como Ingeniero de Software' },
     messageLabel: { en: 'Message', es: 'Mensaje' },
     messagePlaceholder: { en: 'Tell me about the role, project, or what you would like to discuss...', es: 'Cuéntame sobre el rol, el proyecto o qué te gustaría comentar...' },
-    submitButton: { en: 'Send Message', es: 'Enviar Mensaje' },
-    prototypeNotice: { en: 'Client validation active. You can also reach me directly at pablovillanueva48@gmail.com or via LinkedIn / Phone.', es: 'Validación de cliente activa. También puedes contactarme directamente en pablovillanueva48@gmail.com, LinkedIn o teléfono.' },
-    successMessage: { en: 'Thank you! Your message has been validated successfully.', es: '¡Gracias! Tu mensaje ha sido validado correctamente.' },
+    submitButton: { en: 'Send Direct Message', es: 'Enviar Mensaje Directo' },
+    prototypeNotice: { en: 'Submitting validates input and creates a direct email message to pablovillanueva48@gmail.com.', es: 'Al enviar se validan los campos y se prepara el mensaje directo hacia pablovillanueva48@gmail.com.' },
+    successMessage: { en: 'Thank you! Your message has been prepared and opened in your email client.', es: '¡Gracias! Tu mensaje ha sido validado y preparado en tu cliente de correo.' },
     directEmail: { en: 'Direct Email', es: 'Correo Directo' },
     phoneNumber: { en: 'Phone Number', es: 'Teléfono' },
     locationText: { en: 'Location', es: 'Ubicación' },
