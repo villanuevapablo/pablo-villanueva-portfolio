@@ -1,0 +1,123 @@
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[english]{babel}
+\usepackage[margin=0.55in, top=0.45in, bottom=0.45in]{geometry}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{enumitem}
+
+% Clean and professional colors
+\definecolor{primary}{RGB}{30, 41, 59}
+\definecolor{accent}{RGB}{37, 99, 235}
+\definecolor{linecolor}{RGB}{203, 213, 225}
+
+% Hyperlink configuration
+\hypersetup{
+    colorlinks=true,
+    linkcolor=accent,
+    urlcolor=accent,
+    pdfauthor={Pablo Villanueva Picazo},
+    pdftitle={CV - Pablo Villanueva Picazo}
+}
+
+% Section format matching original
+\newcommand{\cvsection}[1]{%
+  \vspace{0.45em}%
+  {\large\textbf{\textsc{#1}}}\\[-0.5em]%
+  {\color{primary}\hrule height 0.5pt}%
+  \vspace{0.35em}%
+}
+
+\setlength{\parindent}{0pt}
+\pagestyle{empty}
+
+\begin{document}
+
+% ==========================================
+% CENTERED HEADER (CLEAN & ATS-FRIENDLY)
+% ==========================================
+\begin{center}
+  {\LARGE \textbf{PABLO VILLANUEVA PICAZO}}\\[0.2em]
+  {\large \textcolor{accent}{\textbf{Software Engineer --- Full-Stack Developer}}}\\[0.25em]
+  Madrid, Spain \ $\cdot$ \ +34 684262439 \ $\cdot$ \ \href{mailto:pablovillanueva48@gmail.com}{pablovillanueva48@gmail.com}\\[0.15em]
+  \href{https://linkedin.com/in/pablovillanuevapicazo}{linkedin.com/in/pablovillanuevapicazo} \ $\cdot$ \ 
+  \href{https://github.com/villanuevapablo}{github.com/villanuevapablo} \ $\cdot$ \ 
+  \href{https://pablo-villanueva-portfolio.vercel.app}{pablo-villanueva-portfolio.vercel.app}
+\end{center}
+
+\vspace{0.25em}
+
+% ==========================================
+% PROFESSIONAL PROFILE
+% ==========================================
+\cvsection{Professional Profile}
+Highly technical Software Engineer, First-Class Honours graduate (9/10 equivalent). Specialized in full-stack development, data architecture, process automation, and applied Machine Learning / Edge AI systems. Demonstrated ability to design scalable solutions, optimize system performance, and enforce web security standards (OWASP) in dynamic production environments.
+
+% ==========================================
+% WORK EXPERIENCE
+% ==========================================
+\cvsection{Work Experience}
+\textbf{Development Technician} \hfill Apr 2025 -- Jun 2025\\
+\textit{Universidad Nebrija (Madrid)}
+\begin{itemize}[leftmargin=1.2em, itemsep=1.2pt, topsep=1.5pt]
+  \item Full-stack development of robust solutions, optimizing user experience, stability, and system scalability (Frontend and Backend).
+  \item Design and implementation of efficient REST APIs to integrate third-party services, ensuring security in data transfer.
+  \item Execution of unit and integration tests (software testing) to ensure code quality and reduce failures in production.
+\end{itemize}
+
+% ==========================================
+% EDUCATION AND TRAINING
+% ==========================================
+\cvsection{Education and Training}
+\textbf{BSc (Hons) Software Engineering}\\
+\textit{York St John University} \hfill Equivalent average grade: 9/10 \ $\vert$ \ First-Class Honours (Class I)\\[0.2em]
+\textbf{Higher Level Vocational Training in Cross-Platform Application Development (DAM)}\\
+\textit{Instituto de Formación Profesional Nebrija}
+
+% ==========================================
+% KEY PROJECTS (FEATURED TECHNICAL TRIAD)
+% ==========================================
+\cvsection{Key Projects}
+\textbf{Final Degree Project (TFG): Bitcoin Forecasting System} \hfill Grade: 9.0/10 \ $\vert$ \ 2026
+\begin{itemize}[leftmargin=1.2em, itemsep=1.2pt, topsep=1.5pt]
+  \item Machine Learning pipeline (Scikit-learn, Pandas) for cryptocurrency price prediction via technical analysis indicators.
+  \item Edge AI architecture for decentralized real-time inference, optimizing computational throughput and latency.
+\end{itemize}
+
+\vspace{0.15em}
+\textbf{Secure Record Management System (SRMS)} \hfill 2026
+\begin{itemize}[leftmargin=1.2em, itemsep=1.2pt, topsep=1.5pt]
+  \item High-security web application built in Go (\texttt{net/http}, SQLite) strictly mitigating OWASP Top 10 vulnerabilities.
+  \item Role-Based Access Control (RBAC), CSRF protection, bcrypt hashing, and brute-force mitigation via IP rate limiting.
+\end{itemize}
+
+\vspace{0.15em}
+\textbf{Smart File Organizer (Local AI Daemon)} \hfill 2026
+\begin{itemize}[leftmargin=1.2em, itemsep=1.2pt, topsep=1.5pt]
+  \item Autonomous background daemon in Python with real-time file monitoring (\texttt{watchdog}) and multiformat parsing (\texttt{pypdf}).
+  \item Automated semantic categorization and sorting powered by local LLMs (Ollama REST API) with strict JSON schemas.
+\end{itemize}
+
+% ==========================================
+% TECHNICAL SKILLS
+% ==========================================
+\cvsection{Technical Skills}
+\begin{itemize}[leftmargin=1.2em, itemsep=1.2pt, topsep=1.5pt]
+  \item \textbf{Languages \& Frameworks:} Go, Java, Python, JavaScript, TypeScript, C++, Spring Boot, React, Angular, Svelte.
+  \item \textbf{Databases \& Cloud:} SQLite, JDBC, Firebase, Cloud Deployment \& Computing, MySQL, PostgreSQL.
+  \item \textbf{Core Competencies:} REST APIs, Unit/Integration Testing, Full-Stack Architecture, Web Security (OWASP Top 10), Machine Learning, Automation \& Local LLMs, Edge AI, Linux, Git.
+\end{itemize}
+
+% ==========================================
+% LANGUAGES AND OTHER DATA
+% ==========================================
+\cvsection{Languages and Other Data}
+\begin{itemize}[leftmargin=1.2em, itemsep=1.2pt, topsep=1.5pt]
+  \item \textbf{Languages:} English (Professional working proficiency / UK Degree) \ $\cdot$ \ Spanish (Native).
+  \item \textbf{Other:} Technological adaptability, continuous learning, Driving License (Category B), Immediate availability.
+\end{itemize}
+
+\end{document}

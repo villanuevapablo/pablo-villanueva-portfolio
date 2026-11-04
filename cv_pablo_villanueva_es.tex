@@ -1,0 +1,133 @@
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[spanish,es-tabla]{babel}
+\usepackage[margin=0.55in, top=0.45in, bottom=0.45in]{geometry}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{tikz}
+
+% Colores profesionales
+\definecolor{primary}{RGB}{30, 41, 59}
+\definecolor{accent}{RGB}{37, 99, 235}
+
+% Hipervínculos
+\hypersetup{
+    colorlinks=true,
+    linkcolor=accent,
+    urlcolor=accent,
+    pdfauthor={Pablo Villanueva Picazo},
+    pdftitle={CV - Pablo Villanueva Picazo}
+}
+
+% Formato de secciones con línea divisoria fina
+\newcommand{\cvsection}[1]{%
+  \vspace{0.45em}%
+  {\large\textbf{\textsc{#1}}}\\[-0.5em]%
+  {\color{primary}\hrule height 0.5pt}%
+  \vspace{0.35em}%
+}
+
+\setlength{\parindent}{0pt}
+\pagestyle{empty}
+
+\begin{document}
+
+% ==========================================
+% CABECERA CON FOTO ("Foto Pablo.jpg")
+% ==========================================
+\begin{minipage}[c]{0.19\textwidth}
+  \begin{tikzpicture}
+    % Recorte con bordes suavemente redondeados idéntico a tu CV original
+    \clip[rounded corners=5pt] (0,0) rectangle (2.35cm, 2.95cm);
+    \node[anchor=south west, inner sep=0] at (0,0) {\includegraphics[width=2.35cm, height=2.95cm]{{Foto Pablo}.jpg}};
+  \end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}[c]{0.79\textwidth}
+  {\LARGE \textbf{PABLO VILLANUEVA PICAZO}}\\[0.2em]
+  {\large \textcolor{accent}{\textbf{Software Engineer --- Full-Stack Developer}}}\\[0.25em]
+  Madrid, España \ $\cdot$ \ +34 684262439\\[0.15em]
+  \href{mailto:pablovillanueva48@gmail.com}{pablovillanueva48@gmail.com} \ $\cdot$ \ 
+  \href{https://linkedin.com/in/pablovillanuevapicazo}{linkedin.com/in/pablovillanuevapicazo}\\[0.15em]
+  \href{https://github.com/villanuevapablo}{github.com/villanuevapablo} \ $\cdot$ \ 
+  \href{https://pablo-villanueva-portfolio.vercel.app}{pablo-villanueva-portfolio.vercel.app}
+\end{minipage}
+
+\vspace{0.3em}
+
+% ==========================================
+% PERFIL PROFESIONAL
+% ==========================================
+\cvsection{Perfil Profesional}
+Ingeniero de Software altamente técnico, graduado con First-Class Honours (9/10). Especializado en desarrollo full-stack, arquitectura de datos, automatización de procesos y modelos aplicados de Machine Learning y Edge AI. Capacidad demostrada para diseñar soluciones escalables, optimizar el rendimiento de sistemas y aplicar principios de seguridad web (OWASP) en entornos dinámicos.
+
+% ==========================================
+% EXPERIENCIA LABORAL
+% ==========================================
+\cvsection{Experiencia Laboral}
+\textbf{Técnico de Desarrollo} \hfill Abril 2025 -- Junio 2025\\
+\textit{Universidad Nebrija (Madrid)}
+\begin{itemize}[leftmargin=1.2em, itemsep=1.2pt, topsep=1.5pt]
+  \item Desarrollo full-stack de soluciones robustas, optimizando la experiencia de usuario, la estabilidad y la escalabilidad del sistema (Frontend y Backend).
+  \item Diseño e implementación de APIs REST eficientes para integrar servicios de terceros, garantizando la seguridad en la transferencia de datos.
+  \item Ejecución de pruebas unitarias y de integración (software testing) para asegurar la calidad del código y reducir fallos en producción.
+\end{itemize}
+
+% ==========================================
+% EDUCACIÓN Y FORMACIÓN
+% ==========================================
+\cvsection{Educación y Formación}
+\textbf{BSc (Hons) Software Engineering}\\
+\textit{York St John University} \hfill Nota media equivalente: 9/10 \ $\vert$ \ First-Class Honours (Class I)\\[0.2em]
+\textbf{Grado Superior en Desarrollo de Aplicaciones Multiplataforma (DAM)}\\
+\textit{Instituto de Formación Profesional Nebrija}
+
+% ==========================================
+% PROYECTOS DESTACADOS (TRILOGÍA TÉCNICA)
+% ==========================================
+\cvsection{Proyectos Destacados}
+\textbf{Trabajo de Fin de Grado (TFG): Sistema de Predicción de Bitcoin} \hfill Nota: 9.0/10 \ $\vert$ \ 2026
+\begin{itemize}[leftmargin=1.2em, itemsep=1.2pt, topsep=1.5pt]
+  \item Desarrollo de un pipeline de Machine Learning (Scikit-learn, Pandas) para previsión de precios mediante análisis técnico.
+  \item Diseño de una arquitectura Edge AI para procesamiento descentralizado en tiempo real, optimizando recursos y latencia.
+\end{itemize}
+
+\vspace{0.15em}
+\textbf{Sistema de Gestión de Registros Médicos (SRMS)} \hfill 2026
+\begin{itemize}[leftmargin=1.2em, itemsep=1.2pt, topsep=1.5pt]
+  \item Aplicación web de alta seguridad en Go (\texttt{net/http}, SQLite) implementando mitigaciones estrictas frente al OWASP Top 10.
+  \item Control de acceso por roles (RBAC), tokens CSRF, hashing bcrypt y protección contra fuerza bruta con rate limiting por IP.
+\end{itemize}
+
+\vspace{0.15em}
+\textbf{Smart File Organizer (Local AI Daemon)} \hfill 2026
+\begin{itemize}[leftmargin=1.2em, itemsep=1.2pt, topsep=1.5pt]
+  \item Demonio autónomo en Python para monitorización de archivos en tiempo real (\texttt{watchdog}) y extracción multiformato (\texttt{pypdf}).
+  \item Clasificación semántica automatizada y estructurada mediante LLMs locales (Ollama REST API) con esquemas JSON estrictos.
+\end{itemize}
+
+% ==========================================
+% COMPETENCIAS TÉCNICAS
+% ==========================================
+\cvsection{Competencias Técnicas}
+\begin{itemize}[leftmargin=1.2em, itemsep=1.2pt, topsep=1.5pt]
+  \item \textbf{Lenguajes y Frameworks:} Go, Java, Python, JavaScript, TypeScript, C++, Spring Boot, React, Angular, Svelte.
+  \item \textbf{Bases de Datos y Cloud:} SQLite, JDBC, Firebase, Cloud (Despliegue y computación), MySQL, PostgreSQL.
+  \item \textbf{Especialidades IT:} APIs REST, Testing (Unitario/Integración), Arquitectura Full-Stack, Web Security (OWASP Top 10), Machine Learning, Automatización \& Local LLMs, Edge AI, Linux, Git.
+\end{itemize}
+
+% ==========================================
+% IDIOMAS Y OTROS DATOS
+% ==========================================
+\cvsection{Idiomas y Otros Datos}
+\begin{itemize}[leftmargin=1.2em, itemsep=1.2pt, topsep=1.5pt]
+  \item \textbf{Idiomas:} Inglés (Fluidez profesional / Grado cursado en Reino Unido) \ $\cdot$ \ Español (Nativo).
+  \item \textbf{Otros:} Adaptabilidad tecnológica, aprendizaje continuo, Permiso B, Disponibilidad inmediata.
+\end{itemize}
+
+\end{document}
