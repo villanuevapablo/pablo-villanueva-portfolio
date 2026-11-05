@@ -9,15 +9,34 @@ interface LanguageContextType {
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
+// Safe storage reader for Safari private mode & storage-blocked environments
+const getInitialLanguage = (): Language => {
+  try {
+    if (typeof window !== 'undefined' && typeof window.localStorage !== 'undefined') {
+      const saved = window.localStorage.getItem('pv_portfolio_lang');
+      if (saved === 'es' || saved === 'en') {
+        return saved;
+      }
+    }
+  } catch (err) {
+    // Safari Private Browsing mode or SecurityError when cookies/storage are disabled
+    console.warn('LocalStorage is restricted in this browser environment. Using default language.', err);
+  }
+  return 'en';
+};
+
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [language, setLanguageState] = useState<Language>(() => {
-    const saved = localStorage.getItem('pv_portfolio_lang');
-    return (saved === 'es' || saved === 'en') ? saved : 'en';
-  });
+  const [language, setLanguageState] = useState<Language>(getInitialLanguage);
 
   const setLanguage = (lang: Language) => {
     setLanguageState(lang);
-    localStorage.setItem('pv_portfolio_lang', lang);
+    try {
+      if (typeof window !== 'undefined' && typeof window.localStorage !== 'undefined') {
+        window.localStorage.setItem('pv_portfolio_lang', lang);
+      }
+    } catch (err) {
+      // Ignore write errors in Safari Private mode
+    }
   };
 
   const toggleLanguage = () => {
@@ -25,7 +44,13 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
   };
 
   useEffect(() => {
-    document.documentElement.lang = language;
+    try {
+      if (typeof document !== 'undefined' && document.documentElement) {
+        document.documentElement.lang = language;
+      }
+    } catch {
+      // Ignore DOM document quirks
+    }
   }, [language]);
 
   return (

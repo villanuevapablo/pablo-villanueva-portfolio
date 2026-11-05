@@ -24,12 +24,18 @@ export const Hero: React.FC = () => {
   };
 
   return (
-    <section id="home" className="relative min-h-[90vh] flex items-center justify-center pt-28 pb-16 overflow-hidden">
+    <section id="home" className="relative min-h-[85vh] min-h-[85dvh] sm:min-h-[90vh] flex items-center justify-center pt-28 pb-16 overflow-hidden">
       {/* Subtle Ambient Background (Clean & Professional Dark Theme) */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[350px] bg-slate-800/25 blur-[120px] rounded-full" />
         <div className="absolute top-1/3 right-1/4 w-[300px] h-[300px] bg-blue-900/15 blur-[100px] rounded-full" />
-        <div className="absolute inset-0 bg-grid-pattern bg-[size:48px_48px] opacity-15 [mask-image:radial-gradient(ellipse_at_center,black_30%,transparent_70%)]" />
+        <div
+          className="absolute inset-0 bg-grid-pattern bg-[size:48px_48px] opacity-15"
+          style={{
+            WebkitMaskImage: 'radial-gradient(ellipse at center, black 30%, transparent 70%)',
+            maskImage: 'radial-gradient(ellipse at center, black 30%, transparent 70%)',
+          }}
+        />
       </div>
 
       <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
