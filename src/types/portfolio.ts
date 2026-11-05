@@ -65,6 +65,10 @@ export interface ProjectItem {
   year?: string;
   shortDescription: Record<Language, string>;
   longDescription: Record<Language, string>;
+  problem?: Record<Language, string>;
+  solution?: Record<Language, string>;
+  myContribution?: Record<Language, string>;
+  challengesAndLearnings?: Record<Language, string>;
   technologies: string[];
   visualType: 'btc-forecast' | 'srms-security' | 'smart-organizer' | 'preflop-hero' | 'iot-edge' | 'fullstack-arch';
   githubUrl: string | null;

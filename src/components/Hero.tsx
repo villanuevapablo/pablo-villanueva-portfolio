@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowDown, Github, Terminal, Sparkles, Send, FolderGit2, MapPin, Award, FileDown } from 'lucide-react';
+import { ArrowDown, Github, Terminal, Send, FolderGit2, Award, FileDown } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { PERSONAL_INFO, SOCIAL_LINKS, UI_TRANSLATIONS } from '../data/portfolioData';
 import { CvModal } from './CvModal';
@@ -24,25 +24,24 @@ export const Hero: React.FC = () => {
   };
 
   return (
-    <section id="home" className="relative min-h-[92vh] flex items-center justify-center pt-28 pb-16 overflow-hidden">
-      {/* Background Decorative Mesh & Radial Glow */}
+    <section id="home" className="relative min-h-[90vh] flex items-center justify-center pt-28 pb-16 overflow-hidden">
+      {/* Subtle Ambient Background (Clean & Professional Dark Theme) */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[450px] bg-gradient-to-tr from-blue-600/15 via-cyan-500/10 to-transparent blur-[120px] rounded-full" />
-        <div className="absolute top-1/3 right-10 w-[350px] h-[350px] bg-blue-500/10 blur-[100px] rounded-full" />
-        <div className="absolute bottom-10 left-10 w-[400px] h-[400px] bg-cyan-600/10 blur-[120px] rounded-full" />
-        <div className="absolute inset-0 bg-grid-pattern bg-[size:48px_48px] opacity-25 [mask-image:radial-gradient(ellipse_at_center,black_40%,transparent_75%)]" />
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[350px] bg-slate-800/25 blur-[120px] rounded-full" />
+        <div className="absolute top-1/3 right-1/4 w-[300px] h-[300px] bg-blue-900/15 blur-[100px] rounded-full" />
+        <div className="absolute inset-0 bg-grid-pattern bg-[size:48px_48px] opacity-15 [mask-image:radial-gradient(ellipse_at_center,black_30%,transparent_70%)]" />
       </div>
 
-      <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
+      <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
         {/* Status Pill Badge & Photo Avatar */}
         <motion.div
-          initial={{ opacity: 0, y: -20 }}
+          initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="inline-flex items-center gap-3 px-3.5 py-1.5 rounded-full bg-[#111827]/80 border border-slate-800 text-xs text-slate-300 mb-6 shadow-inner shadow-black/40 hover:border-slate-700 transition-colors"
+          transition={{ duration: 0.4 }}
+          className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-[#0F172A]/80 border border-slate-800 text-xs text-slate-300 mb-6 shadow-sm"
         >
-          {/* Real Photo Avatar */}
-          <div className="relative w-6 h-6 rounded-full overflow-hidden border border-blue-400/50">
+          {/* Avatar Photo */}
+          <div className="relative w-6 h-6 rounded-full overflow-hidden border border-slate-700">
             <img 
               src={PERSONAL_INFO.avatarUrl} 
               alt={PERSONAL_INFO.fullName} 
@@ -50,88 +49,82 @@ export const Hero: React.FC = () => {
             />
           </div>
 
-          <span className="relative flex h-2 w-2">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-          </span>
-          <span className="font-medium">{PERSONAL_INFO.statusBadge[language]}</span>
+          {/* Steady green dot without excessive ping */}
+          <span className="w-2 h-2 rounded-full bg-emerald-400" />
+          <span className="font-medium text-slate-300">{PERSONAL_INFO.statusBadge[language]}</span>
         </motion.div>
 
-        {/* Identity & Subtitle Tag */}
+        {/* Name Heading */}
+        <motion.h1
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-white mb-4"
+        >
+          {PERSONAL_INFO.fullName}
+        </motion.h1>
+
+        {/* Primary Role & Professional Positioning */}
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
+          transition={{ duration: 0.5, delay: 0.15 }}
           className="mb-4"
         >
-          <h2 className="text-sm sm:text-base font-mono uppercase tracking-widest text-cyan-400 font-semibold mb-3 flex items-center justify-center gap-2">
-            <Terminal className="w-4 h-4 text-blue-400 inline" />
-            <span>{PERSONAL_INFO.fullName}</span>
-            <span className="text-slate-600">•</span>
-            <span className="text-slate-300 font-normal">{PERSONAL_INFO.title[language]}</span>
-          </h2>
+          <p className="text-xl sm:text-2xl font-semibold text-blue-400 font-sans tracking-tight">
+            {PERSONAL_INFO.title[language]}
+          </p>
         </motion.div>
 
-        {/* Main Tri-line Heading */}
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.2 }}
-          className="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-white leading-[1.08] mb-6"
-        >
-          Building <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-blue-200">software</span>.<br />
-          Exploring <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-sky-300">intelligence</span>.<br />
-          Creating <span className="bg-clip-text text-transparent bg-gradient-to-r from-slate-100 via-blue-100 to-slate-300">impact</span>.
-        </motion.h1>
-
-        {/* Supporting Heading & Verified Profile */}
+        {/* Supporting Text: Areas of Interest */}
         <motion.p
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.3 }}
-          className="text-base sm:text-xl text-slate-300 max-w-3xl mx-auto font-normal leading-relaxed mb-4"
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto font-normal leading-relaxed mb-4"
         >
           {PERSONAL_INFO.heroSubheading[language]}
         </motion.p>
 
+        {/* Concise Engineering Profile Summary */}
         <motion.p
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.35 }}
-          className="text-sm sm:text-base text-slate-400 max-w-2xl mx-auto leading-relaxed mb-10"
+          transition={{ duration: 0.5, delay: 0.25 }}
+          className="text-sm sm:text-base text-slate-400 max-w-2xl mx-auto leading-relaxed mb-8"
         >
           {PERSONAL_INFO.heroIntro[language]}
         </motion.p>
 
-        {/* CTAs / Action Buttons */}
+        {/* Action Buttons */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.45 }}
-          className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 mb-14"
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 mb-12"
         >
           {/* Button 1: View projects */}
           <button
             onClick={() => scrollToSection('projects')}
-            className="group relative inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-medium text-sm transition-all duration-200 shadow-lg shadow-blue-600/25 hover:shadow-blue-500/35 hover:-translate-y-0.5"
+            className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-medium text-sm transition-colors shadow-sm"
           >
-            <FolderGit2 className="w-4 h-4 text-blue-200 group-hover:scale-110 transition-transform" />
+            <FolderGit2 className="w-4 h-4 text-blue-100" />
             <span>{UI_TRANSLATIONS.hero.viewProjects[language]}</span>
           </button>
 
           {/* Button 2: Download CV */}
           <button
             onClick={() => setIsCvModalOpen(true)}
-            className="inline-flex items-center gap-2 px-5 py-3.5 rounded-xl bg-slate-900/90 hover:bg-slate-800 text-cyan-300 hover:text-white font-medium text-sm border border-cyan-500/30 hover:border-cyan-500/50 transition-all duration-200 hover:-translate-y-0.5 shadow-lg shadow-cyan-950/30"
+            className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-[#0F172A] hover:bg-slate-800 text-slate-200 hover:text-white font-medium text-sm border border-slate-700 transition-colors"
           >
-            <FileDown className="w-4 h-4 text-cyan-400" />
+            <FileDown className="w-4 h-4 text-slate-400" />
             <span>{UI_TRANSLATIONS.hero.downloadCv[language]}</span>
           </button>
 
           {/* Button 3: Get in touch */}
           <button
             onClick={() => scrollToSection('contact')}
-            className="inline-flex items-center gap-2 px-5 py-3.5 rounded-xl bg-[#111827] hover:bg-slate-800 text-slate-200 hover:text-white font-medium text-sm border border-slate-800 hover:border-slate-700 transition-all duration-200 hover:-translate-y-0.5"
+            className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-[#0F172A] hover:bg-slate-800 text-slate-300 hover:text-white font-medium text-sm border border-slate-800 hover:border-slate-700 transition-colors"
           >
             <Send className="w-4 h-4 text-slate-400" />
             <span>{UI_TRANSLATIONS.hero.getInTouch[language]}</span>
@@ -142,7 +135,8 @@ export const Hero: React.FC = () => {
             href={SOCIAL_LINKS.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-4 py-3.5 rounded-xl bg-[#0D1220]/80 hover:bg-slate-900 text-slate-300 hover:text-white font-medium text-sm border border-slate-800/80 hover:border-slate-700 transition-all duration-200"
+            className="inline-flex items-center gap-2 px-3.5 py-3 rounded-xl bg-[#0F172A] hover:bg-slate-800 text-slate-400 hover:text-white font-medium text-sm border border-slate-800 hover:border-slate-700 transition-colors"
+            aria-label="GitHub Profile"
           >
             <Github className="w-4 h-4" />
           </a>
@@ -150,19 +144,19 @@ export const Hero: React.FC = () => {
 
         {/* Technical Highlights Bar / Quick Specs */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.96 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.7, delay: 0.55 }}
-          className="max-w-3xl mx-auto p-4 sm:p-5 rounded-2xl bg-[#0D1220]/90 border border-slate-800/80 backdrop-blur-md shadow-2xl shadow-black/40 text-left"
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.35 }}
+          className="max-w-3xl mx-auto p-4 sm:p-5 rounded-xl bg-[#0D1220] border border-slate-800 text-left"
         >
-          <div className="flex items-center justify-between border-b border-slate-800/70 pb-3 mb-3">
+          <div className="flex items-center justify-between border-b border-slate-800 pb-3 mb-3">
             <div className="flex items-center gap-2">
-              <span className="w-2.5 h-2.5 rounded-full bg-red-500/80" />
-              <span className="w-2.5 h-2.5 rounded-full bg-yellow-500/80" />
-              <span className="w-2.5 h-2.5 rounded-full bg-green-500/80" />
-              <span className="text-xs font-mono text-slate-400 pl-2">pablo_villanueva_cv.config</span>
+              <span className="w-2.5 h-2.5 rounded-full bg-slate-700" />
+              <span className="w-2.5 h-2.5 rounded-full bg-slate-700" />
+              <span className="w-2.5 h-2.5 rounded-full bg-slate-700" />
+              <span className="text-xs font-mono text-slate-400 pl-2">developer_profile.config</span>
             </div>
-            <div className="flex items-center gap-1.5 text-[11px] font-mono text-emerald-400 font-semibold">
+            <div className="flex items-center gap-1.5 text-[11px] font-mono text-emerald-400 font-medium">
               <Award className="w-3.5 h-3.5" />
               <span>{UI_TRANSLATIONS.hero.gradeBadge[language]}</span>
             </div>
@@ -171,19 +165,19 @@ export const Hero: React.FC = () => {
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs font-mono">
             <div>
               <span className="text-slate-500 block mb-1">{UI_TRANSLATIONS.hero.specCol1Title[language]}</span>
-              <span className="text-slate-200 font-semibold">{UI_TRANSLATIONS.hero.specCol1Value[language]}</span>
+              <span className="text-slate-200 font-medium">{UI_TRANSLATIONS.hero.specCol1Value[language]}</span>
             </div>
             <div>
               <span className="text-slate-500 block mb-1">{UI_TRANSLATIONS.hero.specCol2Title[language]}</span>
-              <span className="text-slate-200 font-semibold">{UI_TRANSLATIONS.hero.specCol2Value[language]}</span>
+              <span className="text-slate-200 font-medium">{UI_TRANSLATIONS.hero.specCol2Value[language]}</span>
             </div>
             <div>
               <span className="text-slate-500 block mb-1">{UI_TRANSLATIONS.hero.specCol3Title[language]}</span>
-              <span className="text-slate-200 font-semibold">{UI_TRANSLATIONS.hero.specCol3Value[language]}</span>
+              <span className="text-slate-200 font-medium">{UI_TRANSLATIONS.hero.specCol3Value[language]}</span>
             </div>
             <div>
               <span className="text-slate-500 block mb-1">{UI_TRANSLATIONS.hero.specCol4Title[language]}</span>
-              <span className="text-emerald-400 font-semibold">{UI_TRANSLATIONS.hero.specCol4Value[language]}</span>
+              <span className="text-emerald-400 font-medium">{UI_TRANSLATIONS.hero.specCol4Value[language]}</span>
             </div>
           </div>
         </motion.div>
@@ -192,18 +186,18 @@ export const Hero: React.FC = () => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.8, duration: 1 }}
-          className="mt-12 flex justify-center"
+          transition={{ delay: 0.6, duration: 0.6 }}
+          className="mt-10 flex justify-center"
         >
           <button
             onClick={() => scrollToSection('about')}
             aria-label="Scroll to About section"
             className="flex flex-col items-center gap-1 text-slate-500 hover:text-slate-300 transition-colors group cursor-pointer"
           >
-            <span className="text-[11px] font-mono tracking-wider uppercase group-hover:text-cyan-400 transition-colors">
+            <span className="text-[11px] font-mono tracking-wider uppercase group-hover:text-blue-400 transition-colors">
               Explore
             </span>
-            <ArrowDown className="w-4 h-4 animate-bounce text-slate-500 group-hover:text-cyan-400" />
+            <ArrowDown className="w-4 h-4 text-slate-500 group-hover:text-blue-400 transition-colors" />
           </button>
         </motion.div>
       </div>

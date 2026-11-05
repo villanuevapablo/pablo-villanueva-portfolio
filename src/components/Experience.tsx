@@ -55,25 +55,25 @@ export const Experience: React.FC = () => {
               transition={{ duration: 0.6 }}
               className="relative group"
             >
-              {/* Glowing Timeline Marker */}
+              {/* Clean Timeline Marker */}
               <div className="absolute -left-[31px] sm:-left-[47px] top-1.5 flex items-center justify-center">
-                <div className="w-6 h-6 rounded-full bg-[#0D1220] border-2 border-blue-500 flex items-center justify-center group-hover:scale-125 transition-transform duration-300 shadow-[0_0_12px_rgba(59,130,246,0.6)]">
-                  <div className="w-2 h-2 rounded-full bg-cyan-400 animate-ping opacity-75" />
+                <div className="w-6 h-6 rounded-full bg-[#0D1220] border-2 border-blue-500 flex items-center justify-center">
+                  <div className="w-2 h-2 rounded-full bg-blue-400" />
                 </div>
               </div>
 
               {/* Experience Card */}
-              <div className="p-6 sm:p-8 rounded-2xl bg-[#0D1220]/90 border border-slate-800/90 hover:border-blue-500/40 transition-all duration-300 shadow-xl shadow-black/20 group-hover:-translate-y-0.5">
+              <div className="p-6 sm:p-8 rounded-2xl bg-[#0D1220] border border-slate-800 hover:border-slate-700 transition-colors shadow-sm">
                 {/* Header Info */}
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4 pb-4 border-b border-slate-800/80">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4 pb-4 border-b border-slate-800">
                   <div>
-                    <span className="text-xs font-mono uppercase tracking-wider text-cyan-400 block mb-1">
+                    <span className="text-xs font-mono uppercase tracking-wider text-slate-400 block mb-1">
                       {exp.type[language]}
                     </span>
-                    <h3 className="text-xl sm:text-2xl font-bold text-white group-hover:text-blue-300 transition-colors">
+                    <h3 className="text-xl sm:text-2xl font-bold text-white mb-1">
                       {exp.role[language]}
                     </h3>
-                    <div className="text-sm font-semibold text-blue-400 mt-1">
+                    <div className="text-sm font-semibold text-blue-400">
                       {exp.company}
                     </div>
                   </div>

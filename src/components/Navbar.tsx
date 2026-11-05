@@ -88,23 +88,23 @@ export const Navbar: React.FC = () => {
                 {PERSONAL_INFO.name}
               </span>
               <span className="text-[11px] font-mono text-slate-400 flex items-center gap-1.5">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
                 Software Engineer
               </span>
             </div>
           </button>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-1 bg-[#111827]/70 backdrop-blur-md px-3 py-1.5 rounded-full border border-slate-800/80 shadow-inner shadow-black/40">
+          <nav className="hidden lg:flex items-center gap-1 bg-[#111827]/80 backdrop-blur-md px-3 py-1.5 rounded-full border border-slate-800">
             {navLinks.map((link) => {
               const isActive = activeSection === link.id;
               return (
                 <button
                   key={link.id}
                   onClick={() => handleNavClick(link.id)}
-                  className={`relative px-3.5 py-1.5 text-xs font-medium rounded-full transition-all duration-200 ${
+                  className={`relative px-3.5 py-1.5 text-xs font-medium rounded-full transition-colors ${
                     isActive
-                      ? 'text-white bg-blue-600/20 text-blue-400 border border-blue-500/30 shadow-[0_0_12px_rgba(59,130,246,0.3)]'
+                      ? 'text-white bg-slate-800 border border-slate-700'
                       : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/40'
                   }`}
                 >

@@ -2,21 +2,18 @@ import { PersonalInfo, ExperienceItem, EducationItem, ProjectItem, SkillCategory
 
 /**
  * ============================================================================
- * VERIFIED RESUME & PROJECT DATA - PABLO VILLANUEVA PICAZO
+ * PORTFOLIO DATA - PABLO VILLANUEVA PICAZO
  * ============================================================================
  * 
- * Synchronized with official curriculum vitae and genuine GitHub repositories:
- * - Software Engineer — Full-Stack Developer
- * - First-Class Honours (Class I) - York St John University (Equivalent: 9/10)
- * - Instituto de Formación Profesional Nebrija (DAM)
- * - Universidad Nebrija (Development Technician)
- * - Core Focus: Full-Stack Development, Applied AI, Automation & Data Analytics
- * - 5 Verified GitHub Projects: 
- *    1. TFG Bitcoin Prediction (Grade: 9.0/10 | Machine Learning & Time-Series)
- *    2. Secure Record Management (SRMS-MEDICAL in Go | OWASP Top 10)
- *    3. Smart File Organizer (Local AI Daemon | Ollama LLMs & Watchdog Automation)
- *    4. IoT Security System (Edge AI & Arduino UNO R4 WiFi | Hardware & AJAX)
- *    5. Preflop Hero (Poker Hand History Parser & GTO Strategy Auditor)
+ * Software Engineer | Full Stack Developer
+ * Interested in Artificial Intelligence, Machine Learning and Data Analytics.
+ * 
+ * Education:
+ * - BSc (Hons) Software Engineering (First-Class Honours, 9/10) - York St John University
+ * - Higher Vocational Training DAM (Cross-Platform Application Development) - Nebrija
+ * 
+ * Experience:
+ * - Development Technician - Universidad Nebrija
  */
 
 export const SOCIAL_LINKS: SocialLinks = {
@@ -32,20 +29,20 @@ export const PERSONAL_INFO: PersonalInfo = {
   initials: 'PV',
   avatarUrl: '/pablo-portrait.jpg',
   title: {
-    en: 'Software Engineer — Full-Stack Developer',
-    es: 'Ingeniero de Software — Desarrollador Full-Stack',
+    en: 'Software Engineer | Full Stack Developer',
+    es: 'Ingeniero de Software | Desarrollador Full Stack',
   },
   heroHeading: {
-    en: 'Building software.\nExploring intelligence.\nCreating impact.',
-    es: 'Construyendo software.\nExplorando inteligencia.\nCreando impacto.',
+    en: 'Software Engineer | Full Stack Developer',
+    es: 'Ingeniero de Software | Desarrollador Full Stack',
   },
   heroSubheading: {
-    en: 'Software Engineer focused on Full-Stack development, applied Artificial Intelligence, intelligent process automation, and data analytics.',
-    es: 'Ingeniero de Software enfocado en desarrollo Full-Stack, Inteligencia Artificial aplicada, automatización inteligente de procesos y analítica de datos.',
+    en: 'Interested in Artificial Intelligence, Machine Learning and Data Analytics.',
+    es: 'Interesado en Inteligencia Artificial, Machine Learning y Analítica de Datos.',
   },
   heroIntro: {
-    en: 'Graduate with First-Class Honours (Class I, 9/10) in Software Engineering from York St John University and Higher Vocational DAM from Nebrija. Experienced in building robust full-stack architectures, local LLM daemons, predictive ML models, IoT edge systems, and secure REST APIs.',
-    es: 'Graduado con First-Class Honours (Nota media: 9/10) en Software Engineering por York St John University y Técnico Superior en DAM por Nebrija. Experiencia en arquitecturas full-stack robustas, demonios con LLMs locales, modelos predictivos de ML, sistemas IoT y APIs REST seguras.',
+    en: 'Software Engineering graduate (First-Class Honours, 9/10) from York St John University and Higher Vocational DAM from Nebrija. Focused on building robust web applications, reliable backend systems, and practical data tools with Go, Python, TypeScript, and React.',
+    es: 'Graduado en Software Engineering (First-Class Honours, 9/10) por York St John University y Técnico Superior DAM por Nebrija. Enfocado en el desarrollo de aplicaciones web robustas, sistemas backend fiables y herramientas prácticas con Go, Python, TypeScript y React.',
   },
   location: {
     en: 'Madrid, Spain',
@@ -56,27 +53,27 @@ export const PERSONAL_INFO: PersonalInfo = {
     es: 'Disponibilidad inmediata • Permiso de conducir B',
   },
   statusBadge: {
-    en: 'Available for Immediate Hire • Madrid, Spain',
-    es: 'Disponibilidad inmediata • Madrid, España',
+    en: 'Available for Opportunities • Madrid, Spain',
+    es: 'Disponible para incorporación • Madrid, España',
   },
   cvFilename: {
     en: 'cv-pablo-villanueva-en.pdf',
     es: 'cv-pablo-villanueva-es.pdf',
   },
   professionalProfile: {
-    en: 'Highly technical Software Engineer, focused on solving complex problems through clean and efficient code. Experience in full-stack development, data architecture, process automation, and agile methodologies. Demonstrated ability to design scalable solutions and optimize system performance in dynamic environments.',
-    es: 'Ingeniero de Software altamente técnico, enfocado en la resolución de problemas complejos mediante código limpio y eficiente. Experiencia en desarrollo full-stack, arquitectura de datos, automatización de procesos y metodologías ágiles. Capacidad demostrada para diseñar soluciones escalables y optimizar el rendimiento de sistemas en entornos dinámicos.',
+    en: 'Software Engineer and Full Stack Developer with strong foundations in software design, backend architectures, relational databases, and modern web interfaces. Proven academic performance (First-Class Honours, 9/10) coupled with practical development experience. Actively curious about Artificial Intelligence, Machine Learning, and Data Analytics, applying them as practical solutions in software projects.',
+    es: 'Ingeniero de Software y Desarrollador Full Stack con sólida base en diseño de software, arquitecturas backend, bases de datos relacionales e interfaces web modernas. Destacado rendimiento académico (First-Class Honours, 9/10) y experiencia práctica en desarrollo. Activo interés en Inteligencia Artificial, Machine Learning y Analítica de Datos, aplicándolos como herramientas prácticas en proyectos reales.',
   },
   aboutText: {
     en: [
-      'Highly technical Software Engineer, focused on solving complex problems through clean, efficient, and maintainable code.',
-      'My engineering foundation bridges robust full-stack development, data architectures, and an active specialization in Artificial Intelligence, autonomous system daemons, and data analytics.',
-      'From designing high-performance backend systems in Go to deploying Edge AI models and autonomous local LLM workflows with Ollama, I prioritize code quality, system efficiency, and practical automation.'
+      'I am a Software Engineer and Full Stack Developer based in Madrid, Spain. My technical background began with practical multiplatform application development (DAM at Nebrija), followed by a Bachelor of Science (Honours) in Software Engineering at York St John University, where I graduated with First-Class Honours (Class I, 9/10 equivalent).',
+      'I focus on building reliable, maintainable software across the full stack: from structuring relational databases and building efficient backend services in Go and Java, to developing responsive, typed web applications with React and TypeScript. During my time as a Development Technician at Universidad Nebrija, I contributed to full-stack features, third-party API integrations, and unit/integration testing in production.',
+      'Alongside core software engineering, I maintain an active interest in Artificial Intelligence, Machine Learning, and Data Analytics. Rather than treating them as abstract concepts, I build practical tools around them: time-series forecasting models, automated local LLM workflows, and data parsing utilities for statistical analysis.'
     ],
     es: [
-      'Ingeniero de Software altamente técnico, enfocado en la resolución de problemas complejos mediante código limpio, eficiente y mantenible.',
-      'Mi base de ingeniería une desarrollo full-stack robusto, arquitectura de datos y una especialización activa en Inteligencia Artificial, demonios autónomos de automatización y analítica de datos.',
-      'Desde el diseño de sistemas backend de alto rendimiento en Go hasta el despliegue de modelos Edge AI y flujos de automatización con LLMs locales en Ollama, priorizo la calidad del código, la eficiencia y la automatización práctica.'
+      'Soy Ingeniero de Software y Desarrollador Full Stack en Madrid, España. Mi formación técnica comenzó con el Grado Superior en Desarrollo de Aplicaciones Multiplataforma (DAM en Nebrija), complementado con el Grado en Software Engineering por York St John University, donde me gradué con First-Class Honours (Clase I, nota media equivalente: 9/10).',
+      'Me enfoco en construir software fiable, limpio y mantenible en todo el stack: desde el modelado de bases de datos relacionales y el desarrollo de servicios backend en Go y Java, hasta la creación de interfaces web tipadas y reactivas con React y TypeScript. Durante mi etapa como Técnico de Desarrollo en la Universidad Nebrija, participé en el desarrollo de funcionalidades full-stack, integración de APIs y pruebas de software en producción.',
+      'Junto a la ingeniería de software tradicional, tengo un interés continuo por la Inteligencia Artificial, el Machine Learning y la Analítica de Datos. Me gusta aplicarlos de forma práctica en proyectos reales: modelos predictivos de series temporales, flujos de automatización local con LLMs y herramientas de parsing para análisis estadístico.'
     ]
   },
   quickHighlights: {
@@ -88,18 +85,18 @@ export const PERSONAL_INFO: PersonalInfo = {
       },
       {
         label: 'Technical Foundation',
-        value: 'DAM Vocational + BSc (Hons)',
-        description: 'Instituto Nebrija & York St John dual technical depth'
+        value: 'BSc (Hons) + Vocational DAM',
+        description: 'Rigorous dual background in practical and academic engineering'
       },
       {
-        label: 'Core Specialties',
-        value: 'Full-Stack, AI & Data Automation',
-        description: 'Python, Go, React, Local LLMs, ETL pipelines & smart daemons'
+        label: 'Primary Focus',
+        value: 'Full Stack & Software Engineering',
+        description: 'Go, Python, TypeScript, React, Java & SQL'
       },
       {
-        label: 'Languages',
-        value: 'English (Prof. Fluency) • Spanish (Native)',
-        description: 'Professional working proficiency (BSc Hons in the UK)'
+        label: 'Areas of Interest',
+        value: 'AI, Machine Learning & Analytics',
+        description: 'Applied ML models, data pipelines and local LLM workflows'
       }
     ],
     es: [
@@ -110,33 +107,33 @@ export const PERSONAL_INFO: PersonalInfo = {
       },
       {
         label: 'Base Técnica',
-        value: 'FP Superior DAM + Grado',
-        description: 'Instituto Nebrija y York St John: sólida base práctica y teórica'
+        value: 'Grado Software Eng. + DAM',
+        description: 'Sólida base combinada entre práctica profesional y grado universitario'
       },
       {
-        label: 'Especialidades Clave',
-        value: 'Full-Stack, IA y Automatización',
-        description: 'Python, Go, React, LLMs locales, pipelines ETL y automatización inteligente'
+        label: 'Especialidad Principal',
+        value: 'Full Stack e Ingeniería de Software',
+        description: 'Go, Python, TypeScript, React, Java y SQL'
       },
       {
-        label: 'Idiomas',
-        value: 'Inglés (Fluidez profesional) • Español (Nativo)',
-        description: 'Competencia profesional completa (Grado universitario en UK)'
+        label: 'Áreas de Interés',
+        value: 'IA, Machine Learning y Analítica',
+        description: 'Modelos aplicados, pipelines de datos y flujos con LLMs locales'
       }
     ]
   },
   otherData: {
     en: [
-      'Immediate availability for on-site, hybrid, or remote engineering positions',
+      'Immediate availability for on-site (Madrid), hybrid, or remote software engineering roles',
       'Driving License (Category B)',
-      'High adaptability in AI-assisted workflows, data analytics, and autonomous automation',
-      'Solid foundations in Agile methodologies, Linux CLI environments, and Git CI/CD flows'
+      'Practical experience with Git version control, testing methodologies, and Linux environments',
+      'Motivated by writing clean code, solving technical problems, and continuous learning'
     ],
     es: [
-      'Disponibilidad inmediata para incorporación presencial, híbrida o remota',
+      'Disponibilidad inmediata para puestos presenciales (Madrid), híbridos o remotos',
       'Permiso de conducir (Categoría B)',
-      'Gran adaptabilidad en flujos asistidos por IA, analítica de datos y automatización autónoma',
-      'Sólidas bases en metodologías ágiles, entornos Linux y flujos CI/CD en Git'
+      'Experiencia práctica con control de versiones Git, metodologías de testing y entornos Linux',
+      'Motivado por escribir código limpio, resolver problemas técnicos y el aprendizaje continuo'
     ]
   }
 };
@@ -145,7 +142,7 @@ export const EXPERIENCES: ExperienceItem[] = [
   {
     id: 'nebrija-technician',
     role: {
-      en: 'Development Technician (Técnico de Desarrollo)',
+      en: 'Development Technician',
       es: 'Técnico de Desarrollo',
     },
     company: 'Universidad Nebrija (Madrid)',
@@ -162,22 +159,24 @@ export const EXPERIENCES: ExperienceItem[] = [
       es: 'Experiencia Laboral',
     },
     summary: {
-      en: 'Full-stack software development in production environments, building scalable solutions, creating secure REST APIs, and running systematic unit and integration testing.',
-      es: 'Desarrollo full-stack de soluciones robustas, diseño e implementación de APIs REST seguras e integración de pruebas para garantizar calidad en producción.',
+      en: 'Full-stack software development in a production environment, building application features, integrating REST APIs, and implementing unit and integration testing.',
+      es: 'Desarrollo de software full-stack en entorno de producción, implementando funcionalidades de aplicación, integración de APIs REST y pruebas unitarias y de integración.',
     },
     responsibilities: {
       en: [
-        'Full-stack development of robust solutions, optimizing user experience, stability, and system scalability (Frontend and Backend).',
-        'Design and implementation of efficient REST APIs to integrate third-party services, ensuring security in data transfer.',
-        'Execution of unit and integration tests (software testing) to ensure code quality and reduce failures in production.'
+        'Developed and maintained full-stack application features across frontend interfaces and backend logic.',
+        'Designed and implemented REST APIs for data communication and third-party service integration.',
+        'Wrote unit and integration tests to ensure code quality and prevent regressions in production.',
+        'Collaborated using Git version control, following team development standards and agile workflows.'
       ],
       es: [
-        'Desarrollo full-stack de soluciones robustas, optimizando la experiencia de usuario, la estabilidad y la escalabilidad del sistema (Frontend y Backend).',
-        'Diseño e implementación de APIs REST eficientes para integrar servicios de terceros, garantizando la seguridad en la transferencia de datos.',
-        'Ejecución de pruebas unitarias y de integración (software testing) para asegurar la calidad del código y reducir fallos en producción.'
+        'Desarrollo y mantenimiento de funcionalidades full-stack en frontend y backend de aplicaciones.',
+        'Diseño e integración de APIs REST para la comunicación de datos y conexión con servicios externos.',
+        'Ejecución de pruebas unitarias y de integración para asegurar la estabilidad del código en producción.',
+        'Trabajo colaborativo con control de versiones Git y flujos de trabajo ágiles.'
       ]
     },
-    technologies: ['Full-Stack', 'REST APIs', 'Software Testing', 'Unit Testing', 'Integration Testing', 'System Scalability', 'Data Transfer Security']
+    technologies: ['Full-Stack', 'REST APIs', 'Software Testing', 'Unit Testing', 'Integration Testing', 'Git', 'Agile']
   }
 ];
 
@@ -203,19 +202,19 @@ export const EDUCATION: EducationItem[] = [
       es: 'Nota media equivalente: 9/10 | First-Class Honours (Class I)',
     },
     description: {
-      en: 'Rigorous British honours degree covering software architecture, distributed engineering, machine learning pipelines, and research methodology.',
-      es: 'Titulación británica oficial de máximo honor enfocada en ingeniería de software, arquitectura de sistemas, pipelines de machine learning y metodología de investigación.',
+      en: 'British honours degree covering software architecture, distributed engineering, machine learning pipelines, and research methodology.',
+      es: 'Grado británico oficial de máximo honor enfocado en ingeniería de software, arquitectura de sistemas, pipelines de machine learning y metodología de investigación.',
     },
     highlights: {
       en: [
-        'Awarded First-Class Honours (Class I) with an equivalent 9/10 average grade',
-        'Final Degree Project (TFG): Bitcoin Price Prediction System & Edge AI (Grade: 9.0/10)',
-        'Advanced system design, empirical research, and rigorous code verification'
+        'Graduated with First-Class Honours (Class I), equivalent to 9/10 average grade',
+        'Final Degree Project (TFG): Bitcoin Price Forecasting System & Edge AI (Grade: 9.0/10)',
+        'Core curriculum in software design, algorithms, machine learning, and systems verification'
       ],
       es: [
-        'Calificación First-Class Honours (Clase I) con nota media equivalente de 9/10',
+        'Graduado con First-Class Honours (Clase I), equivalente a 9/10 de nota media',
         'Trabajo de Fin de Grado (TFG): Sistema de Predicción de Bitcoin y Edge AI (Nota: 9.0/10)',
-        'Diseño avanzado de sistemas, validación empírica y verificación rigurosa de código'
+        'Formación en diseño de software, algoritmos, machine learning y verificación de sistemas'
       ]
     },
     statusBadge: {
@@ -240,19 +239,19 @@ export const EDUCATION: EducationItem[] = [
       es: 'Formación Profesional de Grado Superior',
     },
     description: {
-      en: 'In-depth practical engineering in multiplatform architecture, object-oriented programming with Java, relational database modeling (JDBC, SQL), and multiplatform client interfaces.',
-      es: 'Formación eminentemente técnica y práctica en desarrollo multiplataforma, programación orientada a objetos (Java), diseño de bases de datos (JDBC, SQL) y arquitecturas empresariales.',
+      en: 'Practical technical training in multiplatform software development, object-oriented programming with Java, relational database modeling, and application architecture.',
+      es: 'Formación técnica y práctica en desarrollo de software multiplataforma, programación orientada a objetos en Java, modelado de bases de datos relacionales y arquitectura de aplicaciones.',
     },
     highlights: {
       en: [
-        'Strong OOP fundamentals: Java, Spring Boot, design patterns and clean code',
-        'Data persistence and storage: SQLite, JDBC, Firebase and relational schemas',
-        'Cross-platform development and responsive user experiences'
+        'Solid OOP fundamentals with Java, design patterns, and clean code practices',
+        'Relational database design and persistence with SQL, SQLite, and JDBC',
+        'Frontend and desktop client application development'
       ],
       es: [
-        'Fundamentos sólidos de POO: Java, Spring Boot, patrones de diseño y código limpio',
-        'Persistencia y almacenamiento: SQLite, JDBC, Firebase y modelado relacional',
-        'Desarrollo multiplataforma y diseño de interfaces optimizadas'
+        'Fundamentos sólidos de POO con Java, patrones de diseño y buenas prácticas de código',
+        'Modelado y persistencia en bases de datos relacionales con SQL, SQLite y JDBC',
+        'Desarrollo de interfaces de usuario y aplicaciones cliente multiplataforma'
       ]
     },
     statusBadge: {
@@ -265,23 +264,39 @@ export const EDUCATION: EducationItem[] = [
 export const PROJECTS: ProjectItem[] = [
   {
     id: 'tfg-bitcoin-prediction',
-    title: 'Final Degree Project (TFG): Bitcoin Prediction System',
+    title: 'Bitcoin Price Forecasting System (TFG)',
     category: 'ai-ml',
     categoryLabel: {
-      en: 'Machine Learning & Edge AI',
-      es: 'Machine Learning & Edge AI',
+      en: 'Machine Learning & Time-Series',
+      es: 'Machine Learning & Series Temporales',
     },
     grade: '9.0 / 10',
     year: '2026',
     shortDescription: {
-      en: 'Machine Learning forecasting pipeline for Bitcoin price estimation coupled with an Edge AI architecture for decentralized, low-latency real-time market data processing.',
-      es: 'Desarrollo de un modelo de predicción del precio de Bitcoin mediante algoritmos de Machine Learning y diseño de una arquitectura Edge AI para procesamiento descentralizado en tiempo real.',
+      en: 'Machine learning forecasting pipeline for Bitcoin time-series data using Scikit-learn and chronological cross-validation, coupled with an Edge AI architecture for low-latency decentralized inference.',
+      es: 'Pipeline de predicción con machine learning para series temporales de Bitcoin en Scikit-learn con validación cronológica, junto a una arquitectura Edge AI para inferencia descentralizada de baja latencia.',
     },
     longDescription: {
-      en: 'Academic dissertation evaluated with a 9.0/10 mark. Combines time-series feature engineering (moving averages, lag returns, rolling volatility metrics) with regression models (Random Forest, Linear Regression). Integrates an Edge AI architecture to decentralize live market processing, minimizing server latency and resource consumption.',
-      es: 'Trabajo de Fin de Grado calificado con 9.0/10. Combina ingeniería de características temporales (medias móviles, retardos, volatilidad móvil) con modelos de regresión (Random Forest, Regresión Lineal) y una arquitectura Edge AI para procesamiento descentralizado en tiempo real con mínima latencia.',
+      en: 'Academic dissertation evaluated with a 9.0/10 mark. The project investigates financial time-series forecasting using technical indicators and machine learning regression models (Random Forest, Linear Regression). It evaluates decentralized Edge AI inference to reduce server latency and avoid centralized processing bottlenecks.',
+      es: 'Trabajo de Fin de Grado calificado con 9.0/10. Investiga la predicción de series temporales financieras mediante indicadores técnicos y modelos de regresión en machine learning (Random Forest, Regresión Lineal), evaluando inferencia descentralizada en Edge AI para reducir la latencia.',
     },
-    technologies: ['Python', 'Machine Learning', 'Edge AI', 'Scikit-learn', 'Pandas', 'NumPy', 'Technical Indicators', 'Decentralized Processing'],
+    problem: {
+      en: 'Cryptocurrency price data is highly noisy, volatile, and non-stationary. Standard random cross-validation introduces severe lookahead bias (data leakage) by training models on future data to predict the past. Centralized cloud models also incur latency and cloud hosting costs.',
+      es: 'Las series de precios de criptomonedas tienen alta volatilidad, ruido y no estacionariedad. La validación cruzada aleatoria estándar introduce sesgo de anticipación (data leakage) al entrenar con datos del futuro para predecir el pasado. Además, los modelos centralizados en la nube sufren latencia y costes de infraestructura.',
+    },
+    solution: {
+      en: 'Engineered an end-to-end Python pipeline using Scikit-learn and Pandas. Built technical feature extractors (moving averages, lag returns, rolling volatility), enforced strict walk-forward chronological validation (TimeSeriesSplit) to guarantee realistic evaluation, and designed an Edge AI framework for localized inference.',
+      es: 'Desarrollé un pipeline en Python con Scikit-learn y Pandas. Creé extractores de características técnicas (medias móviles, retardos, volatilidad móvil), apliqué validación cronológica hacia adelante (TimeSeriesSplit) para garantizar una evaluación realista y diseñé un esquema Edge AI para inferencia localizada.',
+    },
+    myContribution: {
+      en: 'Conceived and implemented the full codebase: automated data ingestion with yfinance, feature engineering routines, model training and hyperparameter tuning, validation splits, and authoring the complete academic dissertation (evaluated at 9.0/10).',
+      es: 'Diseñé e implementé el código completo: ingesta automatizada con yfinance, rutinas de ingeniería de características, entrenamiento y ajuste de hiperparámetros, particiones de validación temporal y redacción de la memoria académica (calificada con 9.0/10).',
+    },
+    challengesAndLearnings: {
+      en: 'Learned the critical distinction between standard ML benchmarks and real-world sequential data: preventing data leakage requires strict temporal splits. Discovered that data quality, feature design, and realistic metrics (MAE, directional accuracy) matter far more than model complexity.',
+      es: 'Aprendí la diferencia fundamental entre problemas estándar de ML y datos secuenciales reales: evitar data leakage requiere particiones temporales estrictas. Comprobé que la calidad de los datos, el diseño de variables y métricas realistas (MAE y acierto direccional) son mucho más importantes que añadir complejidad al modelo.',
+    },
+    technologies: ['Python', 'Scikit-learn', 'Pandas', 'NumPy', 'TimeSeriesSplit', 'Edge AI', 'yfinance', 'Technical Indicators'],
     visualType: 'btc-forecast',
     githubUrl: 'https://github.com/villanuevapablo/bitcoin-price-forecasting',
     liveDemoUrl: null,
@@ -296,151 +311,193 @@ export const PROJECTS: ProjectItem[] = [
     },
     features: {
       en: [
-        'Development of a Bitcoin price prediction model using ML algorithms focused on technical market analysis',
-        'Design of an Edge AI architecture for decentralized real-time data processing, optimizing resources and latency',
-        'Rigorous chronological time-series cross-validation (TimeSeriesSplit) to prevent lookahead bias',
-        'Real-time data feeds via yfinance, automated feature engineering, and Telegram bot notification pipeline'
+        'End-to-end Python pipeline for historical market data ingestion and technical indicator computation',
+        'Strict chronological walk-forward cross-validation (TimeSeriesSplit) to prevent lookahead bias',
+        'Trained and benchmarked regression models (Random Forest, Linear Regression) with MAE and directional metrics',
+        'Edge AI architecture designed for localized, decentralized inference to minimize latency'
       ],
       es: [
-        'Desarrollo de un modelo de predicción del precio de Bitcoin utilizando algoritmos de Machine Learning enfocados en análisis técnico',
-        'Diseño de una arquitectura Edge AI para procesamiento de datos descentralizado en tiempo real, optimizando recursos y latencia',
-        'Validación cruzada temporal cronológica estricta (TimeSeriesSplit) para eliminar el sesgo de anticipación',
-        'Ingesta de datos en tiempo real con yfinance, ingeniería de características e integración con bot de Telegram'
-      ]
-    }
-  },
-  {
-    id: 'iot-edge-ai-security',
-    title: 'IoT Security System (Edge AI & Arduino UNO R4)',
-    category: 'iot',
-    categoryLabel: {
-      en: 'IoT & Edge AI',
-      es: 'IoT & Edge AI',
-    },
-    year: '2026',
-    shortDescription: {
-      en: 'Autonomous IoT security appliance running on Arduino UNO R4 WiFi. Detects intruders locally using ultrasonic sensors and rule-based Edge AI logic, featuring an asynchronous real-time AJAX web dashboard, M2M connectivity, and CSV logging.',
-      es: 'Sistema de seguridad IoT con Edge AI en Arduino UNO R4 WiFi. Detecta intrusos en local mediante sensores ultrasónicos y lógica Edge AI, con dashboard web AJAX en tiempo real, conectividad M2M y registro CSV.',
-    },
-    longDescription: {
-      en: 'Hardware security system engineered in C++ on the Arduino UNO R4 WiFi microcontroller platform. Eliminates external cloud latency by performing edge inference locally through high-frequency ultrasonic distance sampling and rule-based decision trees. Embeds an asynchronous web server for live browser monitoring via AJAX, supports M2M device communication, and records forensic CSV logs.',
-      es: 'Sistema de seguridad física desarrollado en C++ sobre la plataforma de microcontroladores Arduino UNO R4 WiFi. Elimina la latencia y dependencia de la nube ejecutando inferencia en el borde (Edge AI) mediante muestreo ultrasónico de alta frecuencia y árboles de decisión. Aloja un servidor web embebido para monitorización en vivo por AJAX, conectividad M2M y registro forense en CSV.',
-    },
-    technologies: ['Arduino UNO R4 WiFi', 'C++ / Embedded', 'Edge AI', 'IoT', 'Ultrasonic Sensors', 'AJAX Web Dashboard', 'M2M Protocols', 'CSV Event Logging'],
-    visualType: 'iot-edge',
-    githubUrl: 'https://github.com/villanuevapablo/IoT-Edge-AI-Security-System',
-    liveDemoUrl: null,
-    isPlaceholderUrl: false,
-    status: {
-      en: 'Embedded Hardware & Edge AI (2026)',
-      es: 'Hardware Embebido & Edge AI (2026)',
-    },
-    features: {
-      en: [
-        'On-device Edge AI decision engine executing autonomously on Arduino UNO R4 WiFi hardware',
-        'Ultrasonic spatial sensing with distance thresholding and noise filtering',
-        'Embedded lightweight web server hosting an interactive real-time AJAX control dashboard',
-        'Machine-to-Machine (M2M) connectivity for automated alerting across local network nodes',
-        'Persistent CSV event logging for security auditing and timestamped intrusion tracking'
-      ],
-      es: [
-        'Motor de decisión Edge AI ejecutado de forma autónoma en el microcontrolador Arduino UNO R4 WiFi',
-        'Sensor ultrasónico espacial con filtrado de ruido y umbrales de detección de proximidad',
-        'Servidor web embebido ligero que sirve un panel de control interactivo por AJAX en tiempo real',
-        'Conectividad Machine-to-Machine (M2M) para propagación de alertas automáticas en red local',
-        'Registro persistente de eventos en formato CSV para auditoría de seguridad y marcas temporales'
-      ]
-    }
-  },
-  {
-    id: 'smart-file-organizer',
-    title: 'Smart File Organizer (Local AI Daemon)',
-    category: 'ai-ml',
-    categoryLabel: {
-      en: 'AI Automation & Local LLMs',
-      es: 'Automatización IA & LLMs Locales',
-    },
-    year: '2026',
-    shortDescription: {
-      en: 'Autonomous background daemon and desktop application for real-time filesystem monitoring, semantic categorization, and standardized renaming using local LLMs (Ollama) with enforced JSON schemas.',
-      es: 'Demonio autónomo en segundo plano y aplicación de escritorio para monitorización del sistema de archivos en tiempo real y clasificación semántica mediante LLMs locales (Ollama) con esquemas JSON estrictos.',
-    },
-    longDescription: {
-      en: 'Autonomous system automation tool engineered in Python that intercepts filesystem events via watchdog. Validates file-lock stability to avoid reading in-flight downloads, extracts multi-format content (text, PDF parsing via pypdf, binary metadata), and executes deterministic local LLM classification via Ollama REST API with strictly enforced JSON schemas. Includes both a headless daemon and an interactive Tkinter desktop GUI.',
-      es: 'Herramienta de automatización de sistema desarrollada en Python que intercepta eventos del sistema de archivos mediante watchdog. Valida el bloqueo de archivos para evitar lecturas de descargas en curso, extrae contenido en múltiples formatos (texto, PDFs con pypdf, metadatos) y ejecuta inferencia local con LLMs mediante Ollama con esquemas JSON estructurados. Incluye demonio en segundo plano e interfaz gráfica en Tkinter.',
-    },
-    technologies: ['Python', 'Local LLMs', 'Ollama API', 'watchdog', 'pypdf', 'JSON Schema', 'Tkinter GUI', 'Automation Daemon'],
-    visualType: 'smart-organizer',
-    githubUrl: 'https://github.com/villanuevapablo/smart-file-organizer',
-    liveDemoUrl: null,
-    isPlaceholderUrl: false,
-    status: {
-      en: 'Automation Daemon & Desktop App (2026)',
-      es: 'Demonio de Automatización & App (2026)',
-    },
-    features: {
-      en: [
-        'Real-time folder monitoring intercepting filesystem creation and move events via watchdog',
-        'File stability and lock verification preventing premature reads of in-flight downloads or large copies',
-        'Multi-format content extraction: text streams, PDF multi-page parsing with pypdf, and binary metadata analysis',
-        'Deterministic local AI classification via Ollama REST API with strictly enforced JSON schemas',
-        'Dual execution mode: background Windows/Linux service and modern desktop GUI'
-      ],
-      es: [
-        'Monitorización de carpetas en tiempo real interceptando eventos de creación y movimiento con watchdog',
-        'Verificación de estabilidad y bloqueo de archivos para evitar lecturas de descargas en curso',
-        'Extracción multiformato: texto, análisis multipágina de PDFs con pypdf y metadatos binarios',
-        'Clasificación determinista con IA local mediante Ollama y validación de esquemas JSON estrictos',
-        'Modo de ejecución dual: servicio en segundo plano (Windows/Linux) e interfaz gráfica de escritorio'
+        'Pipeline completo en Python para ingesta de datos de mercado y cálculo de indicadores técnicos',
+        'Validación cruzada cronológica estricta (TimeSeriesSplit) para eliminar cualquier sesgo de anticipación',
+        'Entrenamiento y comparación de modelos de regresión (Random Forest, Regresión Lineal) con MAE y métricas direccionales',
+        'Diseño de arquitectura Edge AI orientada a inferencia local descentralizada con mínima latencia'
       ]
     }
   },
   {
     id: 'secure-record-management-system',
-    title: 'Secure Record Management System (SRMS-MEDICAL)',
+    title: 'Secure Record Management System (SRMS)',
     category: 'security',
     categoryLabel: {
-      en: 'Web Security & Go Backend',
-      es: 'Seguridad Web & Backend Go',
+      en: 'Go Backend & Systems',
+      es: 'Backend en Go & Sistemas',
     },
     year: '2026',
     shortDescription: {
-      en: 'High-security medical record management platform engineered in Go adhering to OWASP Top 10 standards with RBAC, CSRF mitigation, bcrypt hashing, and IP rate limiting.',
-      es: 'Aplicación web de gestión de registros médicos en Go con net/http y SQLite, implementando mitigaciones estrictas frente al OWASP Top 10, RBAC, CSRF y rate limiting.',
+      en: 'Full-stack medical record management web application built with native Go and SQLite, implementing defense-in-depth security principles against OWASP Top 10 vulnerabilities.',
+      es: 'Aplicación web full-stack de gestión de registros médicos construida con Go nativo y SQLite, aplicando principios de defensa en profundidad contra vulnerabilidades OWASP Top 10.',
     },
     longDescription: {
-      en: 'Enterprise medical record platform engineered with native Go (net/http and html/template) and SQLite. Designed with security-first defense-in-depth: complete prevention of SQL injection and XSS following the OWASP Top 10, Role-Based Access Control (RBAC), CSRF tokens, bcrypt password hashing, IP rate limiting, and automated account lockout after failed logins.',
-      es: 'Plataforma de gestión de registros médicos construida con Go nativo (net/http y html/template) y SQLite. Diseñada con arquitectura de seguridad en profundidad: prevención total de inyección SQL y XSS siguiendo el OWASP Top 10, control de acceso por roles (RBAC), protección CSRF, hashing de contraseñas con bcrypt, rate limiting por IP y bloqueo de cuentas tras intentos fallidos.',
+      en: 'A high-security medical record management platform built with standard library Go (net/http, html/template) and SQLite. Designed with security-first architecture: complete mitigation of SQL injection via parameterized queries, XSS prevention through context-aware template escaping, synchronized CSRF tokens, bcrypt password hashing, role-based access control, and IP rate limiting.',
+      es: 'Plataforma de gestión de registros médicos desarrollada con Go estándar (net/http, html/template) y SQLite. Diseñada con arquitectura de seguridad en profundidad: mitigación total de inyección SQL mediante consultas preparadas, prevención de XSS con escape contextual, tokens CSRF, bcrypt, control de acceso por roles y rate limiting por IP.',
     },
-    technologies: ['Go (Golang)', 'net/http', 'SQLite', 'Web Security', 'OWASP Top 10', 'RBAC', 'bcrypt', 'CSRF Protection', 'Rate Limiting'],
+    problem: {
+      en: 'Web applications handling sensitive patient records are frequent targets of SQL injection, cross-site scripting (XSS), cross-site request forgery (CSRF), and credential brute-forcing.',
+      es: 'Las aplicaciones web que gestionan registros de pacientes son objetivo frecuente de inyecciones SQL, cross-site scripting (XSS), ataques CSRF y fuerza bruta en autenticación.',
+    },
+    solution: {
+      en: 'Engineered a secure web application utilizing Go standard library. Implemented parameterized queries for all database operations, secure session cookies (HttpOnly, SameSite), CSRF token validation on state-changing requests, bcrypt password hashing, and in-memory IP rate limiting to block brute-force attempts.',
+      es: 'Desarrollé una aplicación web segura con la biblioteca estándar de Go. Implementé consultas preparadas para todas las operaciones en base de datos, cookies de sesión seguras (HttpOnly, SameSite), tokens CSRF en peticiones mutables, hashing bcrypt y un rate limiter en memoria por IP para mitigar fuerza bruta.',
+    },
+    myContribution: {
+      en: 'Built the application end-to-end: modeled the relational database schema in SQLite, wrote authentication middleware, implemented role-based access control (differentiating doctors, admins, and patients), and created the responsive frontend templates.',
+      es: 'Desarrollé la aplicación de principio a fin: modelé el esquema relacional en SQLite, programé middleware de autenticación, implementé control de acceso por roles (separando médicos, administradores y pacientes) y creé las plantillas web responsivas.',
+    },
+    challengesAndLearnings: {
+      en: 'Working without heavy third-party web frameworks required building clean HTTP middleware chaining in Go and understanding cookie security flags deeply. Reinforced the principle that web security must be built into the architectural foundation rather than added as an afterthought.',
+      es: 'Prescindir de frameworks externos me exigió dominar el encadenamiento de middleware HTTP en Go y comprender a fondo las directivas de seguridad en cookies. Reforzó el principio de que la seguridad debe ser parte de la arquitectura desde el primer momento.',
+    },
+    technologies: ['Go (Golang)', 'net/http', 'html/template', 'SQLite', 'bcrypt', 'RBAC', 'CSRF Protection', 'Rate Limiting'],
     visualType: 'srms-security',
     githubUrl: 'https://github.com/villanuevapablo/SRMS-MEDICAL',
     liveDemoUrl: null,
     isPlaceholderUrl: false,
     status: {
-      en: 'Production-Grade Security Architecture (2026)',
-      es: 'Arquitectura de Seguridad Empresarial (2026)',
+      en: 'Go Full-Stack Application (2026)',
+      es: 'Aplicación Full-Stack en Go (2026)',
     },
     features: {
       en: [
-        'Web application engineered in Go using standard library net/http, html/template, and SQLite database',
-        'Strict prevention of SQL injection and Cross-Site Scripting (XSS) adhering to the OWASP Top 10',
-        'Role-Based Access Control (RBAC) separating administrative, physician, and user permissions',
-        'CSRF token validation and cryptographic password hashing with bcrypt',
-        'IP rate limiting and automated account lockout after repeated failed authentication attempts'
+        'Engineered with Go standard library (net/http, html/template) with zero heavy external web dependencies',
+        'Relational data persistence in SQLite with strictly parameterized queries preventing SQL injection',
+        'Role-Based Access Control (RBAC) separating administrative, physician, and patient views',
+        'Cryptographic password hashing via bcrypt, CSRF protection, and in-memory IP rate limiting'
       ],
       es: [
-        'Aplicación web desarrollada en Go con net/http, html/template y base de datos SQLite',
-        'Prevención estricta de inyección SQL y Cross-Site Scripting (XSS) siguiendo las pautas de OWASP Top 10',
-        'Control de acceso basado en roles (RBAC) para separar permisos de administración, facultativos y usuarios',
-        'Validación de tokens CSRF y hashing criptográfico de contraseñas mediante bcrypt',
-        'Rate limiting por dirección IP y bloqueo temporal de cuenta tras intentos fallidos de inicio de sesión'
+        'Desarrollada con la biblioteca estándar de Go (net/http, html/template) sin dependencias web pesadas',
+        'Persistencia relacional en SQLite con consultas preparadas que eliminan el riesgo de inyección SQL',
+        'Control de acceso por roles (RBAC) que separa permisos entre administración, médicos y pacientes',
+        'Hashing de contraseñas con bcrypt, protección contra CSRF y limitador de tasa por IP en memoria'
+      ]
+    }
+  },
+  {
+    id: 'smart-file-organizer',
+    title: 'Smart File Organizer',
+    category: 'ai-ml',
+    categoryLabel: {
+      en: 'Automation & Local AI',
+      es: 'Automatización & IA Local',
+    },
+    year: '2026',
+    shortDescription: {
+      en: 'Python automation utility and background service that monitors filesystem directories in real time, extracts document text, and categorizes files using a local Ollama model with enforced JSON schemas.',
+      es: 'Utilidad de automatización en Python y servicio en segundo plano que monitoriza carpetas en tiempo real, extrae texto de documentos y clasifica archivos mediante un LLM local en Ollama con esquemas JSON.',
+    },
+    longDescription: {
+      en: 'A desktop automation tool and background service engineered in Python. It watches target folders (e.g., Downloads) via watchdog, validates file lock status to prevent premature reads during active downloads, extracts text and metadata across multiple formats (text, PDF multi-page parsing with pypdf), and queries a local Ollama LLM with strict JSON schema constraints for deterministic file categorization and renaming.',
+      es: 'Herramienta de automatización y servicio en segundo plano desarrollada en Python. Monitoriza directorios con watchdog, valida el bloqueo de archivos para evitar lecturas de descargas en curso, extrae texto y metadatos multiformato (incluyendo PDFs con pypdf) y consulta a un modelo local en Ollama con esquemas JSON estructurados para clasificar y renombrar.',
+    },
+    problem: {
+      en: 'Local download directories quickly accumulate poorly named and disorganized documents. Commercial cloud sorting solutions require paid subscriptions, consume external API tokens, and expose private personal files to third-party servers.',
+      es: 'Las carpetas de descargas se llenan de archivos desordenados y nombres poco descriptivos. Las soluciones cloud requieren suscripciones de pago y exponen documentos personales privados a servidores externos.',
+    },
+    solution: {
+      en: 'Built a local-first Python application that runs 100% on the user\'s machine with zero recurring costs and complete privacy. Uses watchdog for event-driven filesystem monitoring, implements file stability checks, and leverages local Ollama models with enforced JSON output schemas for deterministic sorting.',
+      es: 'Construí una aplicación en Python 100% local, sin costes recurrentes y con total privacidad. Utiliza watchdog para monitorización reactiva de carpetas, implementa comprobaciones de estabilidad de archivos y aprovecha modelos locales en Ollama con esquemas JSON estructurados.',
+    },
+    myContribution: {
+      en: 'Created the event-driven filesystem listener, built the multi-format content extractors (handling PDFs, text, and binary metadata), integrated the Ollama REST API with prompt templates and JSON schema validation, and created a clean Tkinter desktop interface alongside the background daemon.',
+      es: 'Programé el listener reactivo del sistema de archivos, desarrollé los extractores de contenido multiformato (con soporte multipágina de PDFs), integré la API REST de Ollama con validación de esquemas JSON y construí una interfaz de escritorio en Tkinter además del servicio en segundo plano.',
+    },
+    challengesAndLearnings: {
+      en: 'Handled OS-level file locking issues where creation events fire while a browser is still actively writing a download. Solved this with polling checks on file size and handle availability. Learned how to reliably constrain generative language models to produce valid, parseable JSON.',
+      es: 'Resolví problemas de concurrencia y bloqueo de archivos cuando el sistema notifica eventos de creación mientras el navegador aún sigue escribiendo la descarga (solucionado mediante polling de tamaño y disponibilidad). Aprendí a forzar salidas JSON deterministas y válidas en modelos de lenguaje.',
+    },
+    technologies: ['Python', 'watchdog', 'Ollama API', 'Local LLMs', 'pypdf', 'JSON Schema', 'Tkinter GUI'],
+    visualType: 'smart-organizer',
+    githubUrl: 'https://github.com/villanuevapablo/smart-file-organizer',
+    liveDemoUrl: null,
+    isPlaceholderUrl: false,
+    status: {
+      en: 'Python Desktop App & Daemon (2026)',
+      es: 'App de Escritorio & Servicio Python (2026)',
+    },
+    features: {
+      en: [
+        'Real-time folder monitoring with watchdog for automatic detection of new files',
+        'File stability and lock verification to avoid premature reading of in-progress downloads',
+        'Multi-format content extraction: text streams, PDF multi-page parsing with pypdf, and metadata',
+        'Local LLM inference via Ollama REST API with strictly enforced JSON schemas for deterministic sorting'
+      ],
+      es: [
+        'Monitorización de carpetas en tiempo real con watchdog para detección automática de nuevos archivos',
+        'Comprobación de estabilidad y bloqueo para evitar leer descargas que aún están en progreso',
+        'Extracción de contenido multiformato: flujos de texto, análisis de PDFs con pypdf y metadatos',
+        'Inferencia con LLM local mediante Ollama con validación estricta de esquemas JSON estructurados'
+      ]
+    }
+  },
+  {
+    id: 'iot-edge-ai-security',
+    title: 'IoT Security System (Arduino UNO R4)',
+    category: 'iot',
+    categoryLabel: {
+      en: 'Embedded Systems & C++',
+      es: 'Sistemas Embebidos & C++',
+    },
+    year: '2026',
+    shortDescription: {
+      en: 'Autonomous hardware security system built on Arduino UNO R4 WiFi in C++, featuring local ultrasonic presence detection, embedded web server, AJAX real-time dashboard, and CSV event logging.',
+      es: 'Sistema de seguridad hardware autónomo en Arduino UNO R4 WiFi desarrollado en C++, con detección de presencia ultrasónica local, servidor web embebido, panel AJAX y volcado de eventos a CSV.',
+    },
+    longDescription: {
+      en: 'An embedded physical security appliance developed in C++ on the Arduino UNO R4 WiFi microcontroller platform. Eliminates reliance on external cloud servers by running presence detection logic directly on the device using ultrasonic sensors. Embeds a lightweight HTTP server serving a real-time AJAX web dashboard to browsers without page reloads, and records persistent event logs.',
+      es: 'Dispositivo físico de seguridad embebido desarrollado en C++ sobre el microcontrolador Arduino UNO R4 WiFi. Elimina la dependencia de servidores cloud ejecutando la lógica de detección directamente en el dispositivo mediante sensores ultrasónicos. Aloja un servidor HTTP ligero que sirve un panel web AJAX en tiempo real y registra eventos en CSV.',
+    },
+    problem: {
+      en: 'Commercial smart sensors rely heavily on third-party cloud infrastructure, which introduces latency, creates vendor lock-in, and fails when local internet access goes down.',
+      es: 'Muchos sensores comerciales dependen por completo de la nube de terceros, lo que añade latencia, dependencia de proveedores y causa fallos totales ante caídas de internet.',
+    },
+    solution: {
+      en: 'Programmed an autonomous microcontroller appliance in C++ that processes sensor data on-chip. Filters ultrasonic distance readings, triggers alerts based on configurable proximity thresholds, serves an embedded web interface over local WiFi, and updates dashboard metrics via asynchronous AJAX calls.',
+      es: 'Programé un dispositivo autónomo en C++ que procesa las lecturas de sensores directamente en el chip. Filtra mediciones de distancia, dispara alertas según umbrales configurables, aloja una interfaz web en su WiFi local y actualiza métricas mediante peticiones asíncronas AJAX.',
+    },
+    myContribution: {
+      en: 'Developed the complete C++ firmware: wrote the non-blocking sensor acquisition loop (avoiding delay()), crafted the embedded HTTP response handlers, programmed the front-end AJAX dashboard stored in flash memory, and added CSV event recording.',
+      es: 'Desarrollé el firmware completo en C++: programé el bucle de lectura no bloqueante (evitando delay()), construí las respuestas HTTP del servidor embebido, diseñé el panel AJAX servido desde la memoria flash y programé el volcado de eventos a CSV.',
+    },
+    challengesAndLearnings: {
+      en: 'Managing limited microcontroller memory (SRAM) required careful optimization of string handling and buffer sizes. Taught me non-blocking asynchronous state machines and the mechanics of serving web protocols from embedded hardware.',
+      es: 'Trabajar con memoria restringida (SRAM) me exigió optimizar el manejo de cadenas y buffers. Me enseñó a estructurar máquinas de estados asíncronas no bloqueantes y a servir protocolos web directamente desde hardware embebido.',
+    },
+    technologies: ['Arduino UNO R4 WiFi', 'C++ / Embedded', 'Ultrasonic Sensors', 'HTTP Server', 'AJAX', 'Hardware Registers', 'CSV Logging'],
+    visualType: 'iot-edge',
+    githubUrl: 'https://github.com/villanuevapablo/IoT-Edge-AI-Security-System',
+    liveDemoUrl: null,
+    isPlaceholderUrl: false,
+    status: {
+      en: 'Embedded C++ Project (2026)',
+      es: 'Proyecto Embebido en C++ (2026)',
+    },
+    features: {
+      en: [
+        'On-device presence detection logic executing autonomously on Arduino UNO R4 WiFi hardware',
+        'Ultrasonic spatial sensing with distance thresholding and signal noise filtering',
+        'Embedded lightweight web server hosting an interactive real-time AJAX control dashboard',
+        'Persistent CSV event logging for security auditing and timestamped intrusion tracking'
+      ],
+      es: [
+        'Lógica de detección ejecutada de forma autónoma en el hardware de Arduino UNO R4 WiFi',
+        'Muestreo espacial ultrasónico con umbrales configurables y filtrado de ruido de señal',
+        'Servidor web embebido ligero que sirve un panel de control interactivo por AJAX en tiempo real',
+        'Registro persistente de eventos en formato CSV para auditoría y seguimiento temporal'
       ]
     }
   },
   {
     id: 'preflop-hero',
-    title: 'Preflop Hero: Hand History Parser & Strategy Auditor',
+    title: 'Preflop Hero: Hand History Parser & Analytics',
     category: 'data',
     categoryLabel: {
       en: 'Data Analytics & SQLite',
@@ -448,36 +505,50 @@ export const PROJECTS: ProjectItem[] = [
     },
     year: '2026',
     shortDescription: {
-      en: 'High-performance poker hand history parser and strategy auditor. Extracts hole cards, calculates VPIP and PFR metrics, persists data in SQLite, and benchmarks gameplay against 6-max GTO models.',
-      es: 'Parser de alto rendimiento de historiales de manos de poker y auditor de estrategia preflop. Extrae cartas, calcula métricas VPIP y PFR, persiste datos en SQLite y compara el juego contra benchmarks GTO.',
+      en: 'Python data analytics tool and web dashboard that parses raw text hand histories from online poker rooms, computes gameplay statistics (VPIP, PFR), and stores records in SQLite for analysis.',
+      es: 'Herramienta de analítica de datos y dashboard web en Python que procesa historiales de texto de salas de poker, calcula estadísticas de juego (VPIP, PFR) y almacena datos en SQLite.',
     },
     longDescription: {
-      en: 'Data-driven analytics engine and standalone dark-mode web dashboard. Employs regex parsers to ingest multi-platform hand histories (Winamax & 888poker), computes mathematical preflop indicators (VPIP, PFR, cold-call spread), persists records in SQLite, and diagnoses strategic leaks against Game Theory Optimal (GTO) benchmarks.',
-      es: 'Motor analítico y dashboard web independiente en modo oscuro. Utiliza parsers regex para procesar historiales de Winamax y 888poker, calcula indicadores matemáticos preflop (VPIP, PFR, spread de cold-call), almacena los registros en SQLite y diagnostica fugas estratégicas frente a benchmarks GTO.',
+      en: 'A data parsing and analytics engine paired with a web dashboard. Uses regular expressions to extract structured information from unstructured hand histories (Winamax and 888poker), calculates core statistical metrics (VPIP, PFR, cold-call frequencies), stores parsed data in an indexed SQLite database, and presents performance metrics on an interactive dashboard.',
+      es: 'Motor de parsing y analítica de datos junto a un panel web. Utiliza expresiones regulares para extraer información estructurada a partir de historiales de texto (Winamax y 888poker), calcula métricas estadísticas clave (VPIP, PFR), persiste los registros en una base de datos SQLite indexada y presenta métricas en un dashboard interactivo.',
     },
-    technologies: ['Python', 'SQLite', 'Data Analytics', 'Regex Parsing', 'GTO Benchmarks', 'Web Dashboard', 'Statistical Modeling'],
+    problem: {
+      en: 'Analyzing decision-making across thousands of game sessions requires parsing thousands of messy, unstructured text files exported by different platforms, each with proprietary formatting.',
+      es: 'Analizar la toma de decisiones a lo largo de miles de manos requiere procesar ficheros de texto no estructurados de distintas plataformas, cada una con su formato particular.',
+    },
+    solution: {
+      en: 'Created an automated Python parsing pipeline with regular expressions capable of reading raw logs, extracting player actions and cards, calculating statistical metrics, and saving records to an indexed SQLite database for analytical reporting.',
+      es: 'Creé un pipeline de parsing en Python mediante expresiones regulares capaz de leer logs en bruto, extraer cartas y acciones de jugadores, calcular métricas estadísticas y almacenar los registros en una base de datos SQLite indexada.',
+    },
+    myContribution: {
+      en: 'Designed the regex parsing rules to handle syntax variations between platforms, modeled the relational database schema in SQLite with proper indexes for fast aggregation queries, and built the analytics dashboard interface.',
+      es: 'Diseñé las reglas de parsing con expresiones regulares adaptadas a las diferencias entre salas, modelé el esquema relacional en SQLite con índices optimizados para agregaciones rápidas y creé la interfaz del panel analítico.',
+    },
+    challengesAndLearnings: {
+      en: 'Handling edge cases in text parsing (split pots, dead blinds, disconnected player actions) required writing fault-tolerant pattern matchers. Reinforced database design principles for analytical queries over thousands of sequential records.',
+      es: 'Resolver casos límite en el análisis de texto (botes divididos, ciegas muertas, desconexiones) me exigió crear patrones regex robustos y tolerantes a fallos. Reforzó principios de diseño de bases de datos para consultas analíticas sobre miles de registros.',
+    },
+    technologies: ['Python', 'SQLite', 'Data Analytics', 'Regex Parsing', 'Pandas', 'Web Dashboard', 'Statistical Modeling'],
     visualType: 'preflop-hero',
     githubUrl: 'https://github.com/villanuevapablo/preflop-hero',
     liveDemoUrl: null,
     isPlaceholderUrl: false,
     status: {
-      en: 'Parser Engine & Analytics Dashboard (2026)',
-      es: 'Motor de Parsing y Dashboard Analítico (2026)',
+      en: 'Python Analytics Tool (2026)',
+      es: 'Herramienta Analítica en Python (2026)',
     },
     features: {
       en: [
-        'Multi-platform regex parser supporting raw Winamax and 888poker hand histories',
-        'Mathematical extraction of core indicators: VPIP (Voluntarily Put $ in Pot) and PFR (Preflop Raise)',
-        'Cold-call spread calculation and automatic strategic profiling (Optimal TAG, Loose-Passive, Maniac)',
-        'Robust SQLite relational persistence with indexed hand querying and performance reporting',
-        'Standalone dark-mode dashboard with interactive KPI cards and distribution charts'
+        'Multi-platform regex parser supporting raw Winamax and 888poker text hand histories',
+        'Automated calculation of core indicators: VPIP (Voluntarily Put $ in Pot) and PFR (Preflop Raise)',
+        'Relational data persistence in SQLite with indexed tables for fast statistical queries',
+        'Clean dashboard interface with key performance indicators and positional distribution metrics'
       ],
       es: [
-        'Parser regex multiplataforma compatible con historiales en bruto de Winamax y 888poker',
-        'Cálculo matemático de indicadores clave: VPIP (Voluntarily Put $ in Pot) y PFR (Preflop Raise)',
-        'Cálculo del spread de cold-call y diagnóstico de perfiles estratégicos (TAG Óptimo, Loose-Passive, Maniac)',
-        'Persistencia relacional en SQLite con consultas indexadas y generación de informes de rendimiento',
-        'Dashboard web autónomo en modo oscuro con tarjetas KPI y gráficos de distribución'
+        'Parser regex multiplataforma compatible con ficheros de texto en bruto de Winamax y 888poker',
+        'Cálculo automático de indicadores clave de juego: VPIP (Voluntarily Put $ in Pot) y PFR (Preflop Raise)',
+        'Persistencia relacional en SQLite con tablas indexadas para consultas analíticas de alta velocidad',
+        'Interfaz de panel limpia con métricas clave de rendimiento y distribuciones por posición'
       ]
     }
   }
@@ -487,55 +558,51 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
   {
     id: 'languages-frameworks',
     title: {
-      en: 'Languages & Frameworks',
-      es: 'Lenguajes y Frameworks',
+      en: 'Software Engineering & Full Stack',
+      es: 'Ingeniería de Software & Full Stack',
     },
     icon: 'Code2',
     skills: [
-      { name: 'Python', levelHint: { en: 'ML, Data Analytics, Ollama & Daemons', es: 'ML, Analítica, Ollama y Demonios' }, featured: true },
-      { name: 'Go (Golang)', levelHint: { en: 'Backend, Net/HTTP, Microservices', es: 'Backend, Net/HTTP, Microservicios' }, featured: true },
-      { name: 'Java', levelHint: { en: 'Core OOP, Enterprise, JDBC', es: 'POO, Entornos empresariales, JDBC' }, featured: true },
-      { name: 'TypeScript / JavaScript', levelHint: { en: 'Type-Safe Full-Stack & React', es: 'Full-Stack tipado y React' }, featured: true },
-      { name: 'C++ / Embedded', levelHint: { en: 'Arduino, Edge AI & IoT Hardware', es: 'Arduino, Edge AI y Hardware IoT' }, featured: true },
-      { name: 'Spring Boot', levelHint: { en: 'Java Microservices & REST APIs', es: 'Microservicios y APIs en Java' }, featured: true },
-      { name: 'React', levelHint: { en: 'SPA, Hooks, State Architecture', es: 'SPA, Hooks, Arquitectura de estado' }, featured: true },
-      { name: 'Angular', levelHint: { en: 'Enterprise Frontend Architecture', es: 'Arquitectura frontend empresarial' } },
-      { name: 'Svelte', levelHint: { en: 'Reactive Modern Interfaces', es: 'Interfaces reactivas modernas' } },
+      { name: 'Go (Golang)', levelHint: { en: 'Backend, Net/HTTP, Clean Architecture', es: 'Backend, Net/HTTP, Arquitectura limpia' }, featured: true },
+      { name: 'Python', levelHint: { en: 'Data Analytics, Automation, Scikit-learn', es: 'Analítica de datos, Automatización, Scikit-learn' }, featured: true },
+      { name: 'Java', levelHint: { en: 'OOP, Enterprise Architecture, JDBC', es: 'POO, Arquitectura empresarial, JDBC' }, featured: true },
+      { name: 'TypeScript / JavaScript', levelHint: { en: 'Type-Safe Web Apps & Modern React', es: 'Desarrollo web tipado y React moderno' }, featured: true },
+      { name: 'React', levelHint: { en: 'Component Architecture, Hooks, State', es: 'Arquitectura de componentes, Hooks, Estado' }, featured: true },
+      { name: 'Spring Boot', levelHint: { en: 'Java Backend Services & REST APIs', es: 'Servicios backend y APIs REST en Java' }, featured: true },
+      { name: 'Unit & Integration Testing', levelHint: { en: 'Test-Driven Quality & Verification', es: 'Calidad de software y verificación' }, featured: true },
+      { name: 'Git & Linux CLI', levelHint: { en: 'Version Control & Development Tooling', es: 'Control de versiones y entorno Linux' }, featured: true },
+      { name: 'Angular / Svelte', levelHint: { en: 'Frontend Interface Development', es: 'Desarrollo de interfaces frontend' } },
+    ]
+  },
+  {
+    id: 'databases-systems',
+    title: {
+      en: 'Databases & Systems',
+      es: 'Bases de Datos & Sistemas',
+    },
+    icon: 'Database',
+    skills: [
+      { name: 'SQLite', levelHint: { en: 'Embedded Relational Database & Queries', es: 'Base de datos relacional embebida y SQL' }, featured: true },
+      { name: 'MySQL & PostgreSQL', levelHint: { en: 'Relational Database Schema Design', es: 'Diseño de esquemas y consultas relacionales' }, featured: true },
+      { name: 'JDBC & Data Persistence', levelHint: { en: 'Database Connectivity & Transactions', es: 'Conectividad y persistencia de datos' }, featured: true },
+      { name: 'C++ / Embedded', levelHint: { en: 'Microcontrollers, Arduino UNO R4, IoT', es: 'Microcontroladores, Arduino UNO R4, IoT' }, featured: true },
+      { name: 'REST API Design', levelHint: { en: 'HTTP Services & Data Serialization', es: 'Servicios HTTP y serialización de datos' }, featured: true },
+      { name: 'Cloud Deployment', levelHint: { en: 'Vercel, Git CI/CD & Hosting', es: 'Vercel, Git CI/CD y alojamiento web' }, featured: true },
     ]
   },
   {
     id: 'ai-automation-data',
     title: {
-      en: 'AI, Automation & Data Analytics',
-      es: 'IA, Automatización y Analítica de Datos',
+      en: 'Areas of Interest: AI, Automation & Data',
+      es: 'Áreas de Interés: IA, Automatización y Datos',
     },
     icon: 'Brain',
     skills: [
-      { name: 'Local LLMs & Ollama API', levelHint: { en: 'Zero-Cost Local Ingestion & Schemas', es: 'Ingesta local con esquemas JSON' }, featured: true },
-      { name: 'Edge AI & Microcontroller Inference', levelHint: { en: 'On-Device Low Latency Systems', es: 'Sistemas en el borde de baja latencia' }, featured: true },
-      { name: 'Autonomous System Daemons', levelHint: { en: 'watchdog Real-Time FS Monitoring', es: 'Monitorización en tiempo real con watchdog' }, featured: true },
-      { name: 'Machine Learning (Scikit-learn)', levelHint: { en: 'Time-Series Regression & Validation', es: 'Regresión temporal y validación cruzada' }, featured: true },
-      { name: 'Data Analytics & Feature Engineering', levelHint: { en: 'Pandas, NumPy & Mathematical Stats', es: 'Pandas, NumPy y estadística matemática' }, featured: true },
-      { name: 'ETL Pipelines & Automated Extraction', levelHint: { en: 'pypdf, Text Streams & Regex Parsers', es: 'pypdf, flujos de texto y parsers regex' }, featured: true },
-      { name: 'Web Security (OWASP Top 10)', levelHint: { en: 'SQLi, XSS, CSRF, RBAC & bcrypt', es: 'Mitigación de SQLi, XSS, CSRF, RBAC y bcrypt' }, featured: true },
-      { name: 'Software Testing & Quality Assurance', levelHint: { en: 'Unit & Integration Testing', es: 'Testing unitario e integración' }, featured: true },
-      { name: 'Git & Linux CLI', levelHint: { en: 'Version Control, Daemons & Tooling', es: 'Control de versiones, demonios y CLI' }, featured: true },
-    ]
-  },
-  {
-    id: 'databases-cloud',
-    title: {
-      en: 'Databases, Cloud & IoT',
-      es: 'Bases de Datos, Cloud e IoT',
-    },
-    icon: 'Database',
-    skills: [
-      { name: 'SQLite', levelHint: { en: 'Embedded Lightweight RDBMS', es: 'SGBD relacional ligero embebido' }, featured: true },
-      { name: 'IoT & M2M Protocols', levelHint: { en: 'Sensors, AJAX Web Servers & Hardware', es: 'Sensores, servidores AJAX y hardware' }, featured: true },
-      { name: 'JDBC & Relational Schemas', levelHint: { en: 'Java Database Connectivity & ACID', es: 'Conectividad de datos y esquemas ACID' }, featured: true },
-      { name: 'Firebase', levelHint: { en: 'Cloud NoSQL, Auth & Realtime', es: 'NoSQL en la nube, Auth y Realtime' }, featured: true },
-      { name: 'Cloud Deployment & Hosting', levelHint: { en: 'Vercel, CI/CD & Cloud Compute', es: 'Vercel, CI/CD y computación cloud' }, featured: true },
-      { name: 'MySQL & PostgreSQL', levelHint: { en: 'Relational Database Engines', es: 'Motores de bases de datos relacionales' } },
+      { name: 'Machine Learning (Scikit-learn)', levelHint: { en: 'Regression, Time-Series & Cross-Validation', es: 'Regresión, series temporales y validación' }, featured: true },
+      { name: 'Data Analytics (Pandas & NumPy)', levelHint: { en: 'Feature Engineering & Data Manipulation', es: 'Ingeniería de variables y tratamiento de datos' }, featured: true },
+      { name: 'Local LLMs (Ollama REST API)', levelHint: { en: 'Structured JSON Extraction & Prompting', es: 'Extracción estructurada con esquemas JSON' }, featured: true },
+      { name: 'Filesystem Automation (watchdog)', levelHint: { en: 'Event-Driven Background Processing', es: 'Procesamiento en segundo plano por eventos' }, featured: true },
+      { name: 'Edge AI & Microcontroller Logic', levelHint: { en: 'Localized Inference on Constrained Devices', es: 'Inferencia localizada en dispositivos físicos' }, featured: true },
     ]
   }
 ];
@@ -555,78 +622,80 @@ export const UI_TRANSLATIONS = {
     getInTouch: { en: 'Get in touch', es: 'Contactar' },
     githubProfile: { en: 'GitHub profile', es: 'Perfil de GitHub' },
     downloadCv: { en: 'Download CV (PDF)', es: 'Descargar CV (PDF)' },
-    terminalTag: { en: 'Software Engineer — Full-Stack Developer', es: 'Ingeniero de Software — Desarrollador Full-Stack' },
+    terminalTag: { en: 'Software Engineer | Full Stack Developer', es: 'Ingeniero de Software | Desarrollador Full Stack' },
     gradeBadge: { en: 'BSc (Hons) First-Class Honours (9/10)', es: 'BSc (Hons) First-Class Honours (9/10)' },
-    specCol1Title: { en: '// Specialization', es: '// Especialidad' },
-    specCol1Value: { en: 'Software Engineering & Full-Stack', es: 'Software Engineering & Full-Stack' },
-    specCol2Title: { en: '// Core Stack', es: '// Stack Principal' },
+    specCol1Title: { en: '// Role', es: '// Rol' },
+    specCol1Value: { en: 'Software Engineer & Full Stack', es: 'Software Engineer & Full Stack' },
+    specCol2Title: { en: '// Primary Stack', es: '// Stack Principal' },
     specCol2Value: { en: 'Go • Python • TypeScript • React', es: 'Go • Python • TypeScript • React' },
-    specCol3Title: { en: '// Core Domains', es: '// Áreas de Dominio' },
-    specCol3Value: { en: 'Applied AI • Automation • Data', es: 'IA Aplicada • Automatización • Datos' },
+    specCol3Title: { en: '// Areas of Interest', es: '// Áreas de Interés' },
+    specCol3Value: { en: 'Applied AI • ML • Data Analytics', es: 'IA Aplicada • ML • Analítica de Datos' },
     specCol4Title: { en: '// Availability', es: '// Disponibilidad' },
     specCol4Value: { en: 'Immediate • Madrid / Hybrid', es: 'Inmediata • Madrid / Híbrido' },
   },
   about: {
     title: { en: 'About Me', es: 'Sobre Mí' },
-    subtitle: { en: 'Professional profile, engineering mindset and academic honors', es: 'Perfil profesional, enfoque de ingeniería y distinciones académicas' },
-    downloadCv: { en: 'Download Verified CV', es: 'Descargar CV Verificado' },
-    cvNotice: { en: 'Official PDF available in English & Spanish', es: 'PDF oficial disponible en inglés y español' },
-    academicFoundation: { en: 'Academic Foundation', es: 'Base Académica' },
-    coreInterests: { en: 'Areas of Interest', es: 'Áreas de Especialización' },
-    otherDetailsTitle: { en: 'Availability & Competencies', es: 'Disponibilidad y Competencias' },
+    subtitle: { en: 'Software engineering background, professional experience and areas of technical interest', es: 'Trayectoria en ingeniería de software, experiencia profesional e intereses técnicos' },
+    downloadCv: { en: 'Download CV (PDF)', es: 'Descargar CV (PDF)' },
+    cvNotice: { en: 'Official resume available in English & Spanish', es: 'CV oficial disponible en inglés y español' },
+    academicFoundation: { en: 'Academic Background', es: 'Formación Académica' },
+    coreInterests: { en: 'Areas of Interest', es: 'Áreas de Interés' },
+    otherDetailsTitle: { en: 'Key Details & Availability', es: 'Detalles Clave y Disponibilidad' },
   },
   experience: {
     title: { en: 'Work Experience', es: 'Experiencia Laboral' },
-    subtitle: { en: 'Hands-on roles in software engineering and production development', es: 'Roles prácticos en ingeniería de software y desarrollo en producción' },
+    subtitle: { en: 'Hands-on software development roles in production environments', es: 'Desarrollo de software práctico en entornos de producción' },
     responsibilitiesTitle: { en: 'Key Responsibilities & Scope', es: 'Responsabilidades Clave y Alcance' },
   },
   education: {
     title: { en: 'Education & Training', es: 'Educación y Formación' },
-    subtitle: { en: 'Academic degrees, university honors and certified vocational training', es: 'Titulaciones académicas, honores universitarios y formación técnica' },
+    subtitle: { en: 'Academic degrees, university honors and certified vocational technical training', es: 'Titulaciones académicas, honores universitarios y formación técnica profesional' },
     keyCompetencies: { en: 'Key Achievements & Focus', es: 'Logros Clave y Enfoque' },
   },
   projects: {
     title: { en: 'Featured Projects', es: 'Proyectos Destacados' },
-    subtitle: { en: 'Production codebases across Edge AI, Local LLMs, IoT Hardware, Web Security (OWASP) and Data Analytics', es: 'Proyectos reales en Edge AI, LLMs locales, Hardware IoT, Ciberseguridad (OWASP) y Analítica de Datos' },
+    subtitle: { en: 'Selected software engineering codebases across full-stack applications, machine learning, embedded systems, and data tools', es: 'Proyectos de ingeniería de software en desarrollo full-stack, machine learning, sistemas embebidos y herramientas de datos' },
     filterAll: { en: 'All Projects', es: 'Todos los Proyectos' },
-    filterAi: { en: 'AI & Automation', es: 'IA & Automatización' },
-    filterIot: { en: 'IoT & Hardware', es: 'IoT & Hardware' },
-    filterSecurity: { en: 'Web Security & Go', es: 'Seguridad Web & Go' },
-    filterData: { en: 'Data Analytics & SQLite', es: 'Analítica & SQLite' },
-    viewDetails: { en: 'Inspect Architecture', es: 'Ver Detalles' },
-    codeRepository: { en: 'View Repository', es: 'Ver Repositorio' },
+    filterAi: { en: 'ML & AI', es: 'ML & IA' },
+    filterIot: { en: 'Embedded & IoT', es: 'Embebidos & IoT' },
+    filterSecurity: { en: 'Go & Full-Stack', es: 'Go & Full-Stack' },
+    filterData: { en: 'Data Analytics', es: 'Analítica de Datos' },
+    viewDetails: { en: 'View Technical Details', es: 'Ver Detalles Técnicos' },
+    sourceCode: { en: 'Source Code', es: 'Código Fuente' },
     liveDemo: { en: 'Live Demo', es: 'Demostración' },
-    placeholderBadge: { en: '5 Verified Production Repositories on GitHub', es: '5 Repositorios Reales Verificados en GitHub' },
+    statusCompleted: { en: 'Completed', es: 'Completado' },
   },
   skills: {
-    title: { en: 'Technical Skills', es: 'Competencias Técnicas' },
-    subtitle: { en: 'Languages, frameworks, AI automation, databases, cloud, and security competencies', es: 'Lenguajes, frameworks, automatización con IA, bases de datos, cloud y seguridad' },
-    allTab: { en: 'All Technologies', es: 'Todas las Competencias' },
-    clarificationNote: { en: 'Verified competencies from official curriculum vitae. No arbitrary percentage bars.', es: 'Competencias técnicas verificadas según currículum oficial. Sin porcentajes arbitrarios.' },
+    title: { en: 'Technical Skills', es: 'Habilidades Técnicas' },
+    subtitle: { en: 'Software engineering fundamentals, databases, frameworks, and applied technical interests', es: 'Fundamentos de ingeniería de software, bases de datos, frameworks e intereses técnicos' },
+    allTab: { en: 'All Skills', es: 'Todas las Habilidades' },
+    clarificationNote: {
+      en: 'Honest assessment of technologies used across production roles, academic projects, and open-source repositories.',
+      es: 'Evaluación sincera de tecnologías utilizadas en entornos de producción, proyectos académicos y repositorios abiertos.',
+    },
   },
   contact: {
-    title: { en: "Let's build something together.", es: 'Construyamos algo juntos.' },
-    subtitle: { en: "I'm always interested in connecting with people, exploring new opportunities, and discussing engineering challenges.", es: 'Siempre interesado en conectar, explorar nuevas oportunidades laborales y abordar retos técnicos.' },
+    title: { en: 'Get In Touch', es: 'Contacto' },
+    subtitle: { en: 'Open to software engineering and full-stack development opportunities', es: 'Disponible para oportunidades en ingeniería de software y desarrollo full-stack' },
+    socialText: { en: 'Direct Communication', es: 'Comunicación Directa' },
+    directEmail: { en: 'Personal Email', es: 'Correo Personal' },
+    phoneNumber: { en: 'Phone Number', es: 'Teléfono Móvil' },
+    formTitle: { en: 'Send a Message', es: 'Enviar un Mensaje' },
     nameLabel: { en: 'Your Name', es: 'Tu Nombre' },
-    namePlaceholder: { en: 'e.g. Sarah Jenkins', es: 'ej. Alejandro Gómez' },
-    emailLabel: { en: 'Email Address', es: 'Correo Electrónico' },
-    emailPlaceholder: { en: 'e.g. sarah@company.com', es: 'ej. alejandro@empresa.com' },
+    namePlaceholder: { en: 'e.g. John Doe', es: 'ej. Alejandro Gómez' },
+    emailLabel: { en: 'Your Email', es: 'Tu Correo Electrónico' },
+    emailPlaceholder: { en: 'e.g. john@company.com', es: 'ej. alejandro@empresa.com' },
     subjectLabel: { en: 'Subject', es: 'Asunto' },
-    subjectPlaceholder: { en: 'e.g. Software Engineering Opportunity at [Company]', es: 'ej. Oportunidad como Ingeniero de Software' },
+    subjectPlaceholder: { en: 'Software Engineer Role / Inquiries', es: 'Puesto de Ingeniero de Software / Consulta' },
     messageLabel: { en: 'Message', es: 'Mensaje' },
-    messagePlaceholder: { en: 'Tell me about the role, project, or what you would like to discuss...', es: 'Cuéntame sobre el rol, el proyecto o qué te gustaría comentar...' },
-    submitButton: { en: 'Send Direct Message', es: 'Enviar Mensaje Directo' },
-    prototypeNotice: { en: 'Submitting validates input and creates a direct email message to pablovillanueva48@gmail.com.', es: 'Al enviar se validan los campos y se prepara el mensaje directo hacia pablovillanueva48@gmail.com.' },
-    successMessage: { en: 'Thank you! Your message has been prepared and opened in your email client.', es: '¡Gracias! Tu mensaje ha sido validado y preparado en tu cliente de correo.' },
-    directEmail: { en: 'Direct Email', es: 'Correo Directo' },
-    phoneNumber: { en: 'Phone Number', es: 'Teléfono' },
-    locationText: { en: 'Location', es: 'Ubicación' },
-    socialText: { en: 'Contact & Professional Networks', es: 'Contacto y Redes Profesionales' },
-    availabilityText: { en: 'Availability', es: 'Disponibilidad' },
+    messagePlaceholder: { en: 'Write your message here...', es: 'Escribe tu mensaje aquí...' },
+    submitButton: { en: 'Send Message via Email Client', es: 'Enviar Mensaje vía Cliente de Correo' },
+    successMessage: { en: 'Preparing your email client...', es: 'Abriendo tu cliente de correo...' },
+    prototypeNotice: { en: 'Opens your preferred desktop or web email client with the fields pre-filled.', es: 'Abre tu cliente de correo preferido con los campos listos para enviar.' },
   },
   footer: {
     rightsReserved: { en: 'All rights reserved.', es: 'Todos los derechos reservados.' },
+    craftedWith: { en: 'Designed with React & TypeScript', es: 'Desarrollado con React y TypeScript' },
     backToTop: { en: 'Back to top', es: 'Volver arriba' },
-    craftedWith: { en: 'Engineered with React, TypeScript & Tailwind CSS', es: 'Diseñado con React, TypeScript y Tailwind CSS' },
   }
 };

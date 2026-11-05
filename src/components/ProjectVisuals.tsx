@@ -22,7 +22,7 @@ export const BtcForecastVisual: React.FC = () => {
 
       <div className="relative z-10 flex items-center justify-between border-b border-slate-800/60 pb-2">
         <div className="flex items-center gap-2">
-          <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+          <span className="w-2 h-2 rounded-full bg-emerald-400" />
           <span className="text-[11px] font-semibold text-slate-200">BTC / USD ML Forecast + Edge AI</span>
         </div>
         <div className="flex items-center gap-1.5 text-[10px] text-cyan-400 bg-cyan-950/40 px-2 py-0.5 rounded border border-cyan-800/40">
@@ -62,7 +62,6 @@ export const BtcForecastVisual: React.FC = () => {
           />
 
           <circle cx="300" cy="15" r="4" fill="#10B981" />
-          <circle cx="300" cy="15" r="7" fill="none" stroke="#10B981" strokeWidth="1.5" className="animate-ping" opacity="0.6" />
         </svg>
       </div>
 
@@ -91,7 +90,7 @@ export const IotEdgeVisual: React.FC = () => {
 
       <div className="relative z-10 flex items-center justify-between border-b border-slate-800/60 pb-2">
         <div className="flex items-center gap-2">
-          <Radio className="w-3.5 h-3.5 text-cyan-400 animate-pulse" />
+          <Radio className="w-3.5 h-3.5 text-blue-400" />
           <span className="text-[11px] font-semibold text-slate-200">IoT Security • Arduino UNO R4 WiFi</span>
         </div>
         <div className="flex items-center gap-1 text-[10px] text-emerald-400 bg-emerald-950/40 px-2 py-0.5 rounded border border-emerald-800/40">

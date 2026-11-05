@@ -30,7 +30,7 @@ export const CvModal: React.FC<CvModalProps> = ({ isOpen, onClose }) => {
 
         {/* Modal Header */}
         <div className="flex items-center gap-3.5 mb-5">
-          <div className="relative w-12 h-12 rounded-xl overflow-hidden border border-blue-500/30 shrink-0">
+          <div className="relative w-12 h-12 rounded-xl overflow-hidden border border-slate-700 shrink-0">
             <img 
               src={PERSONAL_INFO.avatarUrl} 
               alt={PERSONAL_INFO.fullName} 
@@ -42,20 +42,20 @@ export const CvModal: React.FC<CvModalProps> = ({ isOpen, onClose }) => {
               <span>{PERSONAL_INFO.fullName}</span>
               <span className="w-2 h-2 rounded-full bg-emerald-400" />
             </h3>
-            <p className="text-xs font-mono text-cyan-400">
+            <p className="text-xs text-blue-400 font-medium">
               {PERSONAL_INFO.title[language]}
             </p>
           </div>
         </div>
 
         {/* Verified Credentials Box */}
-        <div className="space-y-2.5 mb-6 text-xs text-slate-300 font-mono bg-[#111827]/80 p-4 rounded-xl border border-slate-800/80">
+        <div className="space-y-2.5 mb-6 text-xs text-slate-300 font-mono bg-[#111827] p-4 rounded-xl border border-slate-800">
           <div className="flex items-center gap-2">
             <Award className="w-4 h-4 text-emerald-400 shrink-0" />
             <span>York St John Univ. — First-Class Honours (9/10)</span>
           </div>
           <div className="flex items-center gap-2">
-            <CheckCircle className="w-4 h-4 text-cyan-400 shrink-0" />
+            <CheckCircle className="w-4 h-4 text-blue-400 shrink-0" />
             <span>Instituto Nebrija — FP Grado Superior DAM</span>
           </div>
           <div className="flex items-center gap-2">
@@ -63,7 +63,7 @@ export const CvModal: React.FC<CvModalProps> = ({ isOpen, onClose }) => {
             <span>Universidad Nebrija — Development Technician</span>
           </div>
           <div className="flex items-center gap-2">
-            <Globe className="w-4 h-4 text-indigo-400 shrink-0" />
+            <Globe className="w-4 h-4 text-slate-400 shrink-0" />
             <span>
               {language === 'en' 
                 ? 'English (Professional Fluency) • Spanish (Native)' 
@@ -78,7 +78,7 @@ export const CvModal: React.FC<CvModalProps> = ({ isOpen, onClose }) => {
             <a
               href={`/${PERSONAL_INFO.cvFilename.en}`}
               download="CV_Pablo_Villanueva_Picazo_EN.pdf"
-              className="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-medium text-xs transition-colors shadow-lg shadow-blue-600/20"
+              className="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-medium text-xs transition-colors shadow-sm"
             >
               <Download className="w-4 h-4" />
               <span>Download CV (English PDF)</span>
@@ -87,7 +87,7 @@ export const CvModal: React.FC<CvModalProps> = ({ isOpen, onClose }) => {
             <a
               href={`/${PERSONAL_INFO.cvFilename.es}`}
               download="CV_Pablo_Villanueva_Picazo_ES.pdf"
-              className="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-[#111827] hover:bg-slate-800 text-cyan-300 hover:text-white font-medium text-xs border border-slate-700/80 transition-colors"
+              className="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-white font-medium text-xs border border-slate-700 transition-colors"
             >
               <Download className="w-4 h-4" />
               <span>Descargar CV (Español PDF)</span>

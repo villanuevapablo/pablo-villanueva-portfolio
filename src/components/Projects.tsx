@@ -111,14 +111,14 @@ export const Projects: React.FC = () => {
               <motion.article
                 key={project.id}
                 layout
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.95 }}
-                transition={{ duration: 0.35 }}
-                className="group relative flex flex-col justify-between rounded-2xl bg-[#0D1220]/90 border border-slate-800/90 hover:border-blue-500/40 transition-all duration-300 shadow-xl shadow-black/20 hover:-translate-y-1 overflow-hidden"
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 10 }}
+                transition={{ duration: 0.25 }}
+                className="group relative flex flex-col justify-between rounded-2xl bg-[#0D1220] border border-slate-800 hover:border-slate-700 transition-all duration-200 overflow-hidden"
               >
                 {/* Visual Preview Graphic */}
-                <div className="p-4 bg-[#0A0E17] border-b border-slate-800/80">
+                <div className="p-4 bg-[#0A0E17] border-b border-slate-800">
                   {renderVisual(project.visualType)}
                 </div>
 
@@ -127,11 +127,11 @@ export const Projects: React.FC = () => {
                   <div>
                     {/* Category & Status Pill */}
                     <div className="flex items-center justify-between gap-2 mb-3">
-                      <span className="text-[11px] font-mono uppercase tracking-wider text-cyan-400">
+                      <span className="text-[11px] font-mono uppercase tracking-wider text-slate-400 font-medium">
                         {project.categoryLabel[language]}
                       </span>
                       {project.grade ? (
-                        <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-950/60 border border-emerald-800/60 text-emerald-300 font-bold flex items-center gap-1">
+                        <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-950/60 border border-emerald-800/60 text-emerald-300 font-medium flex items-center gap-1">
                           <Award className="w-3 h-3 text-emerald-400" />
                           <span>{project.grade}</span>
                         </span>
@@ -143,7 +143,7 @@ export const Projects: React.FC = () => {
                     </div>
 
                     {/* Title */}
-                    <h3 className="text-xl font-bold text-white group-hover:text-blue-300 transition-colors mb-2">
+                    <h3 className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors mb-2">
                       {project.title}
                     </h3>
 
@@ -173,10 +173,10 @@ export const Projects: React.FC = () => {
                   </div>
 
                   {/* Footer CTAs */}
-                  <div className="pt-4 border-t border-slate-800/80 flex items-center justify-between gap-3">
+                  <div className="pt-4 border-t border-slate-800 flex items-center justify-between gap-3">
                     <button
                       onClick={() => setSelectedProject(project)}
-                      className="inline-flex items-center gap-1.5 text-xs font-semibold text-cyan-400 hover:text-cyan-300 transition-colors"
+                      className="inline-flex items-center gap-1.5 text-xs font-medium text-blue-400 hover:text-blue-300 transition-colors"
                     >
                       <span>{UI_TRANSLATIONS.projects.viewDetails[language]}</span>
                       <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />

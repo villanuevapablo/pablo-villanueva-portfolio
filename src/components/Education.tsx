@@ -49,18 +49,16 @@ export const Education: React.FC = () => {
           {EDUCATION.map((item, idx) => (
             <motion.div
               key={item.id}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: idx * 0.15 }}
-              className="group relative p-7 sm:p-8 rounded-2xl bg-[#0D1220]/80 border border-slate-800/80 hover:border-blue-500/40 transition-all duration-300 shadow-xl shadow-black/20 flex flex-col justify-between hover:-translate-y-1 overflow-hidden"
+              transition={{ duration: 0.4, delay: idx * 0.1 }}
+              className="group relative p-7 sm:p-8 rounded-2xl bg-[#0D1220] border border-slate-800 hover:border-slate-700 transition-colors flex flex-col justify-between overflow-hidden"
             >
-              <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-blue-500 via-cyan-400 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-
               <div>
                 {/* Degree Header & Badge */}
                 <div className="flex items-start justify-between gap-4 mb-4">
-                  <div className="p-3 rounded-xl bg-blue-600/15 border border-blue-500/25 text-blue-400 group-hover:scale-110 transition-transform">
+                  <div className="p-3 rounded-xl bg-slate-900 border border-slate-800 text-blue-400">
                     {idx === 0 ? <Award className="w-6 h-6 text-emerald-400" /> : <GraduationCap className="w-6 h-6" />}
                   </div>
 
