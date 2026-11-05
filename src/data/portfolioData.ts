@@ -64,19 +64,19 @@ export const PERSONAL_INFO: PersonalInfo = {
     es: 'cv-pablo-villanueva-es.pdf',
   },
   professionalProfile: {
-    en: 'Highly technical Software Engineer, focused on solving complex problems through clean and efficient code. Experience in full-stack development, data architecture, process automation, and agile methodologies. Demonstrated ability to design scalable solutions, optimize system performance, and apply web security principles in dynamic environments.',
-    es: 'Ingeniero de Software altamente técnico, enfocado en la resolución de problemas complejos mediante código limpio y eficiente. Experiencia en desarrollo full-stack, arquitectura de datos, automatización de procesos y metodologías ágiles. Capacidad demostrada para diseñar soluciones escalables, optimizar el rendimiento de sistemas y aplicar principios de seguridad web en entornos dinámicos.',
+    en: 'Highly technical Software Engineer, focused on solving complex problems through clean and efficient code. Experience in full-stack development, data architecture, process automation, and agile methodologies. Demonstrated ability to design scalable solutions and optimize system performance in dynamic environments.',
+    es: 'Ingeniero de Software altamente técnico, enfocado en la resolución de problemas complejos mediante código limpio y eficiente. Experiencia en desarrollo full-stack, arquitectura de datos, automatización de procesos y metodologías ágiles. Capacidad demostrada para diseñar soluciones escalables y optimizar el rendimiento de sistemas en entornos dinámicos.',
   },
   aboutText: {
     en: [
       'Highly technical Software Engineer, focused on solving complex problems through clean, efficient, and maintainable code.',
       'My engineering foundation bridges robust full-stack development, data architectures, and an active specialization in Artificial Intelligence, autonomous system daemons, and data analytics.',
-      'From designing resilient Go and Spring Boot microservices to deploying Edge AI on microcontrollers and local LLM pipelines with Ollama, I prioritize high performance, system security (OWASP Top 10), and practical automation.'
+      'From designing high-performance backend systems in Go to deploying Edge AI models and autonomous local LLM workflows with Ollama, I prioritize code quality, system efficiency, and practical automation.'
     ],
     es: [
       'Ingeniero de Software altamente técnico, enfocado en la resolución de problemas complejos mediante código limpio, eficiente y mantenible.',
       'Mi base de ingeniería une desarrollo full-stack robusto, arquitectura de datos y una especialización activa en Inteligencia Artificial, demonios autónomos de automatización y analítica de datos.',
-      'Desde el diseño de microservicios en Go y Spring Boot hasta el despliegue de Edge AI en microcontroladores y pipelines con LLMs locales en Ollama, priorizo el alto rendimiento, la seguridad (OWASP Top 10) y la automatización práctica.'
+      'Desde el diseño de sistemas backend de alto rendimiento en Go hasta el despliegue de modelos Edge AI y flujos de automatización con LLMs locales en Ollama, priorizo la calidad del código, la eficiencia y la automatización práctica.'
     ]
   },
   quickHighlights: {

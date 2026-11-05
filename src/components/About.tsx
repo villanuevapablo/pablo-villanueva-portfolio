@@ -102,25 +102,25 @@ export const About: React.FC = () => {
                 <div className="flex items-start gap-2.5 p-3 rounded-xl bg-[#111827]/60 border border-slate-800/60">
                   <CheckCircle2 className="w-4 h-4 text-cyan-400 shrink-0 mt-0.5" />
                   <span className="text-xs text-slate-300">
-                    {language === 'en' ? 'Clean code, data architecture & agile methodologies' : 'Código limpio, arquitectura de datos y metodologías ágiles'}
+                    {language === 'en' ? 'Scalable Full-Stack architecture & clean code principles' : 'Arquitectura Full-Stack escalable y código limpio'}
                   </span>
                 </div>
                 <div className="flex items-start gap-2.5 p-3 rounded-xl bg-[#111827]/60 border border-slate-800/60">
                   <CheckCircle2 className="w-4 h-4 text-cyan-400 shrink-0 mt-0.5" />
                   <span className="text-xs text-slate-300">
-                    {language === 'en' ? 'Web Security: OWASP Top 10, RBAC, CSRF & bcrypt' : 'Seguridad Web: OWASP Top 10, RBAC, CSRF y bcrypt'}
+                    {language === 'en' ? 'Intelligent process automation & local LLM pipelines' : 'Automatización inteligente y pipelines con LLMs locales'}
                   </span>
                 </div>
                 <div className="flex items-start gap-2.5 p-3 rounded-xl bg-[#111827]/60 border border-slate-800/60">
                   <CheckCircle2 className="w-4 h-4 text-cyan-400 shrink-0 mt-0.5" />
                   <span className="text-xs text-slate-300">
-                    {language === 'en' ? 'Edge AI architectures & decentralized ML processing' : 'Arquitecturas Edge AI y procesamiento descentralizado en tiempo real'}
+                    {language === 'en' ? 'Applied Machine Learning, Edge AI & predictive models' : 'Machine Learning aplicado, Edge AI y modelos predictivos'}
                   </span>
                 </div>
                 <div className="flex items-start gap-2.5 p-3 rounded-xl bg-[#111827]/60 border border-slate-800/60">
                   <CheckCircle2 className="w-4 h-4 text-cyan-400 shrink-0 mt-0.5" />
                   <span className="text-xs text-slate-300">
-                    {language === 'en' ? 'REST API creation, integration & systematic testing' : 'Creación de APIs REST, integración y testing sistemático'}
+                    {language === 'en' ? 'Data engineering, relational modeling & high performance' : 'Ingeniería de datos, modelado relacional y alto rendimiento'}
                   </span>
                 </div>
               </div>
