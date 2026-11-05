@@ -77,7 +77,7 @@ export const About: React.FC = () => {
               </div>
               <span className="text-emerald-400 font-medium flex items-center gap-1.5">
                 <Award className="w-3.5 h-3.5" />
-                <span>Class I Honours (9/10)</span>
+                <span>First-Class Honours</span>
               </span>
             </div>
 

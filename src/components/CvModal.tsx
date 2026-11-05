@@ -52,7 +52,7 @@ export const CvModal: React.FC<CvModalProps> = ({ isOpen, onClose }) => {
         <div className="space-y-2.5 mb-6 text-xs text-slate-300 font-mono bg-[#111827] p-4 rounded-xl border border-slate-800">
           <div className="flex items-center gap-2">
             <Award className="w-4 h-4 text-emerald-400 shrink-0" />
-            <span>York St John Univ. — First-Class Honours (9/10)</span>
+            <span>York St John Univ. — First-Class Honours</span>
           </div>
           <div className="flex items-center gap-2">
             <CheckCircle className="w-4 h-4 text-blue-400 shrink-0" />

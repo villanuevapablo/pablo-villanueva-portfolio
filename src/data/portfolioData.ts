@@ -41,8 +41,8 @@ export const PERSONAL_INFO: PersonalInfo = {
     es: 'Interesado en Inteligencia Artificial, Machine Learning y Analítica de Datos.',
   },
   heroIntro: {
-    en: 'Software Engineering graduate (First-Class Honours, 9/10) from York St John University and Higher Vocational DAM from Nebrija. Focused on building robust web applications, reliable backend systems, and practical data tools with Go, Python, TypeScript, and React.',
-    es: 'Graduado en Software Engineering (First-Class Honours, 9/10) por York St John University y Técnico Superior DAM por Nebrija. Enfocado en el desarrollo de aplicaciones web robustas, sistemas backend fiables y herramientas prácticas con Go, Python, TypeScript y React.',
+    en: 'Software Engineering graduate (First-Class Honours) from York St John University and Higher Vocational DAM from Nebrija. Focused on building robust web applications, reliable backend systems, and practical data tools with Go, Python, TypeScript, and React.',
+    es: 'Graduado en Software Engineering (First-Class Honours) por York St John University y Técnico Superior DAM por Nebrija. Enfocado en el desarrollo de aplicaciones web robustas, sistemas backend fiables y herramientas prácticas con Go, Python, TypeScript y React.',
   },
   location: {
     en: 'Madrid, Spain',
@@ -623,7 +623,7 @@ export const UI_TRANSLATIONS = {
     githubProfile: { en: 'GitHub profile', es: 'Perfil de GitHub' },
     downloadCv: { en: 'Download CV (PDF)', es: 'Descargar CV (PDF)' },
     terminalTag: { en: 'Software Engineer | Full Stack Developer', es: 'Ingeniero de Software | Desarrollador Full Stack' },
-    gradeBadge: { en: 'BSc (Hons) First-Class Honours (9/10)', es: 'BSc (Hons) First-Class Honours (9/10)' },
+    gradeBadge: { en: 'BSc (Hons) First-Class Honours', es: 'BSc (Hons) First-Class Honours' },
     specCol1Title: { en: '// Role', es: '// Rol' },
     specCol1Value: { en: 'Software Engineer & Full Stack', es: 'Software Engineer & Full Stack' },
     specCol2Title: { en: '// Primary Stack', es: '// Stack Principal' },
