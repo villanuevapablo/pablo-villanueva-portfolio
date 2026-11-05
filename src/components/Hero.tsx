@@ -170,20 +170,20 @@ export const Hero: React.FC = () => {
 
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs font-mono">
             <div>
-              <span className="text-slate-500 block mb-1">// Core Languages</span>
-              <span className="text-slate-200 font-semibold">Go • Java • Python • JS/TS</span>
+              <span className="text-slate-500 block mb-1">{UI_TRANSLATIONS.hero.specCol1Title[language]}</span>
+              <span className="text-slate-200 font-semibold">{UI_TRANSLATIONS.hero.specCol1Value[language]}</span>
             </div>
             <div>
-              <span className="text-slate-500 block mb-1">// Backend & Security</span>
-              <span className="text-slate-200 font-semibold">Spring Boot • OWASP • APIs</span>
+              <span className="text-slate-500 block mb-1">{UI_TRANSLATIONS.hero.specCol2Title[language]}</span>
+              <span className="text-slate-200 font-semibold">{UI_TRANSLATIONS.hero.specCol2Value[language]}</span>
             </div>
             <div>
-              <span className="text-slate-500 block mb-1">// Edge AI & ML</span>
-              <span className="text-slate-200 font-semibold">TFG 9.0/10 • Real-time</span>
+              <span className="text-slate-500 block mb-1">{UI_TRANSLATIONS.hero.specCol3Title[language]}</span>
+              <span className="text-slate-200 font-semibold">{UI_TRANSLATIONS.hero.specCol3Value[language]}</span>
             </div>
             <div>
-              <span className="text-slate-500 block mb-1">// Availability</span>
-              <span className="text-emerald-400 font-semibold">Immediate • Madrid</span>
+              <span className="text-slate-500 block mb-1">{UI_TRANSLATIONS.hero.specCol4Title[language]}</span>
+              <span className="text-emerald-400 font-semibold">{UI_TRANSLATIONS.hero.specCol4Value[language]}</span>
             </div>
           </div>
         </motion.div>
