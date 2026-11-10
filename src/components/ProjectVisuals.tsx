@@ -223,7 +223,7 @@ export const SrmsSecurityVisual: React.FC = () => {
 
       {/* Active Layer Technical Dossier Output */}
       <div className="bg-[#171918] text-[#F3F0E9] p-4 mb-3">
-        <div className="font-mono text-[11px] text-[#D97745] mb-1.5 break-all">
+        <div className="font-mono text-[11px] text-[#D97745] mb-1.5 break-words">
           {active.code}
         </div>
         <p className="text-xs text-[#F3F0E9]/90 leading-relaxed">

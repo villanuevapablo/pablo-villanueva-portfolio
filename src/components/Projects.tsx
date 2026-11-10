@@ -53,18 +53,18 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
       return (
         <article
           key={project.id}
-          className="bg-[#171918] text-[#F3F0E9] border border-[#171918] p-6 sm:p-10 lg:p-12"
+          className="bg-[#171918] text-[#F3F0E9] border border-[#171918] p-5 sm:p-10 lg:p-12"
         >
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-7 lg:gap-10 items-start">
             <div className="lg:col-span-6 flex flex-col justify-between">
               <div>
-                <div className="flex flex-wrap items-center justify-between gap-2 pb-4 mb-6 border-b border-[#B9B7AF]/25">
+                <div className="flex flex-wrap items-center justify-between gap-2 pb-4 mb-5 border-b border-[#B9B7AF]/25">
                   <div className="flex items-center gap-3">
-                    <span className="font-serif text-5xl sm:text-6xl text-[#D97745] leading-none">
+                    <span className="font-serif text-4xl sm:text-6xl text-[#D97745] leading-none">
                       {project.projectNumber}
                     </span>
                     <div>
-                      <span className="font-mono text-[10px] uppercase tracking-[0.14em] text-[#B9B7AF] block">
+                      <span className="font-mono text-[10px] uppercase tracking-[0.12em] text-[#B9B7AF] block">
                         {project.categoryLabel[language]}
                       </span>
                       <span className="font-mono text-[11px] text-[#F3F0E9] font-medium">
@@ -80,7 +80,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
                   )}
                 </div>
 
-                <h3 className="font-serif text-3xl sm:text-4xl text-[#F3F0E9] leading-tight mb-3">
+                <h3 className="font-serif text-2xl sm:text-3xl lg:text-4xl text-[#F3F0E9] leading-tight mb-3">
                   {project.title}
                 </h3>
 
@@ -90,11 +90,11 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
                   </p>
                 )}
 
-                <p className="text-sm sm:text-base text-[#F3F0E9]/85 leading-relaxed mb-6">
+                <p className="text-sm sm:text-base text-[#F3F0E9]/85 leading-relaxed mb-5 sm:mb-6">
                   {project.shortDescription[language]}
                 </p>
 
-                <div className="flex flex-wrap gap-1.5 mb-8">
+                <div className="flex flex-wrap gap-1.5 mb-6 sm:mb-8">
                   {project.technologies.map((tech) => (
                     <span
                       key={tech}
@@ -106,10 +106,10 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
                 </div>
               </div>
 
-              <div className="flex flex-wrap items-center gap-3 pt-5 border-t border-[#B9B7AF]/20">
+              <div className="flex flex-wrap items-center gap-2.5 pt-4 border-t border-[#B9B7AF]/20">
                 <button
                   onClick={() => onSelectProject(project.id)}
-                  className="inline-flex items-center gap-2 px-5 py-3 bg-[#F3F0E9] text-[#171918] hover:bg-[#D97745] text-xs font-semibold uppercase tracking-[0.12em] transition-colors"
+                  className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-2.5 sm:py-3 bg-[#F3F0E9] text-[#171918] hover:bg-[#D97745] text-xs font-semibold uppercase tracking-[0.12em] transition-colors"
                 >
                   <span>{UI_COPY.selectedWork.readCaseStudy[language]}</span>
                   <ArrowRight className="w-4 h-4" />
@@ -118,7 +118,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
                   href={project.githubUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 px-4 py-3 border border-[#B9B7AF]/40 text-[#F3F0E9] hover:border-[#F3F0E9] text-xs font-mono uppercase tracking-[0.1em] transition-colors"
+                  className="inline-flex items-center justify-center gap-1.5 px-4 py-2.5 sm:py-3 border border-[#B9B7AF]/40 text-[#F3F0E9] hover:border-[#F3F0E9] text-xs font-mono uppercase tracking-[0.1em] transition-colors"
                 >
                   <span>GitHub</span>
                   <ArrowUpRight className="w-3.5 h-3.5 text-[#D97745]" />
@@ -132,29 +132,29 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
       );
     }
 
-    // 02 — Reversed Paper Spread (Visual Left : Narrative Right) — Local AI Organizer
+    // 02 — Reversed Paper Spread (Visual Left : Narrative Right on Desktop; Header/Story/Visual on Mobile)
     if (project.id === 'smart-file-organizer') {
       return (
         <article
           key={project.id}
-          className="border-y border-[#171918] py-10 sm:py-12"
+          className="border-y border-[#171918] py-8 sm:py-12"
         >
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-7 lg:gap-10 items-start">
             <div className="lg:col-span-6 order-2 lg:order-1">
               {renderVisual(project.visualType)}
             </div>
 
             <div className="lg:col-span-6 order-1 lg:order-2 flex flex-col justify-between">
-              <div className="flex items-start justify-between gap-4 mb-5 pb-4 border-b border-[#B9B7AF]">
+              <div className="flex items-start justify-between gap-4 mb-4 pb-4 border-b border-[#B9B7AF]">
                 <div>
                   <span className="font-mono text-[10px] uppercase tracking-[0.14em] text-[#D97745] font-semibold block">
                     {project.categoryLabel[language]}
                   </span>
-                  <h3 className="font-serif text-3xl sm:text-4xl text-[#171918] leading-tight mt-1">
+                  <h3 className="font-serif text-2xl sm:text-3xl lg:text-4xl text-[#171918] leading-tight mt-1">
                     {project.title}
                   </h3>
                 </div>
-                <span className="font-serif text-5xl text-[#526B9B] leading-none shrink-0">
+                <span className="font-serif text-4xl sm:text-5xl text-[#526B9B] leading-none shrink-0">
                   {project.projectNumber}
                 </span>
               </div>
@@ -163,11 +163,11 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
                 {project.status[language]}
               </div>
 
-              <p className="text-sm sm:text-base text-[#3D403E] leading-relaxed mb-6">
+              <p className="text-sm sm:text-base text-[#3D403E] leading-relaxed mb-5 sm:mb-6">
                 {project.shortDescription[language]}
               </p>
 
-              <div className="flex flex-wrap gap-1.5 mb-7">
+              <div className="flex flex-wrap gap-1.5 mb-6 sm:mb-7">
                 {project.technologies.map((tech) => (
                   <span
                     key={tech}
@@ -178,10 +178,10 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
                 ))}
               </div>
 
-              <div className="flex flex-wrap items-center gap-3 pt-4 border-t border-[#B9B7AF]">
+              <div className="flex flex-wrap items-center gap-2.5 pt-4 border-t border-[#B9B7AF]">
                 <button
                   onClick={() => onSelectProject(project.id)}
-                  className="inline-flex items-center gap-2 px-5 py-3 bg-[#171918] text-[#F3F0E9] hover:bg-[#D97745] text-xs font-semibold uppercase tracking-[0.12em] transition-colors"
+                  className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-2.5 sm:py-3 bg-[#171918] text-[#F3F0E9] hover:bg-[#D97745] text-xs font-semibold uppercase tracking-[0.12em] transition-colors"
                 >
                   <span>{UI_COPY.selectedWork.readCaseStudy[language]}</span>
                   <ArrowRight className="w-4 h-4" />
@@ -190,7 +190,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
                   href={project.githubUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 px-4 py-3 border border-[#171918] text-[#171918] hover:bg-[#171918] hover:text-[#F3F0E9] text-xs font-mono uppercase tracking-[0.1em] transition-colors"
+                  className="inline-flex items-center justify-center gap-1.5 px-4 py-2.5 sm:py-3 border border-[#171918] text-[#171918] hover:bg-[#171918] hover:text-[#F3F0E9] text-xs font-mono uppercase tracking-[0.1em] transition-colors"
                 >
                   <span>GitHub</span>
                   <ArrowUpRight className="w-3.5 h-3.5" />
@@ -207,15 +207,15 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
       return (
         <article
           key={project.id}
-          className="bg-[#EAE6DC]/70 border border-[#B9B7AF] p-6 sm:p-8 lg:p-10"
+          className="bg-[#EAE6DC]/70 border border-[#B9B7AF] p-5 sm:p-8 lg:p-10"
         >
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start">
-            <div className="lg:col-span-2 flex lg:flex-col justify-between lg:border-r lg:border-[#B9B7AF] lg:pr-4 h-full">
+            <div className="lg:col-span-2 flex lg:flex-col items-baseline justify-between lg:border-r lg:border-[#B9B7AF] lg:pr-4 h-full pb-3 lg:pb-0 border-b lg:border-b-0 border-[#B9B7AF]">
               <div>
-                <span className="font-serif text-5xl sm:text-6xl text-[#171918] leading-none block">
+                <span className="font-serif text-4xl sm:text-6xl text-[#171918] leading-none block">
                   {project.projectNumber}
                 </span>
-                <span className="font-mono text-[10px] uppercase tracking-[0.14em] text-[#526B9B] font-semibold mt-2 block">
+                <span className="font-mono text-[10px] uppercase tracking-[0.12em] text-[#526B9B] font-semibold mt-1 lg:mt-2 block">
                   {project.categoryLabel[language]}
                 </span>
               </div>
@@ -228,13 +228,13 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
               <h3 className="font-serif text-2xl sm:text-3xl text-[#171918] leading-tight mb-2">
                 {project.title}
               </h3>
-              <p className="font-mono text-[11px] text-[#5D605C] mb-4">
+              <p className="font-mono text-[11px] text-[#5D605C] mb-3 sm:mb-4">
                 {project.status[language]}
               </p>
               <p className="text-sm text-[#3D403E] leading-relaxed mb-5">
                 {project.shortDescription[language]}
               </p>
-              <div className="flex flex-wrap gap-1.5 mb-6">
+              <div className="flex flex-wrap gap-1.5 mb-5 sm:mb-6">
                 {project.technologies.map((tech) => (
                   <span
                     key={tech}
@@ -244,10 +244,10 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
                   </span>
                 ))}
               </div>
-              <div className="flex flex-wrap items-center gap-3">
+              <div className="flex flex-wrap items-center gap-2.5">
                 <button
                   onClick={() => onSelectProject(project.id)}
-                  className="inline-flex items-center gap-2 px-4 py-2.5 bg-[#171918] text-[#F3F0E9] hover:bg-[#D97745] text-xs font-semibold uppercase tracking-[0.12em] transition-colors"
+                  className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-[#171918] text-[#F3F0E9] hover:bg-[#D97745] text-xs font-semibold uppercase tracking-[0.12em] transition-colors"
                 >
                   <span>{UI_COPY.selectedWork.readCaseStudy[language]}</span>
                   <ArrowRight className="w-4 h-4" />
@@ -256,7 +256,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
                   href={project.githubUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 px-3.5 py-2.5 border border-[#171918] text-[#171918] hover:bg-[#171918] hover:text-[#F3F0E9] text-xs font-mono transition-colors"
+                  className="inline-flex items-center justify-center gap-1 px-3.5 py-2.5 border border-[#171918] text-[#171918] hover:bg-[#171918] hover:text-[#F3F0E9] text-xs font-mono transition-colors"
                 >
                   <span>GitHub</span>
                   <ArrowUpRight className="w-3.5 h-3.5" />
@@ -277,13 +277,13 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
         key={project.id}
         className={
           isIot
-            ? 'bg-[#171918] text-[#F3F0E9] border border-[#171918] p-6 sm:p-8 flex flex-col justify-between'
-            : 'bg-[#F3F0E9] text-[#171918] border-t-4 border-t-[#526B9B] border-x border-b border-[#171918] p-6 sm:p-8 flex flex-col justify-between'
+            ? 'bg-[#171918] text-[#F3F0E9] border border-[#171918] p-5 sm:p-8 flex flex-col justify-between'
+            : 'bg-[#F3F0E9] text-[#171918] border-t-4 border-t-[#526B9B] border-x border-b border-[#171918] p-5 sm:p-8 flex flex-col justify-between'
         }
       >
         <div>
           <div
-            className={`flex items-start justify-between gap-4 pb-4 mb-5 border-b ${
+            className={`flex items-start justify-between gap-4 pb-4 mb-4 sm:mb-5 border-b ${
               isIot ? 'border-[#B9B7AF]/25' : 'border-[#B9B7AF]'
             }`}
           >
@@ -312,13 +312,13 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
             {project.status[language]}
           </p>
 
-          <p className={`text-sm leading-relaxed mb-6 ${isIot ? 'text-[#F3F0E9]/85' : 'text-[#3D403E]'}`}>
+          <p className={`text-sm leading-relaxed mb-5 sm:mb-6 ${isIot ? 'text-[#F3F0E9]/85' : 'text-[#3D403E]'}`}>
             {project.shortDescription[language]}
           </p>
 
-          <div className="mb-6">{renderVisual(project.visualType)}</div>
+          <div className="mb-5 sm:mb-6">{renderVisual(project.visualType)}</div>
 
-          <div className="flex flex-wrap gap-1.5 mb-6">
+          <div className="flex flex-wrap gap-1.5 mb-5 sm:mb-6">
             {project.technologies.map((tech) => (
               <span
                 key={tech}
@@ -335,13 +335,13 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
         </div>
 
         <div
-          className={`flex flex-wrap items-center gap-3 pt-4 border-t ${
+          className={`flex flex-wrap items-center gap-2.5 pt-4 border-t ${
             isIot ? 'border-[#B9B7AF]/20' : 'border-[#B9B7AF]'
           }`}
         >
           <button
             onClick={() => onSelectProject(project.id)}
-            className={`inline-flex items-center gap-2 px-4 py-2.5 text-xs font-semibold uppercase tracking-[0.12em] transition-colors ${
+            className={`flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 px-4 py-2.5 text-xs font-semibold uppercase tracking-[0.12em] transition-colors ${
               isIot
                 ? 'bg-[#F3F0E9] text-[#171918] hover:bg-[#D97745]'
                 : 'bg-[#171918] text-[#F3F0E9] hover:bg-[#D97745]'
@@ -354,7 +354,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
             href={project.githubUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className={`inline-flex items-center gap-1 px-3.5 py-2.5 border text-xs font-mono transition-colors ${
+            className={`inline-flex items-center justify-center gap-1 px-3.5 py-2.5 border text-xs font-mono transition-colors ${
               isIot
                 ? 'border-[#B9B7AF]/40 text-[#F3F0E9] hover:border-[#F3F0E9]'
                 : 'border-[#171918] text-[#171918] hover:bg-[#171918] hover:text-[#F3F0E9]'
@@ -379,16 +379,16 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
     <section
       id="work"
       aria-label={UI_COPY.selectedWork.sectionTitle[language]}
-      className="bg-[#F3F0E9] text-[#171918] border-b border-[#171918] py-16 sm:py-24"
+      className="bg-[#F3F0E9] text-[#171918] border-b border-[#171918] py-12 sm:py-24"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
         {/* Section Header */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 pb-8 mb-10 border-b border-[#171918] items-end">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-6 pb-6 sm:pb-8 mb-6 sm:mb-10 border-b border-[#171918] items-end">
           <div className="lg:col-span-7">
             <span className="font-mono text-[11px] uppercase tracking-[0.16em] text-[#D97745] font-semibold block mb-2">
               {UI_COPY.selectedWork.sectionKicker[language]}
             </span>
-            <h2 className="font-serif text-4xl sm:text-5xl text-[#171918] tracking-tight leading-[1.02]">
+            <h2 className="font-serif text-3xl sm:text-5xl text-[#171918] tracking-tight leading-[1.02]">
               {UI_COPY.selectedWork.sectionTitle[language]}
             </h2>
           </div>
@@ -400,9 +400,9 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
           </div>
         </div>
 
-        {/* Category Tabs */}
+        {/* Sleek Horizontal Swipe Tabs on Mobile / Multi-wrap on Desktop */}
         <div
-          className="flex flex-wrap items-center gap-2 mb-12 pb-6 border-b border-[#B9B7AF]"
+          className="flex flex-nowrap overflow-x-auto no-scrollbar sm:flex-wrap sm:overflow-visible items-center gap-2 mb-8 sm:mb-12 pb-4 border-b border-[#B9B7AF] -mx-4 px-4 sm:mx-0 sm:px-0"
           role="tablist"
           aria-label="Filter projects by category"
         >
@@ -414,7 +414,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
                 role="tab"
                 aria-selected={isActive}
                 onClick={() => setActiveCategory(cat.id)}
-                className={`px-3.5 py-2 font-mono text-[11px] uppercase tracking-[0.12em] border transition-colors ${
+                className={`shrink-0 px-3 sm:px-3.5 py-2 font-mono text-[11px] uppercase tracking-[0.1em] border transition-colors ${
                   isActive
                     ? 'bg-[#171918] text-[#F3F0E9] border-[#171918] font-semibold'
                     : 'bg-transparent text-[#5D605C] border-[#B9B7AF] hover:border-[#171918] hover:text-[#171918]'
@@ -427,7 +427,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
         </div>
 
         {/* Asymmetric Project Layouts */}
-        <div className="space-y-12">
+        <div className="space-y-8 sm:space-y-12">
           {leadSpreads.map((proj) => renderProjectSpread(proj))}
 
           {bottomPair.length > 0 && (

@@ -16,7 +16,7 @@ export const FocusAreasSection: React.FC<FocusAreasSectionProps> = ({
     <section
       id="interests"
       aria-label={UI_COPY.focusAreas.sectionTitle[language]}
-      className="bg-[#EAE6DC]/65 text-[#171918] border-b border-[#171918] py-16 sm:py-24"
+      className="bg-[#EAE6DC]/65 text-[#171918] border-b border-[#171918] py-12 sm:py-24"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
         {/* Section Header */}
@@ -44,7 +44,7 @@ export const FocusAreasSection: React.FC<FocusAreasSectionProps> = ({
             return (
               <div
                 key={area.id}
-                className={`p-6 sm:p-8 border-r border-b border-[#171918] flex flex-col justify-between ${
+                className={`p-5 sm:p-8 border-r border-b border-[#171918] flex flex-col justify-between ${
                   isHighlight
                     ? 'bg-[#171918] text-[#F3F0E9]'
                     : 'bg-[#F3F0E9] text-[#171918]'

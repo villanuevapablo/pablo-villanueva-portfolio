@@ -69,9 +69,8 @@ export const ContactBackCover: React.FC = () => {
       aria-label={language === 'en' ? 'Contact and Direct Channels' : 'Contacto y Canales Directos'}
       className="bg-[#171918] text-[#F3F0E9]"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 pt-16 sm:pt-24 pb-12">
-        {/* Top Bar */}
-        <div className="flex flex-wrap items-center justify-between gap-2 pb-6 mb-12 border-b border-[#B9B7AF]/25 font-mono text-[11px] uppercase tracking-[0.16em]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 pt-12 sm:pt-24 pb-10 sm:pb-12">
+        <div className="flex flex-wrap items-center justify-between gap-2 pb-5 mb-8 sm:mb-12 border-b border-[#B9B7AF]/25 font-mono text-[11px] uppercase tracking-[0.16em]">
           <span className="text-[#D97745] font-semibold">
             {UI_COPY.contact.sectionKicker[language]}
           </span>
@@ -80,11 +79,10 @@ export const ContactBackCover: React.FC = () => {
           </span>
         </div>
 
-        {/* Main Two-Column Contact Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start pb-16 border-b border-[#B9B7AF]/25">
-          <div className="lg:col-span-7 space-y-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 sm:gap-12 items-start pb-12 sm:pb-16 border-b border-[#B9B7AF]/25">
+          <div className="lg:col-span-7 space-y-8 sm:space-y-10">
             <div>
-              <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-[#F3F0E9] leading-[1.02] tracking-tight mb-5">
+              <h2 className="font-serif text-3xl sm:text-5xl lg:text-6xl text-[#F3F0E9] leading-[1.02] tracking-tight mb-4 sm:mb-5">
                 {UI_COPY.contact.headline[language]}
               </h2>
               <p className="text-sm sm:text-base text-[#B9B7AF] leading-relaxed max-w-2xl">
@@ -93,7 +91,7 @@ export const ContactBackCover: React.FC = () => {
             </div>
 
             <div className="border-t border-[#B9B7AF]/25 divide-y divide-[#B9B7AF]/20">
-              <div className="py-4 flex flex-wrap items-center justify-between gap-4">
+              <div className="py-4 flex flex-wrap items-center justify-between gap-3">
                 <div>
                   <span className="font-mono text-[10px] uppercase tracking-[0.14em] text-[#D97745] block mb-0.5">
                     EMAIL
@@ -124,7 +122,7 @@ export const ContactBackCover: React.FC = () => {
                 </button>
               </div>
 
-              <div className="py-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="py-4 grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                 <a
                   href={SOCIAL_LINKS.github}
                   target="_blank"
@@ -164,22 +162,22 @@ export const ContactBackCover: React.FC = () => {
                 <span className="font-mono text-[10px] uppercase tracking-[0.14em] text-[#B9B7AF] block mb-3">
                   {UI_COPY.contact.cvDownloadLabel[language]} · {SOCIAL_LINKS.phone}
                 </span>
-                <div className="flex flex-wrap gap-3">
+                <div className="grid grid-cols-2 sm:flex sm:flex-wrap gap-2.5 sm:gap-3">
                   <a
                     href={`/${PERSONAL_INFO.cvFilename.en}`}
                     download="CV_Pablo_Villanueva_Picazo_EN.pdf"
-                    className="inline-flex items-center gap-2 px-5 py-3 bg-[#F3F0E9] text-[#171918] hover:bg-[#D97745] text-xs font-semibold uppercase tracking-[0.12em] transition-colors"
+                    className="inline-flex items-center justify-center gap-1.5 sm:gap-2 px-3 sm:px-5 py-3 bg-[#F3F0E9] text-[#171918] hover:bg-[#D97745] text-[11px] sm:text-xs font-semibold uppercase tracking-[0.1em] transition-colors"
                   >
-                    <Download className="w-4 h-4" />
-                    <span>Download CV (EN)</span>
+                    <Download className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" />
+                    <span>CV (EN)</span>
                   </a>
                   <a
                     href={`/${PERSONAL_INFO.cvFilename.es}`}
                     download="CV_Pablo_Villanueva_Picazo_ES.pdf"
-                    className="inline-flex items-center gap-2 px-5 py-3 border border-[#F3F0E9] text-[#F3F0E9] hover:bg-[#F3F0E9] hover:text-[#171918] text-xs font-semibold uppercase tracking-[0.12em] transition-colors"
+                    className="inline-flex items-center justify-center gap-1.5 sm:gap-2 px-3 sm:px-5 py-3 border border-[#F3F0E9] text-[#F3F0E9] hover:bg-[#F3F0E9] hover:text-[#171918] text-[11px] sm:text-xs font-semibold uppercase tracking-[0.1em] transition-colors"
                   >
-                    <Download className="w-4 h-4" />
-                    <span>Descargar CV (ES)</span>
+                    <Download className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" />
+                    <span>CV (ES)</span>
                   </a>
                 </div>
               </div>
@@ -187,7 +185,7 @@ export const ContactBackCover: React.FC = () => {
           </div>
 
           {/* Right 5 Cols: Mailto Contact Form */}
-          <div className="lg:col-span-5 border border-[#B9B7AF]/30 p-6 sm:p-8 bg-[#1F2220]">
+          <div className="lg:col-span-5 border border-[#B9B7AF]/30 p-5 sm:p-8 bg-[#1F2220]">
             <div className="flex items-center justify-between pb-3 mb-5 border-b border-[#B9B7AF]/20">
               <span className="font-mono text-[11px] uppercase tracking-[0.14em] text-[#D97745] font-semibold">
                 {UI_COPY.contact.formHeading[language]}
@@ -276,7 +274,6 @@ export const ContactBackCover: React.FC = () => {
           </div>
         </div>
 
-        {/* Footer Bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 font-mono text-[11px] text-[#B9B7AF]">
           <div>
             <span>© {currentYear} {PERSONAL_INFO.fullName}</span>

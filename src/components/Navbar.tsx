@@ -60,7 +60,7 @@ export const Navbar: React.FC<NavbarProps> = ({
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
-          <div className="h-16 flex items-center justify-between gap-4">
+          <div className="h-14 sm:h-16 flex items-center justify-between gap-3">
             <div className="flex items-center gap-3 min-w-0">
               {currentView !== 'home' ? (
                 <button
@@ -134,17 +134,18 @@ export const Navbar: React.FC<NavbarProps> = ({
 
               <button
                 onClick={onOpenCv}
-                className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#171918] text-[#F3F0E9] hover:bg-[#D97745] font-mono text-[11px] uppercase tracking-[0.12em] transition-colors"
+                className="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 bg-[#171918] text-[#F3F0E9] hover:bg-[#D97745] font-mono text-[11px] uppercase tracking-[0.1em] transition-colors"
               >
                 <FileDown className="w-3.5 h-3.5" />
-                <span>CV.PDF</span>
+                <span className="hidden sm:inline">CV.PDF</span>
+                <span className="sm:hidden">CV</span>
               </button>
 
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 aria-label={mobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
                 aria-expanded={mobileMenuOpen}
-                className="lg:hidden p-2 border border-[#B9B7AF] text-[#171918] hover:bg-[#171918] hover:text-[#F3F0E9] transition-colors"
+                className="lg:hidden p-1.5 border border-[#B9B7AF] text-[#171918] hover:bg-[#171918] hover:text-[#F3F0E9] transition-colors"
               >
                 {mobileMenuOpen ? <X className="w-4 h-4" /> : <Menu className="w-4 h-4" />}
               </button>

@@ -49,7 +49,7 @@ export const ProfileSection: React.FC<ProfileSectionProps> = ({ onOpenCv }) => {
       className="bg-[#F3F0E9] text-[#171918] border-b border-[#171918]"
     >
       {/* PART A — PROFILE NARRATIVE & APPROACH */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-16 sm:py-24">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-12 sm:py-24">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 pb-8 mb-12 border-b border-[#171918] items-end">
           <div className="lg:col-span-8">
             <span className="font-mono text-[11px] uppercase tracking-[0.16em] text-[#D97745] font-semibold block mb-2">
@@ -186,7 +186,7 @@ export const ProfileSection: React.FC<ProfileSectionProps> = ({ onOpenCv }) => {
               {EDUCATION.map((edu) => (
                 <div
                   key={edu.id}
-                  className="p-6 sm:p-8 border-r border-b border-[#171918] bg-[#F3F0E9] flex flex-col justify-between"
+                  className="p-5 sm:p-8 border-r border-b border-[#171918] bg-[#F3F0E9] flex flex-col justify-between"
                 >
                   <div>
                     <div className="flex flex-wrap items-center justify-between gap-2 pb-3 mb-4 border-b border-[#B9B7AF]">
@@ -274,7 +274,7 @@ export const ProfileSection: React.FC<ProfileSectionProps> = ({ onOpenCv }) => {
           {TOOLKIT_CATEGORIES.map((group) => (
             <div
               key={group.id}
-              className="p-6 sm:p-8 border-r border-b border-[#171918] bg-[#F3F0E9]"
+              className="p-5 sm:p-8 border-r border-b border-[#171918] bg-[#F3F0E9]"
             >
               <div className="flex items-baseline justify-between gap-2 pb-3 mb-4 border-b border-[#B9B7AF]">
                 <div>

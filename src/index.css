@@ -14,7 +14,7 @@
 
   html {
     scroll-behavior: smooth;
-    scroll-padding-top: 84px;
+    scroll-padding-top: 72px;
     -webkit-text-size-adjust: 100%;
     font-family: 'Manrope', system-ui, -apple-system, sans-serif;
   }
@@ -27,7 +27,6 @@
     font-feature-settings: "kern" 1, "liga" 1;
   }
 
-  /* Custom publication scrollbar */
   ::-webkit-scrollbar {
     width: 8px;
     height: 8px;
@@ -53,24 +52,20 @@
     transform: rotate(180deg);
   }
 
-  .editorial-grid-bg {
-    background-image: linear-gradient(to right, rgba(185, 183, 175, 0.28) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(185, 183, 175, 0.28) 1px, transparent 1px);
-    background-size: 48px 48px;
-  }
-
-  .dark-folio-grid-bg {
-    background-image: linear-gradient(to right, rgba(185, 183, 175, 0.08) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(185, 183, 175, 0.08) 1px, transparent 1px);
-    background-size: 48px 48px;
-  }
-
   .tabular-nums {
     font-variant-numeric: tabular-nums;
   }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
 }
 
-/* Safe iOS reduced motion handling via Framer Motion MotionConfig */
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto !important;
