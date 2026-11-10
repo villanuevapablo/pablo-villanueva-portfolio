@@ -31,7 +31,7 @@ export const ContactBackCover: React.FC = () => {
         setTimeout(() => setCopiedEmail(false), 2000);
       }
     } catch {
-      // Clipboard API restricted in non-HTTPS or legacy mobile browser
+      // Clipboard API restricted in legacy/non-HTTPS contexts
     }
   };
 
@@ -49,8 +49,8 @@ export const ContactBackCover: React.FC = () => {
     const subjectLine =
       formData.subject.trim() ||
       (language === 'en'
-        ? `Engineering Role Inquiry — ${formData.name}`
-        : `Contacto Profesional — ${formData.name}`);
+        ? `Software / AI / Data Role Inquiry — ${formData.name}`
+        : `Oportunidad Software / IA / Datos — ${formData.name}`);
 
     const body = `${formData.message}\n\n---\nFrom: ${formData.name}`;
     const mailtoUrl = `mailto:${SOCIAL_LINKS.email}?subject=${encodeURIComponent(
@@ -66,23 +66,22 @@ export const ContactBackCover: React.FC = () => {
   return (
     <footer
       id="contact"
-      aria-label={language === 'en' ? 'Contact and Back Cover' : 'Contacto y Contraportada'}
+      aria-label={language === 'en' ? 'Contact and Direct Channels' : 'Contacto y Canales Directos'}
       className="bg-[#171918] text-[#F3F0E9]"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 pt-16 sm:pt-24 pb-12">
-        {/* Back Cover Top Header */}
+        {/* Top Bar */}
         <div className="flex flex-wrap items-center justify-between gap-2 pb-6 mb-12 border-b border-[#B9B7AF]/25 font-mono text-[11px] uppercase tracking-[0.16em]">
           <span className="text-[#D97745] font-semibold">
             {UI_COPY.contact.sectionKicker[language]}
           </span>
           <span className="text-[#B9B7AF]">
-            {PERSONAL_INFO.location[language]} · EDITION {currentYear}
+            {PERSONAL_INFO.location[language]} · {currentYear}
           </span>
         </div>
 
-        {/* Main Two-Column Back Cover Composition */}
+        {/* Main Two-Column Contact Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start pb-16 border-b border-[#B9B7AF]/25">
-          {/* Left 7 Cols: Statement + Direct Contact Channels + CV Download */}
           <div className="lg:col-span-7 space-y-10">
             <div>
               <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-[#F3F0E9] leading-[1.02] tracking-tight mb-5">
@@ -93,9 +92,7 @@ export const ContactBackCover: React.FC = () => {
               </p>
             </div>
 
-            {/* Direct Channels Ruled Ledger */}
             <div className="border-t border-[#B9B7AF]/25 divide-y divide-[#B9B7AF]/20">
-              {/* Email Row */}
               <div className="py-4 flex flex-wrap items-center justify-between gap-4">
                 <div>
                   <span className="font-mono text-[10px] uppercase tracking-[0.14em] text-[#D97745] block mb-0.5">
@@ -127,7 +124,6 @@ export const ContactBackCover: React.FC = () => {
                 </button>
               </div>
 
-              {/* GitHub & LinkedIn Twin Row */}
               <div className="py-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <a
                   href={SOCIAL_LINKS.github}
@@ -164,7 +160,6 @@ export const ContactBackCover: React.FC = () => {
                 </a>
               </div>
 
-              {/* Direct CV Download Row */}
               <div className="pt-5">
                 <span className="font-mono text-[10px] uppercase tracking-[0.14em] text-[#B9B7AF] block mb-3">
                   {UI_COPY.contact.cvDownloadLabel[language]} · {SOCIAL_LINKS.phone}
@@ -191,7 +186,7 @@ export const ContactBackCover: React.FC = () => {
             </div>
           </div>
 
-          {/* Right 5 Cols: Minimal Mailto Dispatch Form */}
+          {/* Right 5 Cols: Mailto Contact Form */}
           <div className="lg:col-span-5 border border-[#B9B7AF]/30 p-6 sm:p-8 bg-[#1F2220]">
             <div className="flex items-center justify-between pb-3 mb-5 border-b border-[#B9B7AF]/20">
               <span className="font-mono text-[11px] uppercase tracking-[0.14em] text-[#D97745] font-semibold">
@@ -213,7 +208,7 @@ export const ContactBackCover: React.FC = () => {
                   type="text"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  placeholder={language === 'en' ? 'Recruiter / Engineer Name' : 'Nombre y empresa'}
+                  placeholder={language === 'en' ? 'Recruiter / Team Name' : 'Nombre y empresa'}
                   className="w-full px-3.5 py-2.5 bg-[#171918] border border-[#B9B7AF]/35 text-[#F3F0E9] placeholder-[#5D605C] text-sm focus:outline-none focus:border-[#D97745]"
                 />
               </div>
@@ -232,8 +227,8 @@ export const ContactBackCover: React.FC = () => {
                   onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                   placeholder={
                     language === 'en'
-                      ? 'Junior Software Engineer Role / Interview'
-                      : 'Oferta Software Engineer / Entrevista'
+                      ? 'AI / Data / Software Role Inquiry'
+                      : 'Puesto IA / Datos / Ingeniería de Software'
                   }
                   className="w-full px-3.5 py-2.5 bg-[#171918] border border-[#B9B7AF]/35 text-[#F3F0E9] placeholder-[#5D605C] text-sm focus:outline-none focus:border-[#D97745]"
                 />
@@ -253,7 +248,7 @@ export const ContactBackCover: React.FC = () => {
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   placeholder={
                     language === 'en'
-                      ? 'Write a brief note...'
+                      ? 'Write a brief message...'
                       : 'Escribe brevemente tu mensaje...'
                   }
                   className="w-full px-3.5 py-2.5 bg-[#171918] border border-[#B9B7AF]/35 text-[#F3F0E9] placeholder-[#5D605C] text-sm focus:outline-none focus:border-[#D97745]"
@@ -274,31 +269,31 @@ export const ContactBackCover: React.FC = () => {
 
               <p className="font-mono text-[10px] text-[#B9B7AF]/80 leading-relaxed">
                 {language === 'en'
-                  ? 'Pre-fills your default mail client cleanly with zero third-party tracking.'
-                  : 'Prepara el envío directamente en tu cliente de correo habitual sin intermediarios.'}
+                  ? 'Pre-fills your default mail client directly without third-party tracking.'
+                  : 'Prepara el correo directamente en tu aplicación habitual sin intermediarios.'}
               </p>
             </form>
           </div>
         </div>
 
-        {/* Colophon Bar */}
+        {/* Footer Bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 font-mono text-[11px] text-[#B9B7AF]">
           <div>
             <span>© {currentYear} {PERSONAL_INFO.fullName}</span>
             <span className="mx-2">·</span>
-            <span>{PERSONAL_INFO.publicationName}</span>
+            <span>{PERSONAL_INFO.brandSubtitle}</span>
           </div>
 
           <div className="flex items-center gap-6">
             <span className="hidden md:inline text-[#B9B7AF]/70">
-              React · TypeScript · Tailwind · DM Serif Display & Manrope
+              React · TypeScript · Tailwind CSS
             </span>
             <button
               type="button"
               onClick={scrollToTop}
               className="inline-flex items-center gap-1.5 px-3 py-1.5 border border-[#B9B7AF]/40 text-[#F3F0E9] hover:border-[#D97745] hover:text-[#D97745] transition-colors"
             >
-              <span>{language === 'en' ? 'Return to Cover' : 'Volver a Portada'}</span>
+              <span>{language === 'en' ? 'Return to Top' : 'Volver Arriba'}</span>
               <ArrowUp className="w-3.5 h-3.5" />
             </button>
           </div>

@@ -3,6 +3,7 @@ import {
   ExperienceItem,
   EducationItem,
   ProjectItem,
+  FocusAreaItem,
   ToolkitCategory,
   SocialLinks,
 } from '../types/portfolio';
@@ -19,40 +20,40 @@ export const PERSONAL_INFO: PersonalInfo = {
   fullName: 'Pablo Villanueva Picazo',
   initials: 'PV',
   avatarUrl: '/pablo-portrait.jpg',
-  publicationName: 'THE ENGINEERING JOURNAL',
+  brandSubtitle: 'SOFTWARE · AI · DATA',
   title: {
-    en: 'Software Engineer / Full Stack Developer',
-    es: 'Ingeniero de Software / Desarrollador Full Stack',
+    en: 'Software Engineer | AI & Data Enthusiast',
+    es: 'Ingeniero de Software | Interés en IA y Datos',
   },
   editorialSummary: {
-    en: 'BSc (Hons) Software Engineering graduate (First-Class Honours, York St John University) and DAM Higher Vocational graduate (Nebrija). I build full-stack web applications, backend systems in Go and Java, Python automation tools, and applied machine learning pipelines.',
-    es: 'Graduado en BSc (Hons) Software Engineering (First-Class Honours, York St John University) y Técnico Superior DAM (Nebrija). Desarrollo aplicaciones web full-stack, servicios backend en Go y Java, utilidades en Python y pipelines aplicados de machine learning.',
+    en: 'Software engineering graduate interested in artificial intelligence, machine learning and data analytics, with experience building full-stack applications and practical software solutions.',
+    es: 'Graduado en ingeniería de software interesado en inteligencia artificial, machine learning y analítica de datos, con experiencia desarrollando aplicaciones full-stack y soluciones de software prácticas.',
   },
   interests: [
     {
-      id: 'fullstack',
-      label: { en: 'Full-stack software development', es: 'Desarrollo de software full-stack' },
-      note: { en: 'React, TypeScript, Go templates & SQLite/SQL', es: 'React, TypeScript, plantillas Go y SQLite/SQL' },
-    },
-    {
-      id: 'backend',
-      label: { en: 'Backend engineering', es: 'Ingeniería backend' },
-      note: { en: 'HTTP servers, auth middleware, RBAC & relational modeling', es: 'Servidores HTTP, middleware de autenticación, RBAC y modelado relacional' },
-    },
-    {
       id: 'ai',
       label: { en: 'Artificial Intelligence', es: 'Inteligencia Artificial' },
-      note: { en: 'Local LLM inference pipelines via Ollama JSON schemas', es: 'Pipelines con LLMs locales mediante esquemas JSON en Ollama' },
+      note: { en: 'Local LLM inference pipelines & structured JSON workflows', es: 'Pipelines locales con LLMs y flujos con JSON estructurado' },
     },
     {
       id: 'ml',
       label: { en: 'Machine Learning', es: 'Machine Learning' },
-      note: { en: 'Time-series regression, feature engineering & temporal CV', es: 'Regresión de series temporales, variables técnicas y validación temporal' },
+      note: { en: 'Regression models, Random Forest, TimeSeriesSplit & evaluation', es: 'Modelos de regresión, Random Forest, validación temporal y evaluación' },
     },
     {
       id: 'data',
-      label: { en: 'Data Analytics', es: 'Analítica de Datos' },
-      note: { en: 'Regex extraction engines, Pandas & statistical auditing', es: 'Motores de extracción regex, Pandas y auditoría estadística' },
+      label: { en: 'Data Analytics & Data Science', es: 'Analítica y Ciencia de Datos' },
+      note: { en: 'Data preprocessing, Pandas/NumPy pipelines, regex ETL & visualization', es: 'Preprocesamiento, Pandas/NumPy, extracción regex y visualización' },
+    },
+    {
+      id: 'swe',
+      label: { en: 'Software Engineering', es: 'Ingeniería de Software' },
+      note: { en: 'Clean architecture, relational modeling & software testing', es: 'Arquitectura limpia, modelado relacional y pruebas de software' },
+    },
+    {
+      id: 'fullstack',
+      label: { en: 'Full Stack Development', es: 'Desarrollo Full Stack' },
+      note: { en: 'React, TypeScript, Go, Java, Python & SQLite', es: 'React, TypeScript, Go, Java, Python y SQLite' },
     },
   ],
   location: {
@@ -60,12 +61,16 @@ export const PERSONAL_INFO: PersonalInfo = {
     es: 'Madrid, España',
   },
   availability: {
-    en: 'Immediate availability • On-site (Madrid), hybrid, or remote',
-    es: 'Disponibilidad inmediata • Presencial (Madrid), híbrido o remoto',
+    en: 'Open to opportunities in Software Engineering, Artificial Intelligence, Machine Learning and Data Analytics.',
+    es: 'Abierto a oportunidades en Ingeniería de Software, Inteligencia Artificial, Machine Learning y Analítica de Datos.',
   },
   statusBadge: {
-    en: 'Seeking Junior Software Engineer / Full Stack Roles',
-    es: 'Disponible para Junior Software Engineer / Full Stack',
+    en: 'Open to Software, AI & Data Roles',
+    es: 'Abierto a oportunidades en Software, IA y Datos',
+  },
+  targetRoles: {
+    en: 'Target roles: Junior AI / ML Engineer · Junior Data Analyst / Scientist · Junior Data Engineer · Junior Software Engineer / Full Stack Developer',
+    es: 'Puestos objetivo: Junior AI / ML Engineer · Junior Data Analyst / Scientist · Junior Data Engineer · Junior Software Engineer / Full Stack Developer',
   },
   cvFilename: {
     en: 'cv-pablo-villanueva-en.pdf',
@@ -73,19 +78,19 @@ export const PERSONAL_INFO: PersonalInfo = {
   },
   aboutParagraphs: {
     en: [
-      'I am a software engineer based in Madrid, Spain, focused on building reliable web applications, clear backend architectures, and practical data software. My technical training started with a Higher Level Vocational Degree in Cross-Platform Application Development (DAM) at Instituto Nebrija, followed by a BSc (Hons) in Software Engineering at York St John University, graduating with First-Class Honours (Class I, 9/10 equivalent).',
-      'During my time as a Development Technician at Universidad Nebrija (April–June 2025), I worked in a production development team implementing full-stack application features, integrating REST APIs with external services, and writing unit and integration tests using Git and agile workflows.',
-      'Outside coursework and team delivery, I document and build end-to-end projects around problems I encounter firsthand: a framework-free medical record server in Go built around explicit threat mitigations, an automated desktop file sorter backed by local Ollama models, a regex-to-SQLite hand history analyzer, and an Arduino UNO R4 proximity monitor.',
+      'My academic background combines Higher Vocational Training in Cross-Platform Application Development (DAM, 2023–2025) at Instituto Nebrija with a BSc (Hons) in Software Engineering (2025–2026) at York St John University, graduating with First-Class Honours (9/10 equivalent).',
+      'During my time as a Development Technician at Universidad Nebrija (Apr–Jun 2025), I gained hands-on experience building full-stack web features, integrating external services, writing unit and integration tests, and collaborating with Git in a production environment.',
+      'Today my focus centers on Artificial Intelligence, Machine Learning, and Data Analytics. I enjoy working directly with raw datasets—collecting data, cleaning and transforming variables, engineering features, evaluating predictive models honestly, and exploring practical automation with local language models—while maintaining full-stack development and relational data modeling as core engineering foundations.',
     ],
     es: [
-      'Soy ingeniero de software en Madrid, España, enfocado en desarrollar aplicaciones web fiables, arquitecturas backend claras y herramientas prácticas de datos. Mi base técnica comenzó con el Grado Superior en Desarrollo de Aplicaciones Multiplataforma (DAM) en el Instituto Nebrija y continuó con el grado BSc (Hons) Software Engineering en York St John University, graduándome con First-Class Honours (Clase I, nota media equivalente 9/10).',
-      'Durante mi etapa como Técnico de Desarrollo en la Universidad Nebrija (abril–junio de 2025), trabajé en un entorno real implementando funcionalidades full-stack, integrando APIs REST con servicios de terceros y redactando pruebas unitarias y de integración dentro de flujos Git.',
-      'Además de la formación reglada, construyo y documento proyectos completos sobre problemas concretos: un servidor de registros clínicos en Go puro centrado en mitigaciones de seguridad, un organizador local en Python conectado a Ollama, un analizador de historiales de texto hacia SQLite y un sistema de detección con Arduino UNO R4.',
+      'Mi formación combina el Grado Superior en Desarrollo de Aplicaciones Multiplataforma (DAM, 2023–2025) en el Instituto Nebrija con el grado universitario BSc (Hons) Software Engineering (2025–2026) en York St John University, completado con First-Class Honours (nota media equivalente 9/10).',
+      'Como Técnico de Desarrollo en la Universidad Nebrija (abril–junio de 2025), trabajé desarrollando funcionalidades de aplicaciones web completas, realizando integraciones externas y ejecutando pruebas unitarias y de integración dentro de flujos con Git.',
+      'Actualmente oriento mi desarrollo profesional hacia la Inteligencia Artificial, el Machine Learning y la Analítica de Datos. Disfruto trabajando con datos para detectar patrones—desde la captura y limpieza hasta la ingeniería de características, evaluación temporal de modelos y automatización con LLMs locales—, apoyándome en una base sólida de ingeniería de software.',
     ],
   },
   problemSolvingApproach: {
-    en: 'Start with the data schema and failure modes before picking abstractions. Favor standard library primitives when dependencies add opacity, validate assumptions against real constraints (chronological splits instead of random shuffles; file lock checks before reading downloads), and document limitations alongside results.',
-    es: 'Empezar por el esquema de datos y los modos de fallo antes de elegir abstracciones. Priorizar primitivas de la biblioteca estándar cuando los frameworks oscurecen el flujo, validar hipótesis con restricciones reales (particiones temporales en lugar de aleatorias; verificación de bloqueos antes de leer descargas) y documentar tanto limitaciones como aciertos.',
+    en: 'Approach new problems by inspecting the raw data and constraints before writing abstractions. Validate models strictly without leakage (chronological splits for time series), document model boundaries transparently alongside benchmarks, and test software behavior systematically.',
+    es: 'Abordo cada problema revisando primero los datos reales y las restricciones antes de añadir abstracciones. Valido los modelos sin filtración futura (particiones cronológicas en series temporales), documento con honestidad tanto logros como límites y verifico cada módulo mediante pruebas.',
   },
   languagesSpoken: {
     en: 'English (Professional working proficiency — UK BSc Hons) • Spanish (Native)',
@@ -93,14 +98,14 @@ export const PERSONAL_INFO: PersonalInfo = {
   },
   otherDetails: {
     en: [
-      'Target Roles: Junior Software Engineer, Graduate Software Engineer, Full Stack Developer',
-      'Immediate availability • Category B Driving License',
-      'Direct links: all 5 project repositories verified public on GitHub',
+      'Available immediately for on-site (Madrid), hybrid, or remote positions',
+      'Category B Driving License',
+      'Curious and self-driven continuous learner across AI, Data, and Software projects',
     ],
     es: [
-      'Puestos objetivo: Junior Software Engineer, Graduate Software Engineer, Desarrollador Full Stack',
-      'Disponibilidad inmediata • Permiso de conducir Categoría B',
-      'Transparencia técnica: los 5 repositorios de proyectos son públicos y verificables en GitHub',
+      'Disponibilidad inmediata para puestos presenciales (Madrid), híbridos o remotos',
+      'Permiso de conducir Categoría B',
+      'Aprendizaje continuo en proyectos aplicados de IA, Datos e Ingeniería de Software',
     ],
   },
 };
@@ -122,32 +127,32 @@ export const EXPERIENCES: ExperienceItem[] = [
       es: 'Madrid, España',
     },
     type: {
-      en: 'Production Engineering Role (3 months)',
-      es: 'Experiencia en Desarrollo (3 meses)',
+      en: 'Practical Software Experience (3 months)',
+      es: 'Experiencia Práctica en Desarrollo (3 meses)',
     },
     contextNote: {
-      en: 'Timeline aligns with Spanish DAM vocational workplace training (FCT / practical placement) integrated within the university development team.',
-      es: 'Periodo correspondiente a prácticas en entorno productivo integradas en el equipo de desarrollo de la universidad.',
+      en: 'Practical development placement within the university technical team alongside completion of the DAM qualification.',
+      es: 'Estancia práctica de desarrollo integrada en el equipo técnico de la universidad al finalizar el ciclo formativo DAM.',
     },
     summary: {
-      en: 'Contributed to full-stack feature development, REST API integrations with third-party services, and software test coverage in a team production codebase.',
-      es: 'Contribución al desarrollo full-stack de funcionalidades, integración de APIs REST con servicios de terceros y cobertura de pruebas en entorno productivo.',
+      en: 'Full-stack software development in a production codebase: implementing application features, connecting external services, and executing unit and integration tests.',
+      es: 'Desarrollo de aplicaciones full-stack en entorno productivo: implementación de funcionalidades, conexión con servicios externos y ejecución de pruebas unitarias y de integración.',
     },
     responsibilities: {
       en: [
-        'Implemented and maintained full-stack features across user-facing views and backend logic.',
-        'Designed and integrated REST API endpoints for external service data exchange.',
-        'Authored unit and integration tests to verify expected behavior and reduce production regressions.',
-        'Worked under Git version control and team review workflows.',
+        'Developed and maintained full-stack application features across UI interfaces and backend logic.',
+        'Integrated REST APIs for application data exchange and third-party services.',
+        'Wrote and executed unit and integration tests to verify application stability before release.',
+        'Collaborated under Git version control and structured team workflows.',
       ],
       es: [
-        'Desarrollo y mantenimiento de funcionalidades full-stack entre la capa de interfaz y la lógica servidor.',
-        'Diseño e integración de APIs REST para intercambio de datos y conexión con servicios externos.',
-        'Ejecución de pruebas unitarias y de integración para validar estabilidad y evitar regresiones en producción.',
-        'Colaboración diaria con control de versiones Git y estándares del equipo.',
+        'Implementación y mantenimiento de funcionalidades full-stack entre interfaz y lógica servidor.',
+        'Integración de servicios mediante APIs REST para el intercambio de datos de la aplicación.',
+        'Ejecución de pruebas unitarias y de integración para validar la estabilidad del código.',
+        'Trabajo colaborativo con control de versiones Git y metodologías ágiles.',
       ],
     },
-    technologies: ['Full-Stack Development', 'REST APIs', 'Unit Testing', 'Integration Testing', 'Git', 'Agile Workflows'],
+    technologies: ['Full-Stack Development', 'Unit Testing', 'Integration Testing', 'Git', 'REST Integration', 'Agile Workflows'],
   },
 ];
 
@@ -168,7 +173,7 @@ export const EDUCATION: EducationItem[] = [
       es: 'York, Reino Unido',
     },
     level: {
-      en: 'Undergraduate Honours Degree (UK Level 6)',
+      en: 'University Honours Degree',
       es: 'Grado Universitario Oficial (Reino Unido)',
     },
     grade: {
@@ -176,19 +181,19 @@ export const EDUCATION: EducationItem[] = [
       es: 'First-Class Honours (Clase I) • Nota media equivalente: 9/10',
     },
     description: {
-      en: 'Final-year top-up honours programme in software engineering, secure system implementation, Internet of Things hardware/software integration, and applied research methodology.',
-      es: 'Programa universitario británico de ingeniería de software centrado en arquitectura de sistemas, desarrollo web seguro, sistemas embebidos IoT y metodología de investigación.',
+      en: 'British university degree covering software architecture, applied machine learning research, IoT systems, and secure web development.',
+      es: 'Grado universitario británico enfocado en ingeniería de software, investigación aplicada en machine learning, sistemas IoT y desarrollo web seguro.',
     },
     highlights: {
       en: [
-        'Awarded First-Class Honours (Class I), equivalent to a 9/10 average grade',
-        'COM6016M Dissertation (TFG): Bitcoin Price Forecasting & Analytics System — Grade: 9.0/10',
-        'Assessed coursework includes Go security engineering (SRMS-MEDICAL) and Embedded IoT (COM6017M)',
+        'Graduated with First-Class Honours (Class I), equivalent to 9/10 average grade',
+        'Final Degree Project (COM6016M): Bitcoin Price Forecasting & Analytics System — Grade: 9.0/10',
+        'Key practical coursework in IoT Edge Processing (COM6017M) and Go Secure Systems (SRMS)',
       ],
       es: [
         'Graduado con First-Class Honours (Clase I), nota media equivalente a 9/10',
-        'Trabajo de Fin de Grado (COM6016M): Sistema de Predicción de Bitcoin — Nota: 9.0/10',
-        'Prácticas evaluadas destacadas: SRMS en Go seguro y sistema embebido IoT en Arduino UNO R4 (COM6017M)',
+        'Trabajo de Fin de Grado (COM6016M): Sistema de Predicción de Bitcoin y Analítica — Nota: 9.0/10',
+        'Proyectos universitarios evaluados en sistemas embebidos IoT (COM6017M) y seguridad en Go (SRMS)',
       ],
     },
   },
@@ -200,8 +205,8 @@ export const EDUCATION: EducationItem[] = [
     },
     institution: 'Instituto de Formación Profesional Nebrija',
     period: {
-      en: 'Completed (Dates not specified on source CV)',
-      es: 'Completado (Años exactos pendientes de precisar en CV fuente)',
+      en: '2023 – 2025',
+      es: '2023 – 2025',
     },
     location: {
       en: 'Madrid, Spain',
@@ -212,24 +217,20 @@ export const EDUCATION: EducationItem[] = [
       es: 'Formación Profesional de Grado Superior',
     },
     description: {
-      en: 'Hands-on software engineering training centered on Java object-oriented design, relational databases (SQL/JDBC/SQLite), desktop/mobile UI development, and software deployment.',
-      es: 'Formación técnica centrada en programación orientada a objetos en Java, bases de datos relacionales (SQL, JDBC, SQLite), desarrollo cliente multiplataforma y despliegue de aplicaciones.',
+      en: 'Vocational software development qualification focused on Java object-oriented programming, relational database modeling (MySQL, PostgreSQL, SQLite, JDBC), frontend frameworks, and multiplatform apps.',
+      es: 'Ciclo formativo superior centrado en programación orientada a objetos en Java, modelado relacional (MySQL, PostgreSQL, SQLite, JDBC), desarrollo de interfaces y aplicaciones multiplataforma.',
     },
     highlights: {
       en: [
-        'Object-oriented architecture and design patterns in Java',
-        'Relational schema design, SQL querying, and JDBC data persistence',
-        'Foundational exposure to frontend frameworks and multiplatform UI delivery',
+        'Object-oriented software design and multiplatform development in Java',
+        'Relational database modeling, SQL queries, and persistence with JDBC and SQLite',
+        'Academic training across web interfaces, Python basics, and cloud data tooling',
       ],
       es: [
-        'Arquitectura orientada a objetos y patrones de diseño en Java',
-        'Modelado relacional, consultas SQL y persistencia mediante JDBC',
-        'Base técnica en interfaces cliente y frameworks web multiplataforma',
+        'Programación orientada a objetos y desarrollo de aplicaciones multiplataforma en Java',
+        'Diseño de bases de datos relacionales, consultas SQL y persistencia mediante JDBC y SQLite',
+        'Base académica en desarrollo web frontend y herramientas de datos',
       ],
-    },
-    uncertaintyFlag: {
-      en: 'Flagged for accuracy: Exact start/end years for DAM are not printed on the source CVs; labeled strictly as Completed rather than estimating.',
-      es: 'Nota de rigor: Las fechas de inicio/fin de DAM no figuran explícitas en el CV fuente; se mantiene como Completado sin estimar años.',
     },
   },
 ];
@@ -237,25 +238,25 @@ export const EDUCATION: EducationItem[] = [
 export const PROJECTS: ProjectItem[] = [
   {
     id: 'bitcoin-price-forecasting',
-    issueNumber: '01',
+    projectNumber: '01',
     title: 'Bitcoin Price Forecasting & Analytics System',
     subtitle: {
-      en: 'COM6016M Dissertation (TFG) — Grade: 9.0 / 10',
-      es: 'Trabajo de Fin de Grado COM6016M — Nota: 9.0 / 10',
+      en: 'Data Collection, Feature Engineering, ML Models & Time-Series Validation (TFG — 9.0/10)',
+      es: 'Recolección, Preprocesamiento, Modelos ML y Validación Temporal (TFG — 9.0/10)',
     },
     category: 'ai-ml',
     categoryLabel: {
-      en: 'Machine Learning & Time-Series',
-      es: 'Machine Learning & Series Temporales',
+      en: 'Machine Learning & Data Analytics',
+      es: 'Machine Learning & Analítica de Datos',
     },
     editorialVariant: 'dark-research',
     grade: '9.0 / 10',
     year: '2026',
     shortDescription: {
-      en: 'End-to-end Python regression pipeline forecasting next-day BTC-USD closing prices using chronological 80/20 splitting, 5-fold TimeSeriesSplit validation, Streamlit visual diagnostics, and a Telegram inference bot.',
-      es: 'Pipeline de regresión en Python para estimar el cierre diario siguiente de BTC-USD mediante partición cronológica 80/20, validación TimeSeriesSplit de 5 pliegues, panel Streamlit y bot de Telegram.',
+      en: 'End-to-end Python data and machine learning pipeline: automated OHLCV data collection (yfinance), cleaning & preprocessing, technical feature engineering, Linear Regression & Random Forest training, strict TimeSeriesSplit validation, error evaluation, and Streamlit/Plotly visual analytics.',
+      es: 'Pipeline integral de datos y machine learning en Python: captura automatizada OHLCV (yfinance), limpieza y preprocesamiento, ingeniería de variables técnicas, entrenamiento con Regresión Lineal y Random Forest, validación estricta TimeSeriesSplit, evaluación de error y visualización en Streamlit/Plotly.',
     },
-    technologies: ['Python 3.13', 'Scikit-learn', 'Pandas', 'NumPy', 'yfinance', 'Streamlit', 'Plotly', 'pyTelegramBotAPI', 'Joblib'],
+    technologies: ['Python 3.13', 'Scikit-learn', 'Pandas', 'NumPy', 'TimeSeriesSplit', 'yfinance', 'Matplotlib / Seaborn', 'Plotly & Streamlit'],
     visualType: 'btc-forecast',
     githubUrl: 'https://github.com/villanuevapablo/bitcoin-price-forecasting',
     liveDemoUrl: null,
@@ -269,38 +270,38 @@ export const PROJECTS: ProjectItem[] = [
     },
     caseStudy: {
       introduction: {
-        en: 'Developed for the BSc (Hons) Software Engineering dissertation (COM6016M) at York St John University, this system fetches four years of historical BTC-USD OHLCV data, builds an 8-feature technical dataset, trains and compares Linear Regression and Random Forest models, and serves daily predictions through both a multi-page Streamlit web dashboard and an automated Telegram bot.',
-        es: 'Desarrollado como Trabajo de Fin de Grado (COM6016M) en York St John University, este sistema descarga cuatro años de datos históricos OHLCV de BTC-USD, construye un conjunto de 8 variables técnicas, entrena modelos de Regresión Lineal y Random Forest, y ofrece predicciones a través de un panel Streamlit y un bot en Telegram.',
+        en: 'Developed for the BSc (Hons) Software Engineering dissertation (COM6016M), this system brings together data engineering, machine learning, and data visualization. It collects four years of historical BTC-USD market data, runs preprocessing and feature creation, compares Linear Regression against Random Forest under chronological validation, generates evaluation charts (residuals, heatmaps, feature importance), and serves model outputs through Streamlit and Telegram.',
+        es: 'Desarrollado como Trabajo de Fin de Grado (COM6016M), este proyecto conecta ingeniería de datos, machine learning y visualización. Recolecta cuatro años de datos históricos de BTC-USD, realiza limpieza y creación de variables, compara Regresión Lineal y Random Forest mediante validación cronológica, genera gráficos de diagnóstico y expone los resultados vía Streamlit y Telegram.',
       },
       theChallenge: {
-        en: 'Standard supervised ML examples randomly shuffle rows before splitting train and test sets. Applied to financial time series, shuffling causes severe lookahead bias (data leakage), letting a model see tomorrow\'s moving averages to predict today. The goal was to build a disciplined, strictly sequential training and serving pipeline while comparing linear trend tracking against tree-based non-linear ensembles.',
-        es: 'Los ejemplos habituales de ML mezclan filas aleatoriamente antes de dividir entrenamiento y test. En series financieras esto provoca sesgo de anticipación (data leakage), permitiendo que el modelo vea el futuro para predecir el presente. El reto era construir un pipeline estrictamente cronológico comparando regresión lineal con conjuntos no lineales de árboles.',
+        en: 'Standard supervised ML workflows randomly shuffle data before splitting. In sequential market datasets, shuffling introduces lookahead bias (data leakage), allowing models to peek at future volatility when predicting earlier points. Furthermore, noisy raw series require structured preprocessing and realistic metric inspection rather than optimistic overfit assumptions.',
+        es: 'Los flujos supervisados estándar mezclan las muestras antes de dividir entrenamiento y test. En series temporales financieras, barajar introduce sesgo de anticipación (data leakage). Además, los datos en bruto requieren limpieza rigurosa e interpretación crítica de las métricas frente a la autocorrelación.',
       },
       theSolution: {
-        en: 'Implemented shared feature engineering in train_models.py and analysis.py computing 7-day and 30-day SMAs, 14-day rolling standard deviation, daily percentage return, lag closes (t-1, t-2, t-3), and 7-day volume averages, shifting Closing Price by -1 as the next-day target and dropping the initial 30 NaN rows. Enforced an 80/20 unshuffled chronological holdout alongside 5-fold TimeSeriesSplit cross-validation, then serialized both trained models via Joblib for downstream serving.',
-        es: 'Implementé una extracción de características idéntica en train_models.py y analysis.py calculando medias móviles SMA 7/30, volatilidad móvil de 14 días, retorno porcentual diario, cierres retardados (t-1, t-2, t-3) y volumen SMA 7, desplazando el precio de cierre (-1) como objetivo. Apliqué división cronológica 80/20 sin barajar junto a 5 pliegues TimeSeriesSplit y serialización con Joblib.',
+        en: 'Constructed an end-to-end Python pipeline in train_models.py and analysis.py: flattening yfinance MultiIndex tables, engineering 8 domain features (SMA 7, SMA 30, 14-day rolling volatility, daily percentage returns, lag closes t-1/t-2/t-3, and volume SMA 7), shifting Closing Price (-1) as target, removing leading NaN warm-up rows, and enforcing unshuffled 80/20 chronological splitting alongside 5-fold TimeSeriesSplit evaluation.',
+        es: 'Construí un pipeline completo en Python (train_models.py y analysis.py): normalización de columnas MultiIndex de yfinance, cálculo de 8 variables técnicas (SMA 7/30, volatilidad móvil de 14 días, retorno diario %, cierres t-1/t-2/t-3 y volumen SMA 7), desplazamiento del objetivo (-1), limpieza de valores NaN iniciales y validación estricta con corte cronológico 80/20 y 5 pliegues TimeSeriesSplit.',
       },
       architecture: {
         summary: {
-          en: 'Modular four-script architecture sharing an identical FEATURE_COLUMNS contract so offline research charts, interactive web exploration, and Telegram inference use identical feature transformations.',
-          es: 'Arquitectura modular en cuatro scripts que comparten la constante FEATURE_COLUMNS para garantizar que análisis, dashboard web y bot apliquen exactamente las mismas transformaciones.',
+          en: 'Shared FEATURE_COLUMNS specification tying automated data ingestion, chronological ML evaluation, automated chart export, interactive Streamlit analytics, and Telegram serving into one consistent pipeline.',
+          es: 'Contrato compartido FEATURE_COLUMNS que une captura de datos, entrenamiento y validación temporal, generación de gráficos, dashboard Streamlit y bot en Telegram sin discrepancias.',
         },
         modules: [
           {
-            name: 'train_models.py',
-            role: { en: 'Downloads 4-year BTC-USD data via yfinance, handles MultiIndex columns, trains LR and RF regressors on 80/20 chronological split, and dumps .pkl binaries.', es: 'Descarga 4 años de BTC-USD con yfinance, aplana columnas MultiIndex, entrena LR y RF con división cronológica 80/20 y exporta binarios .pkl.' },
+            name: 'Data Collection & Preprocessing',
+            role: { en: 'Fetches 4-year BTC-USD OHLCV history via yfinance, normalizes MultiIndex columns, and drops 30-day rolling warm-up NaNs cleanly.', es: 'Descarga 4 años de histórico BTC-USD con yfinance, aplana encabezados MultiIndex y filtra los NaNs iniciales.' },
           },
           {
-            name: 'analysis.py',
-            role: { en: 'Runs 5-fold TimeSeriesSplit validation and exports 7 high-DPI diagnostic figures (heatmaps, residuals, feature importance).', es: 'Ejecuta validación cruzada temporal de 5 pliegues y genera 7 gráficos diagnósticos de alta resolución.' },
+            name: 'Feature Engineering & ML Validation',
+            role: { en: 'Generates 8 technical/lag features and benchmarks LinearRegression & RandomForestRegressor across 80/20 holdout and 5-fold TimeSeriesSplit.', es: 'Genera 8 variables técnicas/retardos y compara LinearRegression y RandomForestRegressor bajo partición cronológica 80/20 y TimeSeriesSplit.' },
           },
           {
-            name: 'dashboard.py',
-            role: { en: 'Multi-page Streamlit interface featuring Plotly candlesticks, residual analysis, correlation matrices, and error metrics.', es: 'Aplicación Streamlit multipágina con gráficos de velas Plotly, residuos, correlaciones y comparativa de error.' },
+            name: 'Data Visualization (analysis.py & dashboard.py)',
+            role: { en: 'Produces 7 diagnostic Matplotlib/Seaborn figures plus an interactive Streamlit/Plotly dashboard for correlations, actual vs predicted curves, and residuals.', es: 'Exporta 7 gráficos diagnósticos Matplotlib/Seaborn y ofrece panel interactivo Streamlit/Plotly de correlaciones y residuos.' },
           },
           {
-            name: 'telegram_bot.py',
-            role: { en: 'Stateless bot listener exposing /start, /predict, and /help commands backed by the serialized Joblib models.', es: 'Bot conversacional con comandos /start, /predict y /help conectado a los modelos entrenados.' },
+            name: 'Model Inference Interface',
+            role: { en: 'Serializes trained pipelines with Joblib for reproducible live estimation via Streamlit and Telegram commands (/predict).', es: 'Serializa los modelos con Joblib para inferencia reproducible desde Streamlit y el bot de Telegram.' },
           },
         ],
         codeSnippet: {
@@ -312,7 +313,7 @@ export const PROJECTS: ProjectItem[] = [
     "close_lag_2", "close_lag_3", "volume_sma_7",
 ]
 
-# Unshuffled chronological split — never shuffle time series
+# Chronological split: prevent lookahead leakage
 split_index = int(len(df) * 0.8)
 X_train, X_test = X.iloc[:split_index], X.iloc[split_index:]
 y_train, y_test = y.iloc[:split_index], y.iloc[split_index:]`,
@@ -320,49 +321,282 @@ y_train, y_test = y.iloc[:split_index], y.iloc[split_index:]`,
       },
       engineeringDecisions: [
         {
-          decision: { en: 'Chronological 80/20 Split + TimeSeriesSplit over K-Fold', es: 'Split cronológico 80/20 + TimeSeriesSplit en lugar de K-Fold' },
-          rationale: { en: 'Standard K-Fold leaks future price volatility into earlier folds. Enforcing strict chronological boundaries reflects real out-of-sample forecasting constraints.', es: 'K-Fold tradicional filtra información futura hacia el entrenamiento. Los pliegues cronológicos replican las condiciones reales de predicción.' },
+          decision: { en: 'Chronological 80/20 Split + TimeSeriesSplit over Random K-Fold', es: 'Split cronológico 80/20 + TimeSeriesSplit frente a K-Fold aleatorio' },
+          rationale: { en: 'Preserves strict causal time order so no future trend features ever influence historical training windows.', es: 'Preserva estrictamente la causalidad temporal para impedir que información futura contamine la ventana de entrenamiento.' },
         },
         {
-          decision: { en: 'Shared FEATURE_COLUMNS Constant Across Training & Serving', es: 'Contrato FEATURE_COLUMNS compartido entre entrenamiento y servicio' },
-          rationale: { en: 'Prevents training-serving skew where the Telegram bot or Streamlit dashboard orders columns differently from the pickled scikit-learn estimators.', es: 'Evita inconsistencias de orden o definición de variables entre el entrenamiento offline y las consultas en vivo del bot o dashboard.' },
+          decision: { en: 'Comparing Linear Baseline vs Non-Linear Tree Ensemble', es: 'Comparación entre modelo lineal base y conjunto de árboles' },
+          rationale: { en: 'Revealed how tree ensembles handle non-linear dynamics vs where linear regression maintains trend continuity beyond historical price peaks.', es: 'Permitió observar cuándo los árboles capturan interacciones complejas y dónde la regresión lineal mantiene continuidad fuera del máximo histórico.' },
         },
         {
-          decision: { en: 'Explicit yfinance >= 0.2 MultiIndex Flattening', es: 'Aplanado explícito de columnas MultiIndex en yfinance >= 0.2' },
-          rationale: { en: 'Newer yfinance releases wrap single-ticker downloads in hierarchical column tuples, which breaks pandas rolling calculations unless explicitly normalized.', es: 'Versiones recientes de yfinance devuelven columnas jerárquicas incluso con un único ticker, rompiendo las ventanas móviles si no se normalizan.' },
+          decision: { en: 'Explicit Pipeline Consistency Across Modules', es: 'Consistencia explícita de variables entre scripts' },
+          rationale: { en: 'Keeping FEATURE_COLUMNS synchronized guarantees training scripts, analytical plots, and inference outputs process identical arrays.', es: 'Mantener un contrato único FEATURE_COLUMNS garantiza la reproducibilidad entre análisis offline, dashboard e inferencia.' },
         },
       ],
       challenges: {
         en: [
-          'Tree-based extrapolation limit: During strong upward rallies exceeding the training window peak, Random Forest Regressor capped predictions at its highest seen leaf values, raising test MAE (~$3,550) compared to Linear Regression (~$1,684).',
-          'Non-stationarity & high autocorrelation: A high R² (0.9830 for Linear Regression) reflects next-day price proximity to t-1 close rather than genuine market alpha, underscoring why raw RMSE/R² must be interpreted cautiously in financial series.',
+          'Random Forest range bounding: Decision-tree averages cannot extrapolate above the maximum target observed in training data, causing higher MAE (~$3,550) during new market highs versus Linear Regression (~$1,684).',
+          'Interpreting R² critically: High raw R² (0.9830 for Linear Regression) reflects strong t-1 autocorrelation in price levels rather than reliable trading signals, highlighting why percentage return targets are preferable for future iterations.',
         ],
         es: [
-          'Límite de extrapolación en árboles: Al alcanzar Bitcoin máximos superiores al conjunto de entrenamiento, Random Forest quedó acotado a los valores de sus hojas máximas, elevando su MAE (~$3.550) frente a Regresión Lineal (~$1.684).',
-          'No estacionariedad y autocorrelación: Un R² de 0.9830 en Regresión Lineal refleja sobre todo la cercanía al cierre t-1 y no capacidad mágica de predicción, exigiendo cautela al interpretar métricas.',
+          'Límite de extrapolación en Random Forest: Al ser promedios de hojas entrenadas, los árboles quedaron acotados cuando Bitcoin superó sus máximos previos (MAE ~$3.550 frente a ~$1.684 en Regresión Lineal).',
+          'Interpretación crítica del R²: Un R² alto sobre precio absoluto refleja autocorrelación directa con el cierre previo y no capacidad financiera predictiva.',
         ],
       },
       resultsAndLearnings: {
         results: {
           en: [
-            'Dissertation evaluated at 9.0 / 10 (First-Class standing).',
-            'Measured out-of-sample benchmarks: Linear Regression MAE ~$1,684, RMSE ~$2,317, R² 0.9830; Random Forest MAE ~$3,550, RMSE ~$4,564, R² 0.9342.',
-            'Delivered reproducible chart generation (7 analytical plots) plus live Streamlit dashboard and Telegram inference interface.',
+            'Academic dissertation evaluated at 9.0 / 10 (First-Class standing).',
+            'Out-of-sample test measurements: Linear Regression MAE ~$1,684, RMSE ~$2,317, R² 0.9830; Random Forest MAE ~$3,550, RMSE ~$4,564, R² 0.9342.',
+            'Delivered reproducible data collection, feature scripts, 7 analytical plots, and interactive visual tools.',
           ],
           es: [
-            'Trabajo de Fin de Grado calificado con 9.0 / 10.',
-            'Métricas medidas sobre test cronológico: Regresión Lineal MAE ~$1.684, RMSE ~$2.317, R² 0.9830; Random Forest MAE ~$3.550, RMSE ~$4.564, R² 0.9342.',
-            'Generación reproducible de 7 figuras de análisis más dashboard interactivo Streamlit y bot funcional en Telegram.',
+            'Proyecto evaluado en el TFG universitario con una calificación de 9.0 / 10.',
+            'Métricas reales medidas en test cronológico: Regresión Lineal MAE ~$1.684, RMSE ~$2.317, R² 0.9830; Random Forest MAE ~$3.550, RMSE ~$4.564, R² 0.9342.',
+            'Sistema completo y reproducible desde la ingesta OHLCV hasta los 7 gráficos diagnósticos y el dashboard visual.',
           ],
         },
         limitations: {
           en: [
-            'Models rely strictly on lagged technical price/volume features without macroeconomic or on-chain signals; explicitly disclaimed as academic research rather than financial advice.',
-            'Tree ensembles require target differencing (predicting return % instead of raw USD price) to extrapolate cleanly into new price discovery regimes.',
+            'Strictly academic exploration using historical price/volume series only—not financial advice or a live trading model.',
+            'Predicting percentage returns rather than raw price levels would improve stationarity and tree generalization.',
           ],
           es: [
-            'Los modelos utilizan únicamente precio histórico y volumen sin variables macroeconómicas ni on-chain; uso estrictamente académico.',
-            'Predecir retornos porcentuales en lugar del precio absoluto permitiría que los árboles extrapolaran mejor en nuevos máximos históricos.',
+            'Investigación estrictamente académica sin señales externas ni uso como recomendación financiera.',
+            'Modelar variaciones porcentuales estacionarias sería el paso natural para mejorar la generalización de árboles.',
+          ],
+        },
+      },
+    },
+  },
+  {
+    id: 'smart-file-organizer',
+    projectNumber: '02',
+    title: 'Smart File Organizer (Local AI Classification)',
+    subtitle: {
+      en: 'Event-Driven Document Extraction & Local Ollama JSON Schema Inference',
+      es: 'Extracción Documental Reactiva e Inferencia Local Estructurada con Ollama',
+    },
+    category: 'ai-ml',
+    categoryLabel: {
+      en: 'Applied AI & Python Automation',
+      es: 'IA Aplicada & Automatización Python',
+    },
+    editorialVariant: 'pipeline-monograph',
+    year: '2026',
+    shortDescription: {
+      en: 'Local-first Python application and background service combining real-time filesystem event handling (watchdog), PDF/text content extraction (pypdf), and local LLM inference via Ollama with structured JSON validation and resilient fallbacks.',
+      es: 'Aplicación Python local y servicio en segundo plano que combina monitorización de archivos (watchdog), extracción documental (pypdf/texto) e inferencia con LLMs locales mediante Ollama con esquemas JSON y fallback seguro.',
+    },
+    technologies: ['Python 3.10+', 'Local LLMs (Ollama)', 'JSON Schema', 'pypdf', 'watchdog', 'Tkinter / ttk', 'unittest'],
+    visualType: 'smart-organizer',
+    githubUrl: 'https://github.com/villanuevapablo/smart-file-organizer',
+    liveDemoUrl: null,
+    status: {
+      en: 'Completed • Python AI Utility + Unit Tests (2026)',
+      es: 'Completado • Utilidad IA en Python con Tests (2026)',
+    },
+    caseStudy: {
+      introduction: {
+        en: 'Smart File Organizer applies local large language models (via Ollama) to inspect, categorize, and standardize messy local documents automatically without sending private data to commercial cloud APIs. It ships with both a CLI background watcher and a desktop Tkinter control window.',
+        es: 'Smart File Organizer aplica modelos de lenguaje locales mediante Ollama para analizar, clasificar y renombrar documentos personales sin exponer archivos privados a servidores externos, integrando modo consola e interfaz de escritorio Tkinter.',
+      },
+      theChallenge: {
+        en: 'Filesystem watchers fire creation hooks before browser downloads finish writing (triggering OS write-lock exceptions or corrupt PDF reads), while lightweight local LLMs can emit extra prose, forbidden path characters, or mismatched file extensions.',
+        es: 'Los observadores de sistema de archivos disparan eventos antes de cerrarse las descargas del navegador (generando errores PermissionError o lecturas truncadas), y los modelos locales pueden devolver formato inválido o alterar extensiones.',
+      },
+      theSolution: {
+        en: 'Implemented extension/dotfile filtering, binary file-lock stability polling in watcher.py, 1,500-character multi-format extraction (plain text, 2-page PDF via pypdf, and metadata fallback), deterministic prompting (temperature 0.1, JSON format) with regex sanitization, and fallback routing to "Otros" when Ollama is unreachable.',
+        es: 'Implementé filtros de temporales, comprobación de bloqueos de archivo en watcher.py, extracción multiformato (texto y 2 primeras páginas PDF con pypdf), consultas estructuradas en Ollama (temperature 0.1, format="json") con saneamiento estricto y ruta alternativa a "Otros" si el modelo está apagado.',
+      },
+      architecture: {
+        summary: {
+          en: 'Six modular Python components paired with an automated unittest suite mocking Ollama API responses to verify sanitization and offline fallback behavior.',
+          es: 'Seis módulos Python desacoplados respaldados por pruebas unittest con mocks HTTP de Ollama para verificar saneamiento y tolerancia a fallos.',
+        },
+        modules: [
+          {
+            name: 'watcher.py',
+            role: { en: 'Intercepts directory events via watchdog, ignores partial browser files (.crdownload, .part), and waits for size stabilization + read-lock release.', es: 'Captura eventos de carpeta, filtra descargas parciales y verifica liberación de bloqueo antes de procesar.' },
+          },
+          {
+            name: 'extractor.py',
+            role: { en: 'Extracts up to 1,500 UTF-8 characters from text documents or pypdf streams; extracts filesystem metadata for images/binaries.', es: 'Extrae hasta 1.500 caracteres en texto o PDFs con pypdf, usando metadatos para binarios.' },
+          },
+          {
+            name: 'ai_classifier.py',
+            role: { en: 'Queries local Ollama /api/generate with system constraints, parses JSON safely, enforces authentic file extensions, and gracefully falls back if offline.', es: 'Consulta Ollama local en formato JSON, verifica categoría y preserva siempre la extensión auténtica original.' },
+          },
+          {
+            name: 'file_manager.py & gui.py',
+            role: { en: 'Strips OS invalid characters, deduplicates colliding names (_1, _2), safely moves documents, and renders live status inside Tkinter.', es: 'Limpia caracteres inválidos, evita colisiones (_1, _2) y muestra la actividad en Tkinter.' },
+          },
+        ],
+        codeSnippet: {
+          filename: 'watcher.py',
+          language: 'python',
+          code: `if current_size == last_size and current_size > 0:
+    try:
+        with file_path.open("rb") as handle:
+            handle.read(1)
+        return True  # File size settled AND write lock closed
+    except (PermissionError, OSError):
+        pass  # Ongoing browser write`,
+        },
+      },
+      engineeringDecisions: [
+        {
+          decision: { en: 'Local Ollama Inference + Deterministic Fallback', es: 'Inferencia Local con Ollama + Fallback Determinista' },
+          rationale: { en: 'Preserves full file privacy on-device and ensures zero dropped files even when the local LLM service is turned off.', es: 'Garantiza privacidad total en equipo local y evita pérdidas o errores cuando Ollama no está ejecutándose.' },
+        },
+        {
+          decision: { en: 'Post-Model Regex & Extension Lock', es: 'Bloqueo de Extensión y Saneamiento Post-Modelo' },
+          rationale: { en: 'Guarantees structured filenames never lose their real extension or break Windows path syntax regardless of LLM token sampling.', es: 'Impide que el modelo corrompa rutas en Windows o cambie extensiones reales de archivo.' },
+        },
+      ],
+      challenges: {
+        en: [
+          'Asynchronous browser downloads on Windows caused intermittent PermissionError collisions; resolved by verifying both constant file size and binary read availability.',
+          'Eliminated brittle dependency requirements by degrading HTTP transport smoothly from requests to standard library urllib when needed.',
+        ],
+        es: [
+          'Descargas concurrentes en Windows provocaban colisiones PermissionError; resuelto verificando estabilidad de tamaño y lectura binaria.',
+          'Respaldo automático hacia urllib estándar en caso de entornos sin requests instalado.',
+        ],
+      },
+      resultsAndLearnings: {
+        results: {
+          en: [
+            'Reliable local document triage verified via unittest tests covering sanitization, collision deduplication, binary extraction, and mocked Ollama failures.',
+          ],
+          es: [
+            'Clasificación local fiable validada mediante suite unittest cubriendo saneamiento, colisiones y respuestas online/offline.',
+          ],
+        },
+        limitations: {
+          en: [
+            'Image-only scanned PDFs fall back to metadata classification because heavy OCR engines were intentionally left out.',
+          ],
+          es: [
+            'PDFs escaneados sin capa de texto se procesan por metadatos al omitir OCR pesado.',
+          ],
+        },
+      },
+    },
+  },
+  {
+    id: 'preflop-hero',
+    projectNumber: '03',
+    title: 'Preflop Hero: Data Parsing & Analytics Pipeline',
+    subtitle: {
+      en: 'Regex Text Extraction Engine, Relational SQLite Persistence & Statistical Auditor',
+      es: 'Motor Regex de Extracción, Persistencia SQLite y Analítica Estadística',
+    },
+    category: 'data',
+    categoryLabel: {
+      en: 'Data Analytics & ETL Parsing',
+      es: 'Analítica de Datos & Parsing ETL',
+    },
+    editorialVariant: 'data-notebook',
+    year: '2026',
+    shortDescription: {
+      en: 'Zero-dependency Python analytics tool and companion browser analyzer converting unstructured raw session text files from two formats into normalized SQLite records with composite duplicate checks and automated KPI evaluation (VPIP, PFR, Gap).',
+      es: 'Herramienta analítica en Python puro y aplicación web cliente que transforma registros de texto no estructurados en tablas SQLite normalizadas sin duplicados, calculando métricas agregadas VPIP, PFR y brechas.',
+    },
+    technologies: ['Python 3.12 (Stdlib)', 'Regex Parsing', 'SQLite 3', 'SQL Aggregations', 'HTML5 / SVG', 'Statistical Auditing'],
+    visualType: 'preflop-hero',
+    githubUrl: 'https://github.com/villanuevapablo/preflop-hero',
+    liveDemoUrl: null,
+    status: {
+      en: 'Completed • Python Data Tool + Web UI (2026)',
+      es: 'Completado • Herramienta de Datos Python + Web UI (2026)',
+    },
+    caseStudy: {
+      introduction: {
+        en: 'Preflop Hero automates data cleaning, extraction, storage, and summary evaluation over raw poker hand history exports. Implemented in standard Python without external dependencies alongside a standalone HTML browser analyzer, it parses heterogeneous plain-text logs into an indexed SQLite database and quantifies behavioral tendencies against 6-max reference bands.',
+        es: 'Preflop Hero automatiza la limpieza, extracción regex, persistencia y análisis estadístico de historiales en texto plano exportados por distintas plataformas, almacenándolos en SQLite e incorporando una versión HTML ejecutada íntegramente en el navegador.',
+      },
+      theChallenge: {
+        en: 'Source logs differ dramatically in syntax across platforms (delimiter markers, bracket spacing, comma formatting) and require separating forced blind postings from voluntary actions while preventing duplicate counts across overlapping batch imports.',
+        es: 'Los logs difieren en delimitadores y formato de cartas según la sala, exigen distinguir apuestas forzadas de entradas voluntarias y requieren evitar duplicidades si el usuario reimporta ficheros solapados.',
+      },
+      theSolution: {
+        en: 'Authored compiled regex extractors tailored per platform isolating preflop boundaries cleanly, persisted parsed rows with UNIQUE(hand_id, platform) constraints for idempotent ingestion, computed SQL SUM/COUNT ratios in database.py, and added client-side browser support for private drag-and-drop analysis.',
+        es: 'Implementé patrones regex compilados específicos por plataforma delimitando la fase preflop, apliqué restricción UNIQUE(hand_id, platform) en SQLite para idempotencia automática y construí agregaciones SQL directas junto a un analizador web cliente.',
+      },
+      architecture: {
+        summary: {
+          en: 'Four clean stdlib Python modules (parser, database, analyzer, CLI main) plus a zero-server HTML dashboard running client-side regex and SVG gauges.',
+          es: 'Cuatro módulos en biblioteca estándar Python más una interfaz HTML autónoma para análisis privado en navegador.',
+        },
+        modules: [
+          {
+            name: 'parser.py',
+            role: { en: 'Splits mixed text logs, detects Winamax vs 888poker signatures, strips irregular card punctuation, and extracts VPIP/PFR binary flags.', es: 'Segmenta historiales mixtos, detecta plataforma, normaliza texto de cartas y calcula indicadores VPIP/PFR.' },
+          },
+          {
+            name: 'database.py',
+            role: { en: 'Context-managed SQLite layer maintaining UNIQUE(hand_id, platform) integrity and running SQL aggregate metrics.', es: 'Capa SQLite con gestor de contexto, unicidad compuesta y consultas agregadas.' },
+          },
+          {
+            name: 'analyzer.py',
+            role: { en: 'Evaluates empirical session ratios against theoretical 6-max targets (VPIP 20–27%, PFR 17–23%, Gap 3–6 pp) to flag tendencies.', es: 'Evalúa métricas agregadas frente a referencias teóricas 6-max generando diagnósticos claros.' },
+          },
+          {
+            name: 'index.html',
+            role: { en: 'Privacy-preserving browser interface processing pasted or dropped text logs locally with zero network transfer.', es: 'Interfaz web autónoma para procesar logs en local sin subir datos a ningún servidor.' },
+          },
+        ],
+        codeSnippet: {
+          filename: 'database.py',
+          language: 'sql',
+          code: `CREATE TABLE IF NOT EXISTS hand_statistics (
+    id          INTEGER PRIMARY KEY AUTOINCREMENT,
+    hand_id     TEXT    NOT NULL,
+    platform    TEXT    NOT NULL,
+    hero_cards  TEXT,
+    vpip        INTEGER NOT NULL,
+    pfr         INTEGER NOT NULL,
+    created_at  TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    UNIQUE(hand_id, platform)
+);`,
+        },
+      },
+      engineeringDecisions: [
+        {
+          decision: { en: 'Composite Relational Uniqueness for Idempotent Ingestion', es: 'Restricción Única Compuesta para Ingesta Idempotente' },
+          rationale: { en: 'Enforcing UNIQUE(hand_id, platform) in SQLite eliminates redundant pre-insert SELECT lookups and safely ignores repeated imports.', es: 'Delegar la deduplicación en SQLite evita consultas previas costosas y garantiza integridad entre lotes solapados.' },
+        },
+        {
+          decision: { en: 'Zero-Dependency Python Standard Library Design', es: 'Diseño sin Dependencias Externas en Python' },
+          rationale: { en: 'Runs cleanly on any Python 3.10+ environment using only sqlite3 and re modules.', es: 'Ejecutable en cualquier Python 3.10+ estándar usando exclusivamente sqlite3 y re.' },
+        },
+      ],
+      challenges: {
+        en: [
+          'Properly matching hands that fold out before any flop is dealt (requiring preflop boundaries terminated by either FLOP or SUMMARY).',
+          'Cleaning irregular formatting variations such as commas inside card arrays across 888poker exports.',
+        ],
+        es: [
+          'Detectar correctamente manos que terminan antes del flop alternando delimitadores FLOP y SUMMARY.',
+          'Normalizar formatos dispares de comas y espacios en historiales exportados.',
+        ],
+      },
+      resultsAndLearnings: {
+        results: {
+          en: [
+            'Cleanly converts unstructured raw logs into auditable relational analytics across CLI and browser UI.',
+          ],
+          es: [
+            'Conversión fiable de ficheros de texto heterogéneos en tablas SQLite consultables tanto por terminal como por navegador.',
+          ],
+        },
+        limitations: {
+          en: [
+            'Scope covers Winamax and 888poker preflop decisions; postflop actions and seat-position segmentation are natural future additions.',
+          ],
+          es: [
+            'Alcance actual enfocado en fase preflop para Winamax y 888poker; juego postflop y filtrado por posición serían futuras extensiones.',
           ],
         },
       },
@@ -370,65 +604,65 @@ y_train, y_test = y.iloc[:split_index], y.iloc[split_index:]`,
   },
   {
     id: 'srms-medical',
-    issueNumber: '02',
+    projectNumber: '04',
     title: 'Secure Record Management System (SRMS)',
     subtitle: {
-      en: 'Defense-in-Depth Clinical Web Application in Go & SQLite',
-      es: 'Aplicación Web Clínica con Defensa en Profundidad en Go y SQLite',
+      en: 'Go Standard Library Web Application & Relational SQLite Architecture',
+      es: 'Aplicación Web en Go Estándar y Persistencia Relacional SQLite',
     },
     category: 'backend-security',
     categoryLabel: {
-      en: 'Go Backend & Web Security',
-      es: 'Backend en Go & Seguridad Web',
+      en: 'Software Engineering & Systems',
+      es: 'Ingeniería de Software & Sistemas',
     },
     editorialVariant: 'dossier-spec',
     year: '2026',
     shortDescription: {
-      en: 'Full-stack medical record platform built on Go standard library net/http and CGO-free SQLite (WAL mode). Enforces parameterized SQL, per-IP rate limiting, persistent account lockout, one-time CSRF tokens, bcrypt (cost 12), and RBAC.',
-      es: 'Plataforma web de registros médicos construida con Go net/http y SQLite sin CGO en modo WAL. Implementa consultas preparadas, rate limiting por IP, bloqueo de cuentas, tokens CSRF de un solo uso, bcrypt (cost 12) y RBAC.',
+      en: 'Full-stack medical record management web application built in Go (net/http, html/template) and CGO-free SQLite (WAL mode). Implements parameterized queries, RBAC separation, one-time CSRF checks, bcrypt hashing, and rate limiting.',
+      es: 'Aplicación web full-stack para registros clínicos desarrollada con Go (net/http, html/template) y SQLite en modo WAL. Integra consultas parametrizadas, RBAC, tokens CSRF, hashing bcrypt y control de intentos.',
     },
     technologies: ['Go 1.26', 'net/http', 'html/template', 'modernc.org/sqlite', 'SQLite WAL', 'bcrypt (cost 12)', 'sync.Mutex', 'RBAC'],
     visualType: 'srms-security',
     githubUrl: 'https://github.com/villanuevapablo/SRMS-MEDICAL',
     liveDemoUrl: null,
     status: {
-      en: 'Completed • Assessed Security Engineering Build (2026)',
-      es: 'Completado • Proyecto Evaluado de Seguridad Web (2026)',
+      en: 'Completed • University Engineering Assessment (2026)',
+      es: 'Completado • Proyecto Universitario Evaluado (2026)',
     },
     caseStudy: {
       introduction: {
-        en: 'SRMS (City Health Clinic) is a server-rendered medical record management system engineered in Go without external web frameworks (Gin, Fiber, or ORMs). Packaged cleanly inside the repository as a Go module alongside schema.sql and six html/template views, it handles clinician and patient access while hardening every attack surface against OWASP Top 10 risks.',
-        es: 'SRMS (City Health Clinic) es un sistema de gestión de historiales médicos renderizado en servidor con Go puro, sin frameworks web externos ni ORMs. Incluye su módulo Go, schema.sql y seis plantillas html/template diseñadas aplicando mitigaciones concretas frente al OWASP Top 10.',
+        en: 'SRMS demonstrates clean full-stack systems engineering in Go without external web frameworks. It delivers server-rendered clinical record workflows backed by an indexed 4-table SQLite relational database with structured security boundaries and audit tracking.',
+        es: 'SRMS muestra un sistema full-stack construido directamente sobre la biblioteca estándar de Go y una base relacional SQLite en cuatro tablas, priorizando el diseño de datos y controles explícitos de seguridad.',
       },
       theChallenge: {
-        en: 'Handling protected clinical data invites multiple simultaneous attack vectors: SQL injection in lookup forms, cross-site scripting in medical notes, cross-site request forgery on record edits, Insecure Direct Object References (IDOR) across patient IDs, and credential stuffing / brute-force login attempts.',
-        es: 'Gestionar datos clínicos expone múltiples vectores críticos simultáneos: inyección SQL en búsquedas, XSS en notas médicas, CSRF en modificaciones, referencias directas inseguras a objetos (IDOR) entre pacientes y ataques de fuerza bruta sobre el login.',
+        en: 'Protecting multi-user record applications requires coordinated defenses against SQL injection, XSS, CSRF, broken access control between admins and regular users, and automated credential guessing.',
+        es: 'Gestionar historiales clínicos multiusuario requiere coordinar mitigaciones contra inyección SQL, XSS, CSRF, acceso indebido entre roles y fuerza bruta.',
       },
       theSolution: {
-        en: 'Built an explicit multi-layer defense architecture directly on net/http: server-side session tokens stored in SQLite with HttpOnly + SameSite=Strict cookies, mutex-protected one-time CSRF tokens (32 random bytes, 30-min TTL), dual brute-force mitigation (5 attempts/min IP sliding window + 5-failure 15-min DB account lock), regex field validators, and strict parameterized SQL queries with WAL concurrency.',
-        es: 'Implementé una defensa multicapa explícita sobre net/http: sesiones almacenadas en SQLite con cookies HttpOnly + SameSite=Strict, tokens CSRF de un solo uso protegidos por mutex, mitigación doble ante fuerza bruta (límite deslizante de 5 intentos/min por IP + bloqueo de cuenta de 15 min en BD), validadores regex y SQL parametrizado en modo WAL.',
+        en: 'Used pure Go net/http and modernc.org/sqlite with WAL mode enabled, parameter-bound SQL queries, mutex-guarded one-time CSRF tokens, HttpOnly/SameSiteStrict sessions, bcrypt cost-12 password storage, and account lockout thresholds.',
+        es: 'Utilicé net/http de Go y modernc.org/sqlite en modo WAL con consultas parametrizadas estrictas, tokens CSRF de un solo uso bajo sync.Mutex, cookies seguras, bcrypt y bloqueo por intentos fallidos.',
       },
       architecture: {
         summary: {
-          en: 'Compact four-table SQLite relational schema paired with Go server handlers, background expiry cleanup goroutine, and role-segmented views.',
-          es: 'Esquema relacional SQLite en cuatro tablas junto a controladores HTTP en Go, goroutine de limpieza periódica y vistas separadas por rol.',
+          en: 'Four-table SQLite schema coupled to typed Go handlers, server-rendered HTML templates, and background session expiration cleanup.',
+          es: 'Esquema relacional en cuatro tablas conectado a controladores Go tipados, plantillas html/template y limpieza automática de sesiones expiradas.',
         },
         modules: [
           {
             name: 'schema.sql',
-            role: { en: 'Defines users (admin | regular CHECK constraint, failed_attempts, locked_until), patient_records (audit columns), sessions, and login_attempts with 3 indexes.', es: 'Define las tablas users (roles admin | regular, contadores de bloqueo), patient_records (con auditoría), sessions y login_attempts con 3 índices.' },
+            role: { en: 'Users, patient_records, sessions, and login_attempts tables with B-tree indexes and audit timestamps.', es: 'Tablas users, patient_records, sessions y login_attempts con índices y columnas de auditoría.' },
           },
           {
             name: 'main.go',
-            role: { en: 'Initializes SQLite WAL + foreign_keys pragmas, seeds test accounts, manages CSRF/rate-limit mutex maps, and runs a 10-minute session/token cleanup goroutine.', es: 'Configura SQLite WAL y claves foráneas, gestiona mapas protegidos con sync.Mutex para CSRF/rate-limit y ejecuta una goroutine de limpieza cada 10 minutos.' },
+            role: { en: 'Initializes SQLite WAL + foreign keys, mutex-guarded rate limiters/CSRF state, and background expiration cleanup.', es: 'Inicializa SQLite WAL, sincronización de mapas por mutex y limpieza periódica de tokens.' },
           },
           {
             name: 'handlers.go',
-            role: { en: 'Enforces HTTP method guards, CSRF checks, IP rate-limiting, bcrypt cost-12 comparison, regex contact validation, and admin vs regular authorization scopes.', es: 'Valida método HTTP, token CSRF, límite por IP, bcrypt cost 12, validación regex y separación estricta de permisos admin/regular.' },
+            role: { en: 'Processes authenticated requests, validates inputs via regex, and isolates admin vs regular permissions.', es: 'Gestiona rutas HTTP autenticadas, valida formatos por regex y separa alcances admin y regular.' },
           },
           {
             name: 'templates/*.html',
-            role: { en: 'Six Go html/template views (login, dashboard, view_record, edit_record, admin_records, admin_edit_record) with automatic contextual XSS escaping.', es: 'Seis vistas html/template de Go con escape contextual automático contra XSS.' },
+            role: { en: 'Six Go html/template views benefiting from contextual auto-escaping against XSS.', es: 'Seis vistas html/template con escape contextual automático.' },
           },
         ],
         codeSnippet: {
@@ -441,167 +675,44 @@ y_train, y_test = y.iloc[:split_index], y.iloc[split_index:]`,
     bcryptCost        = 12
     rateLimitWindow   = 1 * time.Minute
     rateLimitMax      = 5
-    accountLockTime   = 15 * time.Minute
-    maxFailedLogins   = 5
 )`,
         },
       },
       engineeringDecisions: [
         {
-          decision: { en: 'Pure-Go modernc.org/sqlite + WAL Pragma over CGO Drivers', es: 'modernc.org/sqlite puro en Go + modo WAL frente a drivers CGO' },
-          rationale: { en: 'Eliminates C compiler toolchain friction across platforms while enabling Write-Ahead Logging (_pragma=journal_mode(WAL)) and enforced foreign keys cleanly in Go.', es: 'Evita dependencias de compilación C entre sistemas operativos manteniendo concurrencia de lectura/escritura mediante WAL y claves foráneas activas.' },
+          decision: { en: 'Standard Library Primitives Over Heavy Web Frameworks', es: 'Primitivas Estándar de Go frente a Frameworks Pesados' },
+          rationale: { en: 'Keeps every validation step, header flag, and database binding explicit and transparent to inspect.', es: 'Mantiene cada validación, cabecera y consulta completamente explícita y legible.' },
         },
         {
-          decision: { en: 'Zero Web Frameworks (Standard library net/http + html/template)', es: 'Sin frameworks web (Go estándar net/http + html/template)' },
-          rationale: { en: 'Using standard library primitives makes every security boundary (cookie attributes, CSRF consumption, SQL arguments, header execution) explicitly readable and auditable.', es: 'Trabajar sin frameworks hace visible y auditable cada frontera de seguridad: atributos de cookie, invalidación CSRF y consultas parametrizadas.' },
+          decision: { en: 'Pure-Go SQLite Driver with WAL Concurrency', es: 'Driver SQLite puro en Go con concurrencia WAL' },
+          rationale: { en: 'Simplifies cross-OS compilation without CGO while supporting concurrent session reads cleanly.', es: 'Facilita compilación sin dependencias C y mejora lecturas concurrentes de sesión.' },
         },
       ],
       challenges: {
         en: [
-          'Concurrent map access in Go HTTP handlers triggers fatal panics; mitigated by wrapping both csrfTokens and rateAttempts slices behind dedicated sync.Mutex locks.',
-          'Balancing IP-level rate limiting against targeted single-account attacks required combining an in-memory sliding IP window with persisted locked_until timestamps in SQLite.',
+          'Preventing concurrent map write panics across HTTP request goroutines using sync.Mutex protection around rate-limit and CSRF maps.',
+          'Combining in-memory IP throttling with persisted DB lockouts for consistent enforcement.',
         ],
         es: [
-          'El acceso concurrente a mapas desde goroutines HTTP en Go provoca panics; resuelto aislando csrfTokens y rateAttempts bajo sync.Mutex dedicados.',
-          'Combinar límite por IP en memoria con bloqueo persistido de cuenta en base de datos para frenar tanto ataques distribuidos como dirigidos a un usuario.',
+          'Evitar condiciones de carrera sobre mapas compartidos mediante sync.Mutex.',
+          'Coordinar limitación por IP en memoria con bloqueo persistente en base de datos.',
         ],
       },
       resultsAndLearnings: {
         results: {
           en: [
-            'Built an auditable Go web server implementing full auth, RBAC (\'admin\' vs \'regular\'), audit trails (last_updated_by/at), and defense against SQLi, XSS, CSRF, and brute-force logins.',
-            'Repository note: SRMS-MEDICAL root README follows a general template while the actual verified Go codebase resides inside the repository bundle (SRMS.zip).',
+            'Auditable Go + SQLite web application implementing end-to-end RBAC, audit tracking, and multi-layer defenses.',
           ],
           es: [
-            'Servidor Go completo con autenticación, RBAC (\'admin\' frente a \'regular\'), columnas de auditoría y mitigación verificada contra SQLi, XSS, CSRF y fuerza bruta.',
-            'Nota de repositorio: El README raíz sigue una plantilla general, mientras que la implementación real en Go reside completa dentro del paquete del repositorio.',
+            'Aplicación web Go + SQLite completa con control de roles, auditoría y mitigación frente a ataques comunes.',
           ],
         },
         limitations: {
           en: [
-            'Session cookie Secure flag defaults to false for local HTTP testing (localhost:8080) and must be flipped or placed behind a TLS terminator in production.',
-            'In-memory CSRF map does not share state across multiple horizontal server instances without externalizing token storage.',
+            'Session cookie Secure flag is set to false for local HTTP testing and requires TLS enablement in live production.',
           ],
           es: [
-            'El atributo Secure de la cookie figura a false para pruebas locales en HTTP (:8080) y debe activarse tras TLS en producción.',
-            'El almacenamiento de CSRF en memoria funciona en instancia única; escalar horizontalmente requeriría persistirlos en base de datos o caché compartida.',
-          ],
-        },
-      },
-    },
-  },
-  {
-    id: 'smart-file-organizer',
-    issueNumber: '03',
-    title: 'Smart File Organizer (Local AI Daemon)',
-    subtitle: {
-      en: 'Real-Time Python Watchdog Service & Deterministic Ollama Classification',
-      es: 'Servicio Reactivo en Python & Clasificación Local Determinista con Ollama',
-    },
-    category: 'automation',
-    categoryLabel: {
-      en: 'Process Automation & Local LLMs',
-      es: 'Automatización & LLMs Locales',
-    },
-    editorialVariant: 'pipeline-monograph',
-    year: '2026',
-    shortDescription: {
-      en: 'Local-first desktop utility and background service built with Python watchdog, pypdf, Tkinter, and Ollama REST API. Verifies file download stability before enforcing JSON classification schemas and collision-safe moves.',
-      es: 'Utilidad local de escritorio y servicio en segundo plano con Python watchdog, pypdf, Tkinter y la API REST de Ollama. Verifica estabilidad de descargas antes de clasificar con JSON estricto y manejo seguro de colisiones.',
-    },
-    technologies: ['Python 3.10+', 'watchdog', 'Ollama REST API', 'pypdf', 'JSON Schema', 'Tkinter / ttk', 'unittest'],
-    visualType: 'smart-organizer',
-    githubUrl: 'https://github.com/villanuevapablo/smart-file-organizer',
-    liveDemoUrl: null,
-    status: {
-      en: 'Completed • Unit Tested CLI + GUI Utility (2026)',
-      es: 'Completado • Utilidad CLI + GUI con Tests Unitarios (2026)',
-    },
-    caseStudy: {
-      introduction: {
-        en: 'Smart File Organizer watches active local folders (such as Windows Downloads) and automatically categorizes, renames, and moves incoming documents locally without sending private files to commercial cloud APIs. It ships with both a foreground/background CLI daemon and a native Tkinter desktop control panel.',
-        es: 'Smart File Organizer monitoriza carpetas locales activas (como Descargas) y clasifica, renombra y mueve documentos localmente sin enviar archivos privados a servicios en la nube. Incluye un modo daemon en consola y una interfaz de escritorio en Tkinter.',
-      },
-      theChallenge: {
-        en: 'Two practical systems bugs break naive file-watching scripts: first, browsers fire filesystem creation events on incomplete downloads (.crdownload, .part) or while holding active Windows write locks; second, local LLMs frequently return markdown chatter or hallucinate invalid path characters or wrong file extensions.',
-        es: 'Dos fallos prácticos rompen los scripts simples de vigilancia: primero, los navegadores disparan eventos antes de terminar descargas (.crdownload, .part) o mientras mantienen bloqueos de escritura; segundo, los LLMs locales suelen devolver texto fuera de esquema o caracteres inválidos para nombres de archivo.',
-      },
-      theSolution: {
-        en: 'Engineered a multi-stage guarded pipeline: extension and dotfile filtering, size-stability polling with explicit binary read-lock checks, 1,500-character multi-format extraction (plain text + first 2 PDF pages via pypdf + binary metadata fallback), structured Ollama API inference ("format": "json", temperature 0.1), regex filename sanitization, collision counters (_1, _2), and automatic fallback to "Otros" if Ollama is offline.',
-        es: 'Diseñé un pipeline protegido por etapas: filtrado de extensiones temporales, polling de estabilidad de tamaño con apertura de prueba de bloqueo, extracción multiformato limitada a 1.500 caracteres (texto plano + 2 primeras páginas PDF con pypdf + metadatos), consulta estructurada a Ollama ("format": "json", temperature 0.1), saneamiento regex, resolución de colisiones (_1, _2) y fallback automático a "Otros".',
-      },
-      architecture: {
-        summary: {
-          en: 'Six cleanly separated Python modules paired with a dedicated unittest suite mocking Ollama HTTP responses and verifying edge cases.',
-          es: 'Seis módulos Python desacoplados junto a una suite unittest que simula respuestas Ollama y verifica casos límite de sistema de archivos.',
-        },
-        modules: [
-          {
-            name: 'watcher.py',
-            role: { en: 'Watchdog FileSystemEventHandler with temporary-extension filters and _wait_until_file_stable lock verification loop.', es: 'Manejador watchdog con filtrado de temporales y bucle _wait_until_file_stable de verificación de bloqueos.' },
-          },
-          {
-            name: 'extractor.py',
-            role: { en: 'Extracts up to 1,500 UTF-8 characters from text files or first 2 pages of PDFs (pypdf), falling back to metadata for binaries/images.', es: 'Extrae hasta 1.500 caracteres en texto o las 2 primeras páginas de PDFs (pypdf), usando metadatos en binarios/imágenes.' },
-          },
-          {
-            name: 'ai_classifier.py',
-            role: { en: 'Constructs strict category system prompt, invokes local Ollama /api/generate with fallback to urllib if requests is absent, enforces YYYY_MM_DD_ formatting and extension lock.', es: 'Construye el prompt estricto por categorías, consulta Ollama local con fallback a urllib y garantiza formato fecha y extensión original.' },
-          },
-          {
-            name: 'file_manager.py & gui.py',
-            role: { en: 'Sanitizes OS forbidden characters (/:*?"<>|), resolves collisions (_1, _2), safely moves via shutil, and renders a live status table in Tkinter.', es: 'Sanea caracteres prohibidos del SO, resuelve colisiones, mueve de forma segura con shutil y muestra actividad en tiempo real en Tkinter.' },
-          },
-        ],
-        codeSnippet: {
-          filename: 'watcher.py',
-          language: 'python',
-          code: `if current_size == last_size and current_size > 0:
-    try:
-        with file_path.open("rb") as handle:
-            handle.read(1)
-        return True  # Stable size AND OS write lock released
-    except (PermissionError, OSError):
-        pass  # Browser still flushing download bytes`,
-        },
-      },
-      engineeringDecisions: [
-        {
-          decision: { en: 'Local Ollama Inference with Deterministic Fallback Over Cloud APIs', es: 'Inferencia Local en Ollama con Fallback Determinista frente a APIs Cloud' },
-          rationale: { en: 'Personal invoices, contracts, and CVs never leave the user\'s disk; if the local daemon is stopped, connection errors degrade gracefully into date-prefixed "Otros" sorting instead of crashing.', es: 'Facturas, contratos y CVs nunca salen del disco local; si Ollama no responde, los documentos pasan de forma segura a "Otros" con prefijo de fecha sin perder ningún archivo.' },
-        },
-        {
-          decision: { en: 'Hard Post-LLM Extension & Regex Path Validation', es: 'Validación Estricta de Extensión y Caracteres Post-LLM' },
-          rationale: { en: 'Even with low temperature (0.1) and JSON formatting, LLMs occasionally alter file suffixes or emit spaces/colons. _sanitize_and_validate_filename forcibly restores the authentic original extension.', es: 'Incluso con temperatura 0.1, un LLM puede cambiar una extensión o emitir signos inválidos. El validador impone la extensión original auténtica del fichero.' },
-        },
-      ],
-      challenges: {
-        en: [
-          'Asynchronous browser downloads on Windows trigger PermissionError during rapid watchdog creation callbacks; resolved via multi-attempt size polling and binary read probing.',
-          'Handling missing optional packages safely: ai_classifier falls back gracefully to Python standard library urllib.request if requests is not installed in a minimal environment.',
-        ],
-        es: [
-          'Las descargas en Windows generan PermissionError en el evento on_created inicial; resuelto combinando comprobación de tamaño estable y lectura de prueba.',
-          'Tolerancia ante ausencia de paquetes: si requests no está instalado, ai_classifier recurre automáticamente a urllib.request de la biblioteca estándar.',
-        ],
-      },
-      resultsAndLearnings: {
-        results: {
-          en: [
-            'Cleanly tested across tests/test_modules.py (filename sanitization, _1/_2 collision resolution, binary extraction, and mocked Ollama online/offline classification paths).',
-            'Zero-cost privacy-preserving local workflow supporting Finanzas_Facturas, Vehiculos_Mantenimiento, Universidad_Estudios, Trabajo_CV, Codigo_Scripts, and Otros.',
-          ],
-          es: [
-            'Cubierto por tests unitarios en tests/test_modules.py verificando saneamiento, colisiones, extracción binaria y rutas éxito/fallback ante Ollama.',
-            'Flujo 100% local y privado adaptado a categorías reales mediante daemon CLI e interfaz gráfica Tkinter.',
-          ],
-        },
-        limitations: {
-          en: [
-            'Scanned image-only PDFs without embedded text layers fall back to metadata classification since OCR (e.g., Tesseract) is intentionally omitted to keep dependencies lightweight.',
-          ],
-          es: [
-            'Los PDFs puramente escaneados como imagen sin texto embebido se clasifican mediante sus metadatos de archivo al no incluir OCR pesado.',
+            'Atributo Secure de cookie configurado para HTTP local; requiere activación tras HTTPS en producción.',
           ],
         },
       },
@@ -609,24 +720,24 @@ y_train, y_test = y.iloc[:split_index], y.iloc[split_index:]`,
   },
   {
     id: 'iot-edge-security',
-    issueNumber: '04',
+    projectNumber: '05',
     title: 'IoT Security System (Arduino UNO R4 WiFi)',
     subtitle: {
-      en: 'COM6017M Hardware Sensing, Edge Classification & Embedded HTTP Server',
-      es: 'Sistema Embebido COM6017M con Procesamiento Local y Servidor Web AJAX',
+      en: 'COM6017M On-Device Sensor Processing & Real-Time Embedded UI',
+      es: 'Procesamiento Local en Microcontrolador COM6017M e Interfaz Embebida',
     },
     category: 'iot',
     categoryLabel: {
-      en: 'Embedded C++ & Hardware',
-      es: 'C++ Embebido & Hardware',
+      en: 'Embedded C++ & Edge Computing',
+      es: 'C++ Embebido & Edge Computing',
     },
     editorialVariant: 'hardware-schematic',
     year: '2026',
     shortDescription: {
-      en: 'Autonomous physical perimeter detector programmed in C++ on Arduino UNO R4 WiFi (Renesas RA4M1 + ESP32-S3). Averages 3 HC-SR04 ultrasonic pings locally, classifies proximity into 3 security zones, drives an LED matrix, and hosts an AJAX dashboard.',
-      es: 'Sistema físico autónomo programado en C++ sobre Arduino UNO R4 WiFi. Promedia 3 pulsos ultrasónicos HC-SR04 localmente, clasifica 3 estados en la placa, controla la matriz LED y sirve un panel AJAX embebido.',
+      en: 'Autonomous C++ microcontroller system on Arduino UNO R4 WiFi that captures 3-sample averaged ultrasonic distance measurements, executes local noise filtering and threshold classification, drives a 12×8 LED matrix, and serves an embedded AJAX web monitor.',
+      es: 'Sistema físico autónomo en C++ sobre Arduino UNO R4 WiFi que promedia muestras ultrasónicas localmente, ejecuta filtrado y clasificación en tres estados, controla la matriz LED 12×8 y sirve un panel AJAX embebido.',
     },
-    technologies: ['Arduino UNO R4 WiFi', 'C++', 'WiFiS3', 'HC-SR04 Ultrasonic', 'Arduino LED Matrix', 'Embedded HTTP/JSON', 'AJAX Polling'],
+    technologies: ['Arduino UNO R4 WiFi', 'C++', 'WiFiS3', 'HC-SR04 Ultrasonic', 'LED Matrix', 'AJAX Polling'],
     visualType: 'iot-edge',
     githubUrl: 'https://github.com/villanuevapablo/IoT-Edge-AI-Security-System',
     liveDemoUrl: null,
@@ -640,34 +751,34 @@ y_train, y_test = y.iloc[:split_index], y.iloc[split_index:]`,
     },
     caseStudy: {
       introduction: {
-        en: 'Developed for the COM6017M Internet of Things module, this project eliminates external cloud MQTT brokers by running all distance sensing, moving-average signal denoising, threat-state classification, visual signaling, and web dashboard serving directly on an Arduino UNO R4 WiFi board.',
-        es: 'Desarrollado para el módulo COM6017M de Internet of Things, este sistema prescinde de servidores cloud externos ejecutando la lectura ultrasónica, filtrado de ruido, clasificación de estado, señalización física y servidor web directamente en un Arduino UNO R4 WiFi.',
+        en: 'Built for the COM6017M Internet of Things module, this prototype removes cloud latency dependencies by executing ultrasonic sampling, noise filtering, alert state classification, hardware LED signaling, and web telemetry directly on Arduino UNO R4 WiFi hardware.',
+        es: 'Desarrollado en la asignatura COM6017M, este dispositivo prescinde de servidores externos ejecutando captura ultrasónica, filtrado de ruido, clasificación local y servidor web directamente en Arduino UNO R4 WiFi.',
       },
       theChallenge: {
-        en: 'Raw HC-SR04 ultrasonic reflections often produce intermittent spike outliers, while serving an interactive monitoring UI from a constrained microcontroller risks memory fragmentation if unbounded logs accumulate.',
-        es: 'Las lecturas ultrasónicas HC-SR04 brutas sufren picos erróneos de señal, mientras que alojar un panel web en tiempo real desde un microcontrolador exige limitar el consumo de memoria RAM al registrar alertas.',
+        en: 'Ultrasonic pulses produce erratic outliers if read unaveraged, while an embedded web server on constrained SRAM requires strict buffer limits to prevent crashes during continuous operation.',
+        es: 'Las lecturas ultrasónicas simples presentan picos esporádicos y un servidor embebido con poca SRAM requiere limitar el tamaño de historial para no bloquear el microcontrolador.',
       },
       theSolution: {
-        en: 'Implemented a 3-sample valid-range ultrasonic filter (0 < cm < 400), deterministic 3-tier threshold classification (<20cm INTRUDER, 20–80cm WARNING, >80cm SECURE) coupled to traffic-light LEDs and 12x8 hex LED matrix bitmaps, plus an embedded WiFiServer listening on port 80 exposing /, /data (JSON), and /reset.',
-        es: 'Implementé un promedio de 3 lecturas válidas (0 < cm < 400), clasificación en tres estados (<20cm INTRUDER, 20–80cm WARNING, >80cm SECURE) reflejada en tres LEDs y la matriz LED integrada (icon_cross, icon_warn, icon_heart), junto a un servidor HTTP embebido con endpoints /, /data JSON y /reset.',
+        en: 'Averaged 3 consecutive valid pulseIn distance readings per cycle (0–400cm), mapped output to 3 states (<20cm INTRUDER, 20–80cm WARNING, >80cm SECURE) with matrix bitmaps, and capped stored logs at 1,000 characters served over lightweight GET /data AJAX JSON polling.',
+        es: 'Implementé un promedio de 3 lecturas válidas (0–400cm), clasificación en 3 estados (<20cm INTRUDER, 20–80cm WARNING, >80cm SECURE) sobre matriz LED y un buffer acotado a 1.000 caracteres servido mediante sondeo JSON GET /data.',
       },
       architecture: {
         summary: {
-          en: 'Single microcontroller firmware coordinating GPIO sensor timing, local deterministic classification, matrix bitmap rendering, and stateless JSON polling.',
-          es: 'Firmware autónomo que coordina pulsos GPIO, filtrado local, iconos hexadecimales en matriz LED y respuestas JSON por WiFi local.',
+          en: 'Single microcontroller sketch uniting GPIO pulse timing, deterministic state transitions, onboard LED matrix graphics, and local HTTP JSON responses.',
+          es: 'Firmware autónomo que unifica temporización GPIO, clasificación de estados, gráficos en matriz LED y servidor HTTP JSON local.',
         },
         modules: [
           {
             name: 'Ultrasonic Sampler (D3/D4)',
-            role: { en: 'Fires 10µs trigger pulses 3x per loop iteration, converts pulseIn echoes to cm, discards out-of-range noise (0..400cm), and averages valid readings.', es: 'Dispara pulsos de 10µs tres veces por ciclo, filtra ecos fuera de rango (0–400cm) y calcula la distancia media.' },
+            role: { en: 'Triggers 3 consecutive ultrasonic pulses and discards out-of-range timeouts.', es: 'Emite 3 pulsos ultrasónicos consecutivos descartando lecturas fuera de rango.' },
           },
           {
-            name: 'Rule Classifier & Matrix',
-            role: { en: 'Maps averaged distance to INTRUDER (<20cm), WARNING (20–80cm), or SECURE (>80cm) and renders 32-bit hex bitmaps onto the 12x8 onboard LED matrix.', es: 'Clasifica la distancia en INTRUDER, WARNING o SECURE, enciende el LED D5/D6/D7 correspondiente y carga bitmaps en la matriz LED.' },
+            name: 'Classifier & Matrix UI',
+            role: { en: 'Drives red/yellow/green pins and renders 32-bit hex icon frames across the 12×8 LED grid.', es: 'Controla los pines LED y carga bitmaps hexadecimales en la matriz 12×8.' },
           },
           {
-            name: 'Embedded HTTP /data & UI',
-            role: { en: 'WiFiServer(80) serves an embedded mobile-friendly dashboard polling /data every 1000ms and exposes /reset to flush stored logs.', es: 'WiFiServer en el puerto 80 sirviendo el panel AJAX con sondeo cada 1000ms a /data y limpieza en /reset.' },
+            name: 'Embedded HTTP Server',
+            role: { en: 'Handles /, /data JSON telemetry, and /reset event flushing on port 80.', es: 'Atiende rutas /, /data JSON y /reset directamente desde la placa en red local.' },
           },
         ],
         codeSnippet: {
@@ -690,163 +801,39 @@ y_train, y_test = y.iloc[:split_index], y.iloc[split_index:]`,
       },
       engineeringDecisions: [
         {
-          decision: { en: 'Bounded Event Log Buffer (1,000-char String Guard)', es: 'Límite Estricto de Historial en Memoria (Guardia de 1.000 caracteres)' },
-          rationale: { en: 'On constrained SRAM, unbounded log appending crashes the WiFi stack over long runtimes. Capping csvLogs at 1,000 characters keeps HTTP responses predictable.', es: 'Concatenar eventos sin límite agotaría la SRAM del microcontrolador; limitar el buffer a 1.000 caracteres mantiene estable el servidor.' },
+          decision: { en: 'Bounded 1,000-Char In-Memory Event Buffer', es: 'Buffer de Eventos Acotado a 1.000 Caracteres' },
+          rationale: { en: 'Protects limited microcontroller SRAM from heap exhaustion over long sessions.', es: 'Protege la memoria limitada de la placa frente a desbordamientos durante usos prolongados.' },
         },
         {
-          decision: { en: '1000ms AJAX JSON Polling (/data) Over Full-Page Reloads', es: 'Sondeo AJAX JSON (/data) cada 1s en lugar de recargas HTML' },
-          rationale: { en: 'Transmitting tiny ~80-byte JSON payloads reduces socket stall time on the ESP32-S3 co-processor and prevents visual UI flicker.', es: 'Enviar un JSON compacto reduce la carga sobre el módulo WiFi y actualiza la barra de distancia sin parpadeos.' },
+          decision: { en: 'JSON Telemetry Polling Instead of Full Page Reloads', es: 'Telemetría JSON en Lugar de Recarga Completa' },
+          rationale: { en: 'Tiny ~80-byte /data responses minimize WiFi socket blocking on embedded hardware.', es: 'Las respuestas ligeras en /data evitan recargas completas y parpadeos visuales.' },
         },
       ],
       challenges: {
         en: [
-          'JSON injection / broken payloads from HTML row fragments inside log responses were fixed by escaping double quotes and stripping newlines before serializing the /data response.',
-          'Handling noisy echoes that produce 0cm timeouts required falling back cleanly to validReadings tracking instead of falsely firing INTRUDER alerts.',
+          'Sanitized quotes and newlines inside HTML event snippets before embedding them inside GET /data JSON strings.',
+          'Filtered zero-cm sensor timeouts so noisy echoes never trigger spurious intrusion alerts.',
         ],
         es: [
-          'Escapar comillas y saltos de línea en las filas de eventos antes de enviarlas dentro del JSON de /data para evitar errores de parseo en fetch().',
-          'Evitar falsas alarmas de INTRUDER cuando el sensor retorna 0 por timeout descartando lecturas fuera del rango válido 0..400cm.',
+          'Escapado de comillas y saltos antes de serializar filas de historial en respuestas JSON.',
+          'Descarte de timeouts 0cm para evitar falsos avisos de intrusión.',
         ],
       },
       resultsAndLearnings: {
         results: {
           en: [
-            'Fully autonomous local WiFi alarm prototype requiring zero external internet connectivity after LAN association.',
-            'Sub-second physical LED & matrix feedback synchronized with a browser monitor usable on desktop and mobile.',
+            'Standalone local LAN hardware monitor synchronizing physical LEDs, matrix frames, and mobile/desktop browser views.',
           ],
           es: [
-            'Prototipo físico completamente autónomo en red local sin dependencia de nube externa.',
-            'Respuesta física simultánea en semáforo LED, matriz 12x8 y navegador móvil en tiempo real.',
+            'Monitor hardware autónomo en LAN local sincronizando LEDs físicos, matriz y navegador móvil.',
           ],
         },
         limitations: {
           en: [
-            'Event logs live purely in RAM and clear on device reset or when exceeding the 1,000-character safeguard; persistent SD card storage would be required for long-term auditing.',
-            'HTTP server operates unencrypted on local LAN as standard for lightweight embedded demos.',
+            'Logs remain in volatile RAM rather than persistent SD storage; designed for local demonstration without HTTPS.',
           ],
           es: [
-            'El historial reside en RAM (sin tarjeta SD), perdiéndose al reiniciar o al superar el límite de 1.000 caracteres.',
-            'Comunicación HTTP plana dentro de red local LAN adecuada al ámbito demostrativo embebido.',
-          ],
-        },
-      },
-    },
-  },
-  {
-    id: 'preflop-hero',
-    issueNumber: '05',
-    title: 'Preflop Hero: Hand History Parser & Analytics',
-    subtitle: {
-      en: 'Zero-Dependency Regex ETL Engine, SQLite Ledger & Client-Side Auditor',
-      es: 'Motor ETL Regex sin Dependencias, SQLite & Auditor de Estrategia',
-    },
-    category: 'data',
-    categoryLabel: {
-      en: 'Data Analytics & Parsing',
-      es: 'Analítica de Datos & Parsing',
-    },
-    editorialVariant: 'data-notebook',
-    year: '2026',
-    shortDescription: {
-      en: 'Dual-mode Python CLI/SQLite pipeline and standalone HTML analyzer that extracts structured preflop decisions from raw Winamax and 888poker hand histories, enforces idempotent ingestion, and benchmarks VPIP, PFR, and cold-call gap against 6-max targets.',
-      es: 'Pipeline dual Python/SQLite y aplicación web autónoma que extrae decisiones preflop desde historiales en bruto de Winamax y 888poker, evita duplicados con índice único y evalúa VPIP, PFR y brecha frente a referencias 6-max.',
-    },
-    technologies: ['Python 3.12 (Stdlib)', 'Regex Parsing', 'SQLite 3', 'HTML5 / SVG', 'Statistical Auditing'],
-    visualType: 'preflop-hero',
-    githubUrl: 'https://github.com/villanuevapablo/preflop-hero',
-    liveDemoUrl: null,
-    status: {
-      en: 'Completed • Python CLI + Standalone Web UI (2026)',
-      es: 'Completado • CLI Python + Interfaz Web Autónoma (2026)',
-    },
-    caseStudy: {
-      introduction: {
-        en: 'Preflop Hero turns unstructured raw text session logs exported by Winamax and 888poker into clean, queryable relational records. Built using zero external pip dependencies in Python alongside a standalone single-file HTML/JS analyzer (index.html), it audits three foundational 6-max strategy indicators: VPIP (Voluntarily Put $ in Pot), PFR (Preflop Raise), and the passive PFR/VPIP gap.',
-        es: 'Preflop Hero transforma archivos de texto en bruto exportados por Winamax y 888poker en registros relacionales auditables. Construido íntegramente con la biblioteca estándar de Python más un analizador web autónomo (index.html), mide VPIP, PFR y la brecha de llamadas pasivas frente a referencias teóricas 6-max.',
-      },
-      theChallenge: {
-        en: 'Every poker client uses distinct headers, card syntax, and street delimiters (e.g. Winamax "*** PRE-FLOP ***" vs 888poker "** Dealing down cards **"). Crucially, forced blinds and antes must not falsely inflate VPIP unless Hero makes a subsequent voluntary call, bet, or raise—and re-uploading overlapping session files cannot double-count hands.',
-        es: 'Cada sala utiliza cabeceras, notación de cartas y delimitadores propios (Winamax frente a 888poker). Además, las ciegas obligatorias no deben contabilizarse como VPIP voluntario, y reimportar archivos solapados nunca debe duplicar estadísticas.',
-      },
-      theSolution: {
-        en: 'Designed platform-specific compiled regular expressions isolating only the preflop block and matching Hero actions explicitly ("raises|calls|bets"). Normalized parsed outputs into SQLite with a composite UNIQUE(hand_id, platform) constraint catching IntegrityError safely for idempotent batch imports.',
-        es: 'Diseñé expresiones regulares compiladas específicas por plataforma que aíslan estrictamente la sección preflop y evalúan acciones voluntarias de Hero ("raises|calls|bets"). La persistencia en SQLite emplea UNIQUE(hand_id, platform) para ignorar duplicados de forma idempotente.',
-      },
-      architecture: {
-        summary: {
-          en: 'Four-module Python stdlib package coupled cleanly to a standalone zero-server HTML dashboard for browser-side parsing.',
-          es: 'Paquete Python de cuatro módulos en biblioteca estándar junto a un dashboard HTML independiente que procesa datos localmente en el navegador.',
-        },
-        modules: [
-          {
-            name: 'parser.py',
-            role: { en: 'Splits mixed-platform log streams, detects Winamax vs 888poker signatures, strips comma spacing in hole cards, and derives binary VPIP/PFR flags.', es: 'Segmenta lotes de manos, identifica plataforma, normaliza las cartas propias y evalúa flags binarios VPIP/PFR.' },
-          },
-          {
-            name: 'database.py',
-            role: { en: 'Context-managed SQLite interface managing the hand_statistics schema with composite UNIQUE(hand_id, platform) deduplication and SQL aggregate queries.', es: 'Gestor SQLite por contexto sobre hand_statistics con clave única compuesta y agregaciones SQL directas.' },
-          },
-          {
-            name: 'analyzer.py',
-            role: { en: 'Compares empirical VPIP (target 20–27%), PFR (17–23%), and gap (3–6 pp) to output structured diagnostic recommendations.', es: 'Compara métricas agregadas contra objetivos teóricos 6-max para generar diagnósticos concretos.' },
-          },
-          {
-            name: 'index.html',
-            role: { en: 'Standalone client-side JS implementation allowing drag-and-drop analysis with zero data leaving the user\'s browser.', es: 'Interfaz web autónoma para análisis drag-and-drop íntegramente en el navegador.' },
-          },
-        ],
-        codeSnippet: {
-          filename: 'database.py',
-          language: 'sql',
-          code: `CREATE TABLE IF NOT EXISTS hand_statistics (
-    id          INTEGER PRIMARY KEY AUTOINCREMENT,
-    hand_id     TEXT    NOT NULL,
-    platform    TEXT    NOT NULL,
-    hero_cards  TEXT,
-    vpip        INTEGER NOT NULL,
-    pfr         INTEGER NOT NULL,
-    created_at  TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    UNIQUE(hand_id, platform)
-);`,
-        },
-      },
-      engineeringDecisions: [
-        {
-          decision: { en: 'Database-Enforced Uniqueness (UNIQUE(hand_id, platform)) Over Application-Side Lookups', es: 'Unicidad en Base de Datos (UNIQUE(hand_id, platform)) frente a comprobaciones previas' },
-          rationale: { en: 'Letting SQLite reject duplicate keys cleanly via IntegrityError makes bulk re-ingestion atomic, fast, and simpler to maintain.', es: 'Delegar la deduplicación al motor relacional convierte las reimportaciones en operaciones idempotentes sin consultas SELECT previas.' },
-        },
-        {
-          decision: { en: 'Pure Python Stdlib + Companion Client-Side Web App', es: 'Biblioteca Estándar Python + Analizador Web Autónomo' },
-          rationale: { en: 'Requires zero pip install steps for quick CLI testing while giving non-technical users an immediate privacy-first browser interface.', es: 'Permite ejecutar el motor CLI en cualquier Python 3.10+ sin dependencias y analizar archivos directamente en el navegador.' },
-        },
-      ],
-      challenges: {
-        en: [
-          'Isolating preflop boundaries carefully when hands end early preflop (going straight from preflop actions to SUMMARY instead of FLOP), handled via non-greedy regex alternation.',
-          'Normalizing platform differences like comma-separated 888poker hole cards ("[ Qh, Qd ]") into consistent display strings.',
-        ],
-        es: [
-          'Delimitar correctamente las manos que terminan antes del flop (pasando directamente a SUMMARY), resuelto con alternancia regex no codiciosa.',
-          'Normalizar variaciones de formato en cartas de 888poker con comas y espacios extra.',
-        ],
-      },
-      resultsAndLearnings: {
-        results: {
-          en: [
-            'Clean dual-execution toolkit: SQLite-backed CLI pipeline plus interactive client-side SVG web analyzer.',
-            'Zero external dependencies and idempotent re-ingestion across multi-platform hand histories.',
-          ],
-          es: [
-            'Herramienta dual limpia: pipeline CLI sobre SQLite y analizador web cliente autónomo.',
-            'Cero dependencias externas y soporte idempotente entre múltiples historiales de salas.',
-          ],
-        },
-        limitations: {
-          en: [
-            'Currently focuses on preflop metrics (VPIP/PFR) and 6-max cash benchmarks for Winamax and 888poker formats; postflop streets and positional filtering (UTG/BTN/BB) remain natural next extensions.',
-          ],
-          es: [
-            'Centrado actualmente en métricas preflop (VPIP/PFR) para formatos Winamax y 888poker; el desglose posicional (UTG/BTN/BB) y postflop quedarían como ampliaciones futuras.',
+            'Registro volátil en RAM (sin tarjeta SD) pensado para entorno demostrativo en red local.',
           ],
         },
       },
@@ -854,165 +841,279 @@ y_train, y_test = y.iloc[:split_index], y.iloc[split_index:]`,
   },
 ];
 
+export const FOCUS_AREAS: FocusAreaItem[] = [
+  {
+    id: 'focus-ai-ml',
+    number: '01',
+    title: {
+      en: 'Artificial Intelligence & Machine Learning',
+      es: 'Inteligencia Artificial y Machine Learning',
+    },
+    description: {
+      en: 'Building end-to-end ML pipelines with chronological validation, evaluating regression and ensemble behavior objectively, and experimenting with structured local LLM workflows.',
+      es: 'Construcción de pipelines de machine learning con validación cronológica, evaluación objetiva de regresión y árboles, y experimentación con flujos estructurados sobre LLMs locales.',
+    },
+    focusPoints: {
+      en: [
+        'Time-series forecasting models (Linear Regression & Random Forest)',
+        'Chronological holdouts & 5-fold TimeSeriesSplit without data leakage',
+        'Local LLM classification using Ollama REST APIs and JSON schemas',
+        'On-device sensor noise filtering and threshold classification',
+      ],
+      es: [
+        'Modelos predictivos en series temporales (Regresión Lineal y Random Forest)',
+        'Validación cronológica estricta y pliegues TimeSeriesSplit sin data leakage',
+        'Clasificación local con modelos Ollama mediante API REST y esquemas JSON',
+        'Filtrado de señales y clasificación autónoma en dispositivos hardware',
+      ],
+    },
+    relatedProjects: [
+      { id: 'bitcoin-price-forecasting', label: '01 — Bitcoin Price Forecasting' },
+      { id: 'smart-file-organizer', label: '02 — Smart File Organizer' },
+      { id: 'iot-edge-security', label: '05 — IoT Security System' },
+    ],
+  },
+  {
+    id: 'focus-data-analytics',
+    number: '02',
+    title: {
+      en: 'Data Analytics & Applied Research',
+      es: 'Analítica de Datos e Investigación Aplicada',
+    },
+    description: {
+      en: 'Transforming unstructured logs and noisy market datasets into clean tabular schemas, meaningful engineered features, statistical summaries, and clear visual diagnostics.',
+      es: 'Transformación de registros sin estructurar y series de mercado en esquemas tabulares limpios, ingeniería de variables, indicadores estadísticos y visualizaciones diagnósticas.',
+    },
+    focusPoints: {
+      en: [
+        'Automated data collection, cleaning & preprocessing in Pandas/NumPy',
+        'Technical feature engineering (moving averages, rolling volatility, lags)',
+        'Multi-platform regex extraction pipelines persisted in SQLite',
+        'Diagnostic evaluation plots with Matplotlib, Seaborn, Plotly & Streamlit',
+      ],
+      es: [
+        'Captura automatizada, limpieza y preprocesamiento con Pandas y NumPy',
+        'Ingeniería de características (medias móviles, volatilidad móvil y retardos)',
+        'Motores regex multiplataforma con persistencia idempotente en SQLite',
+        'Visualización exploratoria y evaluación con Matplotlib, Seaborn, Plotly y Streamlit',
+      ],
+    },
+    relatedProjects: [
+      { id: 'bitcoin-price-forecasting', label: '01 — Bitcoin Price Forecasting' },
+      { id: 'preflop-hero', label: '03 — Preflop Hero Analytics' },
+    ],
+  },
+  {
+    id: 'focus-software-dev',
+    number: '03',
+    title: {
+      en: 'Software Development & Engineering',
+      es: 'Desarrollo e Ingeniería de Software',
+    },
+    description: {
+      en: 'Designing maintainable full-stack applications, relational database schemas, automated unit/integration tests, and dependable systems that support real-world data and user workflows.',
+      es: 'Diseño de aplicaciones full-stack mantenibles, bases de datos relacionales, pruebas unitarias y de integración, y sistemas fiables sobre los que operan los flujos de datos.',
+    },
+    focusPoints: {
+      en: [
+        'Production full-stack delivery & testing at Universidad Nebrija',
+        'Typed React & TypeScript interfaces with Safari iOS compatibility',
+        'Clean Go standard library systems & explicit relational schemas',
+        'Automated test verification using unittest and integration checks',
+      ],
+      es: [
+        'Desarrollo full-stack y pruebas en entorno productivo en Universidad Nebrija',
+        'Interfaces tipadas en React y TypeScript con compatibilidad móvil',
+        'Sistemas limpios en Go estándar y diseño relacional en SQLite/SQL',
+        'Verificación sistemática con pruebas unitarias e integración',
+      ],
+    },
+    relatedProjects: [
+      { id: 'srms-medical', label: '04 — Secure Record Management (SRMS)' },
+      { id: 'smart-file-organizer', label: '02 — Smart File Organizer' },
+    ],
+  },
+];
+
 export const TOOLKIT_CATEGORIES: ToolkitCategory[] = [
   {
-    id: 'software-development',
+    id: 'ai-ml',
     number: 'T.01',
     title: {
-      en: 'Software Development',
-      es: 'Desarrollo de Software',
+      en: 'Artificial Intelligence & Machine Learning',
+      es: 'Inteligencia Artificial y Machine Learning',
     },
     subtitle: {
-      en: 'Languages & application frameworks across production and project delivery',
-      es: 'Lenguajes y frameworks aplicados en producción y proyectos completos',
+      en: 'Supervised modeling, validation methodology & local LLM workflows backed by project code',
+      es: 'Modelado supervisado, validación temporal y experimentación con LLMs locales respaldados por código',
     },
     skills: [
       {
-        name: 'Go (Golang)',
-        evidence: { en: 'SRMS-MEDICAL — net/http server, auth middleware, html/template', es: 'SRMS-MEDICAL — servidor net/http, middleware de seguridad y plantillas' },
-        tier: 'primary',
+        name: 'Scikit-learn & Machine Learning',
+        evidence: { en: 'BTC Forecasting TFG — training, splitting & metric evaluation', es: 'TFG Bitcoin — entrenamiento, validación y evaluación de error' },
+        tier: 'practical',
       },
       {
-        name: 'Python',
-        evidence: { en: '3 repositories — ML pipeline, watchdog daemon, regex/SQLite CLI', es: '3 repositorios — pipeline ML, servicio watchdog y motor regex/SQLite' },
-        tier: 'primary',
+        name: 'Regression & Random Forest',
+        evidence: { en: 'Out-of-sample benchmarking of LinearRegression vs RandomForestRegressor', es: 'Comparativa real LinearRegression frente a RandomForestRegressor' },
+        tier: 'practical',
       },
       {
-        name: 'TypeScript & JavaScript',
-        evidence: { en: 'Interactive web UIs, React state systems & client-side parsers', es: 'Interfaces web tipadas, gestión de estado y analizadores cliente' },
-        tier: 'primary',
+        name: 'Time Series Validation (TimeSeriesSplit)',
+        evidence: { en: '5-fold chronological walk-forward validation preventing leakage', es: 'Validación cronológica en 5 pliegues evitando filtración futura' },
+        tier: 'practical',
       },
       {
-        name: 'React',
-        evidence: { en: 'Component architecture, custom routing & accessible interactive views', es: 'Arquitectura de componentes, vistas editoriales y accesibilidad' },
-        tier: 'primary',
+        name: 'Model Evaluation (MAE, RMSE, R²)',
+        evidence: { en: 'Residual distributions & out-of-sample diagnostic comparisons', es: 'Análisis de residuos y comparativas métricas out-of-sample' },
+        tier: 'practical',
       },
       {
-        name: 'Java',
-        evidence: { en: 'DAM curriculum — OOP, architecture & application delivery', es: 'Formación DAM — POO, arquitectura y aplicaciones multiplataforma' },
-        tier: 'primary',
+        name: 'Local LLMs (Ollama + JSON Schema)',
+        evidence: { en: 'Smart File Organizer — structured document classification at temp=0.1', es: 'Smart File Organizer — clasificación documental estructurada local' },
+        tier: 'practical',
       },
       {
-        name: 'C++ (Embedded)',
-        evidence: { en: 'IoT Security System — Arduino UNO R4 WiFi firmware', es: 'Sistema IoT — firmware C++ en microcontrolador Arduino UNO R4 WiFi' },
-        tier: 'primary',
-      },
-      {
-        name: 'Spring Boot / Angular / Svelte',
-        evidence: { en: 'Foundational & CV coursework exposure (secondary to core stack)', es: 'Base formativa y práctica académica en CV (complementario al stack principal)' },
-        tier: 'academic',
+        name: 'Applied ML & Deepening AI Foundations',
+        evidence: { en: 'Active career focus — exploring advanced analytics & ML workflows', es: 'Foco actual — profundizando en flujos de ML y analítica avanzada' },
+        tier: 'interest',
       },
     ],
   },
   {
-    id: 'backend-data',
+    id: 'data-analytics',
     number: 'T.02',
     title: {
-      en: 'Backend & Data',
-      es: 'Backend y Datos',
+      en: 'Data Analytics & Data Processing',
+      es: 'Analítica y Procesamiento de Datos',
     },
     subtitle: {
-      en: 'APIs, persistence modeling, security controls & relational querying',
-      es: 'APIs, persistencia relacional, controles de seguridad y modelado de datos',
+      en: 'Data collection, cleaning, feature pipelines, statistical checks & exploratory visual analytics',
+      es: 'Captura, limpieza, ingeniería de características, estadística y visualización exploratoria',
     },
     skills: [
       {
-        name: 'REST API Design & Integration',
-        evidence: { en: 'Universidad Nebrija integrations, Ollama REST & Telegram webhooks/polling', es: 'Integraciones en Universidad Nebrija, API Ollama y bot de Telegram' },
-        tier: 'primary',
+        name: 'Python (Data & Automation)',
+        evidence: { en: '3 complete repositories — ML pipelines, watchdog ETL & regex CLI', es: '3 repositorios propios — ML, automatización documental y ETL regex' },
+        tier: 'practical',
       },
       {
-        name: 'SQLite (WAL & Indexed Schemas)',
-        evidence: { en: 'SRMS-MEDICAL (4-table schema) & Preflop Hero (unique deduplication)', es: 'SRMS-MEDICAL (esquema de 4 tablas) y Preflop Hero (deduplicación única)' },
-        tier: 'primary',
+        name: 'Pandas & NumPy',
+        evidence: { en: 'OHLCV preprocessing, MultiIndex normalization & NaN cleaning', es: 'Preprocesamiento OHLCV, normalización y limpieza de nulos' },
+        tier: 'practical',
       },
       {
-        name: 'MySQL, PostgreSQL & JDBC',
-        evidence: { en: 'Relational schema design and transactional persistence foundations', es: 'Diseño relacional y persistencia transaccional en formación técnica' },
-        tier: 'primary',
+        name: 'Feature Engineering',
+        evidence: { en: 'Moving averages (SMA 7/30), 14-day rolling volatility & lag transformations', es: 'Medias móviles (SMA 7/30), volatilidad móvil 14d y variables retardadas' },
+        tier: 'practical',
       },
       {
-        name: 'Auth & Security Primitives',
-        evidence: { en: 'bcrypt (cost 12), one-time CSRF tokens, HttpOnly cookies, IP rate limits', es: 'bcrypt (coste 12), tokens CSRF de un uso, cookies HttpOnly y límite por IP' },
-        tier: 'primary',
+        name: 'Data Cleaning & Regex ETL',
+        evidence: { en: 'Preflop Hero & Smart File Organizer — text/PDF extraction (pypdf)', es: 'Preflop Hero y File Organizer — parsing regex y extracción pypdf' },
+        tier: 'practical',
       },
       {
-        name: 'Firebase',
-        evidence: { en: 'Academic / CV cloud database & hosting exposure', es: 'Uso en entorno académico / base de datos cloud reflejada en CV' },
-        tier: 'academic',
-      },
-    ],
-  },
-  {
-    id: 'tools-testing',
-    number: 'T.03',
-    title: {
-      en: 'Tools & Engineering Practice',
-      es: 'Herramientas y Calidad',
-    },
-    subtitle: {
-      en: 'Version control, verification workflows, OS environments & deployment',
-      es: 'Control de versiones, verificación con pruebas, sistemas y despliegue',
-    },
-    skills: [
-      {
-        name: 'Git & GitHub',
-        evidence: { en: 'Team delivery at Universidad Nebrija & 6 public repositories', es: 'Flujos de equipo en Universidad Nebrija y 6 repositorios públicos' },
-        tier: 'primary',
-      },
-      {
-        name: 'Unit & Integration Testing',
-        evidence: { en: 'Production QA at Nebrija + Python unittest suites (mocking Ollama APIs)', es: 'Pruebas en producción en Nebrija y suites unittest con mocks' },
-        tier: 'primary',
-      },
-      {
-        name: 'Linux CLI & Windows PowerShell',
-        evidence: { en: 'Daemon scripting, systemd/Task Scheduler deployment docs & debugging', es: 'Automatización de servicios, consola Linux y depuración de procesos' },
-        tier: 'primary',
-      },
-      {
-        name: 'Vite, Tailwind CSS & Vercel',
-        evidence: { en: 'Production SPA builds, Safari compatibility targets & automated deployments', es: 'Builds SPA optimizados, compatibilidad Safari iOS y despliegue continuo' },
-        tier: 'primary',
-      },
-    ],
-  },
-  {
-    id: 'ai-data-experiments',
-    number: 'T.04',
-    title: {
-      en: 'AI & Data Experiments',
-      es: 'IA y Experimentos de Datos',
-    },
-    subtitle: {
-      en: 'Applied areas of interest backed by working pipelines and hardware experiments',
-      es: 'Áreas de interés aplicadas respaldadas por pipelines y prototipos reales',
-    },
-    skills: [
-      {
-        name: 'Scikit-learn & Time-Series Validation',
-        evidence: { en: 'Linear Regression & Random Forest tested under 5-fold TimeSeriesSplit', es: 'Regresión Lineal y Random Forest evaluados bajo TimeSeriesSplit' },
-        tier: 'primary',
-      },
-      {
-        name: 'Pandas, NumPy & Feature Engineering',
-        evidence: { en: 'Rolling windows (SMA 7/30, Volatility 14) & financial lag transforms', es: 'Ventanas móviles (SMA 7/30, Volatilidad 14) y variables retardadas' },
-        tier: 'primary',
-      },
-      {
-        name: 'Local LLMs (Ollama REST + JSON Mode)',
-        evidence: { en: 'Structured document classification with deterministic schema sanitization', es: 'Clasificación documental estructurada con saneamiento determinista' },
-        tier: 'primary',
+        name: 'Statistical Analysis',
+        evidence: { en: 'Correlation matrices, residuals & behavioral metrics (VPIP, PFR)', es: 'Matrices de correlación, análisis residual y métricas VPIP/PFR' },
+        tier: 'practical',
       },
       {
         name: 'Matplotlib, Seaborn, Plotly & Streamlit',
-        evidence: { en: '7 diagnostic research plots & multi-page interactive evaluation UI', es: '7 gráficos diagnósticos de investigación y panel interactivo' },
-        tier: 'primary',
+        evidence: { en: '7 automated research plots + interactive BTC analytical dashboard', es: '7 gráficos analíticos automatizados y panel interactivo Streamlit' },
+        tier: 'practical',
+      },
+    ],
+  },
+  {
+    id: 'software-engineering',
+    number: 'T.03',
+    title: {
+      en: 'Software Engineering & Development',
+      es: 'Ingeniería y Desarrollo de Software',
+    },
+    subtitle: {
+      en: 'Core languages, full-stack web architecture & coursework technologies separated honestly',
+      es: 'Lenguajes, desarrollo full-stack y tecnologías académicas diferenciadas por nivel de uso',
+    },
+    skills: [
+      {
+        name: 'TypeScript / JavaScript & React',
+        evidence: { en: 'Portfolio web architecture, state routing & responsive interactive UIs', es: 'Arquitectura web tipada, enrutado SPA e interfaces responsivas' },
+        tier: 'practical',
       },
       {
-        name: 'Edge Signal Processing (Arduino UNO R4)',
-        evidence: { en: 'Local sensor denoising and autonomous rule-based perimeter alerts', es: 'Filtrado de señal en dispositivo y clasificación local autónoma' },
-        tier: 'primary',
+        name: 'Go (Golang)',
+        evidence: { en: 'SRMS-MEDICAL — net/http server, middleware & html/template views', es: 'SRMS-MEDICAL — servidor web net/http y plantillas HTML' },
+        tier: 'practical',
+      },
+      {
+        name: 'C++ (Embedded)',
+        evidence: { en: 'IoT Security System — Arduino UNO R4 WiFi ultrasonic firmware', es: 'Sistema IoT — firmware C++ en placa Arduino UNO R4 WiFi' },
+        tier: 'practical',
+      },
+      {
+        name: 'Full-Stack & Software Testing',
+        evidence: { en: 'Universidad Nebrija (Apr–Jun 2025) & unittest suites in Python', es: 'Universidad Nebrija (abr–jun 2025) y pruebas unitarias/integración' },
+        tier: 'practical',
+      },
+      {
+        name: 'REST API Integration (Foundational)',
+        evidence: { en: 'External service integrations at Nebrija, yfinance & Ollama REST calls', es: 'Integraciones externas en Nebrija, llamadas REST a Ollama/yfinance' },
+        tier: 'practical',
+      },
+      {
+        name: 'Java (OOP & Architecture)',
+        evidence: { en: 'DAM (2023–2025) core curriculum — OOP, JDBC & client apps', es: 'Troncal en DAM (2023–2025) — POO, diseño y JDBC' },
+        tier: 'academic',
+      },
+      {
+        name: 'Spring Boot / Angular / Svelte',
+        evidence: { en: 'Academic / CV coursework foundations (studied prior to AI/Python focus)', es: 'Base formativa y práctica académica en CV' },
+        tier: 'academic',
+      },
+    ],
+  },
+  {
+    id: 'databases-tools',
+    number: 'T.04',
+    title: {
+      en: 'Databases, Tools & Infrastructure',
+      es: 'Bases de Datos, Herramientas e Infraestructura',
+    },
+    subtitle: {
+      en: 'Relational schemas, version control, Linux environments & deployment workflows',
+      es: 'Bases relacionales, control de versiones Git, consola Linux y despliegue continuo',
+    },
+    skills: [
+      {
+        name: 'SQLite (Indexed Schemas & WAL)',
+        evidence: { en: 'Used across Preflop Hero (UNIQUE deduplication) & SRMS (4 tables)', es: 'Usado en Preflop Hero (clave única) y SRMS (4 tablas WAL)' },
+        tier: 'practical',
+      },
+      {
+        name: 'MySQL, PostgreSQL & JDBC',
+        evidence: { en: 'Relational modeling & SQL querying during DAM (2023–2025)', es: 'Modelado relacional y consultas SQL en formación DAM (2023–2025)' },
+        tier: 'academic',
+      },
+      {
+        name: 'Firebase',
+        evidence: { en: 'Cloud persistence tooling covered in academic CV training', es: 'Base de datos cloud vista en etapa formativa y CV' },
+        tier: 'academic',
+      },
+      {
+        name: 'Git & GitHub',
+        evidence: { en: 'Team version control at Nebrija + 6 verified public repositories', es: 'Flujos de equipo en Nebrija y 6 repositorios públicos verificables' },
+        tier: 'practical',
+      },
+      {
+        name: 'Linux CLI & Development Tooling',
+        evidence: { en: 'Command-line workflows, environments & service configuration', es: 'Consola Linux, entornos virtuales y configuración de servicios' },
+        tier: 'practical',
+      },
+      {
+        name: 'Vite, Tailwind CSS & Vercel',
+        evidence: { en: 'SPA production bundling, responsive verification & continuous hosting', es: 'Empaquetado SPA, verificación móvil Safari y despliegue en Vercel' },
+        tier: 'practical',
       },
     ],
   },
@@ -1020,95 +1121,88 @@ export const TOOLKIT_CATEGORIES: ToolkitCategory[] = [
 
 export const UI_COPY = {
   nav: {
-    index: { en: '01 / INDEX', es: '01 / PORTADA' },
-    work: { en: '02 / SELECTED WORK', es: '02 / PROYECTOS' },
-    notes: { en: '03 / NOTES', es: '03 / NOTAS' },
+    overview: { en: '01 / OVERVIEW', es: '01 / INICIO' },
+    work: { en: '02 / PROJECTS', es: '02 / PROYECTOS' },
+    interests: { en: '03 / FOCUS AREAS', es: '03 / ÁREAS DE INTERÉS' },
     profile: { en: '04 / PROFILE', es: '04 / PERFIL' },
     contact: { en: '05 / CONTACT', es: '05 / CONTACTO' },
   },
   cover: {
-    editionTag: { en: 'ISSUE 01 — ENGINEERING JOURNAL', es: 'EDICIÓN 01 — DIARIO DE INGENIERÍA' },
-    locationMeta: { en: 'MADRID, SPAIN · UTC+1', es: 'MADRID, ESPAÑA · UTC+1' },
-    credentialMeta: { en: 'BSC (HONS) FIRST-CLASS HONOURS', es: 'BSC (HONS) FIRST-CLASS HONOURS' },
-    interestHeading: { en: 'AREAS OF FOCUS & INTEREST', es: 'ÁREAS DE TRABAJO E INTERÉS' },
-    portraitCaption: { en: 'FIG. 00 — PABLO VILLANUEVA PICAZO / AUTHOR EDITION', es: 'FIG. 00 — PABLO VILLANUEVA PICAZO / EDICIÓN DE AUTOR' },
-    leadDispatchLabel: { en: 'LEAD MONOGRAPH IN THIS ISSUE', es: 'MONOGRAFÍA DESTACADA' },
-    readSelectedWork: { en: 'Read Selected Work', es: 'Explorar Proyectos' },
+    topTag: { en: 'MADRID, SPAIN · SOFTWARE · AI · DATA', es: 'MADRID, ESPAÑA · SOFTWARE · IA · DATOS' },
+    locationMeta: { en: 'YORK ST JOHN (BSC HONS) · NEBRIJA (DAM)', es: 'YORK ST JOHN (BSC HONS) · NEBRIJA (DAM)' },
+    credentialMeta: { en: 'FIRST-CLASS HONOURS (9/10)', es: 'FIRST-CLASS HONOURS (9/10)' },
+    interestHeading: { en: 'PRIMARY FOCUS & INTERESTS (PRIORITY ORDER)', es: 'ÁREAS DE INTERÉS PRINCIPALES (ORDEN DE PRIORIDAD)' },
+    portraitCaption: { en: 'AUTHOR · PABLO VILLANUEVA', es: 'AUTOR · PABLO VILLANUEVA' },
+    featuredBoxLabel: { en: 'FEATURED AI & DATA WORK', es: 'PROYECTO DESTACADO EN IA Y DATOS' },
+    readSelectedWork: { en: 'View Projects', es: 'Ver Proyectos' },
     openCv: { en: 'Download CV (EN / ES)', es: 'Descargar CV (ES / EN)' },
   },
   selectedWork: {
     sectionKicker: { en: '02 // SELECTED WORK & TECHNICAL CASE STUDIES', es: '02 // PROYECTOS SELECCIONADOS Y CASOS DE ESTUDIO' },
-    sectionTitle: { en: 'Selected Engineering Monographs', es: 'Monografías de Ingeniería Seleccionadas' },
+    sectionTitle: { en: 'Projects & Technical Case Studies', es: 'Proyectos y Casos de Estudio Técnicos' },
     sectionSubtitle: {
-      en: 'Five self-contained projects across machine learning, framework-free Go security, Python automation, embedded systems, and data parsing. Select any monograph for full architecture, code notes, and limitations.',
-      es: 'Cinco proyectos verificables en machine learning, seguridad backend en Go puro, automatización en Python, sistemas embebidos y parsing de datos. Selecciona cualquier monografía para leer su arquitectura completa.',
+      en: 'Five self-contained projects across machine learning, local AI, data analytics, software systems, and embedded hardware. Select any project for detailed pipeline breakdowns and code.',
+      es: 'Cinco proyectos propios en machine learning, IA local, analítica de datos, sistemas web y hardware embebido. Abre cualquier proyecto para ver su arquitectura, decisiones técnicas y código.',
     },
-    readCaseStudy: { en: 'Open Full Case Study', es: 'Abrir Caso de Estudio' },
+    readCaseStudy: { en: 'View Case Study', es: 'Ver Caso de Estudio' },
     viewRepo: { en: 'Source Code on GitHub', es: 'Código en GitHub' },
-    filterAll: { en: 'All Monographs (05)', es: 'Todas (05)' },
-    filterMl: { en: 'Machine Learning', es: 'Machine Learning' },
-    filterBackend: { en: 'Go & Security', es: 'Go y Seguridad' },
-    filterAutomation: { en: 'Local AI & Python', es: 'IA Local y Python' },
-    filterIot: { en: 'Embedded IoT', es: 'IoT Embebido' },
-    filterData: { en: 'Data Analytics', es: 'Analítica de Datos' },
+    filterAll: { en: 'All Projects (05)', es: 'Todos (05)' },
+    filterAiMl: { en: 'AI & ML (02)', es: 'IA y ML (02)' },
+    filterData: { en: 'Data Analytics (01)', es: 'Analítica de Datos (01)' },
+    filterSoftware: { en: 'Software & Systems (01)', es: 'Software y Sistemas (01)' },
+    filterIot: { en: 'Embedded IoT (01)', es: 'IoT Embebido (01)' },
   },
   caseStudyChapters: {
-    backToIndex: { en: 'Back to Selected Work', es: 'Volver al Índice de Proyectos' },
+    backToIndex: { en: 'Back to Projects', es: 'Volver a Proyectos' },
     c01: { en: '01 — INTRODUCTION', es: '01 — INTRODUCCIÓN' },
     c02: { en: '02 — THE CHALLENGE', es: '02 — EL DESAFÍO' },
     c03: { en: '03 — THE SOLUTION', es: '03 — LA SOLUCIÓN' },
     c04: { en: '04 — ARCHITECTURE', es: '04 — ARQUITECTURA' },
     c05: { en: '05 — ENGINEERING DECISIONS', es: '05 — DECISIONES TÉCNICAS' },
-    c06: { en: '06 — CHALLENGES & DEBUGGING', es: '06 — RETO Y DEPURACIÓN' },
+    c06: { en: '06 — CHALLENGES & DEBUGGING', es: '06 — RETOS Y DEPURACIÓN' },
     c07: { en: '07 — RESULTS & LIMITATIONS', es: '07 — RESULTADOS Y LÍMITES' },
     c08: { en: '08 — SOURCE CODE', es: '08 — CÓDIGO FUENTE' },
     achievedLabel: { en: 'Verified Outcomes', es: 'Resultados Comprobados' },
     limitationsLabel: { en: 'Known Boundaries & Limitations', es: 'Límites Técnicos y Alcance' },
-    prevStory: { en: 'Previous Monograph', es: 'Monografía Anterior' },
-    nextStory: { en: 'Next Monograph', es: 'Siguiente Monografía' },
+    prevStory: { en: 'Previous Project', es: 'Proyecto Anterior' },
+    nextStory: { en: 'Next Project', es: 'Siguiente Proyecto' },
   },
-  notes: {
-    sectionKicker: { en: '03 // FIELD DISPATCHES & DEBUGGING LOG', es: '03 // NOTAS DE INGENIERÍA Y DEPURACIÓN' },
-    sectionTitle: { en: 'Engineering Notes', es: 'Notas de Ingeniería' },
+  focusAreas: {
+    sectionKicker: { en: '03 // AREAS OF INTEREST', es: '03 // ÁREAS DE INTERÉS' },
+    sectionTitle: { en: 'Where My Work Concentrates', es: 'Áreas de Interés y Aplicación Técnica' },
     sectionSubtitle: {
-      en: 'Concrete implementation findings, bugs resolved, and architectural lessons documented directly from my repositories. Future topics remain openly flagged until verified by real code.',
-      es: 'Hallazgos técnicos reales, fallos depurados y decisiones documentadas directamente sobre mis repositorios. Los temas futuros se dejan indicados sin inventar artículos.',
+      en: 'Connecting formal software engineering training with hands-on machine learning workflows, data pipelines, and applied automation.',
+      es: 'Combinando mi base académica en ingeniería de software con flujos aplicados de machine learning, pipelines de datos y automatización práctica.',
     },
-    readNote: { en: 'Read Technical Note', es: 'Leer Nota Técnica' },
-    backToNotes: { en: 'Back to Engineering Notes', es: 'Volver a Notas de Ingeniería' },
-    learnedHeading: { en: 'Key Engineering Takeaway', es: 'Aprendizaje Clave' },
-    relatedProjectHeading: { en: 'Verified in Project', es: 'Verificado en el Proyecto' },
-    queuedHeading: { en: 'EDITORIAL LEDGER — UPCOMING / QUEUED TOPICS (NOT YET WRITTEN)', es: 'ARCHIVO EDITORIAL — TEMAS PRÓXIMOS PENDIENTES DE ESCRITURA' },
-    queuedNote: {
-      en: 'Only verified notes grounded in real codebase experience are published above. Additional entries will be added as new systems are built and tested.',
-      es: 'Aquí únicamente se publican notas basadas en código real ya escrito y depurado. El catálogo crecerá con nuevos desarrollos verificados.',
-    },
+    relatedWorkLabel: { en: 'Backed by Projects', es: 'Respaldado por Proyectos' },
   },
   profile: {
-    sectionKicker: { en: '04 // AUTHOR DOSSIER, EXPERIENCE, EDUCATION & TOOLKIT', es: '04 // PERFIL, EXPERIENCIA, EDUCACIÓN Y HERRAMIENTAS' },
-    sectionTitle: { en: 'Engineering Background & Toolkit', es: 'Trayectoria Técnica y Herramientas' },
-    narrativeHeading: { en: 'Background & Engineering Narrative', es: 'Trayectoria y Enfoque' },
-    approachHeading: { en: 'Problem-Solving Approach', es: 'Metodología de Resolución' },
-    experienceHeading: { en: 'Industry Experience', es: 'Experiencia Profesional' },
-    educationHeading: { en: 'Academic Credentials', es: 'Formación Académica' },
-    toolkitHeading: { en: 'Technical Toolkit — Categorized Index', es: 'Inventario Técnico — Índice Estructurado' },
-    primaryBadge: { en: 'Core Stack / Built Projects', es: 'Uso Principal / Proyectos' },
-    academicBadge: { en: 'Academic / Secondary Exposure', es: 'Exposición Académica / CV' },
+    sectionKicker: { en: '04 // PROFILE, EXPERIENCE, EDUCATION & TOOLKIT', es: '04 // PERFIL, EXPERIENCIA, EDUCACIÓN Y HERRAMIENTAS' },
+    sectionTitle: { en: 'Background & Technical Toolkit', es: 'Trayectoria y Competencias Técnicas' },
+    narrativeHeading: { en: 'Background & Career Focus', es: 'Trayectoria y Dirección Profesional' },
+    approachHeading: { en: 'Engineering & Data Approach', es: 'Enfoque de Trabajo con Código y Datos' },
+    experienceHeading: { en: 'Work Experience', es: 'Experiencia Laboral' },
+    educationHeading: { en: 'Education & Qualifications', es: 'Educación y Titulaciones' },
+    toolkitHeading: { en: 'Technical Toolkit — Organized Around AI, Data & Software', es: 'Inventario Técnico — Organizado por IA, Datos y Software' },
+    tierLegendTitle: { en: 'EXPERIENCE LEVELS (TRANSPARENT CLASSIFICATION)', es: 'NIVELES DE EXPERIENCIA (CLASIFICACIÓN HONESTA)' },
+    practicalLabel: { en: 'A. Practical Experience (Built in projects or production)', es: 'A. Experiencia Práctica (Proyectos reales o entorno laboral)' },
+    academicLabel: { en: 'B. Academic Experience (University & DAM curriculum)', es: 'B. Experiencia Académica (Grado y formación DAM)' },
+    interestLabel: { en: 'C. Current Exploration (Active learning in AI & Data)', es: 'C. Intereses Actuales (Exploración activa en IA y Datos)' },
   },
   contact: {
-    sectionKicker: { en: '05 // BACK COVER & DIRECT CHANNELS', es: '05 // CONTRAPORTADA Y CONTACTO DIRECTO' },
+    sectionKicker: { en: '05 // CONTACT & DIRECT CHANNELS', es: '05 // CONTACTO Y CANALES DIRECTOS' },
     headline: {
-      en: 'Open to Junior Software Engineer & Full Stack Developer Roles.',
-      es: 'Disponible para puestos de Junior Software Engineer y Desarrollador Full Stack.',
+      en: 'Open to opportunities in Software, AI & Data.',
+      es: 'Abierto a oportunidades en Software, IA y Datos.',
     },
     subline: {
-      en: 'Based in Madrid, Spain with immediate availability for on-site, hybrid, or remote teams. Download either CV edition or reach out directly.',
-      es: 'Ubicado en Madrid, con disponibilidad inmediata para equipos presenciales, híbridos o remotos. Descarga el CV en español/inglés o escríbeme directamente.',
+      en: 'Interested in Junior AI / Machine Learning Engineer, Junior Data Analyst / Scientist, Junior Data Engineer, and Junior Software / Full Stack Developer roles. Available in Madrid, hybrid, or remote.',
+      es: 'Interesado en posiciones de Junior AI / ML Engineer, Junior Data Analyst / Scientist, Junior Data Engineer y Junior Software Engineer / Full Stack. Disponible en Madrid, híbrido o remoto.',
     },
     copyEmail: { en: 'Copy Address', es: 'Copiar Correo' },
     copied: { en: 'Copied to clipboard', es: 'Copiado al portapapeles' },
-    formHeading: { en: 'Compose Direct Mailto Dispatch', es: 'Redactar Mensaje Directo (Email)' },
+    formHeading: { en: 'Send a Direct Email', es: 'Enviar Mensaje Directo' },
     sendBtn: { en: 'Open in Email Client', es: 'Abrir en Cliente de Correo' },
-    cvDownloadLabel: { en: 'Official Curricula Vitae', es: 'Currículum Vitae Oficial' },
+    cvDownloadLabel: { en: 'Download Official CV (PDF)', es: 'Descargar CV Oficial (PDF)' },
   },
 };

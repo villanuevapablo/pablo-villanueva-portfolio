@@ -4,7 +4,7 @@ import { useLanguage } from '../context/LanguageContext';
 import { PERSONAL_INFO, SOCIAL_LINKS, UI_COPY } from '../data/portfolioData';
 
 interface NavbarProps {
-  currentView: 'home' | 'case-study' | 'note';
+  currentView: 'home' | 'case-study';
   activeSection: string;
   onNavigateSection: (sectionId: string) => void;
   onBackHome: () => void;
@@ -37,9 +37,9 @@ export const Navbar: React.FC<NavbarProps> = ({
   }, [currentView]);
 
   const navItems = [
-    { id: 'index', label: UI_COPY.nav.index[language] },
+    { id: 'overview', label: UI_COPY.nav.overview[language] },
     { id: 'work', label: UI_COPY.nav.work[language] },
-    { id: 'notes', label: UI_COPY.nav.notes[language] },
+    { id: 'interests', label: UI_COPY.nav.interests[language] },
     { id: 'profile', label: UI_COPY.nav.profile[language] },
     { id: 'contact', label: UI_COPY.nav.contact[language] },
   ];
@@ -52,7 +52,6 @@ export const Navbar: React.FC<NavbarProps> = ({
   return (
     <>
       <header className="sticky top-0 z-40 bg-[#F3F0E9]/95 backdrop-blur-sm border-b border-[#B9B7AF]">
-        {/* Restrained Top Publication Progress Hairline */}
         <div className="h-[2px] w-full bg-[#B9B7AF]/30 relative">
           <div
             className="h-full bg-[#D97745] transition-[width] duration-150 ease-out"
@@ -62,7 +61,6 @@ export const Navbar: React.FC<NavbarProps> = ({
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
           <div className="h-16 flex items-center justify-between gap-4">
-            {/* Publication Wordmark / Back to Index */}
             <div className="flex items-center gap-3 min-w-0">
               {currentView !== 'home' ? (
                 <button
@@ -70,41 +68,40 @@ export const Navbar: React.FC<NavbarProps> = ({
                   className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.14em] text-[#171918] hover:text-[#D97745] transition-colors py-1"
                 >
                   <ArrowLeft className="w-4 h-4" />
-                  <span>{language === 'en' ? 'Index' : 'Portada'}</span>
+                  <span>{language === 'en' ? 'Overview' : 'Inicio'}</span>
                 </button>
               ) : (
                 <button
-                  onClick={() => handleItemClick('index')}
+                  onClick={() => handleItemClick('overview')}
                   className="text-left group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#D97745]"
                   aria-label="Pablo Villanueva — Return to top"
                 >
-                  <span className="font-mono text-[11px] uppercase tracking-[0.16em] text-[#171918] font-medium block truncate">
-                    PV — {PERSONAL_INFO.publicationName}
+                  <span className="font-mono text-[11px] uppercase tracking-[0.14em] text-[#171918] font-semibold block truncate">
+                    {PERSONAL_INFO.name.toUpperCase()}
+                    <span className="text-[#5D605C] font-normal hidden sm:inline">
+                      {' · '}
+                      {PERSONAL_INFO.brandSubtitle}
+                    </span>
                   </span>
                 </button>
               )}
             </div>
 
-            {/* Desktop Signature Editorial Index */}
             <nav
-              aria-label="Primary Editorial Index"
+              aria-label="Primary Portfolio Navigation"
               className="hidden lg:flex items-center gap-1"
             >
               {navItems.map((item) => {
                 const isActive =
                   currentView === 'home'
                     ? activeSection === item.id
-                    : currentView === 'case-study'
-                      ? item.id === 'work'
-                      : currentView === 'note'
-                        ? item.id === 'notes'
-                        : false;
+                    : item.id === 'work';
 
                 return (
                   <button
                     key={item.id}
                     onClick={() => handleItemClick(item.id)}
-                    className={`px-3 py-2 font-mono text-[11px] tracking-[0.12em] transition-colors border-b-2 ${
+                    className={`px-3 py-2 font-mono text-[11px] tracking-[0.1em] transition-colors border-b-2 ${
                       isActive
                         ? 'text-[#171918] border-[#D97745] font-semibold'
                         : 'text-[#5D605C] border-transparent hover:text-[#171918] hover:border-[#B9B7AF]'
@@ -116,14 +113,13 @@ export const Navbar: React.FC<NavbarProps> = ({
               })}
             </nav>
 
-            {/* Right Controls: Language Edition + CV Trigger + Mobile Drawer Trigger */}
             <div className="flex items-center gap-2 sm:gap-3">
               <button
                 onClick={toggleLanguage}
                 aria-label={
                   language === 'en'
-                    ? 'Switch publication to Spanish'
-                    : 'Cambiar publicación a inglés'
+                    ? 'Switch language to Spanish'
+                    : 'Cambiar idioma a inglés'
                 }
                 className="font-mono text-[11px] uppercase tracking-[0.12em] px-2.5 py-1.5 border border-[#B9B7AF] hover:border-[#171918] text-[#171918] transition-colors"
               >
@@ -146,7 +142,7 @@ export const Navbar: React.FC<NavbarProps> = ({
 
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                aria-label={mobileMenuOpen ? 'Close navigation index' : 'Open navigation index'}
+                aria-label={mobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
                 aria-expanded={mobileMenuOpen}
                 className="lg:hidden p-2 border border-[#B9B7AF] text-[#171918] hover:bg-[#171918] hover:text-[#F3F0E9] transition-colors"
               >
@@ -157,13 +153,12 @@ export const Navbar: React.FC<NavbarProps> = ({
         </div>
       </header>
 
-      {/* Accessible Full-Screen Editorial Mobile Drawer */}
       {mobileMenuOpen && (
         <div className="fixed inset-0 z-50 lg:hidden bg-[#171918] text-[#F3F0E9] flex flex-col justify-between p-6 overflow-y-auto">
           <div>
             <div className="flex items-center justify-between border-b border-[#B9B7AF]/30 pb-4 mb-8">
               <span className="font-mono text-[11px] uppercase tracking-[0.16em] text-[#D97745]">
-                {PERSONAL_INFO.publicationName} — INDEX
+                {PERSONAL_INFO.name.toUpperCase()} · {PERSONAL_INFO.brandSubtitle}
               </span>
               <button
                 onClick={() => setMobileMenuOpen(false)}
@@ -174,7 +169,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               </button>
             </div>
 
-            <nav className="space-y-1" aria-label="Mobile Index">
+            <nav className="space-y-1" aria-label="Mobile Navigation">
               {navItems.map((item) => {
                 const isActive = currentView === 'home' && activeSection === item.id;
                 return (

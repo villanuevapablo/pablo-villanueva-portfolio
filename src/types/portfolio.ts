@@ -3,10 +3,10 @@ export type Language = 'en' | 'es';
 export type ProjectCategory =
   | 'all'
   | 'ai-ml'
-  | 'backend-security'
+  | 'data'
   | 'automation'
-  | 'iot'
-  | 'data';
+  | 'backend-security'
+  | 'iot';
 
 export type CaseStudyVariant =
   | 'dark-research'
@@ -14,6 +14,8 @@ export type CaseStudyVariant =
   | 'pipeline-monograph'
   | 'hardware-schematic'
   | 'data-notebook';
+
+export type SkillTier = 'practical' | 'academic' | 'interest';
 
 export interface SocialLinks {
   github: string;
@@ -33,13 +35,14 @@ export interface PersonalInfo {
   fullName: string;
   initials: string;
   avatarUrl: string;
-  publicationName: string;
+  brandSubtitle: string;
   title: Record<Language, string>;
   editorialSummary: Record<Language, string>;
   interests: InterestArea[];
   location: Record<Language, string>;
   availability: Record<Language, string>;
   statusBadge: Record<Language, string>;
+  targetRoles: Record<Language, string>;
   cvFilename: {
     en: string;
     es: string;
@@ -73,7 +76,6 @@ export interface EducationItem {
   grade?: Record<Language, string>;
   description: Record<Language, string>;
   highlights: Record<Language, string[]>;
-  uncertaintyFlag?: Record<Language, string>;
 }
 
 export interface ProjectCaseStudy {
@@ -105,7 +107,7 @@ export interface ProjectCaseStudy {
 
 export interface ProjectItem {
   id: string;
-  issueNumber: string;
+  projectNumber: string;
   title: string;
   subtitle: Record<Language, string>;
   category: Exclude<ProjectCategory, 'all'>;
@@ -128,35 +130,22 @@ export interface ProjectItem {
   caseStudy: ProjectCaseStudy;
 }
 
-export interface EngineeringNote {
+export interface FocusAreaItem {
   id: string;
   number: string;
   title: Record<Language, string>;
-  date: string;
-  topic: Record<Language, string>;
-  readingTime: string;
-  shortIntro: Record<Language, string>;
-  explanation: Record<Language, string[]>;
-  codeOrDiagram: {
-    label: Record<Language, string>;
-    snippet: string;
-  };
-  whatILearned: Record<Language, string>;
-  relatedProjectId: string;
-  relatedProjectTitle: string;
-}
-
-export interface QueuedNoteTopic {
-  id: string;
-  topic: Record<Language, string>;
-  workingTitle: Record<Language, string>;
-  plannedScope: Record<Language, string>;
+  description: Record<Language, string>;
+  focusPoints: Record<Language, string[]>;
+  relatedProjects: {
+    id: string;
+    label: string;
+  }[];
 }
 
 export interface ToolkitSkill {
   name: string;
   evidence: Record<Language, string>;
-  tier: 'primary' | 'academic';
+  tier: SkillTier;
 }
 
 export interface ToolkitCategory {

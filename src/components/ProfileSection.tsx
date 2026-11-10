@@ -7,6 +7,7 @@ import {
   TOOLKIT_CATEGORIES,
   UI_COPY,
 } from '../data/portfolioData';
+import { SkillTier } from '../types/portfolio';
 import { useLanguage } from '../context/LanguageContext';
 
 interface ProfileSectionProps {
@@ -16,15 +17,38 @@ interface ProfileSectionProps {
 export const ProfileSection: React.FC<ProfileSectionProps> = ({ onOpenCv }) => {
   const { language } = useLanguage();
 
+  const renderTierGlyph = (tier: SkillTier) => {
+    if (tier === 'practical') {
+      return (
+        <span
+          className="w-2 h-2 bg-[#171918] shrink-0"
+          title={UI_COPY.profile.practicalLabel[language]}
+        />
+      );
+    }
+    if (tier === 'academic') {
+      return (
+        <span
+          className="w-2 h-2 border border-[#5D605C] shrink-0"
+          title={UI_COPY.profile.academicLabel[language]}
+        />
+      );
+    }
+    return (
+      <span
+        className="w-2 h-2 bg-[#D97745] rotate-45 shrink-0"
+        title={UI_COPY.profile.interestLabel[language]}
+      />
+    );
+  };
+
   return (
     <section
       id="profile"
       aria-label={UI_COPY.profile.sectionTitle[language]}
       className="bg-[#F3F0E9] text-[#171918] border-b border-[#171918]"
     >
-      {/* -------------------------------------------------------------------
-       * PART A — PROFILE NARRATIVE & PROBLEM-SOLVING APPROACH
-       * ------------------------------------------------------------------- */}
+      {/* PART A — PROFILE NARRATIVE & APPROACH */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-16 sm:py-24">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 pb-8 mb-12 border-b border-[#171918] items-end">
           <div className="lg:col-span-8">
@@ -48,7 +72,6 @@ export const ProfileSection: React.FC<ProfileSectionProps> = ({ onOpenCv }) => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
-          {/* Narrative Copy */}
           <div className="lg:col-span-7 space-y-5">
             <span className="font-mono text-[10px] uppercase tracking-[0.16em] text-[#526B9B] font-semibold block">
               {UI_COPY.profile.narrativeHeading[language]}
@@ -61,7 +84,6 @@ export const ProfileSection: React.FC<ProfileSectionProps> = ({ onOpenCv }) => {
             ))}
           </div>
 
-          {/* Right Approach & Factual Details Column */}
           <div className="lg:col-span-5 space-y-6 lg:border-l lg:border-[#B9B7AF] lg:pl-8">
             <div className="border-t-2 border-[#171918] pt-4">
               <span className="font-mono text-[10px] uppercase tracking-[0.16em] text-[#D97745] font-semibold block mb-2">
@@ -74,10 +96,13 @@ export const ProfileSection: React.FC<ProfileSectionProps> = ({ onOpenCv }) => {
 
             <div className="border-t border-[#B9B7AF] pt-4 space-y-2 text-xs">
               <span className="font-mono text-[10px] uppercase tracking-[0.16em] text-[#5D605C] block mb-2">
-                {language === 'en' ? 'VERIFIED ATTRIBUTES' : 'DATOS VERIFICADOS'}
+                {language === 'en' ? 'VERIFIED PROFILE DETAILS' : 'DATOS VERIFICADOS'}
               </span>
               <p className="font-semibold text-[#171918]">
                 {PERSONAL_INFO.languagesSpoken[language]}
+              </p>
+              <p className="text-[#526B9B] font-medium leading-relaxed">
+                {PERSONAL_INFO.targetRoles[language]}
               </p>
               <ul className="space-y-1.5 text-[#3D403E] pt-1">
                 {PERSONAL_INFO.otherDetails[language].map((detail, dIdx) => (
@@ -92,12 +117,9 @@ export const ProfileSection: React.FC<ProfileSectionProps> = ({ onOpenCv }) => {
         </div>
       </div>
 
-      {/* -------------------------------------------------------------------
-       * PART B — CHRONOLOGICAL EXPERIENCE & ACADEMIC LEDGER
-       * ------------------------------------------------------------------- */}
+      {/* PART B — EXPERIENCE & ACADEMIC TIMELINE */}
       <div className="border-y border-[#171918] bg-[#EAE6DC]/55">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-14 sm:py-16">
-          {/* Experience Row */}
           <div className="mb-14">
             <span className="font-mono text-[11px] uppercase tracking-[0.16em] text-[#D97745] font-semibold block mb-6">
               {UI_COPY.profile.experienceHeading[language]}
@@ -155,14 +177,13 @@ export const ProfileSection: React.FC<ProfileSectionProps> = ({ onOpenCv }) => {
             ))}
           </div>
 
-          {/* Education Two-Column Ruled Specification */}
           <div>
             <span className="font-mono text-[11px] uppercase tracking-[0.16em] text-[#526B9B] font-semibold block mb-6">
               {UI_COPY.profile.educationHeading[language]}
             </span>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 border-t border-l border-[#171918]">
-              {EDUCATION.map((edu, idx) => (
+              {EDUCATION.map((edu) => (
                 <div
                   key={edu.id}
                   className="p-6 sm:p-8 border-r border-b border-[#171918] bg-[#F3F0E9] flex flex-col justify-between"
@@ -172,7 +193,7 @@ export const ProfileSection: React.FC<ProfileSectionProps> = ({ onOpenCv }) => {
                       <span className="font-mono text-[11px] text-[#5D605C]">
                         {edu.level[language]}
                       </span>
-                      <span className="font-mono text-[11px] font-semibold text-[#171918]">
+                      <span className="font-mono text-xs font-bold text-[#D97745]">
                         {edu.period[language]}
                       </span>
                     </div>
@@ -205,17 +226,9 @@ export const ProfileSection: React.FC<ProfileSectionProps> = ({ onOpenCv }) => {
                     </ul>
                   </div>
 
-                  {edu.uncertaintyFlag && (
-                    <p className="mt-5 pt-3 border-t border-dashed border-[#B9B7AF] font-mono text-[11px] text-[#5D605C]">
-                      {edu.uncertaintyFlag[language]}
-                    </p>
-                  )}
-
-                  {idx === 0 && !edu.uncertaintyFlag && (
-                    <div className="mt-5 pt-3 border-t border-[#B9B7AF]/50 font-mono text-[10px] text-[#5D605C] uppercase tracking-[0.12em]">
-                      UK HONOURS DEGREE · VERIFIED TRANSCRIPT CREDENTIAL
-                    </div>
-                  )}
+                  <div className="mt-5 pt-3 border-t border-[#B9B7AF]/50 font-mono text-[10px] text-[#5D605C] uppercase tracking-[0.12em]">
+                    {edu.institution} · {edu.period[language]}
+                  </div>
                 </div>
               ))}
             </div>
@@ -223,29 +236,37 @@ export const ProfileSection: React.FC<ProfileSectionProps> = ({ onOpenCv }) => {
         </div>
       </div>
 
-      {/* -------------------------------------------------------------------
-       * PART C — TECHNICAL TOOLKIT (4 CLEAN EDITORIAL GROUPS, NO LOGO WALL)
-       * ------------------------------------------------------------------- */}
+      {/* PART C — TECHNICAL TOOLKIT (AI & DATA FIRST, 3 HONEST EXPERIENCE TIERS) */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-16 sm:py-20">
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 pb-6 mb-10 border-b border-[#171918]">
-          <div>
-            <span className="font-mono text-[11px] uppercase tracking-[0.16em] text-[#D97745] font-semibold block mb-2">
-              {UI_COPY.profile.toolkitHeading[language]}
-            </span>
-            <h3 className="font-serif text-3xl sm:text-4xl text-[#171918]">
-              {language === 'en' ? 'Verified Skills & Project Evidence' : 'Habilidades y Respaldo en Código Real'}
-            </h3>
-          </div>
+        <div className="pb-6 mb-8 border-b border-[#171918]">
+          <span className="font-mono text-[11px] uppercase tracking-[0.16em] text-[#D97745] font-semibold block mb-2">
+            {UI_COPY.profile.toolkitHeading[language]}
+          </span>
+          <h3 className="font-serif text-3xl sm:text-4xl text-[#171918] mb-5">
+            {language === 'en'
+              ? 'Skills & Technical Inventory by Experience Level'
+              : 'Competencias Técnicas por Nivel de Experiencia'}
+          </h3>
 
-          <div className="flex flex-wrap items-center gap-4 font-mono text-[10px] uppercase tracking-[0.1em]">
-            <span className="flex items-center gap-1.5 text-[#171918]">
-              <span className="w-2 h-2 bg-[#171918] inline-block" />
-              {UI_COPY.profile.primaryBadge[language]}
+          {/* 3-Tier Classification Bar */}
+          <div className="p-4 bg-[#EAE6DC]/70 border border-[#B9B7AF]">
+            <span className="font-mono text-[10px] uppercase tracking-[0.14em] text-[#5D605C] block mb-2.5 font-semibold">
+              {UI_COPY.profile.tierLegendTitle[language]}
             </span>
-            <span className="flex items-center gap-1.5 text-[#5D605C]">
-              <span className="w-2 h-2 border border-[#B9B7AF] inline-block" />
-              {UI_COPY.profile.academicBadge[language]}
-            </span>
+            <div className="flex flex-wrap gap-x-6 gap-y-2 font-mono text-[11px]">
+              <span className="flex items-center gap-2 text-[#171918] font-medium">
+                <span className="w-2 h-2 bg-[#171918] inline-block" />
+                {UI_COPY.profile.practicalLabel[language]}
+              </span>
+              <span className="flex items-center gap-2 text-[#5D605C]">
+                <span className="w-2 h-2 border border-[#5D605C] inline-block" />
+                {UI_COPY.profile.academicLabel[language]}
+              </span>
+              <span className="flex items-center gap-2 text-[#D97745] font-medium">
+                <span className="w-2 h-2 bg-[#D97745] rotate-45 inline-block" />
+                {UI_COPY.profile.interestLabel[language]}
+              </span>
+            </div>
           </div>
         </div>
 
@@ -255,7 +276,7 @@ export const ProfileSection: React.FC<ProfileSectionProps> = ({ onOpenCv }) => {
               key={group.id}
               className="p-6 sm:p-8 border-r border-b border-[#171918] bg-[#F3F0E9]"
             >
-              <div className="flex items-baseline justify-between gap-2 pb-3 mb-5 border-b border-[#B9B7AF]">
+              <div className="flex items-baseline justify-between gap-2 pb-3 mb-4 border-b border-[#B9B7AF]">
                 <div>
                   <span className="font-mono text-[10px] text-[#D97745] font-semibold block">
                     {group.number}
@@ -273,18 +294,19 @@ export const ProfileSection: React.FC<ProfileSectionProps> = ({ onOpenCv }) => {
 
               <div className="divide-y divide-[#B9B7AF]/70">
                 {group.skills.map((skill) => (
-                  <div key={skill.name} className="py-2.5 grid grid-cols-1 sm:grid-cols-12 gap-1 sm:gap-4 items-baseline">
-                    <div className="sm:col-span-5 flex items-center gap-2">
-                      <span
-                        className={`w-1.5 h-1.5 shrink-0 ${
-                          skill.tier === 'primary'
-                            ? 'bg-[#171918]'
-                            : 'border border-[#5D605C]'
-                        }`}
-                      />
+                  <div
+                    key={skill.name}
+                    className="py-2.5 grid grid-cols-1 sm:grid-cols-12 gap-1 sm:gap-4 items-baseline"
+                  >
+                    <div className="sm:col-span-5 flex items-center gap-2.5">
+                      {renderTierGlyph(skill.tier)}
                       <span
                         className={`text-sm font-bold ${
-                          skill.tier === 'primary' ? 'text-[#171918]' : 'text-[#5D605C]'
+                          skill.tier === 'practical'
+                            ? 'text-[#171918]'
+                            : skill.tier === 'interest'
+                              ? 'text-[#B85D30]'
+                              : 'text-[#5D605C]'
                         }`}
                       >
                         {skill.name}

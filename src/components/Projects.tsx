@@ -21,11 +21,10 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
 
   const categories: { id: ProjectCategory; label: string }[] = [
     { id: 'all', label: UI_COPY.selectedWork.filterAll[language] },
-    { id: 'ai-ml', label: UI_COPY.selectedWork.filterMl[language] },
-    { id: 'backend-security', label: UI_COPY.selectedWork.filterBackend[language] },
-    { id: 'automation', label: UI_COPY.selectedWork.filterAutomation[language] },
-    { id: 'iot', label: UI_COPY.selectedWork.filterIot[language] },
+    { id: 'ai-ml', label: UI_COPY.selectedWork.filterAiMl[language] },
     { id: 'data', label: UI_COPY.selectedWork.filterData[language] },
+    { id: 'backend-security', label: UI_COPY.selectedWork.filterSoftware[language] },
+    { id: 'iot', label: UI_COPY.selectedWork.filterIot[language] },
   ];
 
   const filtered =
@@ -49,7 +48,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
   };
 
   const renderProjectSpread = (project: ProjectItem) => {
-    // 01 — Lead Dark Ink Research Feature Spread
+    // 01 — Lead Dark Ink Research Spread (BTC ML & Time Series)
     if (project.id === 'bitcoin-price-forecasting') {
       return (
         <article
@@ -62,7 +61,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
                 <div className="flex flex-wrap items-center justify-between gap-2 pb-4 mb-6 border-b border-[#B9B7AF]/25">
                   <div className="flex items-center gap-3">
                     <span className="font-serif text-5xl sm:text-6xl text-[#D97745] leading-none">
-                      {project.issueNumber}
+                      {project.projectNumber}
                     </span>
                     <div>
                       <span className="font-mono text-[10px] uppercase tracking-[0.14em] text-[#B9B7AF] block">
@@ -133,8 +132,8 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
       );
     }
 
-    // 02 — Reversed Paper Dossier Spread (Visual Left : Editorial Spec Right)
-    if (project.id === 'srms-medical') {
+    // 02 — Reversed Paper Spread (Visual Left : Narrative Right) — Local AI Organizer
+    if (project.id === 'smart-file-organizer') {
       return (
         <article
           key={project.id}
@@ -148,7 +147,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
             <div className="lg:col-span-6 order-1 lg:order-2 flex flex-col justify-between">
               <div className="flex items-start justify-between gap-4 mb-5 pb-4 border-b border-[#B9B7AF]">
                 <div>
-                  <span className="font-mono text-[10px] uppercase tracking-[0.14em] text-[#526B9B] font-semibold block">
+                  <span className="font-mono text-[10px] uppercase tracking-[0.14em] text-[#D97745] font-semibold block">
                     {project.categoryLabel[language]}
                   </span>
                   <h3 className="font-serif text-3xl sm:text-4xl text-[#171918] leading-tight mt-1">
@@ -156,7 +155,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
                   </h3>
                 </div>
                 <span className="font-serif text-5xl text-[#526B9B] leading-none shrink-0">
-                  {project.issueNumber}
+                  {project.projectNumber}
                 </span>
               </div>
 
@@ -203,8 +202,8 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
       );
     }
 
-    // 03 — Three-Column Spine Monograph (Numeral Column + Story + Pipeline)
-    if (project.id === 'smart-file-organizer') {
+    // 03 — Three-Column Spine Spread — Preflop Hero Data Parsing & Analytics
+    if (project.id === 'preflop-hero') {
       return (
         <article
           key={project.id}
@@ -214,9 +213,9 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
             <div className="lg:col-span-2 flex lg:flex-col justify-between lg:border-r lg:border-[#B9B7AF] lg:pr-4 h-full">
               <div>
                 <span className="font-serif text-5xl sm:text-6xl text-[#171918] leading-none block">
-                  {project.issueNumber}
+                  {project.projectNumber}
                 </span>
-                <span className="font-mono text-[10px] uppercase tracking-[0.14em] text-[#D97745] font-semibold mt-2 block">
+                <span className="font-mono text-[10px] uppercase tracking-[0.14em] text-[#526B9B] font-semibold mt-2 block">
                   {project.categoryLabel[language]}
                 </span>
               </div>
@@ -271,7 +270,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
       );
     }
 
-    // 04 (Embedded Hardware Dark Ink) & 05 (Data Analytics Paper Plate)
+    // 04 (Go Systems Light Plate) & 05 (Embedded IoT Dark Plate)
     const isIot = project.id === 'iot-edge-security';
     return (
       <article
@@ -279,7 +278,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
         className={
           isIot
             ? 'bg-[#171918] text-[#F3F0E9] border border-[#171918] p-6 sm:p-8 flex flex-col justify-between'
-            : 'bg-[#F3F0E9] text-[#171918] border-t-4 border-t-[#D97745] border-x border-b border-[#171918] p-6 sm:p-8 flex flex-col justify-between'
+            : 'bg-[#F3F0E9] text-[#171918] border-t-4 border-t-[#526B9B] border-x border-b border-[#171918] p-6 sm:p-8 flex flex-col justify-between'
         }
       >
         <div>
@@ -305,7 +304,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
                 isIot ? 'text-[#D97745]' : 'text-[#171918]'
               }`}
             >
-              {project.issueNumber}
+              {project.projectNumber}
             </span>
           </div>
 
@@ -369,12 +368,11 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
     );
   };
 
-  // Separate top 3 varied spreads and bottom asymmetric pair (or all cleanly when filtered)
   const leadSpreads = filtered.filter((p) =>
-    ['bitcoin-price-forecasting', 'srms-medical', 'smart-file-organizer'].includes(p.id)
+    ['bitcoin-price-forecasting', 'smart-file-organizer', 'preflop-hero'].includes(p.id)
   );
   const bottomPair = filtered.filter((p) =>
-    ['iot-edge-security', 'preflop-hero'].includes(p.id)
+    ['srms-medical', 'iot-edge-security'].includes(p.id)
   );
 
   return (
@@ -384,7 +382,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
       className="bg-[#F3F0E9] text-[#171918] border-b border-[#171918] py-16 sm:py-24"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
-        {/* Asymmetric Section Masthead */}
+        {/* Section Header */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 pb-8 mb-10 border-b border-[#171918] items-end">
           <div className="lg:col-span-7">
             <span className="font-mono text-[11px] uppercase tracking-[0.16em] text-[#D97745] font-semibold block mb-2">
@@ -402,11 +400,11 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
           </div>
         </div>
 
-        {/* Publication Subject Index Filter Tabs */}
+        {/* Category Tabs */}
         <div
           className="flex flex-wrap items-center gap-2 mb-12 pb-6 border-b border-[#B9B7AF]"
           role="tablist"
-          aria-label="Filter projects by engineering category"
+          aria-label="Filter projects by category"
         >
           {categories.map((cat) => {
             const isActive = activeCategory === cat.id;
@@ -428,7 +426,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
           })}
         </div>
 
-        {/* Varied Editorial Project Spreads */}
+        {/* Asymmetric Project Layouts */}
         <div className="space-y-12">
           {leadSpreads.map((proj) => renderProjectSpread(proj))}
 
@@ -438,15 +436,11 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
                 bottomPair.length === 2 ? 'lg:grid-cols-12' : ''
               } gap-8 items-stretch`}
             >
-              {bottomPair.map((proj, idx) => (
+              {bottomPair.map((proj) => (
                 <div
                   key={proj.id}
                   className={
-                    bottomPair.length === 2
-                      ? idx === 0
-                        ? 'lg:col-span-6 flex'
-                        : 'lg:col-span-6 flex'
-                      : 'w-full'
+                    bottomPair.length === 2 ? 'lg:col-span-6 flex' : 'w-full'
                   }
                 >
                   <div className="w-full flex [&>article]:w-full">

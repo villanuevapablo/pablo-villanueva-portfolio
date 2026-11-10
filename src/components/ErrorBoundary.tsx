@@ -33,13 +33,13 @@ export class ErrorBoundary extends Component<Props, State> {
         <div className="p-8 text-[#171918] bg-[#F3F0E9] min-h-[60vh] flex flex-col items-center justify-center border-y border-[#B9B7AF]">
           <div className="max-w-md w-full p-8 border border-[#171918] bg-[#F3F0E9]">
             <span className="font-mono text-[11px] uppercase tracking-[0.16em] text-[#D97745] block mb-2">
-              Publication Render Notice
+              Render Notice
             </span>
             <h2 className="font-serif text-2xl text-[#171918] mb-3">
               A section failed to render.
             </h2>
             <p className="text-sm text-[#3D403E] leading-relaxed mb-6">
-              An unexpected runtime error prevented this view from displaying. Reload to reinitialize the journal cleanly.
+              An unexpected error prevented this view from displaying. Reload to reinitialize the application cleanly.
             </p>
             <button
               onClick={() => {

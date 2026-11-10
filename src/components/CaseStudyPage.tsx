@@ -50,12 +50,8 @@ export const CaseStudyPage: React.FC<CaseStudyPageProps> = ({
   const c = UI_COPY.caseStudyChapters;
   const cs = project.caseStudy;
 
-  /* --------------------------------------------------------------------------
-   * Distinct Top Header Composition per Project Editorial Variant
-   * -------------------------------------------------------------------------- */
   const renderVariantHeader = () => {
     if (project.editorialVariant === 'dark-research') {
-      // Research Paper Dark Ink Cover
       return (
         <header className="bg-[#171918] text-[#F3F0E9] border-b border-[#171918] py-12 sm:py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
@@ -68,7 +64,7 @@ export const CaseStudyPage: React.FC<CaseStudyPageProps> = ({
                 <span>{c.backToIndex[language]}</span>
               </button>
               <span className="font-mono text-[11px] uppercase tracking-[0.14em] text-[#D97745]">
-                MONOGRAPH {project.issueNumber} · RESEARCH DISSERTATION
+                CASE STUDY {project.projectNumber} · APPLIED ML &amp; DATA
               </span>
             </div>
 
@@ -100,7 +96,6 @@ export const CaseStudyPage: React.FC<CaseStudyPageProps> = ({
     }
 
     if (project.editorialVariant === 'hardware-schematic') {
-      // Hardware Schematic Split Header
       return (
         <header className="bg-[#EAE6DC] text-[#171918] border-b border-[#171918] py-12 sm:py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
@@ -113,14 +108,14 @@ export const CaseStudyPage: React.FC<CaseStudyPageProps> = ({
                 <span>{c.backToIndex[language]}</span>
               </button>
               <span className="font-mono text-[11px] uppercase tracking-[0.14em] text-[#526B9B] font-semibold">
-                HARDWARE SCHEMATIC · MONOGRAPH {project.issueNumber}
+                HARDWARE SCHEMATIC · PROJECT {project.projectNumber}
               </span>
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
               <div className="lg:col-span-6">
                 <span className="font-serif text-6xl text-[#D97745] block leading-none mb-2">
-                  {project.issueNumber}
+                  {project.projectNumber}
                 </span>
                 <h1 className="font-serif text-3xl sm:text-5xl text-[#171918] leading-tight mb-3">
                   {project.title}
@@ -143,7 +138,6 @@ export const CaseStudyPage: React.FC<CaseStudyPageProps> = ({
       );
     }
 
-    // Dossier Spec / Pipeline Monograph / Data Notebook Editorial Paper Headers
     return (
       <header className="bg-[#F3F0E9] text-[#171918] border-b border-[#171918] py-12 sm:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
@@ -156,7 +150,7 @@ export const CaseStudyPage: React.FC<CaseStudyPageProps> = ({
               <span>{c.backToIndex[language]}</span>
             </button>
             <span className="font-mono text-[11px] uppercase tracking-[0.14em] text-[#D97745] font-semibold">
-              MONOGRAPH {project.issueNumber} / {project.categoryLabel[language]}
+              CASE STUDY {project.projectNumber} / {project.categoryLabel[language]}
             </span>
           </div>
 
@@ -190,9 +184,6 @@ export const CaseStudyPage: React.FC<CaseStudyPageProps> = ({
     );
   };
 
-  /* --------------------------------------------------------------------------
-   * Shared Chapters Block (Formatted Distinctly by Variant)
-   * -------------------------------------------------------------------------- */
   const renderAllEightChapters = () => {
     const isStickyRail = project.editorialVariant === 'pipeline-monograph';
     const isNotebook = project.editorialVariant === 'data-notebook';
@@ -212,7 +203,6 @@ export const CaseStudyPage: React.FC<CaseStudyPageProps> = ({
     return (
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-14 sm:py-20">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
-          {/* Optional Sticky Sidebar TOC (Used on Pipeline Monograph Variant) */}
           {isStickyRail && (
             <aside className="hidden lg:block lg:col-span-3 lg:sticky lg:top-24 border-r border-[#B9B7AF] pr-6">
               <span className="font-mono text-[10px] uppercase tracking-[0.16em] text-[#D97745] block mb-4 font-semibold">
@@ -233,9 +223,7 @@ export const CaseStudyPage: React.FC<CaseStudyPageProps> = ({
             </aside>
           )}
 
-          {/* Main Story Body */}
           <div className={isStickyRail ? 'lg:col-span-9 space-y-14' : 'lg:col-span-12 space-y-14'}>
-            {/* 01 — INTRODUCTION */}
             <section id="ch-01" className="grid grid-cols-1 lg:grid-cols-12 gap-6 pb-10 border-b border-[#B9B7AF]">
               <div className="lg:col-span-4">
                 <h2 className="font-mono text-xs uppercase tracking-[0.16em] text-[#D97745] font-semibold">
@@ -249,7 +237,6 @@ export const CaseStudyPage: React.FC<CaseStudyPageProps> = ({
               </div>
             </section>
 
-            {/* 02 & 03 — THE CHALLENGE & THE SOLUTION */}
             <section
               id="ch-02"
               className={
@@ -288,10 +275,8 @@ export const CaseStudyPage: React.FC<CaseStudyPageProps> = ({
               </div>
             </section>
 
-            {/* Pipeline Visual Inline for Pipeline Variant */}
             {isStickyRail && <div>{renderVisual(project.visualType)}</div>}
 
-            {/* 04 — ARCHITECTURE */}
             <section id="ch-04" className="grid grid-cols-1 lg:grid-cols-12 gap-6 pb-10 border-b border-[#B9B7AF]">
               <div className="lg:col-span-4">
                 <h2 className="font-mono text-xs uppercase tracking-[0.16em] text-[#D97745] font-semibold mb-2">
@@ -330,7 +315,6 @@ export const CaseStudyPage: React.FC<CaseStudyPageProps> = ({
               </div>
             </section>
 
-            {/* 05 — ENGINEERING DECISIONS */}
             <section id="ch-05" className="grid grid-cols-1 lg:grid-cols-12 gap-6 pb-10 border-b border-[#B9B7AF]">
               <div className="lg:col-span-4">
                 <h2 className="font-mono text-xs uppercase tracking-[0.16em] text-[#D97745] font-semibold">
@@ -351,7 +335,6 @@ export const CaseStudyPage: React.FC<CaseStudyPageProps> = ({
               </div>
             </section>
 
-            {/* 06 — CHALLENGES */}
             <section id="ch-06" className="grid grid-cols-1 lg:grid-cols-12 gap-6 pb-10 border-b border-[#B9B7AF]">
               <div className="lg:col-span-4">
                 <h2 className="font-mono text-xs uppercase tracking-[0.16em] text-[#D97745] font-semibold">
@@ -370,7 +353,6 @@ export const CaseStudyPage: React.FC<CaseStudyPageProps> = ({
               </div>
             </section>
 
-            {/* 07 — RESULTS & LEARNINGS */}
             <section id="ch-07" className="grid grid-cols-1 lg:grid-cols-12 gap-6 pb-10 border-b border-[#B9B7AF]">
               <div className="lg:col-span-4">
                 <h2 className="font-mono text-xs uppercase tracking-[0.16em] text-[#D97745] font-semibold">
@@ -408,7 +390,6 @@ export const CaseStudyPage: React.FC<CaseStudyPageProps> = ({
               </div>
             </section>
 
-            {/* 08 — SOURCE CODE */}
             <section id="ch-08" className="bg-[#171918] text-[#F3F0E9] p-6 sm:p-8 flex flex-col sm:flex-row sm:items-center justify-between gap-6">
               <div>
                 <span className="font-mono text-[11px] uppercase tracking-[0.16em] text-[#D97745] block mb-1">
@@ -436,7 +417,7 @@ export const CaseStudyPage: React.FC<CaseStudyPageProps> = ({
           </div>
         </div>
 
-        {/* Previous / Next Monograph Footer Navigation */}
+        {/* Previous / Next Case Study Pagination */}
         <nav
           aria-label="Case study pagination"
           className="mt-16 pt-8 border-t border-[#171918] grid grid-cols-1 sm:grid-cols-2 gap-4"
@@ -450,7 +431,7 @@ export const CaseStudyPage: React.FC<CaseStudyPageProps> = ({
               <span>{c.prevStory[language]}</span>
             </span>
             <span className="font-serif text-xl text-[#171918] block">
-              {prevProject.issueNumber} — {prevProject.title}
+              {prevProject.projectNumber} — {prevProject.title}
             </span>
           </button>
 
@@ -463,7 +444,7 @@ export const CaseStudyPage: React.FC<CaseStudyPageProps> = ({
               <ArrowRight className="w-3.5 h-3.5" />
             </span>
             <span className="font-serif text-xl text-[#171918] block">
-              {nextProject.issueNumber} — {nextProject.title}
+              {nextProject.projectNumber} — {nextProject.title}
             </span>
           </button>
         </nav>

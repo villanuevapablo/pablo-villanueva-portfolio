@@ -36,7 +36,7 @@ export const CvModal: React.FC<CvModalProps> = ({ isOpen, onClose }) => {
       >
         <div className="flex items-center justify-between border-b border-[#B9B7AF] pb-4 mb-6">
           <span className="font-mono text-[11px] uppercase tracking-[0.16em] text-[#D97745] font-medium">
-            {language === 'en' ? 'OFFICIAL CURRICULUM VITAE' : 'CURRÍCULUM VITAE OFICIAL'}
+            {language === 'en' ? 'CURRICULUM VITAE (PDF)' : 'CURRÍCULUM VITAE (PDF)'}
           </span>
           <button
             onClick={onClose}
@@ -48,11 +48,11 @@ export const CvModal: React.FC<CvModalProps> = ({ isOpen, onClose }) => {
         </div>
 
         <div className="flex items-start gap-4 mb-6">
-          <div className="w-16 h-20 border border-[#171918] overflow-hidden shrink-0 bg-[#EAE6DC]">
+          <div className="w-16 aspect-[3/4] border border-[#171918] overflow-hidden shrink-0 bg-[#EAE6DC]">
             <img
               src={PERSONAL_INFO.avatarUrl}
               alt={PERSONAL_INFO.fullName}
-              className="w-full h-full object-cover object-top"
+              className="w-full h-full object-cover object-center"
             />
           </div>
           <div>
@@ -71,15 +71,15 @@ export const CvModal: React.FC<CvModalProps> = ({ isOpen, onClose }) => {
         <div className="border-y border-[#B9B7AF] py-4 mb-6 space-y-2.5 text-xs">
           <div className="flex items-center gap-2.5 text-[#171918]">
             <Award className="w-4 h-4 text-[#D97745] shrink-0" />
-            <span>York St John University — BSc (Hons) Software Engineering · First-Class Honours (9/10)</span>
+            <span>York St John Univ. (2025–2026) — BSc (Hons) Software Engineering · First-Class Honours (9/10)</span>
           </div>
           <div className="flex items-center gap-2.5 text-[#171918]">
             <CheckCircle2 className="w-4 h-4 text-[#526B9B] shrink-0" />
-            <span>Instituto Nebrija — FP Grado Superior DAM</span>
+            <span>Instituto Nebrija (2023–2025) — FP Grado Superior DAM</span>
           </div>
           <div className="flex items-center gap-2.5 text-[#171918]">
             <CheckCircle2 className="w-4 h-4 text-[#526B9B] shrink-0" />
-            <span>Universidad Nebrija — Development Technician (Apr – Jun 2025)</span>
+            <span>Universidad Nebrija (Apr–Jun 2025) — Development Technician</span>
           </div>
           <div className="flex items-center gap-2.5 text-[#5D605C]">
             <Globe className="w-4 h-4 text-[#5D605C] shrink-0" />
@@ -108,12 +108,12 @@ export const CvModal: React.FC<CvModalProps> = ({ isOpen, onClose }) => {
         </div>
 
         <div className="flex items-center justify-between pt-3 border-t border-[#B9B7AF]/60 text-[11px] font-mono text-[#5D605C]">
-          <span>1-Page LaTeX Verified Edition</span>
+          <span>{PERSONAL_INFO.statusBadge[language]}</span>
           <a
             href={SOCIAL_LINKS.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 text-[#171918] hover:text-[#D97745] font-medium"
+            className="inline-flex items-center gap-1 text-[#171918] hover:text-[#D97745] font-medium shrink-0"
           >
             <span>LinkedIn</span>
             <ExternalLink className="w-3 h-3" />

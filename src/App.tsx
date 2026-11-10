@@ -2,19 +2,16 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { Projects } from './components/Projects';
-import { EngineeringNotes } from './components/EngineeringNotes';
+import { FocusAreasSection } from './components/FocusAreasSection';
 import { ProfileSection } from './components/ProfileSection';
 import { ContactBackCover } from './components/ContactBackCover';
 import { CaseStudyPage } from './components/CaseStudyPage';
-import { NoteReaderPage } from './components/NoteReaderPage';
 import { CvModal } from './components/CvModal';
 import { PROJECTS } from './data/portfolioData';
-import { ENGINEERING_NOTES } from './data/engineeringNotes';
 
 type RouteState =
   | { view: 'home' }
-  | { view: 'case-study'; projectId: string }
-  | { view: 'note'; noteId: string };
+  | { view: 'case-study'; projectId: string };
 
 function parseLocationRoute(): RouteState {
   try {
@@ -25,12 +22,6 @@ function parseLocationRoute(): RouteState {
         return { view: 'case-study', projectId: slug };
       }
     }
-    if (path.startsWith('/notes/')) {
-      const slug = path.replace('/notes/', '').replace(/\/+$/, '');
-      if (ENGINEERING_NOTES.some((n) => n.id === slug)) {
-        return { view: 'note', noteId: slug };
-      }
-    }
   } catch {
     // Fallback cleanly if window location access fails
   }
@@ -39,10 +30,9 @@ function parseLocationRoute(): RouteState {
 
 export const App: React.FC = () => {
   const [route, setRoute] = useState<RouteState>(parseLocationRoute);
-  const [activeSection, setActiveSection] = useState<string>('index');
+  const [activeSection, setActiveSection] = useState<string>('overview');
   const [isCvModalOpen, setIsCvModalOpen] = useState(false);
 
-  // Sync browser back / forward navigation gestures (important on mobile Safari!)
   useEffect(() => {
     const handlePopState = () => {
       setRoute(parseLocationRoute());
@@ -51,14 +41,13 @@ export const App: React.FC = () => {
     return () => window.removeEventListener('popstate', handlePopState);
   }, []);
 
-  // Scroll-spy for home index indicator
   useEffect(() => {
     if (route.view !== 'home') return;
 
-    const sectionIds = ['index', 'work', 'notes', 'profile', 'contact'];
+    const sectionIds = ['overview', 'work', 'interests', 'profile', 'contact'];
     const handleScroll = () => {
       const marker = window.scrollY + 140;
-      let current = 'index';
+      let current = 'overview';
       for (const id of sectionIds) {
         const el = document.getElementById(id);
         if (el) {
@@ -121,15 +110,6 @@ export const App: React.FC = () => {
     setRoute({ view: 'case-study', projectId });
   }, []);
 
-  const openNote = useCallback((noteId: string) => {
-    try {
-      window.history.pushState(null, '', `/notes/${noteId}`);
-    } catch {
-      // Fallback safely
-    }
-    setRoute({ view: 'note', noteId });
-  }, []);
-
   return (
     <div className="relative min-h-screen min-h-[100dvh] bg-[#F3F0E9] text-[#171918] overflow-x-clip font-sans">
       <Navbar
@@ -149,10 +129,7 @@ export const App: React.FC = () => {
               onOpenCv={() => setIsCvModalOpen(true)}
             />
             <Projects onSelectProject={openCaseStudy} />
-            <EngineeringNotes
-              onSelectNote={openNote}
-              onSelectProject={openCaseStudy}
-            />
+            <FocusAreasSection onSelectProject={openCaseStudy} />
             <ProfileSection onOpenCv={() => setIsCvModalOpen(true)} />
             <ContactBackCover />
           </>
@@ -164,18 +141,6 @@ export const App: React.FC = () => {
               projectId={route.projectId}
               onSelectProject={openCaseStudy}
               onBackHome={() => navigateHome('work')}
-            />
-            <ContactBackCover />
-          </>
-        )}
-
-        {route.view === 'note' && (
-          <>
-            <NoteReaderPage
-              noteId={route.noteId}
-              onSelectNote={openNote}
-              onSelectProject={openCaseStudy}
-              onBackHome={() => navigateHome('notes')}
             />
             <ContactBackCover />
           </>
