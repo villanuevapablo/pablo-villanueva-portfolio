@@ -1,227 +1,233 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Github, Linkedin, Globe, ArrowUpRight } from 'lucide-react';
+import { Menu, X, FileDown, ArrowUpRight, ArrowLeft } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
-import { PERSONAL_INFO, SOCIAL_LINKS, UI_TRANSLATIONS } from '../data/portfolioData';
+import { PERSONAL_INFO, SOCIAL_LINKS, UI_COPY } from '../data/portfolioData';
 
-export const Navbar: React.FC = () => {
+interface NavbarProps {
+  currentView: 'home' | 'case-study' | 'note';
+  activeSection: string;
+  onNavigateSection: (sectionId: string) => void;
+  onBackHome: () => void;
+  onOpenCv: () => void;
+}
+
+export const Navbar: React.FC<NavbarProps> = ({
+  currentView,
+  activeSection,
+  onNavigateSection,
+  onBackHome,
+  onOpenCv,
+}) => {
   const { language, toggleLanguage } = useLanguage();
-  const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState('home');
+  const [scrollProgress, setScrollProgress] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-
-      const sections = ['home', 'about', 'experience', 'education', 'projects', 'skills', 'contact'];
-      const scrollPosition = window.scrollY + 120;
-
-      for (const section of sections) {
-        const el = document.getElementById(section);
-        if (el) {
-          const top = el.offsetTop;
-          const height = el.offsetHeight;
-          if (scrollPosition >= top && scrollPosition < top + height) {
-            setActiveSection(section);
-            break;
-          }
-        }
+      const scrollTop = window.scrollY;
+      const docHeight =
+        document.documentElement.scrollHeight - window.innerHeight;
+      if (docHeight > 0) {
+        setScrollProgress(Math.min(100, Math.max(0, (scrollTop / docHeight) * 100)));
       }
     };
-
     window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [currentView]);
 
-  const navLinks = [
-    { id: 'home', label: UI_TRANSLATIONS.nav.home[language] },
-    { id: 'about', label: UI_TRANSLATIONS.nav.about[language] },
-    { id: 'experience', label: UI_TRANSLATIONS.nav.experience[language] },
-    { id: 'education', label: UI_TRANSLATIONS.nav.education[language] },
-    { id: 'projects', label: UI_TRANSLATIONS.nav.projects[language] },
-    { id: 'skills', label: UI_TRANSLATIONS.nav.skills[language] },
-    { id: 'contact', label: UI_TRANSLATIONS.nav.contact[language] },
+  const navItems = [
+    { id: 'index', label: UI_COPY.nav.index[language] },
+    { id: 'work', label: UI_COPY.nav.work[language] },
+    { id: 'notes', label: UI_COPY.nav.notes[language] },
+    { id: 'profile', label: UI_COPY.nav.profile[language] },
+    { id: 'contact', label: UI_COPY.nav.contact[language] },
   ];
 
-  const handleNavClick = (id: string) => {
+  const handleItemClick = (id: string) => {
     setMobileMenuOpen(false);
-    const element = document.getElementById(id);
-    if (element) {
-      const offset = 80;
-      const bodyRect = document.body.getBoundingClientRect().top;
-      const elementRect = element.getBoundingClientRect().top;
-      const elementPosition = elementRect - bodyRect;
-      const offsetPosition = elementPosition - offset;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-      });
-    }
+    onNavigateSection(id);
   };
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? 'bg-[#080B14]/85 backdrop-blur-md border-b border-slate-800/60 shadow-lg shadow-black/20 py-3'
-          : 'bg-transparent py-5'
-      }`}
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between">
-          {/* Brand Logo & Name */}
-          <button
-            onClick={() => handleNavClick('home')}
-            className="group flex items-center gap-3 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded-lg p-1"
-            aria-label="Pablo Villanueva - Back to home"
-          >
-            <div className="relative flex items-center justify-center w-9 h-9 rounded-lg bg-gradient-to-br from-blue-600 to-cyan-500 p-[1.5px] transition-transform duration-300 group-hover:scale-105">
-              <div className="w-full h-full bg-[#0D1220] rounded-[7px] flex items-center justify-center">
-                <span className="text-xs font-bold font-mono tracking-tight text-white group-hover:text-cyan-400 transition-colors">
-                  {PERSONAL_INFO.initials}
-                </span>
-              </div>
-            </div>
-            <div className="flex flex-col">
-              <span className="text-sm font-semibold text-slate-100 tracking-tight group-hover:text-blue-400 transition-colors">
-                {PERSONAL_INFO.name}
-              </span>
-              <span className="text-[11px] font-mono text-slate-400 flex items-center gap-1.5">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
-                Software Engineer
-              </span>
-            </div>
-          </button>
+    <>
+      <header className="sticky top-0 z-40 bg-[#F3F0E9]/95 backdrop-blur-sm border-b border-[#B9B7AF]">
+        {/* Restrained Top Publication Progress Hairline */}
+        <div className="h-[2px] w-full bg-[#B9B7AF]/30 relative">
+          <div
+            className="h-full bg-[#D97745] transition-[width] duration-150 ease-out"
+            style={{ width: `${scrollProgress}%` }}
+          />
+        </div>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-1 bg-[#111827]/80 backdrop-blur-md px-3 py-1.5 rounded-full border border-slate-800">
-            {navLinks.map((link) => {
-              const isActive = activeSection === link.id;
-              return (
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
+          <div className="h-16 flex items-center justify-between gap-4">
+            {/* Publication Wordmark / Back to Index */}
+            <div className="flex items-center gap-3 min-w-0">
+              {currentView !== 'home' ? (
                 <button
-                  key={link.id}
-                  onClick={() => handleNavClick(link.id)}
-                  className={`relative px-3.5 py-1.5 text-xs font-medium rounded-full transition-colors ${
-                    isActive
-                      ? 'text-white bg-slate-800 border border-slate-700'
-                      : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/40'
-                  }`}
+                  onClick={onBackHome}
+                  className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.14em] text-[#171918] hover:text-[#D97745] transition-colors py-1"
                 >
-                  {link.label}
+                  <ArrowLeft className="w-4 h-4" />
+                  <span>{language === 'en' ? 'Index' : 'Portada'}</span>
                 </button>
-              );
-            })}
-          </nav>
-
-          {/* Right actions: Socials, Language Toggle & Mobile Hamburger */}
-          <div className="flex items-center gap-2 sm:gap-3">
-            {/* Language Switcher */}
-            <button
-              onClick={toggleLanguage}
-              aria-label={`Switch language to ${language === 'en' ? 'Spanish' : 'English'}`}
-              className="flex items-center gap-1.5 px-2.5 py-1.5 text-xs font-medium rounded-lg text-slate-300 bg-slate-900/60 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 transition-all duration-200"
-              title={language === 'en' ? 'Cambiar a Español' : 'Switch to English'}
-            >
-              <Globe className="w-3.5 h-3.5 text-cyan-400" />
-              <span className="font-mono uppercase font-semibold">{language}</span>
-              <span className="text-[10px] text-slate-500 hidden sm:inline">
-                {language === 'en' ? 'ES' : 'EN'}
-              </span>
-            </button>
-
-            {/* Social Icons (Desktop) */}
-            <div className="hidden sm:flex items-center gap-1 pl-1 border-l border-slate-800/80">
-              <a
-                href={SOCIAL_LINKS.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="GitHub Profile"
-                className="p-2 text-slate-400 hover:text-white hover:bg-slate-800/60 rounded-lg transition-colors"
-                title="GitHub"
-              >
-                <Github className="w-4 h-4" />
-              </a>
-              <a
-                href={SOCIAL_LINKS.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="LinkedIn Profile"
-                className="p-2 text-slate-400 hover:text-[#0A66C2] hover:bg-slate-800/60 rounded-lg transition-colors"
-                title="LinkedIn"
-              >
-                <Linkedin className="w-4 h-4" />
-              </a>
+              ) : (
+                <button
+                  onClick={() => handleItemClick('index')}
+                  className="text-left group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#D97745]"
+                  aria-label="Pablo Villanueva — Return to top"
+                >
+                  <span className="font-mono text-[11px] uppercase tracking-[0.16em] text-[#171918] font-medium block truncate">
+                    PV — {PERSONAL_INFO.publicationName}
+                  </span>
+                </button>
+              )}
             </div>
 
-            {/* Mobile Hamburger Button */}
-            <button
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              aria-label="Toggle menu"
-              className="p-2 text-slate-400 hover:text-white hover:bg-slate-800/60 rounded-lg lg:hidden transition-colors"
+            {/* Desktop Signature Editorial Index */}
+            <nav
+              aria-label="Primary Editorial Index"
+              className="hidden lg:flex items-center gap-1"
             >
-              {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-            </button>
+              {navItems.map((item) => {
+                const isActive =
+                  currentView === 'home'
+                    ? activeSection === item.id
+                    : currentView === 'case-study'
+                      ? item.id === 'work'
+                      : currentView === 'note'
+                        ? item.id === 'notes'
+                        : false;
+
+                return (
+                  <button
+                    key={item.id}
+                    onClick={() => handleItemClick(item.id)}
+                    className={`px-3 py-2 font-mono text-[11px] tracking-[0.12em] transition-colors border-b-2 ${
+                      isActive
+                        ? 'text-[#171918] border-[#D97745] font-semibold'
+                        : 'text-[#5D605C] border-transparent hover:text-[#171918] hover:border-[#B9B7AF]'
+                    }`}
+                  >
+                    {item.label}
+                  </button>
+                );
+              })}
+            </nav>
+
+            {/* Right Controls: Language Edition + CV Trigger + Mobile Drawer Trigger */}
+            <div className="flex items-center gap-2 sm:gap-3">
+              <button
+                onClick={toggleLanguage}
+                aria-label={
+                  language === 'en'
+                    ? 'Switch publication to Spanish'
+                    : 'Cambiar publicación a inglés'
+                }
+                className="font-mono text-[11px] uppercase tracking-[0.12em] px-2.5 py-1.5 border border-[#B9B7AF] hover:border-[#171918] text-[#171918] transition-colors"
+              >
+                <span className={language === 'en' ? 'font-bold text-[#D97745]' : 'text-[#5D605C]'}>
+                  EN
+                </span>
+                <span className="mx-1 text-[#B9B7AF]">/</span>
+                <span className={language === 'es' ? 'font-bold text-[#D97745]' : 'text-[#5D605C]'}>
+                  ES
+                </span>
+              </button>
+
+              <button
+                onClick={onOpenCv}
+                className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#171918] text-[#F3F0E9] hover:bg-[#D97745] font-mono text-[11px] uppercase tracking-[0.12em] transition-colors"
+              >
+                <FileDown className="w-3.5 h-3.5" />
+                <span>CV.PDF</span>
+              </button>
+
+              <button
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                aria-label={mobileMenuOpen ? 'Close navigation index' : 'Open navigation index'}
+                aria-expanded={mobileMenuOpen}
+                className="lg:hidden p-2 border border-[#B9B7AF] text-[#171918] hover:bg-[#171918] hover:text-[#F3F0E9] transition-colors"
+              >
+                {mobileMenuOpen ? <X className="w-4 h-4" /> : <Menu className="w-4 h-4" />}
+              </button>
+            </div>
           </div>
         </div>
-      </div>
+      </header>
 
-      {/* Mobile Drawer Menu */}
+      {/* Accessible Full-Screen Editorial Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden fixed inset-x-0 top-[60px] bg-[#0D1220]/95 backdrop-blur-xl border-b border-slate-800/80 shadow-2xl px-6 py-6 transition-all duration-300">
-          <div className="flex flex-col gap-2">
-            {navLinks.map((link) => {
-              const isActive = activeSection === link.id;
-              return (
-                <button
-                  key={link.id}
-                  onClick={() => handleNavClick(link.id)}
-                  className={`text-left px-4 py-3 rounded-lg text-sm font-medium transition-all ${
-                    isActive
-                      ? 'bg-blue-600/15 text-blue-400 font-semibold border border-blue-500/20'
-                      : 'text-slate-300 hover:bg-slate-800/50 hover:text-white'
-                  }`}
-                >
-                  {link.label}
-                </button>
-              );
-            })}
+        <div className="fixed inset-0 z-50 lg:hidden bg-[#171918] text-[#F3F0E9] flex flex-col justify-between p-6 overflow-y-auto">
+          <div>
+            <div className="flex items-center justify-between border-b border-[#B9B7AF]/30 pb-4 mb-8">
+              <span className="font-mono text-[11px] uppercase tracking-[0.16em] text-[#D97745]">
+                {PERSONAL_INFO.publicationName} — INDEX
+              </span>
+              <button
+                onClick={() => setMobileMenuOpen(false)}
+                className="p-2 border border-[#B9B7AF]/40 text-[#F3F0E9]"
+                aria-label="Close menu"
+              >
+                <X className="w-4 h-4" />
+              </button>
+            </div>
+
+            <nav className="space-y-1" aria-label="Mobile Index">
+              {navItems.map((item) => {
+                const isActive = currentView === 'home' && activeSection === item.id;
+                return (
+                  <button
+                    key={item.id}
+                    onClick={() => handleItemClick(item.id)}
+                    className={`w-full text-left py-4 border-b border-[#B9B7AF]/20 flex items-center justify-between font-serif text-2xl transition-colors ${
+                      isActive ? 'text-[#D97745]' : 'text-[#F3F0E9] hover:text-[#D97745]'
+                    }`}
+                  >
+                    <span>{item.label}</span>
+                    <span className="font-mono text-xs text-[#B9B7AF]">→</span>
+                  </button>
+                );
+              })}
+            </nav>
           </div>
 
-          <div className="mt-6 pt-5 border-t border-slate-800/80 flex items-center justify-between">
-            <div className="flex items-center gap-3">
+          <div className="pt-8 space-y-4">
+            <button
+              onClick={() => {
+                setMobileMenuOpen(false);
+                onOpenCv();
+              }}
+              className="w-full py-3.5 bg-[#D97745] text-[#171918] font-semibold text-xs uppercase tracking-[0.14em] flex items-center justify-center gap-2"
+            >
+              <FileDown className="w-4 h-4" />
+              <span>{UI_COPY.cover.openCv[language]}</span>
+            </button>
+
+            <div className="grid grid-cols-2 gap-3 pt-2 font-mono text-xs">
               <a
                 href={SOCIAL_LINKS.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 px-3 py-2 text-xs text-slate-300 bg-slate-900 border border-slate-800 rounded-lg hover:border-slate-700"
+                className="py-2.5 border border-[#B9B7AF]/30 text-center text-[#F3F0E9] flex items-center justify-center gap-1"
               >
-                <Github className="w-4 h-4 text-white" />
                 <span>GitHub</span>
-                <ArrowUpRight className="w-3 h-3 text-slate-500" />
+                <ArrowUpRight className="w-3.5 h-3.5" />
               </a>
               <a
                 href={SOCIAL_LINKS.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 px-3 py-2 text-xs text-slate-300 bg-slate-900 border border-slate-800 rounded-lg hover:border-slate-700"
+                className="py-2.5 border border-[#B9B7AF]/30 text-center text-[#F3F0E9] flex items-center justify-center gap-1"
               >
-                <Linkedin className="w-4 h-4 text-[#0A66C2]" />
                 <span>LinkedIn</span>
-                <ArrowUpRight className="w-3 h-3 text-slate-500" />
+                <ArrowUpRight className="w-3.5 h-3.5" />
               </a>
             </div>
-
-            <button
-              onClick={toggleLanguage}
-              className="flex items-center gap-1.5 px-3 py-2 text-xs font-medium text-slate-300 bg-slate-900 border border-slate-800 rounded-lg"
-            >
-              <Globe className="w-3.5 h-3.5 text-cyan-400" />
-              <span className="font-mono uppercase">{language === 'en' ? 'Español' : 'English'}</span>
-            </button>
           </div>
         </div>
       )}
-    </header>
+    </>
   );
 };

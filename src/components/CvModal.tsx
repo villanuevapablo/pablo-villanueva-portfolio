@@ -1,5 +1,5 @@
-import React from 'react';
-import { X, FileText, Download, CheckCircle, ExternalLink, Award, Globe } from 'lucide-react';
+import React, { useEffect } from 'react';
+import { X, Download, Award, CheckCircle2, Globe, ExternalLink } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { PERSONAL_INFO, SOCIAL_LINKS } from '../data/portfolioData';
 
@@ -11,104 +11,113 @@ interface CvModalProps {
 export const CvModal: React.FC<CvModalProps> = ({ isOpen, onClose }) => {
   const { language } = useLanguage();
 
+  useEffect(() => {
+    if (!isOpen) return;
+    const handleKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') onClose();
+    };
+    window.addEventListener('keydown', handleKey);
+    return () => window.removeEventListener('keydown', handleKey);
+  }, [isOpen, onClose]);
+
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md animate-in fade-in duration-200">
-      <div 
-        className="relative w-full max-w-lg rounded-2xl bg-[#0D1220] border border-slate-700/80 shadow-2xl p-6 sm:p-7 text-left"
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#171918]/80 backdrop-blur-sm"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="cv-modal-title"
+      onClick={onClose}
+    >
+      <div
+        className="relative w-full max-w-xl bg-[#F3F0E9] text-[#171918] border border-[#171918] p-6 sm:p-8 text-left shadow-2xl"
         onClick={(e) => e.stopPropagation()}
       >
-        {/* Close Button */}
-        <button
-          onClick={onClose}
-          className="absolute top-4 right-4 p-2 text-slate-400 hover:text-white rounded-lg hover:bg-slate-800 transition-colors"
-          aria-label="Close modal"
-        >
-          <X className="w-5 h-5" />
-        </button>
+        <div className="flex items-center justify-between border-b border-[#B9B7AF] pb-4 mb-6">
+          <span className="font-mono text-[11px] uppercase tracking-[0.16em] text-[#D97745] font-medium">
+            {language === 'en' ? 'OFFICIAL CURRICULUM VITAE' : 'CURRÍCULUM VITAE OFICIAL'}
+          </span>
+          <button
+            onClick={onClose}
+            className="p-1.5 text-[#171918] hover:bg-[#171918] hover:text-[#F3F0E9] border border-transparent hover:border-[#171918] transition-colors"
+            aria-label={language === 'en' ? 'Close modal' : 'Cerrar ventana'}
+          >
+            <X className="w-4 h-4" />
+          </button>
+        </div>
 
-        {/* Modal Header */}
-        <div className="flex items-center gap-3.5 mb-5">
-          <div className="relative w-12 h-12 rounded-xl overflow-hidden border border-slate-700 shrink-0">
-            <img 
-              src={PERSONAL_INFO.avatarUrl} 
-              alt={PERSONAL_INFO.fullName} 
+        <div className="flex items-start gap-4 mb-6">
+          <div className="w-16 h-20 border border-[#171918] overflow-hidden shrink-0 bg-[#EAE6DC]">
+            <img
+              src={PERSONAL_INFO.avatarUrl}
+              alt={PERSONAL_INFO.fullName}
               className="w-full h-full object-cover object-top"
             />
           </div>
           <div>
-            <h3 className="text-lg font-bold text-white flex items-center gap-2">
-              <span>{PERSONAL_INFO.fullName}</span>
-              <span className="w-2 h-2 rounded-full bg-emerald-400" />
+            <h3 id="cv-modal-title" className="font-serif text-2xl sm:text-3xl text-[#171918] leading-tight">
+              {PERSONAL_INFO.fullName}
             </h3>
-            <p className="text-xs text-blue-400 font-medium">
+            <p className="text-xs sm:text-sm font-semibold text-[#526B9B] mt-1">
               {PERSONAL_INFO.title[language]}
+            </p>
+            <p className="font-mono text-[11px] text-[#5D605C] mt-1">
+              {PERSONAL_INFO.location[language]} · {SOCIAL_LINKS.phone}
             </p>
           </div>
         </div>
 
-        {/* Verified Credentials Box */}
-        <div className="space-y-2.5 mb-6 text-xs text-slate-300 font-mono bg-[#111827] p-4 rounded-xl border border-slate-800">
-          <div className="flex items-center gap-2">
-            <Award className="w-4 h-4 text-emerald-400 shrink-0" />
-            <span>York St John Univ. — First-Class Honours</span>
+        <div className="border-y border-[#B9B7AF] py-4 mb-6 space-y-2.5 text-xs">
+          <div className="flex items-center gap-2.5 text-[#171918]">
+            <Award className="w-4 h-4 text-[#D97745] shrink-0" />
+            <span>York St John University — BSc (Hons) Software Engineering · First-Class Honours (9/10)</span>
           </div>
-          <div className="flex items-center gap-2">
-            <CheckCircle className="w-4 h-4 text-blue-400 shrink-0" />
+          <div className="flex items-center gap-2.5 text-[#171918]">
+            <CheckCircle2 className="w-4 h-4 text-[#526B9B] shrink-0" />
             <span>Instituto Nebrija — FP Grado Superior DAM</span>
           </div>
-          <div className="flex items-center gap-2">
-            <CheckCircle className="w-4 h-4 text-blue-400 shrink-0" />
-            <span>Universidad Nebrija — Development Technician</span>
+          <div className="flex items-center gap-2.5 text-[#171918]">
+            <CheckCircle2 className="w-4 h-4 text-[#526B9B] shrink-0" />
+            <span>Universidad Nebrija — Development Technician (Apr – Jun 2025)</span>
           </div>
-          <div className="flex items-center gap-2">
-            <Globe className="w-4 h-4 text-slate-400 shrink-0" />
-            <span>
-              {language === 'en' 
-                ? 'English (Professional Fluency) • Spanish (Native)' 
-                : 'Inglés (Fluidez profesional) • Español (Nativo)'}
-            </span>
+          <div className="flex items-center gap-2.5 text-[#5D605C]">
+            <Globe className="w-4 h-4 text-[#5D605C] shrink-0" />
+            <span>{PERSONAL_INFO.languagesSpoken[language]}</span>
           </div>
         </div>
 
-        {/* Action Buttons: Download in EN or ES */}
-        <div className="space-y-3">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            <a
-              href={`/${PERSONAL_INFO.cvFilename.en}`}
-              download="CV_Pablo_Villanueva_Picazo_EN.pdf"
-              className="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-medium text-xs transition-colors shadow-sm"
-            >
-              <Download className="w-4 h-4" />
-              <span>Download CV (English PDF)</span>
-            </a>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-5">
+          <a
+            href={`/${PERSONAL_INFO.cvFilename.en}`}
+            download="CV_Pablo_Villanueva_Picazo_EN.pdf"
+            className="inline-flex items-center justify-center gap-2 px-4 py-3.5 bg-[#171918] text-[#F3F0E9] hover:bg-[#D97745] text-xs font-semibold uppercase tracking-[0.1em] transition-colors"
+          >
+            <Download className="w-4 h-4" />
+            <span>CV English (PDF)</span>
+          </a>
 
-            <a
-              href={`/${PERSONAL_INFO.cvFilename.es}`}
-              download="CV_Pablo_Villanueva_Picazo_ES.pdf"
-              className="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-white font-medium text-xs border border-slate-700 transition-colors"
-            >
-              <Download className="w-4 h-4" />
-              <span>Descargar CV (Español PDF)</span>
-            </a>
-          </div>
+          <a
+            href={`/${PERSONAL_INFO.cvFilename.es}`}
+            download="CV_Pablo_Villanueva_Picazo_ES.pdf"
+            className="inline-flex items-center justify-center gap-2 px-4 py-3.5 bg-transparent text-[#171918] hover:bg-[#171918] hover:text-[#F3F0E9] border border-[#171918] text-xs font-semibold uppercase tracking-[0.1em] transition-colors"
+          >
+            <Download className="w-4 h-4" />
+            <span>CV Español (PDF)</span>
+          </a>
+        </div>
 
-          <div className="flex items-center justify-between pt-2 border-t border-slate-800/80 text-xs">
-            <span className="text-slate-400 font-mono">
-              Madrid, Spain • {SOCIAL_LINKS.phone}
-            </span>
-
-            <a
-              href={SOCIAL_LINKS.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1 text-blue-400 hover:text-blue-300 font-medium"
-            >
-              <span>LinkedIn</span>
-              <ExternalLink className="w-3.5 h-3.5" />
-            </a>
-          </div>
+        <div className="flex items-center justify-between pt-3 border-t border-[#B9B7AF]/60 text-[11px] font-mono text-[#5D605C]">
+          <span>1-Page LaTeX Verified Edition</span>
+          <a
+            href={SOCIAL_LINKS.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1 text-[#171918] hover:text-[#D97745] font-medium"
+          >
+            <span>LinkedIn</span>
+            <ExternalLink className="w-3 h-3" />
+          </a>
         </div>
       </div>
     </div>

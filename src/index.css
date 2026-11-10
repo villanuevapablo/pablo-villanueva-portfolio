@@ -4,67 +4,73 @@
 
 @layer base {
   :root {
-    color-scheme: dark;
+    --paper: #F3F0E9;
+    --ink: #171918;
+    --terracotta: #D97745;
+    --muted-blue: #526B9B;
+    --stone: #B9B7AF;
+    color-scheme: light dark;
   }
 
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 84px;
     -webkit-text-size-adjust: 100%;
+    font-family: 'Manrope', system-ui, -apple-system, sans-serif;
   }
 
   body {
-    background-color: #080B14;
-    color: #F8FAFC;
+    background-color: #F3F0E9;
+    color: #171918;
     min-height: 100vh;
     min-height: 100dvh;
+    font-feature-settings: "kern" 1, "liga" 1;
   }
 
-  /* Custom scrollbar */
+  /* Custom publication scrollbar */
   ::-webkit-scrollbar {
     width: 8px;
     height: 8px;
   }
 
   ::-webkit-scrollbar-track {
-    background: #080B14;
+    background: #F3F0E9;
   }
 
   ::-webkit-scrollbar-thumb {
-    background: #1E293B;
-    border-radius: 4px;
-    border: 1px solid rgba(148, 163, 184, 0.1);
+    background: #B9B7AF;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: #334155;
+    background: #171918;
   }
 }
 
 @layer utilities {
-  .bg-glass {
-    background: rgba(15, 23, 42, 0.75);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+  .writing-vertical {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
   }
 
-  .bg-glass-card {
-    background: rgba(15, 23, 42, 0.65);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border: 1px solid rgba(148, 163, 184, 0.1);
+  .editorial-grid-bg {
+    background-image: linear-gradient(to right, rgba(185, 183, 175, 0.28) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(185, 183, 175, 0.28) 1px, transparent 1px);
+    background-size: 48px 48px;
   }
 
-  .bg-glass-card-hover {
-    transition: all 0.2s ease-in-out;
+  .dark-folio-grid-bg {
+    background-image: linear-gradient(to right, rgba(185, 183, 175, 0.08) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(185, 183, 175, 0.08) 1px, transparent 1px);
+    background-size: 48px 48px;
   }
 
-  .bg-glass-card-hover:hover {
-    border-color: rgba(148, 163, 184, 0.25);
-    transform: translateY(-1px);
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
   }
 }
 
-/* Reduced motion preference - handled cleanly by Framer Motion MotionConfig */
+/* Safe iOS reduced motion handling via Framer Motion MotionConfig */
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto !important;

@@ -1,5 +1,20 @@
 export type Language = 'en' | 'es';
 
+export type ProjectCategory =
+  | 'all'
+  | 'ai-ml'
+  | 'backend-security'
+  | 'automation'
+  | 'iot'
+  | 'data';
+
+export type CaseStudyVariant =
+  | 'dark-research'
+  | 'dossier-spec'
+  | 'pipeline-monograph'
+  | 'hardware-schematic'
+  | 'data-notebook';
+
 export interface SocialLinks {
   github: string;
   linkedin: string;
@@ -7,15 +22,21 @@ export interface SocialLinks {
   phone: string;
 }
 
+export interface InterestArea {
+  id: string;
+  label: Record<Language, string>;
+  note: Record<Language, string>;
+}
+
 export interface PersonalInfo {
   name: string;
   fullName: string;
   initials: string;
   avatarUrl: string;
+  publicationName: string;
   title: Record<Language, string>;
-  heroHeading: Record<Language, string>;
-  heroSubheading: Record<Language, string>;
-  heroIntro: Record<Language, string>;
+  editorialSummary: Record<Language, string>;
+  interests: InterestArea[];
   location: Record<Language, string>;
   availability: Record<Language, string>;
   statusBadge: Record<Language, string>;
@@ -23,10 +44,10 @@ export interface PersonalInfo {
     en: string;
     es: string;
   };
-  professionalProfile: Record<Language, string>;
-  aboutText: Record<Language, string[]>;
-  quickHighlights: Record<Language, { label: string; value: string; description: string }[]>;
-  otherData: Record<Language, string[]>;
+  aboutParagraphs: Record<Language, string[]>;
+  problemSolvingApproach: Record<Language, string>;
+  languagesSpoken: Record<Language, string>;
+  otherDetails: Record<Language, string[]>;
 }
 
 export interface ExperienceItem {
@@ -36,6 +57,7 @@ export interface ExperienceItem {
   period: Record<Language, string>;
   location: Record<Language, string>;
   type: Record<Language, string>;
+  contextNote?: Record<Language, string>;
   summary: Record<Language, string>;
   responsibilities: Record<Language, string[]>;
   technologies: string[];
@@ -45,47 +67,102 @@ export interface EducationItem {
   id: string;
   degree: Record<Language, string>;
   institution: string;
-  period: string;
+  period: Record<Language, string>;
   location: Record<Language, string>;
   level: Record<Language, string>;
   grade?: Record<Language, string>;
   description: Record<Language, string>;
   highlights: Record<Language, string[]>;
-  statusBadge?: Record<Language, string>;
+  uncertaintyFlag?: Record<Language, string>;
 }
 
-export type ProjectCategory = 'all' | 'ai-ml' | 'security' | 'data' | 'iot';
+export interface ProjectCaseStudy {
+  introduction: Record<Language, string>;
+  theChallenge: Record<Language, string>;
+  theSolution: Record<Language, string>;
+  architecture: {
+    summary: Record<Language, string>;
+    modules: {
+      name: string;
+      role: Record<Language, string>;
+    }[];
+    codeSnippet?: {
+      filename: string;
+      language: string;
+      code: string;
+    };
+  };
+  engineeringDecisions: {
+    decision: Record<Language, string>;
+    rationale: Record<Language, string>;
+  }[];
+  challenges: Record<Language, string[]>;
+  resultsAndLearnings: {
+    results: Record<Language, string[]>;
+    limitations: Record<Language, string[]>;
+  };
+}
 
 export interface ProjectItem {
   id: string;
+  issueNumber: string;
   title: string;
-  category: ProjectCategory;
+  subtitle: Record<Language, string>;
+  category: Exclude<ProjectCategory, 'all'>;
   categoryLabel: Record<Language, string>;
+  editorialVariant: CaseStudyVariant;
   grade?: string;
-  year?: string;
+  year: string;
   shortDescription: Record<Language, string>;
-  longDescription: Record<Language, string>;
-  problem?: Record<Language, string>;
-  solution?: Record<Language, string>;
-  myContribution?: Record<Language, string>;
-  challengesAndLearnings?: Record<Language, string>;
   technologies: string[];
-  visualType: 'btc-forecast' | 'srms-security' | 'smart-organizer' | 'preflop-hero' | 'iot-edge' | 'fullstack-arch';
-  githubUrl: string | null;
+  visualType:
+    | 'btc-forecast'
+    | 'srms-security'
+    | 'smart-organizer'
+    | 'iot-edge'
+    | 'preflop-hero';
+  githubUrl: string;
   liveDemoUrl: string | null;
   status: Record<Language, string>;
   academicContext?: Record<Language, string>;
-  features: Record<Language, string[]>;
-  isPlaceholderUrl?: boolean;
+  caseStudy: ProjectCaseStudy;
 }
 
-export interface SkillCategory {
+export interface EngineeringNote {
   id: string;
+  number: string;
   title: Record<Language, string>;
-  icon: string;
-  skills: {
-    name: string;
-    levelHint?: Record<Language, string>;
-    featured?: boolean;
-  }[];
+  date: string;
+  topic: Record<Language, string>;
+  readingTime: string;
+  shortIntro: Record<Language, string>;
+  explanation: Record<Language, string[]>;
+  codeOrDiagram: {
+    label: Record<Language, string>;
+    snippet: string;
+  };
+  whatILearned: Record<Language, string>;
+  relatedProjectId: string;
+  relatedProjectTitle: string;
+}
+
+export interface QueuedNoteTopic {
+  id: string;
+  topic: Record<Language, string>;
+  workingTitle: Record<Language, string>;
+  plannedScope: Record<Language, string>;
+}
+
+export interface ToolkitSkill {
+  name: string;
+  evidence: Record<Language, string>;
+  tier: 'primary' | 'academic';
+}
+
+export interface ToolkitCategory {
+  id: string;
+  number: string;
+  title: Record<Language, string>;
+  subtitle: Record<Language, string>;
+  skills: ToolkitSkill[];
 }
